@@ -64,6 +64,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] **Phase 5 backend DONE** (D-036, D-037): FastAPI endpoints `/chat /health /ticket /ticket/{id} /tickets /leave-balance /docs-list /pdf/{doc_id} /demo-employees /me /circulars /insights`. Route tour: all routes demonstrated. Run locally: `uvicorn backend.app:app --port 8000`, then `python scripts/ask.py --demo`.
 
+- [x] **Phase 6 frontend DONE** (D-038): `frontend/` React + Vite portal. Local run: terminal 1 `uvicorn backend.app:app --port 8000`; terminal 2 `cd frontend && npm run dev`, then open http://localhost:5173.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 
