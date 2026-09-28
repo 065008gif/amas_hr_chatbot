@@ -56,3 +56,21 @@ Consequences:
 2. The backend treats **503 like 429**: retry once, fail over, and show a friendly message. It never shows the raw error.
 3. We'll re-test `gemini-3.8-flash` in Phase 5. If it's reliably available, it may go first, because it's a stronger model.
 4. Model names and availability change often. This is threat A5 ("model deprecation") in the report, and we've already seen it happen once (the `gemini-2.5-flash` 404).
+
+**D-014 (2026-09-28): Free-tier limits are unknown, so the code is built to cope with them.**
+*What we measured:* one small request to each provider, looking at the response headers. Ollama (HTTP 200) returned **no rate-limit headers**. Gemini `gemini-3.1-flash-lite` returned **HTTP 503**, only about 10 minutes after the same model returned 200 (D-013), and also had no rate-limit headers. So neither API tells us its limits in advance.
+*What we believe but have NOT verified (all UNVERIFIED):*
+- Ollama cloud's free plan has usage limits that reset over time (for example hourly or daily). The exact numbers are shown only in the user's ollama.com account and may change.
+- Gemini's free tier limits each model by requests per minute, requests per day and tokens per minute. The numbers vary by model and change often. The user's own figures are on the AI Studio usage/rate-limit page.
+- Both providers may use free-tier traffic to improve their services. See the privacy notice planned for the About page (question B4).
+
+*Coping design (implemented in Phase 5, with all values in the single config file):*
+1. **Answer cache.** SQLite, keyed on the normalised question plus the profile (grade, location). A repeated question costs no quota and gives the identical answer (question F7).
+2. **Few model calls per turn.** Regex safety and escalation rules run first, with no model call. Greetings, the leave-balance tool and ticket status need no model call. The intent classification and the follow-up rewrite share one small JSON call. So there are at most 2 model calls per chat turn.
+3. **Small requests.** Only the top 6 to 8 chunks go in the prompt, and the output-token cap is set in the config.
+4. **Timeouts and retries.** 30 s timeout. One retry with a short backoff on timeouts and 5xx errors. On a 429 we honour `Retry-After` if present and never loop.
+5. **Failover.** Ollama `gpt-oss:120b` first, then the ordered Gemini list (D-013). The first provider that answers wins.
+6. **Circuit breaker.** A provider that fails 3 times in a row is skipped for 60 s, so users don't wait through a timeout on every request.
+7. **Friendly messages.** On 429: "The free model limit was reached, please try again shortly." On 503 or all-down: "The AI service is busy right now, please try again in a minute." Users never see a raw error. `/health` shows each provider's last status.
+8. **Protecting quota on the public link.** A per-IP rate limit, 800 characters per message and 20 turns per session.
+9. **Evaluation runs in batches.** Phase 7 scripts are throttled (a pause between calls), resumable (results saved after each question) and use the cache, so a run can be spread over several sessions or days if limits are hit.

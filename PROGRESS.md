@@ -23,8 +23,9 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 1, Step 1 DONE: user added the key; `bash scripts/test_ollama.sh` → HTTP 200, content 'ready', `thinking` field present (never shown to users). Slow first call (36.7 s) traced to college DNS (about 5 s per uncached lookup); the model itself takes about 1 s. DECISIONS D-010 to D-012. Committed locally (push at end of Phase 1).
 - [x] Phase 1, Step 2 DONE: Gemini key works. `gemini-2.5-flash` gives 404 (retired for new users); `gemini-3.8-flash`, `gemini-flash-latest` and `gemini-3.5-flash-lite` gave 503 (high demand); **`gemini-3.1-flash-lite` → 200 'ready'** (now the test script default). DECISIONS D-013. Re-test `gemini-3.8-flash` in Phase 5.
 
+- [x] Phase 1, Step 3 DONE: header check showed no rate-limit headers from either provider; Gemini 3.1-flash-lite gave 503 about 10 min after a 200 (flaky). Limits recorded as UNVERIFIED; 9-point coping design in DECISIONS D-014 (to implement in Phase 5).
+
 ## Next
-- [ ] Phase 1, Step 3: free-tier limits explained (UNVERIFIED) and the coping design written into DECISIONS
 - [ ] Phase 1, Steps 4-5: network test (huggingface.co, github.com, vercel.com, pypi.org), embedding model download and timing
 - [ ] Phase 1, Step 6: Hugging Face and Vercel accounts (GitHub already exists, skip)
 - [ ] End of Phase 1: secret scan, commit, user pushes
