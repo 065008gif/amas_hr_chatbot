@@ -9,7 +9,7 @@ const docs = new Map() // doc_id -> loading promise (each PDF is fetched once pe
 
 function loadDoc(docId) {
   if (!docs.has(docId)) {
-    const p = pdfjs.getDocument({ url: pdfUrl(docId) }).promise
+    const p = pdfjs.getDocument({ url: pdfUrl(docId), disableRange: true, disableStream: true }).promise // small files: one plain GET
     p.catch(() => docs.delete(docId))
     docs.set(docId, p)
   }

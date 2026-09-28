@@ -74,6 +74,8 @@ DB_PATH = RUNTIME_DIR / "hrbot.sqlite"
 TICKET_PREFIX = "NXR-HR"
 TICKET_CATEGORIES = ["Leave", "Payroll", "Benefits", "POSH/Grievance", "Policy Clarification", "IT Access", "Other"]
 CORS_ORIGINS = [o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:5173").split(",") if o.strip()]
+# Vercel production and preview addresses of the portal project (named "nexora-hr-portal" in Phase 8).
+CORS_ORIGIN_REGEX = os.environ.get("CORS_ORIGIN_REGEX", r"^https://nexora-hr-portal(-[a-z0-9-]+)?\.vercel\.app$")
 
 # ---- Fictional contacts (content/_company.yaml) and one real public helpline ----
 CONTACTS = {

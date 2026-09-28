@@ -19,7 +19,8 @@ from backend import config, llm, store
 from backend import chat as chatmod
 
 app = FastAPI(title="Nia - Nexora HR assistant (demo)", version="1.0")
-app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_methods=["GET", "POST"],
+app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_origin_regex=config.CORS_ORIGIN_REGEX,
+                   allow_methods=["GET", "POST"],
                    allow_headers=["Content-Type", "X-Employee-Id"])
 
 STATE = {"started": time.time(), "ready": False, "warm_error": None, "warm_seconds": None}
