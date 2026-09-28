@@ -1,0 +1,161 @@
+# Phase 4 DEVELOPMENT set for retrieval: used to tune the retriever, separately from the traps
+# (tests/traps.json), which are reported as the held-out TEST set.
+#
+# answerable: a chunk is "gold" if it belongs to `doc` and contains `quote` (exact text, whitespace
+#             normalised). A question may list several acceptable golds (any one counts as a hit).
+# unanswerable: questions the documents do not answer. `absent` lists terms that must appear in NO
+#             chunk (checked by tests/retrieval_eval.py) so the label is verified, not assumed.
+# followups:  multi-turn cases for the follow-up rewriter.
+
+answerable:
+  - id: D01
+    q: How long is probation for someone joining at L2?
+    gold: [{doc: "002", quote: "The probation period is six months for Grades L1 to L3"}]
+  - id: D02
+    q: Can my probation be extended, and by how long?
+    gold: [{doc: "002", quote: "Probation may be extended once, by up to three months"}]
+  - id: D03
+    q: I have worked here for 4 years and am resigning. Am I eligible for gratuity?
+    gold: [{doc: "005", quote: "after not less than five years of continuous service"}]
+  - id: D04
+    q: How soon after my clearances will I receive my relieving letter?
+    gold: [{doc: "008", quote: "issued within seven Working Days after all clearances"},
+           {doc: "008", quote: "HR/CIR/2026/07"}]
+  - id: D05
+    q: Who approves an earned leave application of 15 days?
+    gold: [{doc: "001", quote: "EL of more than 10 Working Days"}]
+  - id: D06
+    q: What medical documents do I have to upload if I am on sick leave for three days?
+    gold: [{doc: "001", quote: "Certificate from a registered medical practitioner"}]
+  - id: D07
+    q: Must I stay in the company guest house when travelling as an L4?
+    gold: [{doc: "007", quote: "Employees in Grades L1 to L5 stay in it"}]
+  - id: D08
+    q: Is Holi a holiday in the Pune office?
+    gold: [{doc: "001", quote: "Holiday: Holi"}]
+  - id: D09
+    q: How many restricted holidays can I choose in a year?
+    gold: [{doc: "001", quote: "B.1 Restricted holidays"}]
+  - id: D10
+    q: I joined on 10 August at L3. How much earned leave will I get by March?
+    gold: [{doc: "001", quote: "How is leave prorated for a new joiner"}]
+  - id: D11
+    q: What is the salary range for an L4?
+    gold: [{doc: "005", quote: "Annual Fixed Pay ranges by Grade"}]
+  - id: D12
+    q: Will my variable pay be cut because I was on maternity leave?
+    gold: [{doc: "005", quote: "I was on maternity leave for six months"}]
+  - id: D13
+    q: Who is on the Internal Committee that hears harassment complaints?
+    gold: [{doc: "003", quote: "Each Internal Committee consists of"}]
+  - id: D14
+    q: How many committee members must be present for a POSH inquiry to go ahead?
+    gold: [{doc: "003", quote: "only when at least three members are present"}]
+  - id: D15
+    q: Will people find out who filed a harassment complaint?
+    gold: [{doc: "003", quote: "11.1 What is confidential"}]
+  - id: D16
+    q: Can I apply for an internal job after 10 months in my current role?
+    gold: [{doc: "002", quote: "HR/CIR/2026/01"}, {doc: "002", quote: "Internal job postings"}]
+  - id: D17
+    q: What happens to my earned leave balance if an employee dies while in service?
+    gold: [{doc: "001", quote: "11.4 Death in service"}]
+  - id: D18
+    q: Can I take earned leave while serving my notice period?
+    gold: [{doc: "001", quote: "11.1 Leave during the notice period"}]
+  - id: D19
+    q: What are the penalties for a minor misconduct like repeated late attendance?
+    gold: [{doc: "004", quote: "Categories of misconduct and range of penalties"}]
+  - id: D20
+    q: How many days does it take to be treated as absconding?
+    gold: [{doc: "008", quote: "eight or more consecutive Working Days"}]
+  - id: D21
+    q: When is my laptop returned and my account disabled when I leave?
+    gold: [{doc: "008", quote: "accounts disabled at 6:00 p.m."}]
+  - id: D22
+    q: Can the company transfer me to another city, and how much notice will I get?
+    gold: [{doc: "002", quote: "19.1 Transfers between locations"}]
+  - id: D23
+    q: Is the Wi-Fi at a coffee shop OK for working on client systems?
+    gold: [{doc: "009", quote: "Public Wi-Fi may be used only with the virtual"}]
+  - id: D24
+    q: After how many minutes does my laptop screen lock automatically?
+    gold: [{doc: "009", quote: "Screens lock automatically after five minutes"}]
+  - id: D25
+    q: Can I let my colleague follow me through the office door without badging?
+    gold: [{doc: "009", quote: "do not allow others to follow them through a controlled door"}]
+  - id: D26
+    q: Does an interview candidate from another city get their travel paid?
+    gold: [{doc: "007", quote: "15.1 Candidates"}]
+  - id: D27
+    q: Who needs to approve international business travel?
+    gold: [{doc: "007", quote: "Item: International Business Travel"}]
+  - id: D28
+    q: What documents should I attach when I book a hotel myself on a business trip?
+    gold: [{doc: "007", quote: "GST invoice in the Company's name"}]
+  - id: D29
+    q: What happens if I do not finish my mandatory training on time?
+    gold: [{doc: "002", quote: "31.2 Consequences of non-completion"}]
+  - id: D30
+    q: Is there a creche at the Bengaluru office?
+    gold: [{doc: "002", quote: "Company locations and facilities"}]
+  - id: D31
+    q: After I leave, can I try to hire my former teammates to my new company?
+    gold: [{doc: "008", quote: "10.2 Non-sol"}]
+  - id: D32
+    q: How long does the company take to pay my full and final settlement?
+    gold: [{doc: "008", quote: "within 45 days of the Last Day of Service"}]
+  - id: D33
+    q: How is gratuity calculated if I resign after 7 years and 8 months?
+    gold: [{doc: "005", quote: "Resignation after seven years and eight months"}]
+  - id: D34
+    q: Who approves the salary increase budget each year?
+    gold: [{doc: "005", quote: "22.1 Approvals"}]
+  - id: D35
+    q: How many earned leave days does an L7 get each year?
+    gold: [{doc: "001", quote: "Annual leave entitlement by Grade"},
+           {doc: "002", quote: "Summary of leave entitlements"}]
+  - id: D36
+    q: What should I do if I get injured in an accident at the office?
+    gold: [{doc: "002", quote: "16.2 Accident"}]
+  - id: D37
+    q: I face harassment from a client's employee while working at the client site. Where do I complain?
+    gold: [{doc: "002", quote: "20.3 Complaints at a client site"}]
+  - id: D38
+    q: What is the notice period for someone still on probation?
+    gold: [{doc: "008", quote: "5.2 Notice during probation"}]
+  - id: D39
+    q: Can I use my personal phone to read work email at L5?
+    gold: [{doc: "009", quote: "Permitted personal devices by Grade"}]
+  - id: D40
+    q: What does the Leave Policy mean by Immediate Family?
+    gold: [{doc: "001", quote: "\"Immediate Family\" means"}]
+
+unanswerable:
+  - {id: U01, q: "Does Nexora give a bonus for running a marathon?", absent: [marathon]}
+  - {id: U02, q: "Can I bring my dog to the office on Fridays?", absent: [dog, pet]}
+  - {id: U03, q: "What is the canteen menu at the Hyderabad office this week?", absent: [menu]}
+  - {id: U04, q: "Does the company reimburse my gym membership fees?", absent: [gym membership]}
+  - {id: U05, q: "Can I get a loan from the company to buy a car?", absent: [car loan, vehicle loan]}
+  - {id: U06, q: "Is there a policy on growing a beard or dress code for men?", absent: [beard]}
+  - {id: U07, q: "How many days of leave do I get for my own wedding anniversary?", absent: [wedding anniversary]}
+  - {id: U08, q: "Does Nexora sponsor employees for a US green card?", absent: [green card]}
+  - {id: U09, q: "Can I claim the cost of a new mobile phone every two years?", absent: [phone allowance, handset]}
+  - {id: U10, q: "Does Nexora give employees free movie tickets every month?", absent: [movie, cinema]}
+  - {id: U11, q: "Who won the cricket match yesterday?", absent: [cricket]}
+  - {id: U12, q: "Write me a poem about Mondays.", absent: [poem]}
+  - {id: U13, q: "What is the capital of Australia?", absent: [canberra, capital of]}
+  - {id: U14, q: "Can I take leave to attend a music festival in Goa?", absent: [goa, music festival]}
+  - {id: U15, q: "Does the company pay for laser eye surgery?", absent: [laser, lasik]}
+
+followups:
+  - {id: F01, history: ["What is the notice period if I resign at L5?"], q: "What about L7?",
+     expect: "What is the notice period if I resign at L7?"}
+  - {id: F02, history: ["What is the hotel limit for an L5 staying in Mumbai?"], q: "and in Pune?",
+     expect_contains: [L5, Pune, hotel limit]}
+  - {id: F03, history: ["How many earned leave days does an L3 get?"], q: "How about sick leave?",
+     expect_contains: [L3, sick leave]}
+  - {id: F04, history: ["Can I claim a cab from the airport at L4?"], q: "What if the flight lands after midnight?",
+     expect_contains: [cab, airport, L4, midnight]}
+  - {id: F05, history: ["How long is probation for L2?"], q: "Is day-care reimbursed in Pune?",
+     expect: "Is day-care reimbursed in Pune?"}

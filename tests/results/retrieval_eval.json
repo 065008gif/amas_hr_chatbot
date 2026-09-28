@@ -1,0 +1,2485 @@
+{
+ "run": "2026-09-28T19:53:50",
+ "variants": {
+  "full": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.7,
+    "recall@3": 0.9,
+    "recall@5": 0.925,
+    "recall@8": 0.925,
+    "MRR": 0.79375,
+    "all_evidence@8": 0.925
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.6060606060606061,
+    "recall@3": 0.8484848484848485,
+    "recall@5": 0.9090909090909091,
+    "recall@8": 0.9393939393939394,
+    "MRR": 0.7323232323232324,
+    "all_evidence@8": 0.5757575757575758
+   }
+  },
+  "no rerank": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.65,
+    "recall@3": 0.875,
+    "recall@5": 0.925,
+    "recall@8": 0.925,
+    "MRR": 0.7654166666666666,
+    "all_evidence@8": 0.925
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.6363636363636364,
+    "recall@3": 0.8787878787878788,
+    "recall@5": 0.9393939393939394,
+    "recall@8": 0.9393939393939394,
+    "MRR": 0.756060606060606,
+    "all_evidence@8": 0.5757575757575758
+   }
+  },
+  "no boosting": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.725,
+    "recall@3": 0.9,
+    "recall@5": 0.925,
+    "recall@8": 0.925,
+    "MRR": 0.80625,
+    "all_evidence@8": 0.925
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.5757575757575758,
+    "recall@3": 0.8181818181818182,
+    "recall@5": 0.9090909090909091,
+    "recall@8": 0.9393939393939394,
+    "MRR": 0.7133838383838385,
+    "all_evidence@8": 0.6060606060606061
+   }
+  },
+  "no circular rule": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.7,
+    "recall@3": 0.9,
+    "recall@5": 0.925,
+    "recall@8": 0.925,
+    "MRR": 0.8020833333333333,
+    "all_evidence@8": 0.925
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.6060606060606061,
+    "recall@3": 0.8484848484848485,
+    "recall@5": 0.9090909090909091,
+    "recall@8": 0.9393939393939394,
+    "MRR": 0.7323232323232324,
+    "all_evidence@8": 0.6060606060606061
+   }
+  },
+  "BM25 only, no rerank": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.6,
+    "recall@3": 0.8,
+    "recall@5": 0.8,
+    "recall@8": 0.875,
+    "MRR": 0.7025297619047619,
+    "all_evidence@8": 0.875
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.5151515151515151,
+    "recall@3": 0.7878787878787878,
+    "recall@5": 0.8484848484848485,
+    "recall@8": 0.9393939393939394,
+    "MRR": 0.6667027417027417,
+    "all_evidence@8": 0.6363636363636364
+   }
+  },
+  "dense only, no rerank": {
+   "dev": {
+    "n": 40,
+    "recall@1": 0.625,
+    "recall@3": 0.85,
+    "recall@5": 0.95,
+    "recall@8": 1.0,
+    "MRR": 0.7541964285714284,
+    "all_evidence@8": 1.0
+   },
+   "test": {
+    "n": 33,
+    "recall@1": 0.5151515151515151,
+    "recall@3": 0.8181818181818182,
+    "recall@5": 0.8787878787878788,
+    "recall@8": 0.8787878787878788,
+    "MRR": 0.6616161616161614,
+    "all_evidence@8": 0.5151515151515151
+   }
+  }
+ },
+ "threshold": {
+  "tuned_on": "dev",
+  "value": 0.0015,
+  "dev": {
+   "threshold": 0.0015,
+   "answerable_kept": "40/40",
+   "unanswerable_refused": "10/15",
+   "wrongly_refused": [],
+   "wrongly_answered": [
+    "U01",
+    "U04",
+    "U07",
+    "U08",
+    "U10"
+   ]
+  },
+  "test": {
+   "threshold": 0.0015,
+   "answerable_kept": "33/33",
+   "unanswerable_refused": "0/3",
+   "wrongly_refused": [],
+   "wrongly_answered": [
+    "T08",
+    "T12",
+    "T36"
+   ]
+  },
+  "confidences": {
+   "dev": {
+    "answerable": [
+     0.0155,
+     0.0443,
+     0.0668,
+     0.112,
+     0.4392,
+     0.4745,
+     0.5799,
+     0.7595,
+     0.7989,
+     0.8028,
+     0.8293,
+     0.8624,
+     0.8716,
+     0.8906,
+     0.8922,
+     0.8977,
+     0.9097,
+     0.9859,
+     0.9861,
+     0.9864,
+     0.9872,
+     0.9874,
+     0.9898,
+     0.9917,
+     0.9942,
+     0.9947,
+     0.9963,
+     0.9964,
+     0.9974,
+     0.9975,
+     0.9976,
+     0.9981,
+     0.9981,
+     0.9983,
+     0.9988,
+     0.9988,
+     0.9989,
+     0.9993,
+     0.9993,
+     0.9996
+    ],
+    "unanswerable": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0001,
+     0.0004,
+     0.0006,
+     0.0012,
+     0.0019,
+     0.0339,
+     0.0795,
+     0.1898,
+     0.2413
+    ]
+   },
+   "test": {
+    "answerable": [
+     0.0024,
+     0.0092,
+     0.0101,
+     0.2923,
+     0.3005,
+     0.3074,
+     0.3507,
+     0.6174,
+     0.6304,
+     0.7486,
+     0.8514,
+     0.8735,
+     0.8906,
+     0.8909,
+     0.902,
+     0.9182,
+     0.9222,
+     0.9392,
+     0.9511,
+     0.9666,
+     0.9671,
+     0.9821,
+     0.9847,
+     0.9873,
+     0.9903,
+     0.9912,
+     0.9972,
+     0.9978,
+     0.9979,
+     0.9988,
+     0.9991,
+     0.9993,
+     0.9999
+    ],
+    "unanswerable": [
+     0.0028,
+     0.0037,
+     0.2912
+    ]
+   }
+  }
+ },
+ "followups": "5/5",
+ "failures": [
+  {
+   "set": "dev",
+   "id": "D05",
+   "q": "Who approves an earned leave application of 15 days?",
+   "answerable": true,
+   "type": null,
+   "first_gold_rank": null,
+   "all_evidence": false,
+   "confidence": 0.8977,
+   "ms": 684.5,
+   "top": [
+    "001:clause:4.1-4.2",
+    "001:clause:4.3-4.5",
+    "005:circular:HR/CIR/2026/05",
+    "008:annexure:C.1-C.3",
+    "001:clause:3.4-3.7",
+    "001:circular:HR/CIR/2025/11",
+    "001:table:table:Annexure_A:Form_HR-L-01:_Application_for_",
+    "001:clause:10.1-10.5"
+   ],
+   "gold": [
+    "001:table:table3"
+   ]
+  },
+  {
+   "set": "dev",
+   "id": "D11",
+   "q": "What is the salary range for an L4?",
+   "answerable": true,
+   "type": null,
+   "first_gold_rank": null,
+   "all_evidence": false,
+   "confidence": 0.8906,
+   "ms": 730.3,
+   "top": [
+    "001:annexure:D.6-D.7",
+    "002:table:table6",
+    "005:clause:19.1-19.4",
+    "005:table:table1",
+    "005:circular:HR/CIR/2025/03",
+    "007:annexure:C.1-C.2",
+    "007:circular:HR/CIR/2025/01",
+    "006:clause:9.1-9.3"
+   ],
+   "gold": [
+    "005:table:table7"
+   ]
+  },
+  {
+   "set": "dev",
+   "id": "D15",
+   "q": "Will people find out who filed a harassment complaint?",
+   "answerable": true,
+   "type": null,
+   "first_gold_rank": null,
+   "all_evidence": false,
+   "confidence": 0.8028,
+   "ms": 718.1,
+   "top": [
+    "003:clause:6.3-6.5",
+    "003:circular:HR/CIR/2025/05",
+    "003:clause:6.1-6.2",
+    "003:clause:15.1-15.2",
+    "003:clause:15.3-15.6",
+    "003:clause:2.1-2.4",
+    "003:circular:HR/CIR/2026/04",
+    "003:clause:5.3-5.5"
+   ],
+   "gold": [
+    "003:clause:11.1-11.3"
+   ]
+  },
+  {
+   "set": "test",
+   "id": "T13",
+   "q": "I am a male employee. Can I file a sexual harassment complaint with the Internal Committee?",
+   "answerable": true,
+   "type": 1,
+   "first_gold_rank": null,
+   "all_evidence": false,
+   "confidence": 0.9912,
+   "ms": 929.6,
+   "top": [
+    "003:clause:6.1-6.2",
+    "003:clause:5.1-5.2",
+    "003:table:table:Annexure_A:Form_IC-01:_Complaint_to_the_I",
+    "003:clause:6.3-6.5",
+    "003:circular:HR/CIR/2025/05",
+    "003:annexure:C.1-C.6",
+    "003:clause:15.3-15.6",
+    "002:clause:13.1-13.4"
+   ],
+   "gold": [
+    "003:circular:HR/CIR/2026/04",
+    "003:clause:2.1-2.4"
+   ]
+  },
+  {
+   "set": "test",
+   "id": "T18",
+   "q": "My father-in-law is a director at one of our vendors. Do I need to declare it?",
+   "answerable": true,
+   "type": 4,
+   "first_gold_rank": null,
+   "all_evidence": false,
+   "confidence": 0.0024,
+   "ms": 687.5,
+   "top": [
+    "004:table:table1",
+    "009:clause:18.1-18.3",
+    "004:clause:4.1-4.3",
+    "004:table:table:Annexure_A:Form_ETH-01:_Conflict_of_inter",
+    "004:clause:10.1-10.3",
+    "004:clause:1.1-1.4",
+    "004:clause:17.1-17.4",
+    "009:annexure:E.3-E.5"
+   ],
+   "gold": [
+    "004:definition:2.4-2.9"
+   ]
+  }
+ ],
+ "latency_ms": {
+  "median": 699.6,
+  "p95": 883.7
+ },
+ "per_question": {
+  "dev": [
+   {
+    "id": "D01",
+    "q": "How long is probation for someone joining at L2?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9964,
+    "ms": 821.7,
+    "top": [
+     "002:clause:4.5-4.7",
+     "008:table:table1",
+     "002:table:table7",
+     "001:annexure:D.6-D.7",
+     "002:clause:4.1-4.2",
+     "008:clause:5.1-5.3",
+     "002:clause:30.3-30.5",
+     "002:clause:4.3-4.4"
+    ],
+    "gold": [
+     "002:clause:4.5-4.7"
+    ]
+   },
+   {
+    "id": "D02",
+    "q": "Can my probation be extended, and by how long?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9947,
+    "ms": 613.4,
+    "top": [
+     "002:clause:4.5-4.7",
+     "008:clause:5.1-5.3",
+     "002:clause:30.3-30.5",
+     "008:table:table1",
+     "008:circular:HR/CIR/2025/04",
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "002:annexure:D.1-D.3"
+    ],
+    "gold": [
+     "002:clause:4.5-4.7"
+    ]
+   },
+   {
+    "id": "D03",
+    "q": "I have worked here for 4 years and am resigning. Am I eligible for gratuity?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8293,
+    "ms": 562.8,
+    "top": [
+     "005:clause:7.1-7.2",
+     "005:annexure:B.1-B.3",
+     "008:annexure:C.7-C.9",
+     "005:clause:7.3-7.5",
+     "008:clause:12.1-12.3",
+     "008:annexure:B.1",
+     "008:clause:8.2-8.5",
+     "002:clause:17.1-17.3"
+    ],
+    "gold": [
+     "005:clause:7.1-7.2"
+    ]
+   },
+   {
+    "id": "D04",
+    "q": "How soon after my clearances will I receive my relieving letter?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.9993,
+    "ms": 542.8,
+    "top": [
+     "008:annexure:C.4-C.6",
+     "008:clause:9.1-9.4",
+     "008:circular:HR/CIR/2026/07",
+     "008:annexure:C.7-C.9",
+     "008:clause:8.2-8.5",
+     "008:table:table4",
+     "008:clause:7.1-7.4",
+     "008:table:table2"
+    ],
+    "gold": [
+     "008:circular:HR/CIR/2026/07",
+     "008:clause:9.1-9.4"
+    ]
+   },
+   {
+    "id": "D05",
+    "q": "Who approves an earned leave application of 15 days?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.8977,
+    "ms": 684.5,
+    "top": [
+     "001:clause:4.1-4.2",
+     "001:clause:4.3-4.5",
+     "005:circular:HR/CIR/2026/05",
+     "008:annexure:C.1-C.3",
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "001:table:table:Annexure_A:Form_HR-L-01:_Application_for_",
+     "001:clause:10.1-10.5"
+    ],
+    "gold": [
+     "001:table:table3"
+    ]
+   },
+   {
+    "id": "D06",
+    "q": "What medical documents do I have to upload if I am on sick leave for three days?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9872,
+    "ms": 713.7,
+    "top": [
+     "001:table:table:Annexure_A:Checklist_of_supporting_docume",
+     "001:clause:5.4-5.6",
+     "001:clause:5.1-5.3",
+     "001:circular:HR/CIR/2025/11",
+     "001:clause:4.1-4.2",
+     "001:clause:3.4-3.7",
+     "006:clause:13.3-13.5",
+     "002:table:table3"
+    ],
+    "gold": [
+     "001:clause:5.4-5.6",
+     "001:table:table:Annexure_A:Checklist_of_supporting_docume"
+    ]
+   },
+   {
+    "id": "D07",
+    "q": "Must I stay in the company guest house when travelling as an L4?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9861,
+    "ms": 667.7,
+    "top": [
+     "007:clause:5.1-5.2",
+     "007:circular:HR/CIR/2025/01",
+     "002:table:table10",
+     "007:annexure:C.1-C.2",
+     "006:clause:11.1-11.3",
+     "007:clause:5.3-5.5",
+     "002:annexure:D.10-D.12",
+     "007:clause:15.1-15.2"
+    ],
+    "gold": [
+     "007:clause:5.1-5.2"
+    ]
+   },
+   {
+    "id": "D08",
+    "q": "Is Holi a holiday in the Pune office?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.5799,
+    "ms": 579.4,
+    "top": [
+     "001:table:table4",
+     "001:table:table2",
+     "001:table:table4#2",
+     "007:clause:2.1-2.5",
+     "002:circular:HR/CIR/2025/09",
+     "007:annexure:C.3-C.4",
+     "005:table:table2",
+     "001:clause:9.1-9.5"
+    ],
+    "gold": [
+     "001:table:table4"
+    ]
+   },
+   {
+    "id": "D09",
+    "q": "How many restricted holidays can I choose in a year?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9942,
+    "ms": 597.3,
+    "top": [
+     "001:annexure:B.1-B.2",
+     "001:clause:9.1-9.5",
+     "001:table:table4#2",
+     "002:clause:6.1-6.4",
+     "001:table:table4",
+     "001:table:table2",
+     "002:table:table3",
+     "002:annexure:D.7-D.9"
+    ],
+    "gold": [
+     "001:annexure:B.1-B.2"
+    ]
+   },
+   {
+    "id": "D10",
+    "q": "I joined on 10 August at L3. How much earned leave will I get by March?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9974,
+    "ms": 731.5,
+    "top": [
+     "001:annexure:D.2-D.3",
+     "001:clause:4.3-4.5",
+     "001:table:table1",
+     "002:table:table3",
+     "001:clause:4.1-4.2",
+     "005:circular:HR/CIR/2026/05",
+     "001:clause:5.1-5.3",
+     "001:circular:HR/CIR/2025/11"
+    ],
+    "gold": [
+     "001:annexure:D.2-D.3"
+    ]
+   },
+   {
+    "id": "D11",
+    "q": "What is the salary range for an L4?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.8906,
+    "ms": 730.3,
+    "top": [
+     "001:annexure:D.6-D.7",
+     "002:table:table6",
+     "005:clause:19.1-19.4",
+     "005:table:table1",
+     "005:circular:HR/CIR/2025/03",
+     "007:annexure:C.1-C.2",
+     "007:circular:HR/CIR/2025/01",
+     "006:clause:9.1-9.3"
+    ],
+    "gold": [
+     "005:table:table7"
+    ]
+   },
+   {
+    "id": "D12",
+    "q": "Will my variable pay be cut because I was on maternity leave?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9988,
+    "ms": 554.7,
+    "top": [
+     "005:annexure:C.11-C.14",
+     "005:clause:8.1-8.3",
+     "001:clause:6.2.3-6.2.5",
+     "001:clause:6.1-6.2.2",
+     "008:clause:13.1-13.4",
+     "008:annexure:C.4-C.6",
+     "005:clause:8.4-8.6",
+     "002:clause:26.1-26.3"
+    ],
+    "gold": [
+     "005:annexure:C.11-C.14"
+    ]
+   },
+   {
+    "id": "D13",
+    "q": "Who is on the Internal Committee that hears harassment complaints?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.9983,
+    "ms": 867.4,
+    "top": [
+     "003:clause:5.3-5.5",
+     "003:circular:HR/CIR/2025/05",
+     "003:clause:5.1-5.2",
+     "003:clause:15.3-15.6",
+     "003:clause:8.4-8.6",
+     "003:clause:6.1-6.2",
+     "003:clause:14.1-14.5",
+     "003:clause:6.3-6.5"
+    ],
+    "gold": [
+     "003:clause:5.1-5.2"
+    ]
+   },
+   {
+    "id": "D14",
+    "q": "How many committee members must be present for a POSH inquiry to go ahead?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9898,
+    "ms": 729.8,
+    "top": [
+     "003:clause:5.3-5.5",
+     "003:circular:HR/CIR/2025/05",
+     "003:clause:14.1-14.5",
+     "003:clause:8.4-8.6",
+     "003:clause:8.1-8.3",
+     "003:clause:5.1-5.2",
+     "003:clause:7.1-7.3",
+     "003:table:table2"
+    ],
+    "gold": [
+     "003:clause:5.3-5.5"
+    ]
+   },
+   {
+    "id": "D15",
+    "q": "Will people find out who filed a harassment complaint?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.8028,
+    "ms": 718.1,
+    "top": [
+     "003:clause:6.3-6.5",
+     "003:circular:HR/CIR/2025/05",
+     "003:clause:6.1-6.2",
+     "003:clause:15.1-15.2",
+     "003:clause:15.3-15.6",
+     "003:clause:2.1-2.4",
+     "003:circular:HR/CIR/2026/04",
+     "003:clause:5.3-5.5"
+    ],
+    "gold": [
+     "003:clause:11.1-11.3"
+    ]
+   },
+   {
+    "id": "D16",
+    "q": "Can I apply for an internal job after 10 months in my current role?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9993,
+    "ms": 734.1,
+    "top": [
+     "002:circular:HR/CIR/2026/01",
+     "002:clause:9.4-9.5",
+     "002:annexure:D.4-D.6",
+     "008:clause:10.1-10.5",
+     "002:clause:30.1-30.2",
+     "003:annexure:C.1-C.6",
+     "002:clause:19.1-19.2",
+     "001:clause:8.3-8.3.3"
+    ],
+    "gold": [
+     "002:circular:HR/CIR/2026/01",
+     "002:clause:9.4-9.5"
+    ]
+   },
+   {
+    "id": "D17",
+    "q": "What happens to my earned leave balance if an employee dies while in service?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9874,
+    "ms": 699.5,
+    "top": [
+     "001:clause:11.3-11.5",
+     "008:annexure:B.1",
+     "008:clause:8.1",
+     "001:clause:11.1-11.2",
+     "001:clause:4.3-4.5",
+     "001:clause:3.1-3.3",
+     "001:clause:3.4-3.7",
+     "001:clause:4.1-4.2"
+    ],
+    "gold": [
+     "001:clause:11.3-11.5"
+    ]
+   },
+   {
+    "id": "D18",
+    "q": "Can I take earned leave while serving my notice period?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9864,
+    "ms": 699.6,
+    "top": [
+     "001:clause:11.1-11.2",
+     "008:annexure:C.1-C.3",
+     "001:clause:11.3-11.5",
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "008:annexure:B.1",
+     "001:annexure:D.4-D.5",
+     "008:clause:5.4-5.7"
+    ],
+    "gold": [
+     "001:clause:11.1-11.2"
+    ]
+   },
+   {
+    "id": "D19",
+    "q": "What are the penalties for a minor misconduct like repeated late attendance?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.9981,
+    "ms": 522.2,
+    "top": [
+     "006:clause:4.3-4.5",
+     "004:table:table3",
+     "006:clause:1.1-1.3",
+     "004:clause:15.1-15.2",
+     "006:clause:4.1-4.2",
+     "006:clause:13.1-13.2",
+     "006:clause:13.3-13.5",
+     "006:clause:10.1-10.3"
+    ],
+    "gold": [
+     "004:table:table3"
+    ]
+   },
+   {
+    "id": "D20",
+    "q": "How many days does it take to be treated as absconding?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.8716,
+    "ms": 561.6,
+    "top": [
+     "008:clause:11.1-11.4",
+     "008:clause:2.1-2.8",
+     "001:clause:8.1-8.2",
+     "001:clause:5.1-5.3",
+     "001:circular:HR/CIR/2025/11",
+     "008:annexure:C.1-C.3",
+     "001:annexure:D.6-D.7",
+     "005:clause:9.4-9.7"
+    ],
+    "gold": [
+     "008:clause:2.1-2.8"
+    ]
+   },
+   {
+    "id": "D21",
+    "q": "When is my laptop returned and my account disabled when I leave?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8922,
+    "ms": 530.5,
+    "top": [
+     "008:table:table2",
+     "002:clause:28.1-28.3",
+     "002:annexure:D.7-D.9",
+     "009:annexure:C.1-C.3",
+     "009:clause:19.1-19.2",
+     "008:clause:13.1-13.4",
+     "002:clause:14.1-14.3",
+     "007:clause:8.1-8.4"
+    ],
+    "gold": [
+     "008:table:table2"
+    ]
+   },
+   {
+    "id": "D22",
+    "q": "Can the company transfer me to another city, and how much notice will I get?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.4745,
+    "ms": 688.2,
+    "top": [
+     "002:clause:19.1-19.2",
+     "002:clause:19.2-19.4",
+     "006:clause:5.4-5.6",
+     "007:clause:15.1-15.2",
+     "008:annexure:C.7-C.9",
+     "007:clause:2.1-2.5",
+     "005:definition:2.5-2.9",
+     "008:clause:5.4-5.7"
+    ],
+    "gold": [
+     "002:clause:19.1-19.2"
+    ]
+   },
+   {
+    "id": "D23",
+    "q": "Is the Wi-Fi at a coffee shop OK for working on client systems?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.112,
+    "ms": 598.3,
+    "top": [
+     "009:clause:10.1-10.3",
+     "002:clause:14.1-14.3",
+     "009:clause:9.1-9.4",
+     "009:clause:4.1-4.3",
+     "004:annexure:C.3-C.5",
+     "009:clause:6.1-6.4",
+     "004:clause:20.1-20.4",
+     "009:clause:14.1-14.3"
+    ],
+    "gold": [
+     "009:clause:10.1-10.3"
+    ]
+   },
+   {
+    "id": "D24",
+    "q": "After how many minutes does my laptop screen lock automatically?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9976,
+    "ms": 638.7,
+    "top": [
+     "009:clause:6.1-6.4",
+     "009:table:table4",
+     "009:clause:7.3-7.5",
+     "002:clause:14.1-14.3",
+     "009:clause:15.1-15.3",
+     "009:annexure:C.1-C.3",
+     "006:clause:12.1-12.3",
+     "002:annexure:D.7-D.9"
+    ],
+    "gold": [
+     "009:clause:6.1-6.4"
+    ]
+   },
+   {
+    "id": "D25",
+    "q": "Can I let my colleague follow me through the office door without badging?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.0155,
+    "ms": 745.0,
+    "top": [
+     "004:clause:20.1-20.4",
+     "009:clause:15.1-15.3",
+     "006:clause:8.1-8.3",
+     "003:annexure:C.1-C.6",
+     "002:clause:5.3-5.4",
+     "006:clause:7.1-7.3",
+     "004:clause:3.1-3.4",
+     "009:annexure:C.4-C.7"
+    ],
+    "gold": [
+     "009:clause:15.1-15.3"
+    ]
+   },
+   {
+    "id": "D26",
+    "q": "Does an interview candidate from another city get their travel paid?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9975,
+    "ms": 501.0,
+    "top": [
+     "007:clause:15.1-15.2",
+     "007:clause:2.1-2.5",
+     "007:clause:10.1-10.3",
+     "005:definition:2.5-2.9",
+     "007:clause:14.1-14.3",
+     "002:clause:15.1-15.2",
+     "007:clause:6.1-6.3",
+     "007:annexure:C.3-C.4"
+    ],
+    "gold": [
+     "007:clause:15.1-15.2"
+    ]
+   },
+   {
+    "id": "D27",
+    "q": "Who needs to approve international business travel?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.9988,
+    "ms": 522.0,
+    "top": [
+     "007:clause:3.1-3.2",
+     "007:clause:8.1-8.4",
+     "007:table:table7",
+     "007:clause:1.1-1.3",
+     "002:clause:15.1-15.2",
+     "007:clause:16.1-16.3",
+     "007:table:table:Front:Version_History",
+     "007:table:table6"
+    ],
+    "gold": [
+     "007:table:table7"
+    ]
+   },
+   {
+    "id": "D28",
+    "q": "What documents should I attach when I book a hotel myself on a business trip?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.4392,
+    "ms": 547.1,
+    "top": [
+     "007:table:table:Annexure_A:What_to_attach_to_a_travel_cla",
+     "007:annexure:C.8-C.10",
+     "007:table:table7",
+     "007:clause:5.1-5.2",
+     "007:circular:HR/CIR/2025/01",
+     "002:clause:15.1-15.2",
+     "007:clause:3.3-3.5",
+     "007:clause:8.1-8.4"
+    ],
+    "gold": [
+     "007:table:table:Annexure_A:What_to_attach_to_a_travel_cla"
+    ]
+   },
+   {
+    "id": "D29",
+    "q": "What happens if I do not finish my mandatory training on time?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8624,
+    "ms": 580.5,
+    "top": [
+     "002:clause:31.1-31.3",
+     "002:table:table12",
+     "002:clause:10.1-10.4",
+     "006:clause:11.1-11.3",
+     "006:annexure:C.4-C.8",
+     "001:clause:5.1-5.3",
+     "001:circular:HR/CIR/2025/11",
+     "006:clause:13.3-13.5"
+    ],
+    "gold": [
+     "002:clause:31.1-31.3"
+    ]
+   },
+   {
+    "id": "D30",
+    "q": "Is there a creche at the Bengaluru office?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.7989,
+    "ms": 852.2,
+    "top": [
+     "002:clause:8.1-8.2",
+     "002:circular:HR/CIR/2025/09",
+     "002:table:table1",
+     "002:clause:3.1-3.2",
+     "001:table:table4#2",
+     "005:annexure:C.3-C.4",
+     "001:table:table4",
+     "003:table:table1"
+    ],
+    "gold": [
+     "002:table:table1"
+    ]
+   },
+   {
+    "id": "D31",
+    "q": "After I leave, can I try to hire my former teammates to my new company?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.0668,
+    "ms": 694.8,
+    "top": [
+     "008:clause:10.1-10.5",
+     "002:annexure:D.4-D.6",
+     "008:clause:15.1-15.3",
+     "008:annexure:C.4-C.6",
+     "008:clause:14.1-14.3",
+     "008:clause:12.1-12.3",
+     "002:annexure:D.7-D.9",
+     "002:clause:19.1-19.2"
+    ],
+    "gold": [
+     "008:clause:10.1-10.5"
+    ]
+   },
+   {
+    "id": "D32",
+    "q": "How long does the company take to pay my full and final settlement?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 4,
+    "all_evidence": true,
+    "confidence": 0.9917,
+    "ms": 563.5,
+    "top": [
+     "008:annexure:B.1",
+     "008:clause:8.1",
+     "005:clause:7.3-7.5",
+     "008:clause:8.2-8.5",
+     "008:clause:2.1-2.8",
+     "008:table:table3",
+     "002:clause:19.2-19.4",
+     "001:clause:11.3-11.5"
+    ],
+    "gold": [
+     "008:clause:8.2-8.5",
+     "008:table:table4"
+    ]
+   },
+   {
+    "id": "D33",
+    "q": "How is gratuity calculated if I resign after 7 years and 8 months?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9996,
+    "ms": 576.4,
+    "top": [
+     "005:annexure:B.1-B.3",
+     "005:clause:7.1-7.2",
+     "008:annexure:C.7-C.9",
+     "005:clause:7.3-7.5",
+     "008:clause:8.1",
+     "008:clause:8.2-8.5",
+     "008:clause:12.1-12.3",
+     "002:annexure:D.7-D.9"
+    ],
+    "gold": [
+     "005:annexure:B.1-B.3"
+    ]
+   },
+   {
+    "id": "D34",
+    "q": "Who approves the salary increase budget each year?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.9981,
+    "ms": 565.4,
+    "top": [
+     "005:clause:13.1-13.4",
+     "005:clause:22.1-22.3",
+     "005:table:table6",
+     "005:clause:3.1-3.4",
+     "005:clause:16.3-16.5",
+     "005:clause:4.1-4.3",
+     "005:clause:20.1-20.2",
+     "002:clause:7.3-7.6"
+    ],
+    "gold": [
+     "005:clause:22.1-22.3"
+    ]
+   },
+   {
+    "id": "D35",
+    "q": "How many earned leave days does an L7 get each year?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.7595,
+    "ms": 711.2,
+    "top": [
+     "002:table:table3",
+     "001:table:table1",
+     "001:clause:4.3-4.5",
+     "005:clause:12.1-12.4",
+     "005:circular:HR/CIR/2026/05",
+     "001:clause:4.1-4.2",
+     "008:annexure:B.1",
+     "001:clause:3.4-3.7"
+    ],
+    "gold": [
+     "001:table:table1",
+     "002:table:table3"
+    ]
+   },
+   {
+    "id": "D36",
+    "q": "What should I do if I get injured in an accident at the office?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.0443,
+    "ms": 551.0,
+    "top": [
+     "002:clause:16.1-16.3",
+     "002:clause:25.1-25.4",
+     "005:table:table:Annexure_E:Documents_for_a_reimbursement_",
+     "002:clause:24.1-24.4",
+     "006:clause:7.1-7.3",
+     "006:clause:8.1-8.3",
+     "006:clause:5.4-5.6",
+     "006:circular:HR/CIR/2025/10"
+    ],
+    "gold": [
+     "002:clause:16.1-16.3"
+    ]
+   },
+   {
+    "id": "D37",
+    "q": "I face harassment from a client's employee while working at the client site. Where do I complain?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9963,
+    "ms": 915.9,
+    "top": [
+     "002:clause:20.3-20.6",
+     "004:clause:20.1-20.4",
+     "002:clause:20.1-20.2",
+     "002:clause:12.3-12.6",
+     "002:annexure:G.3-G.6",
+     "003:clause:2.1-2.4",
+     "003:circular:HR/CIR/2026/04",
+     "003:definition:3.5-3.10"
+    ],
+    "gold": [
+     "002:clause:20.3-20.6"
+    ]
+   },
+   {
+    "id": "D38",
+    "q": "What is the notice period for someone still on probation?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9859,
+    "ms": 563.3,
+    "top": [
+     "008:clause:5.1-5.3",
+     "002:clause:4.5-4.7",
+     "008:table:table1",
+     "002:table:table7",
+     "001:definition:2.10-2.14",
+     "008:circular:HR/CIR/2025/04",
+     "002:clause:30.3-30.5",
+     "001:clause:11.1-11.2"
+    ],
+    "gold": [
+     "008:clause:5.1-5.3"
+    ]
+   },
+   {
+    "id": "D39",
+    "q": "Can I use my personal phone to read work email at L5?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9097,
+    "ms": 751.0,
+    "top": [
+     "009:table:table2",
+     "009:annexure:C.1-C.3",
+     "009:annexure:C.4-C.7",
+     "009:clause:7.1-7.2",
+     "009:clause:4.1-4.3",
+     "009:annexure:B.1-B.2",
+     "002:clause:29.1-29.3",
+     "009:clause:7.3-7.5"
+    ],
+    "gold": [
+     "009:table:table2"
+    ]
+   },
+   {
+    "id": "D40",
+    "q": "What does the Leave Policy mean by Immediate Family?",
+    "answerable": true,
+    "type": null,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9989,
+    "ms": 644.7,
+    "top": [
+     "001:definition:2.6-2.9",
+     "001:circular:HR/CIR/2026/02",
+     "001:annexure:D.4-D.5",
+     "001:clause:7.1-7.3",
+     "001:clause:1.1-1.2",
+     "001:clause:1.3-1.4",
+     "002:clause:6.1-6.4",
+     "002:clause:19.2-19.4"
+    ],
+    "gold": [
+     "001:definition:2.6-2.9"
+    ]
+   },
+   {
+    "id": "U01",
+    "q": "Does Nexora give a bonus for running a marathon?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0019,
+    "ms": 631.1,
+    "top": [
+     "002:clause:3.1-3.2",
+     "002:table:table13",
+     "005:clause:10.1-10.3",
+     "002:clause:18.1-18.5",
+     "005:clause:15.1-15.3",
+     "002:clause:11.1-11.4",
+     "002:table:table8",
+     "002:clause:Front-intro"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U02",
+    "q": "Can I bring my dog to the office on Fridays?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 568.6,
+    "top": [
+     "006:circular:HR/CIR/2025/10",
+     "006:clause:8.1-8.3",
+     "006:annexure:C.1-C.3",
+     "006:clause:5.4-5.6",
+     "002:clause:5.3-5.4",
+     "002:clause:5.1-5.2",
+     "006:clause:7.1-7.3",
+     "006:clause:13.1-13.2"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U03",
+    "q": "What is the canteen menu at the Hyderabad office this week?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0012,
+    "ms": 651.5,
+    "top": [
+     "001:table:table4#2",
+     "001:table:table4",
+     "007:clause:2.1-2.5",
+     "002:table:table1",
+     "006:table:table2",
+     "003:table:table1",
+     "003:circular:HR/CIR/2025/05",
+     "002:clause:5.1-5.2"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U04",
+    "q": "Does the company reimburse my gym membership fees?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0795,
+    "ms": 659.6,
+    "top": [
+     "007:clause:14.1-14.3",
+     "007:table:table4",
+     "007:clause:15.1-15.2",
+     "002:clause:10.1-10.4",
+     "002:clause:28.1-28.3",
+     "007:annexure:C.5-C.7",
+     "007:annexure:C.8-C.10",
+     "005:clause:17.4-17.6"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U05",
+    "q": "Can I get a loan from the company to buy a car?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 597.3,
+    "top": [
+     "008:circular:HR/CIR/2025/04",
+     "005:clause:19.1-19.4",
+     "008:clause:5.4-5.7",
+     "007:clause:7.3-7.5",
+     "007:clause:7.1-7.2",
+     "007:circular:HR/CIR/2025/12",
+     "004:clause:7.3-7.5",
+     "002:clause:28.1-28.3"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U06",
+    "q": "Is there a policy on growing a beard or dress code for men?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0006,
+    "ms": 790.3,
+    "top": [
+     "003:circular:HR/CIR/2026/04",
+     "003:clause:1.1-1.3",
+     "002:clause:12.3-12.6",
+     "004:clause:1.1-1.4",
+     "003:clause:2.1-2.4",
+     "002:clause:12.1-12.2",
+     "009:clause:16.1-16.3",
+     "001:clause:12.5-12.6"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U07",
+    "q": "How many days of leave do I get for my own wedding anniversary?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.1898,
+    "ms": 622.2,
+    "top": [
+     "001:clause:7.1-7.3",
+     "001:circular:HR/CIR/2026/02",
+     "002:clause:6.1-6.4",
+     "002:annexure:D.7-D.9",
+     "001:clause:4.1-4.2",
+     "002:table:table3",
+     "001:clause:8.1-8.2",
+     "001:clause:5.1-5.3"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U08",
+    "q": "Does Nexora sponsor employees for a US green card?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.2413,
+    "ms": 646.1,
+    "top": [
+     "005:clause:10.1-10.3",
+     "002:clause:3.1-3.2",
+     "002:clause:30.1-30.2",
+     "002:table:table13",
+     "002:clause:15.1-15.2",
+     "002:clause:18.1-18.5",
+     "002:clause:4.3-4.4",
+     "002:clause:21.3-21.5"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U09",
+    "q": "Can I claim the cost of a new mobile phone every two years?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0004,
+    "ms": 700.3,
+    "top": [
+     "005:clause:12.1-12.4",
+     "005:circular:HR/CIR/2026/05",
+     "002:annexure:D.7-D.9",
+     "007:annexure:C.3-C.4",
+     "007:clause:7.3-7.5",
+     "005:clause:9.4-9.7",
+     "005:annexure:B.1-B.3",
+     "002:table:table9"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U10",
+    "q": "Does Nexora give employees free movie tickets every month?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0339,
+    "ms": 669.9,
+    "top": [
+     "002:annexure:D.10-D.12",
+     "002:clause:Front-intro",
+     "002:table:table13",
+     "002:clause:2.1-2.10",
+     "002:clause:3.3-3.5",
+     "001:clause:Front-intro",
+     "005:clause:5.1-5.2",
+     "002:table:table8"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U11",
+    "q": "Who won the cricket match yesterday?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 645.2,
+    "top": [
+     "005:clause:5.3-5.5",
+     "001:clause:7.4-7.7",
+     "001:table:table2",
+     "005:clause:Front-intro",
+     "001:table:table4",
+     "001:table:table4#2",
+     "008:clause:2.1-2.8",
+     "001:clause:2.1-2.5"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U12",
+    "q": "Write me a poem about Mondays.",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 783.3,
+    "top": [
+     "001:annexure:D.1",
+     "002:clause:5.1-5.2",
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "001:annexure:D.4-D.5",
+     "001:definition:2.10-2.14",
+     "006:circular:HR/CIR/2025/10",
+     "009:clause:17.1-17.4"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U13",
+    "q": "What is the capital of Australia?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 677.6,
+    "top": [
+     "007:clause:2.1-2.5",
+     "007:table:table6",
+     "007:annexure:C.3-C.4",
+     "004:definition:2.4-2.9",
+     "005:table:table8",
+     "001:table:table2",
+     "001:annexure:B.1-B.2",
+     "006:clause:2.1-2.8"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U14",
+    "q": "Can I take leave to attend a music festival in Goa?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0,
+    "ms": 657.8,
+    "top": [
+     "001:annexure:D.4-D.5",
+     "001:clause:9.1-9.5",
+     "001:annexure:D.6-D.7",
+     "006:clause:13.3-13.5",
+     "008:annexure:C.1-C.3",
+     "007:annexure:C.1-C.2",
+     "002:clause:4.3-4.4",
+     "007:clause:13.1-13.3"
+    ],
+    "gold": []
+   },
+   {
+    "id": "U15",
+    "q": "Does the company pay for laser eye surgery?",
+    "answerable": false,
+    "type": null,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0001,
+    "ms": 610.5,
+    "top": [
+     "005:clause:17.4-17.6",
+     "005:clause:2.1-2.4",
+     "005:table:table5",
+     "002:clause:7.1-7.2",
+     "005:clause:1.1-1.4",
+     "005:clause:17.1-17.3",
+     "005:annexure:C.11-C.14",
+     "008:annexure:C.7-C.9"
+    ],
+    "gold": []
+   }
+  ],
+  "test": [
+   {
+    "id": "T01",
+    "q": "How many days of paternity leave do I get for a baby born in August 2025?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9666,
+    "ms": 671.4,
+    "top": [
+     "001:circular:HR/CIR/2025/07",
+     "001:clause:6.3-6.5",
+     "001:clause:6.1-6.2.2",
+     "002:clause:6.1-6.4",
+     "001:table:table:Annexure_A:Checklist_of_supporting_docume",
+     "001:table:table:Front:Version_History",
+     "001:clause:12.5-12.6",
+     "001:annexure:D.2-D.3"
+    ],
+    "gold": [
+     "001:circular:HR/CIR/2025/07",
+     "001:clause:6.3-6.5"
+    ]
+   },
+   {
+    "id": "T02",
+    "q": "Can I add a casual leave day to my earned leave?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.9873,
+    "ms": 756.3,
+    "top": [
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "001:clause:4.1-4.2",
+     "001:clause:5.1-5.3",
+     "001:table:table1",
+     "002:table:table3",
+     "001:clause:3.1-3.3",
+     "005:circular:HR/CIR/2026/05"
+    ],
+    "gold": [
+     "001:circular:HR/CIR/2025/11",
+     "001:clause:5.1-5.3"
+    ]
+   },
+   {
+    "id": "T03",
+    "q": "My grandmother passed away. Can I take bereavement leave?",
+    "answerable": true,
+    "type": 4,
+    "first_gold_rank": 2,
+    "all_evidence": false,
+    "confidence": 0.9972,
+    "ms": 759.5,
+    "top": [
+     "001:annexure:D.4-D.5",
+     "001:circular:HR/CIR/2026/02",
+     "001:clause:7.1-7.3",
+     "002:clause:6.1-6.4",
+     "001:annexure:D.6-D.7",
+     "008:annexure:C.1-C.3",
+     "001:clause:4.3-4.5",
+     "002:annexure:D.10-D.12"
+    ],
+    "gold": [
+     "001:circular:HR/CIR/2026/02",
+     "001:definition:2.6-2.9"
+    ]
+   },
+   {
+    "id": "T04",
+    "q": "I am still on probation. How much maternity leave can I get?",
+    "answerable": true,
+    "type": 6,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.8909,
+    "ms": 626.2,
+    "top": [
+     "001:clause:6.2.3-6.2.5",
+     "001:clause:6.1-6.2.2",
+     "008:annexure:C.4-C.6",
+     "008:clause:13.1-13.4",
+     "005:annexure:C.11-C.14",
+     "002:clause:6.1-6.4",
+     "001:clause:12.5-12.6",
+     "002:clause:4.5-4.7"
+    ],
+    "gold": [
+     "001:clause:1.5-1.7",
+     "001:clause:6.1-6.2.2",
+     "001:clause:6.2.3-6.2.5"
+    ]
+   },
+   {
+    "id": "T05",
+    "q": "I am an L2 associate. Can I encash my earned leave this year?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.9182,
+    "ms": 769.8,
+    "top": [
+     "001:table:table1",
+     "001:annexure:D.6-D.7",
+     "001:clause:4.3-4.5",
+     "002:table:table3",
+     "001:clause:4.1-4.2",
+     "008:annexure:B.1",
+     "001:clause:1.1-1.2",
+     "001:clause:3.4-3.7"
+    ],
+    "gold": [
+     "001:clause:4.3-4.5"
+    ]
+   },
+   {
+    "id": "T06",
+    "q": "Can an L4 employee take a sabbatical?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9999,
+    "ms": 752.3,
+    "top": [
+     "001:annexure:D.6-D.7",
+     "001:clause:8.3-8.3.3",
+     "007:annexure:C.1-C.2",
+     "001:clause:8.1-8.2",
+     "005:clause:17.4-17.6",
+     "001:annexure:D.4-D.5",
+     "002:annexure:D.10-D.12",
+     "006:annexure:C.1-C.3"
+    ],
+    "gold": [
+     "001:annexure:D.6-D.7",
+     "001:clause:8.3-8.3.3"
+    ]
+   },
+   {
+    "id": "T07",
+    "q": "I am an L6 manager and worked last Sunday. Do I get a comp off?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.0092,
+    "ms": 802.0,
+    "top": [
+     "006:clause:9.1-9.3",
+     "006:annexure:C.1-C.3",
+     "001:clause:7.1-7.3",
+     "001:circular:HR/CIR/2026/02",
+     "006:clause:11.1-11.3",
+     "001:annexure:D.4-D.5",
+     "006:clause:6.1-6.3",
+     "006:circular:HR/CIR/2026/06"
+    ],
+    "gold": [
+     "001:clause:7.1-7.3"
+    ]
+   },
+   {
+    "id": "T08",
+    "q": "Can I donate some of my earned leave to a colleague who is ill?",
+    "answerable": false,
+    "type": 5,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0037,
+    "ms": 721.0,
+    "top": [
+     "001:clause:3.4-3.7",
+     "001:circular:HR/CIR/2025/11",
+     "001:clause:4.1-4.2",
+     "001:clause:5.1-5.3",
+     "001:table:table1",
+     "001:clause:3.1-3.3",
+     "002:clause:26.1-26.3",
+     "002:table:table3"
+    ],
+    "gold": []
+   },
+   {
+    "id": "T09",
+    "q": "The Employee Handbook says paternity leave is 5 days. Is that right?",
+    "answerable": true,
+    "type": 2,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.9671,
+    "ms": 903.5,
+    "top": [
+     "002:clause:6.1-6.4",
+     "001:clause:6.3-6.5",
+     "001:circular:HR/CIR/2025/07",
+     "001:clause:6.1-6.2.2",
+     "001:clause:12.5-12.6",
+     "001:table:table3",
+     "001:clause:6.2.3-6.2.5",
+     "002:clause:5.3-5.4"
+    ],
+    "gold": [
+     "001:circular:HR/CIR/2025/07",
+     "002:clause:1.1-1.5",
+     "002:clause:6.1-6.4"
+    ]
+   },
+   {
+    "id": "T10",
+    "q": "I am an L7 senior manager. How much referral bonus will I get if my friend joins at L5?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.3005,
+    "ms": 757.0,
+    "top": [
+     "002:clause:11.1-11.4",
+     "002:table:table6",
+     "001:annexure:D.2-D.3",
+     "005:clause:8.1-8.3",
+     "005:clause:12.1-12.4",
+     "005:circular:HR/CIR/2026/05",
+     "005:clause:15.1-15.3",
+     "005:clause:14.1-14.4"
+    ],
+    "gold": [
+     "002:clause:11.1-11.4"
+    ]
+   },
+   {
+    "id": "T11",
+    "q": "How much day-care reimbursement can I claim in Pune?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9392,
+    "ms": 674.9,
+    "top": [
+     "002:circular:HR/CIR/2025/09",
+     "007:annexure:C.3-C.4",
+     "002:clause:8.1-8.2",
+     "005:annexure:C.8-C.10",
+     "007:clause:2.1-2.5",
+     "002:clause:24.1-24.4",
+     "007:clause:7.3-7.5",
+     "007:clause:9.1-9.4"
+    ],
+    "gold": [
+     "002:circular:HR/CIR/2025/09",
+     "002:clause:8.1-8.2"
+    ]
+   },
+   {
+    "id": "T12",
+    "q": "Does Nexora pay for egg freezing?",
+    "answerable": false,
+    "type": 5,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0028,
+    "ms": 659.6,
+    "top": [
+     "002:clause:3.1-3.2",
+     "002:annexure:D.10-D.12",
+     "002:table:table13",
+     "001:clause:2.1-2.5",
+     "005:clause:Front-intro",
+     "002:clause:18.1-18.5",
+     "001:clause:Front-intro",
+     "003:table:table1"
+    ],
+    "gold": []
+   },
+   {
+    "id": "T13",
+    "q": "I am a male employee. Can I file a sexual harassment complaint with the Internal Committee?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.9912,
+    "ms": 929.6,
+    "top": [
+     "003:clause:6.1-6.2",
+     "003:clause:5.1-5.2",
+     "003:table:table:Annexure_A:Form_IC-01:_Complaint_to_the_I",
+     "003:clause:6.3-6.5",
+     "003:circular:HR/CIR/2025/05",
+     "003:annexure:C.1-C.6",
+     "003:clause:15.3-15.6",
+     "002:clause:13.1-13.4"
+    ],
+    "gold": [
+     "003:circular:HR/CIR/2026/04",
+     "003:clause:2.1-2.4"
+    ]
+   },
+   {
+    "id": "T14",
+    "q": "A colleague keeps sending me inappropriate messages on WhatsApp late at night. That is not at work, so does the POSH policy apply?",
+    "answerable": true,
+    "type": 4,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.9903,
+    "ms": 820.2,
+    "top": [
+     "003:annexure:C.1-C.6",
+     "003:clause:4.1-4.3",
+     "003:clause:14.1-14.5",
+     "003:clause:6.1-6.2",
+     "003:clause:13.1-13.2",
+     "002:clause:29.1-29.3",
+     "006:clause:7.1-7.3",
+     "009:clause:8.1-8.4"
+    ],
+    "gold": [
+     "003:annexure:C.1-C.6",
+     "003:definition:3.5-3.10"
+    ]
+   },
+   {
+    "id": "T15",
+    "q": "A vendor gave me a Rs. 3,000 Amazon gift card for Diwali. Can I keep it?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 3,
+    "all_evidence": true,
+    "confidence": 0.9222,
+    "ms": 716.2,
+    "top": [
+     "004:annexure:C.1-C.2",
+     "004:table:table2",
+     "004:circular:HR/CIR/2025/08",
+     "004:clause:6.1-6.2",
+     "004:clause:6.3-6.5",
+     "002:annexure:D.13-D.15",
+     "007:annexure:C.3-C.4",
+     "004:table:table:Annexure_B:Form_ETH-02:_Gift_register_ent"
+    ],
+    "gold": [
+     "004:circular:HR/CIR/2025/08",
+     "004:clause:6.1-6.2"
+    ]
+   },
+   {
+    "id": "T16",
+    "q": "Something happened with a colleague six weeks ago. The Code of Conduct says harassment must be reported within 30 days. Is it too late to complain to the Internal Committee?",
+    "answerable": true,
+    "type": 2,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.6174,
+    "ms": 833.8,
+    "top": [
+     "004:clause:12.1-12.4",
+     "004:clause:15.3-15.5",
+     "003:annexure:C.1-C.6",
+     "003:clause:6.1-6.2",
+     "004:clause:20.1-20.4",
+     "004:table:table3",
+     "003:clause:8.4-8.6",
+     "003:clause:14.1-14.5"
+    ],
+    "gold": [
+     "003:clause:6.1-6.2",
+     "004:clause:1.1-1.4",
+     "004:clause:12.1-12.4"
+    ]
+   },
+   {
+    "id": "T17",
+    "q": "I am an L4 developer and want to buy Nexora shares. Do I need pre-clearance?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 2,
+    "all_evidence": false,
+    "confidence": 0.0101,
+    "ms": 769.5,
+    "top": [
+     "002:annexure:D.10-D.12",
+     "004:clause:8.3-8.5",
+     "004:annexure:C.3-C.5",
+     "001:annexure:D.6-D.7",
+     "004:clause:8.1-8.2",
+     "001:clause:Front-intro",
+     "002:clause:3.1-3.2",
+     "008:circular:HR/CIR/2025/04"
+    ],
+    "gold": [
+     "004:clause:2.1-2.3",
+     "004:clause:8.3-8.5"
+    ]
+   },
+   {
+    "id": "T18",
+    "q": "My father-in-law is a director at one of our vendors. Do I need to declare it?",
+    "answerable": true,
+    "type": 4,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.0024,
+    "ms": 687.5,
+    "top": [
+     "004:table:table1",
+     "009:clause:18.1-18.3",
+     "004:clause:4.1-4.3",
+     "004:table:table:Annexure_A:Form_ETH-01:_Conflict_of_inter",
+     "004:clause:10.1-10.3",
+     "004:clause:1.1-1.4",
+     "004:clause:17.1-17.4",
+     "009:annexure:E.3-E.5"
+    ],
+    "gold": [
+     "004:definition:2.4-2.9"
+    ]
+   },
+   {
+    "id": "T19",
+    "q": "I am an L2. What is my group medical insurance sum insured?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8514,
+    "ms": 754.5,
+    "top": [
+     "005:circular:HR/CIR/2025/06",
+     "005:table:table4",
+     "002:table:table4",
+     "005:clause:9.1-9.3",
+     "007:table:table6",
+     "002:clause:8.1-8.2",
+     "002:circular:HR/CIR/2025/09",
+     "005:clause:9.4-9.7"
+    ],
+    "gold": [
+     "005:circular:HR/CIR/2025/06"
+    ]
+   },
+   {
+    "id": "T20",
+    "q": "I rent a flat in Bengaluru. Is Bengaluru a metro city for my HRA exemption?",
+    "answerable": true,
+    "type": 4,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9979,
+    "ms": 901.0,
+    "top": [
+     "005:annexure:C.3-C.4",
+     "005:definition:2.5-2.9",
+     "007:clause:2.1-2.5",
+     "001:table:table4",
+     "007:annexure:C.1-C.2",
+     "005:table:table2",
+     "005:clause:3.1-3.4",
+     "001:table:table4#2"
+    ],
+    "gold": [
+     "005:annexure:C.3-C.4",
+     "005:definition:2.5-2.9"
+    ]
+   },
+   {
+    "id": "T21",
+    "q": "I resigned on 10 May. Will I get my variable pay for last year in the June salary?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9821,
+    "ms": 756.2,
+    "top": [
+     "005:annexure:C.1-C.2",
+     "005:clause:8.4-8.6",
+     "005:annexure:C.11-C.14",
+     "005:annexure:C.5-C.7",
+     "002:clause:7.3-7.6",
+     "005:clause:8.1-8.3",
+     "005:table:table1",
+     "005:clause:13.1-13.4"
+    ],
+    "gold": [
+     "005:annexure:C.1-C.2",
+     "005:clause:8.4-8.6"
+    ]
+   },
+   {
+    "id": "T22",
+    "q": "Why is no professional tax deducted from my salary? I work in Noida.",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9991,
+    "ms": 883.7,
+    "top": [
+     "005:clause:4.4-4.6",
+     "005:annexure:C.5-C.7",
+     "005:table:table2",
+     "005:definition:2.5-2.9",
+     "005:clause:16.3-16.5",
+     "002:clause:7.3-7.6",
+     "005:clause:16.1-16.2",
+     "005:clause:4.1-4.3"
+    ],
+    "gold": [
+     "005:clause:4.4-4.6"
+    ]
+   },
+   {
+    "id": "T23",
+    "q": "I am an L4 on hybrid work. Can I choose Wednesday as one of my work-from-home days?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 2,
+    "all_evidence": true,
+    "confidence": 0.6304,
+    "ms": 731.0,
+    "top": [
+     "006:annexure:C.1-C.3",
+     "006:circular:HR/CIR/2025/10",
+     "002:clause:24.1-24.4",
+     "002:annexure:D.10-D.12",
+     "006:clause:5.1-5.3",
+     "006:clause:11.1-11.3",
+     "002:clause:5.3-5.4",
+     "002:annexure:D.4-D.6"
+    ],
+    "gold": [
+     "006:circular:HR/CIR/2025/10",
+     "006:clause:5.1-5.3"
+    ]
+   },
+   {
+    "id": "T24",
+    "q": "I am an L2 and worked 6 hours of approved overtime. At what rate will I be paid?",
+    "answerable": true,
+    "type": 6,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9511,
+    "ms": 680.6,
+    "top": [
+     "006:clause:9.1-9.3",
+     "006:clause:9.4-9.6",
+     "006:annexure:C.1-C.3",
+     "006:table:table2",
+     "006:clause:6.1-6.3",
+     "006:circular:HR/CIR/2026/06",
+     "006:table:table1",
+     "006:clause:1.1-1.3"
+    ],
+    "gold": [
+     "006:clause:1.1-1.3",
+     "006:clause:9.1-9.3"
+    ]
+   },
+   {
+    "id": "T25",
+    "q": "I am an L6 manager on the US night shift. How much shift allowance do I get?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8735,
+    "ms": 833.2,
+    "top": [
+     "006:clause:6.1-6.3",
+     "006:circular:HR/CIR/2026/06",
+     "006:table:table1",
+     "007:table:table2",
+     "007:circular:HR/CIR/2025/01",
+     "002:table:table10",
+     "006:annexure:C.4-C.8",
+     "002:clause:5.3-5.4"
+    ],
+    "gold": [
+     "006:clause:6.1-6.3"
+    ]
+   },
+   {
+    "id": "T26",
+    "q": "I am an L2. My flight lands at 11:30 p.m. Can I take an Uber home and claim it?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 2,
+    "all_evidence": false,
+    "confidence": 0.3074,
+    "ms": 741.6,
+    "top": [
+     "007:annexure:C.1-C.2",
+     "007:circular:HR/CIR/2025/12",
+     "001:annexure:D.6-D.7",
+     "006:clause:8.1-8.3",
+     "006:table:table1",
+     "006:circular:HR/CIR/2026/06",
+     "006:annexure:C.4-C.8",
+     "007:clause:7.3-7.5"
+    ],
+    "gold": [
+     "007:circular:HR/CIR/2025/12",
+     "007:clause:7.1-7.2"
+    ]
+   },
+   {
+    "id": "T27",
+    "q": "I am an L2. Can I fly from Bengaluru to Chennai for a client meeting?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.9993,
+    "ms": 743.0,
+    "top": [
+     "007:annexure:C.1-C.2",
+     "005:annexure:C.3-C.4",
+     "001:table:table4#2",
+     "001:table:table4",
+     "006:table:table2",
+     "007:clause:2.1-2.5",
+     "001:clause:1.1-1.2",
+     "003:table:table1"
+    ],
+    "gold": [
+     "007:annexure:C.1-C.2",
+     "007:clause:4.1-4.3"
+    ]
+   },
+   {
+    "id": "T28",
+    "q": "What is the hotel limit for an L5 staying in Mumbai?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.8906,
+    "ms": 809.9,
+    "top": [
+     "007:circular:HR/CIR/2025/01",
+     "007:table:table2",
+     "007:clause:5.1-5.2",
+     "007:annexure:C.3-C.4",
+     "007:table:table5",
+     "002:table:table10",
+     "005:table:table4",
+     "001:annexure:D.6-D.7"
+    ],
+    "gold": [
+     "007:circular:HR/CIR/2025/01"
+    ]
+   },
+   {
+    "id": "T29",
+    "q": "I am an L5 leaving with 52 days of earned leave. How many days will be encashed in my full and final settlement?",
+    "answerable": true,
+    "type": 2,
+    "first_gold_rank": 6,
+    "all_evidence": false,
+    "confidence": 0.9978,
+    "ms": 872.1,
+    "top": [
+     "008:annexure:B.1",
+     "001:annexure:D.2-D.3",
+     "001:clause:4.3-4.5",
+     "002:table:table3",
+     "001:annexure:D.6-D.7",
+     "008:clause:8.1",
+     "001:table:table1",
+     "001:clause:11.3-11.5"
+    ],
+    "gold": [
+     "001:clause:11.1-11.2",
+     "001:clause:11.3-11.5",
+     "008:clause:8.1"
+    ]
+   },
+   {
+    "id": "T30",
+    "q": "What is the notice period if I resign at L5?",
+    "answerable": true,
+    "type": 2,
+    "first_gold_rank": 1,
+    "all_evidence": false,
+    "confidence": 0.9988,
+    "ms": 671.4,
+    "top": [
+     "008:clause:5.1-5.3",
+     "002:table:table7",
+     "008:table:table1",
+     "008:annexure:B.1",
+     "008:clause:4.1-4.4",
+     "001:clause:11.1-11.2",
+     "008:clause:5.4-5.7",
+     "008:circular:HR/CIR/2025/04"
+    ],
+    "gold": [
+     "002:table:table7",
+     "008:clause:1.1-1.3",
+     "008:clause:5.1-5.3"
+    ]
+   },
+   {
+    "id": "T31",
+    "q": "I am an L3 with 60 days' notice. Can I buy out the whole notice period and leave next week?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.902,
+    "ms": 709.1,
+    "top": [
+     "008:circular:HR/CIR/2025/04",
+     "002:table:table7",
+     "008:table:table1",
+     "008:clause:5.4-5.7",
+     "006:annexure:C.1-C.3",
+     "008:annexure:C.1-C.3",
+     "008:clause:5.1-5.3",
+     "001:clause:11.1-11.2"
+    ],
+    "gold": [
+     "008:circular:HR/CIR/2025/04",
+     "008:clause:5.4-5.7"
+    ]
+   },
+   {
+    "id": "T32",
+    "q": "I left on 31 March after seven years. When must my gratuity be paid?",
+    "answerable": true,
+    "type": 6,
+    "first_gold_rank": 4,
+    "all_evidence": false,
+    "confidence": 0.7486,
+    "ms": 704.5,
+    "top": [
+     "005:annexure:B.1-B.3",
+     "005:clause:7.1-7.2",
+     "008:annexure:C.7-C.9",
+     "008:clause:8.2-8.5",
+     "005:clause:17.4-17.6",
+     "005:annexure:C.11-C.14",
+     "001:annexure:D.2-D.3",
+     "007:annexure:C.8-C.10"
+    ],
+    "gold": [
+     "005:clause:7.3-7.5",
+     "008:clause:1.1-1.3",
+     "008:clause:8.2-8.5"
+    ]
+   },
+   {
+    "id": "T33",
+    "q": "My password is 80 days old. Do I need to change it before 90 days?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.3507,
+    "ms": 826.8,
+    "top": [
+     "009:circular:HR/CIR/2025/02",
+     "009:clause:5.1-5.5",
+     "002:clause:30.1-30.2",
+     "007:annexure:C.8-C.10",
+     "009:table:table4",
+     "002:clause:22.3-22.5",
+     "002:clause:30.3-30.5",
+     "009:table:table:Front:Version_History"
+    ],
+    "gold": [
+     "009:circular:HR/CIR/2025/02",
+     "009:clause:5.1-5.5"
+    ]
+   },
+   {
+    "id": "T34",
+    "q": "Can I paste some client source code into ChatGPT to debug it?",
+    "answerable": true,
+    "type": 1,
+    "first_gold_rank": 4,
+    "all_evidence": false,
+    "confidence": 0.2923,
+    "ms": 887.7,
+    "top": [
+     "009:clause:17.1-17.4",
+     "004:annexure:C.9-C.10",
+     "009:table:table4",
+     "009:circular:HR/CIR/2025/13",
+     "004:annexure:C.3-C.5",
+     "004:clause:21.1-21.3",
+     "009:clause:2.1-2.4",
+     "009:clause:9.1-9.4"
+    ],
+    "gold": [
+     "009:circular:HR/CIR/2025/13",
+     "009:clause:14.1-14.3"
+    ]
+   },
+   {
+    "id": "T35",
+    "q": "I am an L3. Can I use my personal laptop for work when my office laptop is being repaired?",
+    "answerable": true,
+    "type": 3,
+    "first_gold_rank": 1,
+    "all_evidence": true,
+    "confidence": 0.9847,
+    "ms": 793.7,
+    "top": [
+     "009:annexure:C.1-C.3",
+     "009:table:table2",
+     "002:clause:14.1-14.3",
+     "006:annexure:C.1-C.3",
+     "002:annexure:D.7-D.9",
+     "002:clause:28.1-28.3",
+     "009:clause:7.1-7.2",
+     "009:clause:19.1-19.2"
+    ],
+    "gold": [
+     "009:annexure:C.1-C.3"
+    ]
+   },
+   {
+    "id": "T36",
+    "q": "Will Nexora reimburse my home electricity bill when I work from home?",
+    "answerable": false,
+    "type": 5,
+    "first_gold_rank": null,
+    "all_evidence": false,
+    "confidence": 0.2912,
+    "ms": 716.0,
+    "top": [
+     "002:clause:24.1-24.4",
+     "002:annexure:D.4-D.6",
+     "002:clause:5.3-5.4",
+     "007:clause:7.3-7.5",
+     "009:clause:7.3-7.5",
+     "009:clause:10.1-10.3",
+     "006:clause:5.1-5.3",
+     "005:clause:18.1-18.3"
+    ],
+    "gold": []
+   }
+  ]
+ },
+ "label_problems": []
+}

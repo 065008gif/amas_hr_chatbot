@@ -29,3 +29,17 @@ CHUNK_MAX_TOKENS = 450          # longer clauses are split on sentence boundarie
 CHUNK_SPLIT_TARGET = 350        # size of each piece when a long clause or table is split
 CHUNK_OVERLAP_SENTENCES = 1     # sentences repeated at the start of the next piece
 CHUNK_WARN_TOKENS = 600         # reported by the statistics as "too large"
+
+# ---- Retrieval (Phase 4) ----
+BM25_TOP_K = 30                 # keyword candidates
+DENSE_TOP_K = 30                # semantic candidates
+RRF_K = 60                      # Reciprocal Rank Fusion constant (standard value)
+RERANK_THREADS = 2              # like a free Hugging Face Space
+EMBED_QUERY_PREFIX = "Represent this sentence for searching relevant passages: "  # bge query instruction
+RERANK_MODEL = "Xenova/ms-marco-MiniLM-L-6-v2"   # small ONNX cross-encoder, via fastembed
+RERANK_CANDIDATES = 15          # fused candidates scored by the reranker (0.6 s on 2 CPU threads)
+FINAL_TOP_K = 8                 # chunks given to the answer model (the brief: 6 to 8)
+MAIN_TOP_K = 6                  # best-ranked chunks kept before amending circulars are added
+BOOST_RRF = 0.15                # fused-score multiplier per matched grade/location/leave type/document
+CONFIDENCE_THRESHOLD = 0.0015   # reranker probability of the best chunk; below it: "not found, offer a ticket".
+                                # Set on the DEV set as 1/10 of the lowest answerable score (D-035).
