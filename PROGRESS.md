@@ -25,6 +25,6 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 ## Next
 - [ ] Phase 1, Step 3: free-tier limits explained (UNVERIFIED) and the coping design written into DECISIONS
-- [ ] Phase 1, Steps 4-5: free-tier limits, network test (huggingface.co, github.com, vercel.com, pypi.org), embedding model download and timing
+- [ ] Phase 1, Steps 4-5: network test (huggingface.co, github.com, vercel.com, pypi.org), embedding model download and timing
 - [ ] Phase 1, Step 6: Hugging Face and Vercel accounts (GitHub already exists, skip)
 - [ ] End of Phase 1: secret scan, commit, user pushes
