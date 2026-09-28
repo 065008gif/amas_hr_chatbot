@@ -78,7 +78,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 ## Next: Phase 7 evaluation (resumable batches)
 Each batch is small enough to finish in one sitting. Model-calling runs save one line per item to `tests/results/*.jsonl` and skip items already done, so an interrupted run resumes where it stopped. They run the backend in-process with the answer cache OFF (so every answer is fresh) and pause between calls to respect free-tier limits.
-- [ ] Batch 1: `tests/eval/runner.py` (shared resumable runner) + `tests/eval_set.yaml` part 1: about 100 single questions (direct, grade tables, multi-document, circular overrides, conflicts, unanswerable, needs-clarification, escalation) with gold facts; `tests/check_eval_set.py` verifies every gold fact appears in the index text and every unanswerable key term appears nowhere.
+- [x] **Batch 1 DONE** (D-043): `tests/eval_set.yaml` (119 single questions: 36 traps + 83 new), `tests/evalkit.py`, `tests/check_eval_set.py` (129/129 quotes on page, negative control 129/129 caught; found 4 of my own labelling mistakes), `tests/answer_eval.py` (resumable runner + scorer). Pipeline check on 6 items; 2 escalation misses found (E03 salary not credited, E10 caste jokes), left unfixed until the baseline run.
+- [ ] Batch 1b: baseline run of the remaining 113 single questions: `python tests/answer_eval.py --limit 40` three times (resumes by itself), then `python tests/answer_eval.py --score`.
 - [ ] Batch 2: 30 multi-turn conversations (3 turns each) and 40 paraphrase pairs.
 - [ ] Batch 3: `tests/adversarial.json` (at least 20; injection, prompt reveal, persona, fake policy, hidden instructions, encodings, other languages, other employees' data) + `tests/adversarial_eval.py`.
 - [ ] Batch 4+: run `answer_eval.py` in chunks (`--limit`), then `adversarial_eval.py`, then `latency.py` against the live URL.

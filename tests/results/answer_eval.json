@@ -1,0 +1,182 @@
+{
+ "summary": {
+  "items_scored": 6,
+  "items_in_set": 119,
+  "verdicts": {
+   "partly": 1,
+   "correctly_refused": 1,
+   "correct": 1,
+   "clarify_ok": 1,
+   "missed_escalation": 2
+  },
+  "by_category": {
+   "circular": {
+    "partly": 1,
+    "correct": 1
+   },
+   "clarify": {
+    "clarify_ok": 1
+   },
+   "escalation": {
+    "missed_escalation": 2
+   },
+   "unanswerable": {
+    "correctly_refused": 1
+   }
+  },
+  "answerable_accuracy": {
+   "n": 1,
+   "of": 2,
+   "rate": 0.5
+  },
+  "answerable_correct_or_partly": {
+   "n": 2,
+   "of": 2,
+   "rate": 1.0
+  },
+  "citation_snippet_on_cited_page": {
+   "n": 9,
+   "of": 9,
+   "rate": 1.0
+  },
+  "correct_answers_citing_a_gold_page": {
+   "n": 2,
+   "of": 2,
+   "rate": 1.0
+  },
+  "refusal_precision": {
+   "n": 1,
+   "of": 1,
+   "rate": 1.0
+  },
+  "refusal_recall": {
+   "n": 1,
+   "of": 1,
+   "rate": 1.0
+  },
+  "escalation_recall": {
+   "n": 0,
+   "of": 2,
+   "rate": 0.0
+  },
+  "clarify_rate": {
+   "n": 1,
+   "of": 1,
+   "rate": 1.0
+  },
+  "providers": {
+   "ollama": 6
+  },
+  "scoring": "String checks against gold facts (tests/eval_set.yaml); no model is used as a judge."
+ },
+ "items": [
+  {
+   "id": "T01",
+   "cat": "circular",
+   "q": "How many days of paternity leave do I get for a baby born in August 2025?",
+   "expected": [
+    "answer"
+   ],
+   "route": "answer",
+   "verdict": "partly",
+   "facts": [
+    true,
+    false
+   ],
+   "citations": 2,
+   "citations_on_page": 2,
+   "cites_gold_page": true,
+   "provider": "ollama",
+   "latency_ms": 5770,
+   "answer": "You are entitled to 10 Working Days of paternity leave for a baby born in August 2025 [S1][S2]."
+  },
+  {
+   "id": "T12",
+   "cat": "unanswerable",
+   "q": "Does Nexora pay for egg freezing?",
+   "expected": [
+    "not_found"
+   ],
+   "route": "not_found",
+   "verdict": "correctly_refused",
+   "facts": null,
+   "citations": 0,
+   "citations_on_page": 0,
+   "cites_gold_page": false,
+   "provider": "ollama",
+   "latency_ms": 1207,
+   "answer": "Nexora's policy documents do not cover egg freezing payments."
+  },
+  {
+   "id": "Q04",
+   "cat": "circular",
+   "q": "My father passed away last week. How many days of bereavement leave can I take?",
+   "expected": [
+    "answer"
+   ],
+   "route": "answer",
+   "verdict": "correct",
+   "facts": [
+    true
+   ],
+   "citations": 2,
+   "citations_on_page": 2,
+   "cites_gold_page": true,
+   "provider": "ollama",
+   "latency_ms": 1526,
+   "answer": "You are entitled to 5 Working Days of bereavement leave, to be taken within 15 Calendar Days of the death [S3][S2]."
+  },
+  {
+   "id": "C01",
+   "cat": "clarify",
+   "q": "How much earned leave do I get per year?",
+   "expected": [
+    "clarify"
+   ],
+   "route": "clarify",
+   "verdict": "clarify_ok",
+   "facts": null,
+   "citations": 0,
+   "citations_on_page": 0,
+   "cites_gold_page": false,
+   "provider": "ollama",
+   "latency_ms": 2230,
+   "answer": "Which grade are you in (L1 to L8)?"
+  },
+  {
+   "id": "E03",
+   "cat": "escalation",
+   "q": "My salary for August has still not been credited. What should I do?",
+   "expected": [
+    "escalate",
+    "tool"
+   ],
+   "route": "answer",
+   "verdict": "missed_escalation",
+   "facts": null,
+   "citations": 1,
+   "citations_on_page": 1,
+   "cites_gold_page": false,
+   "provider": "ollama",
+   "latency_ms": 1795,
+   "answer": "Salary is credited on the last Working Day of each month, and any payroll issues should be raised as a ticket in the Payroll category within 30 days of the pay date; the team will correct it in the next payroll cycle [S2]."
+  },
+  {
+   "id": "E10",
+   "cat": "escalation",
+   "q": "A colleague keeps making jokes about my caste in team meetings.",
+   "expected": [
+    "escalate"
+   ],
+   "route": "answer",
+   "verdict": "missed_escalation",
+   "facts": null,
+   "citations": 4,
+   "citations_on_page": 4,
+   "cites_gold_page": false,
+   "provider": "ollama",
+   "latency_ms": 3249,
+   "answer": "You can raise a complaint about the caste‑based jokes with the Internal Committee, or first speak confidentially to the HR Business Partner for guidance. Such remarks are prohibited as discrimination under the Code of Conduct and Ethics and qualify as harassment under the POSH policy’s definition of humiliating treatment that can affect health or safety [S8][S5][S6]. A grievance should be reported within 30 days of the incident, though the Internal Committee may consider extensions in special circumstances [S8][S2]."
+  }
+ ]
+}

@@ -121,6 +121,7 @@ def handle_turn(message, employee_id=None, profile=None, history=None):
 
     def done(resp, topic=None, question=message):
         resp["latency_ms"] = int((time.perf_counter() - t0) * 1000)
+        resp["usage"] = dict(usage_total)                # model tokens for this turn (0 when no model call)
         store.log_turn(resp["route"], topic, resp["latency_ms"], resp.get("provider"), usage_total,
                        resp.get("confidence"), resp.get("cache_hit"), question, len(resp["citations"]))
         return resp
