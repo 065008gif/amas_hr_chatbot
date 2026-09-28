@@ -202,3 +202,11 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
 - Claim arithmetic was checked: per diem 3 × Rs. 1,000 + transfers 650 + 720 + 840 + 910 + local cabs 1,160 = Rs. 7,280.
 - **Checker refinement:** the repeated-sentence (filler) check now skips table cells. Grade tables legitimately repeat a cell such as the L1 to L3 air rule, while repeated running text is still an error.
 - Running total: 108 pages against 120 targeted.
+
+**D-028 (2026-09-28): Separation and Exit Policy (NTL/HR/POL/008) is complete: 12 pages against a target of 14 ±2.**
+- 16 sections, 4 numbered tables (notice by grade, clearances, F&F computation, exit timeline) and 4 annexures, plus 2 circulars (HR/CIR/2025/04 buyout limited to 50% of notice; HR/CIR/2026/07 digital relieving letter within 3 Working Days). About 4,300 words. 3 statutory claims (retrenchment compensation, Contract Act s.27, Maternity Benefit Act s.12); all are UNVERIFIED.
+- **Plants conflict C02** (F&F encashes at most 30 days of EL, against the Leave Policy's grade limit, which prevails) **and completes C04** (notice for L5 is 90 days, against the Handbook table's 60).
+- **Statutory override:** Clause 8.2 pays gratuity with the F&F within 45 days, while the Gratuity Act requires 30 days (Compensation Policy Clause 7.3). The policy's own Clause 1.3 says the statute prevails.
+- F&F arithmetic was checked: 1,00,000 + 86,538 + 2,59,615 − 1,50,000 = Rs. 2,96,153. The 30 days bought out are within the circular's 50% limit.
+- Traps: T29 (type 2: C02), T30 (type 2: C04; its Handbook quote is taken from a table row and verified on the PDF), T31 (type 1: buyout circular), T32 (type 6: gratuity 30 days).
+- Running total: 120 pages against 134 targeted, and 32 traps.

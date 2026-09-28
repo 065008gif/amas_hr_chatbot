@@ -1,0 +1,430 @@
+doc_id: "008"
+title: Separation and Exit Policy
+number: NTL/HR/POL/008
+version: "3.0"
+effective_date: "2025-01-01"
+target_pages: 14
+
+control:
+  owner: Head, HR Operations
+  approver: Chief People Officer
+  approval_date: "2024-12-18"
+  classification: Internal
+  supersedes: Exit Management Policy version 2.4 dated 1 April 2023
+  review_cycle: Annual
+  applicable_to: All Employees in Grades L1 to L8
+  distribution: "Published on the NPP under Policies > Separation. The exit checklist and the Full and Final Settlement statement are generated on the NPP for each separating Employee. Printed copies are uncontrolled."
+
+history:
+  - ["1.0", "2015-04-01", "First issue as the Exit Management Policy.", "HR Operations / Director HR"]
+  - ["2.0", "2019-04-01", "Notice periods revised by Grade; exit clearances moved online.", "HR Operations / CPO"]
+  - ["2.4", "2023-04-01", "Absconding procedure and post-employment obligations revised.", "HR Operations / CPO"]
+  - ["3.0", "2025-01-01", "Renamed Separation and Exit Policy; severance on redundancy introduced; settlement timelines restated.", "HR Operations / CPO"]
+
+sections:
+  - num: 1
+    title: Purpose, Scope and Precedence
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Policy sets out how employment with the Company ends, the Notice Periods that apply, the exit process and clearances, the Full and Final Settlement, the documents issued to a departing Employee, and the obligations that continue after employment ends. It aims to make every exit orderly, fair and respectful."
+      - clause: "1.2"
+        title: Scope
+        text: "This Policy applies to every Employee in Grades L1 to L8, whether the separation is by resignation, termination, retirement, death, Absconding or the end of a fixed-term contract."
+      - clause: "1.3"
+        title: Precedence
+        text: "This Policy governs Notice Periods and the exit process. Where the {doc:002} summarises Notice Periods differently, this Policy prevails. Payments that form part of the settlement are calculated in accordance with the policy governing each payment, and where a statute provides a more favourable time limit or amount, the statute prevails."
+
+  - num: 2
+    title: Definitions
+    body:
+      - clause: "2.1"
+        term: Absconding
+        text: "means absence from duty without sanctioned leave and without intimation for eight or more consecutive Working Days, as described in {ref:#Section 11}."
+      - clause: "2.2"
+        term: Full and Final Settlement
+        text: "(F&F) means the final statement of all amounts payable to and recoverable from a departing Employee, and the payment or recovery of the net amount."
+      - clause: "2.3"
+        term: Garden Leave
+        text: "means a period of the Notice Period during which the Employee remains employed and paid but is not required or permitted to work or to access Company systems and premises."
+      - clause: "2.4"
+        term: Last Day of Service
+        text: "means the last day on which the Employee is on the rolls of the Company, as recorded on the NPP."
+      - clause: "2.5"
+        term: Notice Pay
+        text: "means the monthly fixed pay of the Employee divided by 30, multiplied by the number of days concerned."
+      - clause: "2.6"
+        term: Notice Period
+        text: "means the period of notice set out in {ref:#Table 1} for the Employee's Grade, counted in calendar days from the day after the resignation or the notice of termination is recorded on the NPP."
+      - clause: "2.7"
+        term: Relieving Letter
+        text: "means the letter confirming that the Employee has been relieved of duties and has completed exit clearances, stating the date of joining, the Last Day of Service and the last designation."
+      - clause: "2.8"
+        term: Working Day
+        text: "has the meaning given in the {doc:001}."
+
+  - num: 3
+    title: Ways in which Employment Ends
+    body:
+      - clause: "3.1"
+        title: Modes of separation
+        text: "Employment ends by resignation by the Employee; termination by the Company on grounds of performance, misconduct or redundancy; retirement on superannuation; death; Absconding; or the end of a fixed-term contract. The process for each is described in this Policy."
+      - clause: "3.2"
+        title: Fixed-term contracts
+        text: "A fixed-term contract ends on the date stated in it without notice, unless it is extended or converted in writing before that date. An Employee on a fixed-term contract who wishes to leave before that date gives the Notice Period for the Grade."
+      - clause: "3.3"
+        title: Respectful exits
+        text: "Every separation, whatever its reason, is handled confidentially and with courtesy. Information about the reason for an Employee's exit is shared only with those who need it."
+
+  - num: 4
+    title: Resignation
+    body:
+      - clause: "4.1"
+        title: How to resign
+        text: "An Employee resigns by submitting a resignation on the NPP, which records the date and time. A resignation by e-mail or letter is accepted only where the NPP is unavailable and is recorded on the NPP by the HR Business Partner within one Working Day."
+      - clause: "4.2"
+        title: Acknowledgement and discussion
+        text: "The Reporting Manager acknowledges the resignation on the NPP within two Working Days and may hold a conversation with the Employee to understand the reasons. No Employee is pressured to withdraw a resignation, and a resignation cannot be refused."
+      - clause: "4.3"
+        title: Withdrawal
+        text: "An Employee may request to withdraw a resignation within seven days of submitting it. The withdrawal takes effect only if approved by the Reporting Manager and the HR Business Partner, who may decline it where a replacement has already been confirmed."
+      - clause: "4.4"
+        title: Last Day of Service
+        text: "The Last Day of Service is the last day of the Notice Period, unless it is advanced under {ref:#5.3} or {ref:#5.4}, or extended under the leave rules in {ref:#5.6}."
+
+  - num: 5
+    title: Notice Period
+    body:
+      - clause: "5.1"
+        title: Notice by Grade
+        text: "The Notice Period for resignation and for termination by the Company, other than for misconduct, is set out in {ref:#Table 1}. An Employee in Grades L5 to L8 serves a Notice Period of 90 days."
+      - table:
+          id: Table 1
+          title: Notice Period by Grade
+          grade_table: true
+          header: ["Grade", "Notice Period (calendar days)", "Remarks"]
+          widths: [0.9, 2.2, 4.8]
+          rows:
+            - ["L1", "30", "15 days during probation"]
+            - ["L2", "30", "15 days during probation"]
+            - ["L3", "60", "15 days during probation"]
+            - ["L4", "60", "15 days during probation"]
+            - ["L5", "90", "15 days during probation"]
+            - ["L6", "90", "15 days during probation"]
+            - ["L7", "90", "15 days during probation"]
+            - ["L8", "90", "Directors who are key managerial personnel may have a longer period in their contract"]
+      - clause: "5.2"
+        title: Notice during probation
+        text: "A Probationer of any Grade, as defined in the {doc:001}, serves a Notice Period of 15 days, and the Company gives 15 days' notice or Notice Pay in lieu when ending employment during probation."
+      - clause: "5.3"
+        title: Waiver by the Company
+        text: "The Company may, at its discretion, waive the whole or part of the Notice Period at the Employee's request, having regard to the handover of work and client commitments. A waiver is approved by the Reporting Manager and, for Grades L5 to L8, the Business Unit Head, and no recovery is made for the waived days."
+      - clause: "5.4"
+        title: Buyout by the Employee
+        text: "An Employee who wishes to leave before completing the Notice Period, and whose request for a waiver is not approved, may buy out the whole or any part of the unserved Notice Period by paying Notice Pay for the unserved days, with the approval of the Reporting Manager and the HR Business Partner. The amount is recovered from the F&F."
+      - clause: "5.5"
+        title: Unserved notice without buyout
+        text: "Where an Employee leaves without serving the Notice Period and without an approved waiver or buyout, Notice Pay for the unserved days is recovered from the F&F, and the Relieving Letter is not issued until the recovery is complete. The service certificate is issued in any case."
+      - clause: "5.6"
+        title: Leave during the Notice Period
+        text: "Leave during the Notice Period is governed by the {doc:001}. Leave other than certified Sick Leave extends the Last Day of Service by the number of days of leave, unless the Reporting Manager waives the extension."
+      - clause: "5.7"
+        title: Garden Leave
+        text: "The Company may place an Employee on Garden Leave for the whole or part of the Notice Period, for example where the Employee is joining a competitor or has access to sensitive information. During Garden Leave, the Employee is paid in full and remains bound by all obligations of employment, including confidentiality and the prohibition on outside employment."
+
+  - num: 6
+    title: Termination by the Company
+    body:
+      - clause: "6.1"
+        title: Performance
+        text: "Employment may be terminated for performance only after the Employee has been given a performance improvement plan under the {doc:002}, with specific goals and support, and has not met the goals. The Company gives the Notice Period for the Grade or Notice Pay in lieu."
+      - clause: "6.2"
+        title: Misconduct
+        text: "Employment may be terminated for misconduct after the disciplinary procedure in the {doc:004}. Termination for gross misconduct is without notice or Notice Pay."
+      - clause: "6.3"
+        title: Redundancy
+        text: "Where a role becomes redundant because of the loss of a client, a restructuring or a change in technology, the Company first seeks a suitable alternative role for the Employee for at least 30 days. If none is found, employment is terminated with the Notice Period or Notice Pay in lieu, and severance pay under {ref:#6.4}."
+      - clause: "6.4"
+        title: Severance pay
+        text: "An Employee whose employment ends by redundancy receives severance pay of one month's fixed pay for each completed year of service, subject to a minimum of two months and a maximum of six months, in addition to Notice Pay. Where the Employee is a workman entitled to {stat:ID_RETRENCHMENT|retrenchment compensation under the Industrial Disputes Act, 1947 or the Industrial Relations Code, 2020}, the severance pay includes that compensation and is never less than it."
+      - clause: "6.5"
+        title: Outplacement support
+        text: "An Employee leaving by redundancy is offered three months of outplacement support from an external provider, continued group medical insurance for three months after the Last Day of Service, and a reference confirming that the separation was not related to performance or conduct."
+
+  - num: 7
+    title: Exit Process and Clearances
+    body:
+      - clause: "7.1"
+        title: Handover
+        text: "Within five Working Days of the resignation, the Employee and the Reporting Manager agree a handover plan on the NPP, listing work to be transferred, documents and credentials to be handed over, and client communication. The Reporting Manager confirms completion before the Last Day of Service."
+      - clause: "7.2"
+        title: Clearances
+        text: "Each function completes its clearance on the NPP by the Last Day of Service, as set out in {ref:#Table 2}. Clearances not completed within five Working Days after the Last Day of Service are escalated to the Head, HR Operations."
+      - table:
+          id: Table 2
+          title: Exit clearances
+          header: ["Function", "What is cleared", "By when"]
+          widths: [1.6, 4.6, 1.8]
+          rows:
+            - ["Reporting Manager", "Handover plan completed; project access removal requested", "Last Day of Service"]
+            - ["IT Service Desk", "Laptop, peripherals and mobile device returned; data backed up where required; accounts disabled at 6:00 p.m. on the Last Day of Service", "Last Day of Service"]
+            - ["Facilities", "Identity card, access cards, locker keys and parking permit returned", "Last Day of Service"]
+            - ["Finance", "Travel advances settled; corporate card closed; pending claims submitted", "Last Day of Service"]
+            - ["Payroll", "Loans and salary advances computed for recovery", "Three Working Days after"]
+            - ["HR Operations", "Exit interview offered; documents prepared; statutory records updated", "Five Working Days after"]
+      - clause: "7.3"
+        title: Exit interview
+        text: "The HR Business Partner offers every departing Employee an exit interview, in person or online, and an anonymous exit survey. Participation is voluntary. The content is confidential; themes are reported to the Business Unit Head without identifying individuals."
+      - clause: "7.4"
+        title: Personal data on devices
+        text: "Before returning a Company laptop or phone, the Employee may remove personal files with the IT Service Desk's help, but may not copy any Company or client data. A personal device enrolled under the {doc:009} has the Company work profile removed on the Last Day of Service."
+
+  - num: 8
+    title: Full and Final Settlement
+    body:
+      - clause: "8.1"
+        title: Components
+        text: "The F&F includes the following, calculated in accordance with the policy governing each item:"
+        items:
+          - "fixed pay for the days worked up to the Last Day of Service;"
+          - "encashment of the Earned Leave balance on the Last Day of Service, up to a maximum of 30 days, at Basic Salary divided by 26 for each day;"
+          - "gratuity, where the Employee is eligible under the {doc:005};"
+          - "variable pay, where payable under the Compensation and Benefits Policy;"
+          - "approved reimbursements and claims not yet paid; and"
+          - "recoveries, including unserved Notice Pay, outstanding loans and advances, prorated joining or relocation bonus, and the value of unreturned assets."
+      - clause: "8.2"
+        title: Time for settlement
+        text: "The F&F is processed and the net amount paid within 45 days of the Last Day of Service, provided that all clearances have been completed. Gratuity, where payable, is paid together with the F&F within the same 45 days."
+      - clause: "8.3"
+        title: Statement and queries
+        text: "The F&F statement is published on the NPP and sent to the Employee's personal e-mail address. The Employee may raise a query within 30 days of the statement; Payroll responds within ten Working Days and pays any correction within a further ten Working Days."
+      - clause: "8.4"
+        title: Net amount payable by the Employee
+        text: "Where recoveries exceed the amounts payable, the Employee pays the difference within 30 days of the statement. The Relieving Letter is issued on payment."
+      - clause: "8.5"
+        title: Tax
+        text: "Tax is deducted at source on the F&F in accordance with law, taking into account the {stat:IT_GRATUITY_EXEMPT|exemptions for gratuity} and {stat:IT_LEAVE_ENCASH|leave encashment on separation}. Form 16 for the year is issued after the end of the financial year."
+
+  - num: 9
+    title: Relieving Letter and Other Documents
+    body:
+      - clause: "9.1"
+        title: Relieving Letter and service certificate
+        text: "The Relieving Letter and a service certificate stating the dates of employment and the last designation are issued within seven Working Days after all clearances are completed and any amount due from the Employee is paid. The service certificate does not comment on performance or the reason for leaving."
+      - clause: "9.2"
+        title: Provident fund
+        text: "The Employee's provident fund remains in the Universal Account Number and may be transferred to the next employer or withdrawn under the EPFO rules. The Company updates the date of exit on the EPFO portal within seven days of the Last Day of Service."
+      - clause: "9.3"
+        title: References
+        text: "Requests for references from prospective employers or background verification agencies are answered only by HR Operations and only with the Employee's consent, confirming the dates of employment, the last designation and the Grade. Managers do not give personal references on behalf of the Company."
+      - clause: "9.4"
+        title: Insurance continuation
+        text: "Group medical insurance ends on the Last Day of Service, except as provided in {ref:#6.5}. The insurer's conversion option is described in the exit kit on the NPP."
+
+  - num: 10
+    title: Obligations after Employment
+    body:
+      - clause: "10.1"
+        title: Confidentiality
+        text: "The obligation to keep confidential the information of the Company, its clients and its Employees continues after the Last Day of Service without limit of time. The Employee returns or destroys all confidential material and confirms this in the exit declaration."
+      - clause: "10.2"
+        title: Non-solicitation of Employees
+        text: "For 12 months after the Last Day of Service, the former Employee shall not solicit or induce any Employee with whom the former Employee worked in the last 12 months of employment to leave the Company."
+      - clause: "10.3"
+        title: Non-solicitation of clients
+        text: "For 12 months after the Last Day of Service, the former Employee shall not solicit business from, or provide services directly to, any client for whom the former Employee worked in the last 12 months of employment, in competition with the Company. Joining a client as its own employee is subject to the terms of the Company's contract with that client, which the HR Business Partner will explain."
+      - clause: "10.4"
+        title: No post-employment non-compete
+        text: "The Company does not restrict a former Employee from joining a competitor after the Last Day of Service, recognising that {stat:CONTRACT_ACT_27|agreements in restraint of trade after employment are generally void under Indian law}. The obligations in {ref:#10.1} to {ref:#10.3} continue to apply."
+      - clause: "10.5"
+        title: Intellectual property
+        text: "Work product created during employment remains the property of the Company or its client under the {doc:004}. The former Employee assists, at the Company's cost, with any formality needed to record the Company's rights."
+
+  - num: 11
+    title: Absconding
+    body:
+      - clause: "11.1"
+        title: Contacting the Employee
+        text: "Where an Employee is absent without intimation, the Reporting Manager tries to contact the Employee and the emergency contact by telephone and e-mail on the first and third Working Days, and informs the HR Business Partner, who checks whether the Employee is safe."
+      - clause: "11.2"
+        title: Letters
+        text: "Where the absence continues for eight consecutive Working Days, HR Operations sends a letter by registered post and e-mail to the last known addresses, asking the Employee to report or explain the absence within seven days. If there is no response, a second letter is sent giving a further seven days and stating that the Employee will otherwise be treated as having abandoned employment."
+      - clause: "11.3"
+        title: Deemed abandonment
+        text: "If the Employee does not respond to the second letter, the Employee is treated as having abandoned employment with effect from the first day of absence. The F&F is prepared with recovery of Notice Pay for the Notice Period, only a service certificate stating the dates of employment is issued, and the separation is recorded as Absconding. The Company does not issue a Relieving Letter."
+      - clause: "11.4"
+        title: Return and explanation
+        text: "Where the Employee reports or responds with an explanation, such as a medical emergency, the absence is dealt with under the {doc:001} and, where appropriate, the {doc:004}."
+
+  - num: 12
+    title: Retirement, Death and Rehire
+    body:
+      - clause: "12.1"
+        title: Retirement
+        text: "Employees retire on the last day of the month in which they attain the age of 60 years. The Company may offer a retired Employee a fixed-term consultancy or contract where business needs require, on terms agreed at the time."
+      - clause: "12.2"
+        title: Death in service
+        text: "On the death of an Employee in service, the HR Business Partner contacts the family to offer support and to guide them through the formalities. The F&F, gratuity, insurance and the family support described in the {doc:005}, and leave encashment under the {doc:001}, are paid to the nominee within 15 days of receiving the death certificate and the claim documents. No notice or recovery for unserved notice applies."
+      - clause: "12.3"
+        title: Rehire
+        text: "A former Employee who left by resignation or redundancy may be rehired after six months from the Last Day of Service. A former Employee terminated for misconduct or recorded as Absconding is not eligible for rehire. On rehire within 12 months of the Last Day of Service, the previous service is counted for the long service awards in the {doc:002}."
+
+  - num: 13
+    title: Special Circumstances
+    body:
+      - clause: "13.1"
+        title: During maternity leave
+        text: "The Company does not terminate the employment of a woman Employee during her maternity leave, and {stat:MB_NO_DISMISSAL|a discharge or dismissal during maternity absence is unlawful} except for gross misconduct in the circumstances permitted by the Maternity Benefit Act, 1961. A redundancy affecting her role is deferred until she has returned and been offered any suitable alternative role."
+      - clause: "13.2"
+        title: During illness
+        text: "Employment is not terminated for performance while an Employee is on certified Sick Leave or special sick leave. Where an Employee is unable to return to work after prolonged illness, the HR Business Partner explores reasonable accommodation and alternative roles before any separation is considered, and any separation on medical grounds is approved by the Chief People Officer."
+      - clause: "13.3"
+        title: Resignation during a performance improvement plan
+        text: "An Employee on a performance improvement plan may resign at any time. The plan ends on resignation, and the Notice Period applies in the usual way. The resignation does not affect the Employee's eligibility for rehire under {ref:#12.3}."
+      - clause: "13.4"
+        title: Resignation during an inquiry
+        text: "Where an Employee resigns while a disciplinary inquiry or an Internal Committee inquiry is pending, the inquiry is completed and its outcome recorded. The Relieving Letter may be withheld until the outcome is known, but for not more than 60 days after the Last Day of Service, and the service certificate is issued in any case."
+
+  - num: 14
+    title: Exits from Client Sites and Assignments Abroad
+    body:
+      - clause: "14.1"
+        title: Client access and assets
+        text: "An Employee deployed at a client site returns the client's identity card, equipment and tokens to the client's project manager on or before the Last Day of Service, and the Reporting Manager confirms the return in the handover plan. The client's own exit formalities are completed where the contract requires them."
+      - clause: "14.2"
+        title: Assignments abroad
+        text: "An Employee on an assignment abroad who resigns returns to India before the Last Day of Service unless the Business Unit Head approves otherwise. The Company bears the cost of the return journey, and host-country formalities, such as the cancellation of a work permit and final tax filings, are completed through the Company's advisors."
+      - clause: "14.3"
+        title: Visa sponsorship
+        text: "Where the Company has sponsored a work visa, it informs the immigration authorities of the end of employment where the law of the host country requires, and the former Employee is responsible for complying with the conditions of the visa after the Last Day of Service."
+
+  - num: 15
+    title: Communicating Departures
+    body:
+      - clause: "15.1"
+        title: Announcements
+        text: "The Reporting Manager informs the team and, where relevant, the client of an Employee's departure after agreeing the wording with the Employee. The reason for leaving is not disclosed without the Employee's agreement."
+      - clause: "15.2"
+        title: E-mail and accounts
+        text: "On the Last Day of Service, the e-mail account is closed and an automatic reply, agreed with the Employee, directs correspondents to the Reporting Manager for 30 days. Personal messages received after that date are not forwarded."
+      - clause: "15.3"
+        title: Public profiles
+        text: "The former Employee updates public professional profiles to show that employment has ended within 30 days of the Last Day of Service, and does not describe the Company's clients or confidential work in a manner that breaches {ref:#10.1}."
+
+  - num: 16
+    title: Appeals and Concerns
+    body:
+      - clause: "16.1"
+        title: Appeal against termination
+        text: "An Employee whose employment is terminated for performance or redundancy may appeal in writing to the Chief People Officer within 15 days of the notice of termination. The Chief People Officer, or a senior leader nominated by the Chief People Officer who was not involved in the decision, decides within 30 days. Appeals against termination for misconduct follow the {doc:004}."
+      - clause: "16.2"
+        title: Concerns about the settlement or documents
+        text: "A concern about the Full and Final Settlement, the Relieving Letter or any other document is raised as a ticket through the HR Helpdesk and, if unresolved within ten Working Days, escalated to the Head, HR Operations."
+
+annexures:
+  - id: A
+    title: Exit Declaration
+    body:
+      - table:
+          title: "Form HR-EX-01: Exit declaration (completed on the NPP on the Last Day of Service)"
+          form: true
+          widths: [3, 2]
+          rows:
+            - ["I have returned all Company assets issued to me", ""]
+            - ["I have not retained any Company or client information in any form, on any device or account", ""]
+            - ["I understand my continuing obligations of confidentiality and non-solicitation", ""]
+            - ["Personal e-mail address and telephone number for the F&F and documents", ""]
+            - ["Signature and date", ""]
+
+  - id: B
+    title: Illustration of a Full and Final Settlement
+    body:
+      - para: "The example below is for an Employee in Grade L5 who resigns and serves 60 of the 90 days of notice, the Business Unit Head having declined a waiver and approved a buyout of the balance."
+      - clause: "B.1"
+        title: Facts
+        text: "Monthly fixed pay is Rs. 1,50,000, of which Basic Salary is Rs. 75,000. The Last Day of Service is the 20th day of the month. The Earned Leave balance on that day is 52 days. The Employee has 6 years and 4 months of service, and there is no loan outstanding."
+      - table:
+          id: Table 3
+          title: F&F computation for the illustration
+          header: ["Item", "Calculation", "Amount (Rs.)"]
+          widths: [2.6, 3.8, 1.8]
+          rows:
+            - ["Fixed pay for 20 days", "1,50,000 divided by 30, multiplied by 20", "1,00,000"]
+            - ["Earned Leave encashment", "75,000 divided by 26, multiplied by 30 days", "86,538"]
+            - ["Gratuity", "75,000 multiplied by 15, divided by 26, multiplied by 6 years", "2,59,615"]
+            - ["Less: buyout of 30 unserved days of notice", "1,50,000 divided by 30, multiplied by 30", "(1,50,000)"]
+            - ["Net amount before tax", "", "2,96,153"]
+          note: "Of the 52 days of Earned Leave, 30 days are encashed under {ref:#8.1} and the remainder lapses. Service of 6 years and 4 months counts as 6 years because the part-year does not exceed six months."
+
+  - id: C
+    title: Frequently Asked Questions
+    body:
+      - clause: "C.1"
+        title: Can my manager refuse my resignation?
+        text: "No. A resignation cannot be refused under {ref:#4.2}. The manager may discuss the reasons, and the Company may decide whether to waive any part of the Notice Period."
+      - clause: "C.2"
+        title: I have an offer that needs me to join in 45 days, but my notice is 60 days. What can I do?
+        text: "Request a waiver of 15 days under {ref:#5.3}. If it is not approved, the unserved days may be bought out under {ref:#5.4}, subject to approval and to any circular limiting buyout."
+      - clause: "C.3"
+        title: Can I take my pending Earned Leave during notice instead of encashing it?
+        text: "Only with the approval of the Reporting Manager and the HR Business Partner, and such leave extends the Last Day of Service unless the extension is waived, as provided in the Leave Policy."
+      - clause: "C.4"
+        title: When will I get my Relieving Letter?
+        text: "Within seven Working Days after clearances are complete and any amount due from you is paid, under {ref:#9.1}, subject to any circular that shortens this time."
+      - clause: "C.5"
+        title: I am joining a competitor. Will the Company stop me?
+        text: "No. There is no post-employment non-compete under {ref:#10.4}. The Company may place you on Garden Leave during the Notice Period, and your confidentiality and non-solicitation obligations continue after you leave."
+
+      - clause: "C.6"
+        title: I am on maternity leave and my project has been closed. Can I be let go?
+        text: "No. The Company does not terminate employment during maternity leave, and any redundancy is deferred until after return and after alternative roles have been considered, under {ref:#13.1}."
+      - clause: "C.7"
+        title: Can the Company withhold my Relieving Letter because an inquiry is pending?
+        text: "Only until the outcome is known and for not more than 60 days after the Last Day of Service, under {ref:#13.4}. The service certificate is issued in any case."
+      - clause: "C.8"
+        title: I was made redundant after four years. What will I receive?
+        text: "Notice Pay or the Notice Period, severance of one month's fixed pay for each completed year, which is four months, outplacement support and three months of continued medical insurance, under {ref:#6.4} and {ref:#6.5}. Gratuity is not payable because five years of service have not been completed."
+
+      - clause: "C.9"
+        title: Do I have to serve notice if the Company ends my fixed-term contract on its end date?
+        text: "No. A fixed-term contract ends on its stated date without notice on either side under {ref:#3.2}. Notice applies only if either party wishes to end it before that date."
+  - id: D
+    title: Exit Timeline
+    body:
+      - para: "The table below shows the usual sequence of steps after a resignation, with the time allowed for each. The governing clause applies where a step is delayed."
+      - table:
+          id: Table 4
+          title: Exit steps and timelines
+          header: ["Step", "Timeline", "Clause"]
+          widths: [4, 2.4, 1.4]
+          rows:
+            - ["Resignation submitted on the NPP", "Day 0", "{ref:#4.1}"]
+            - ["Acknowledgement by the Reporting Manager", "Within 2 Working Days", "{ref:#4.2}"]
+            - ["Last date to request withdrawal of the resignation", "Within 7 days", "{ref:#4.3}"]
+            - ["Handover plan agreed", "Within 5 Working Days", "{ref:#7.1}"]
+            - ["Clearances completed", "By the Last Day of Service", "{ref:#7.2}"]
+            - ["Gratuity paid, where eligible", "Within 30 days of becoming payable, as required by law", "{ref:#1.3}"]
+            - ["Full and Final Settlement paid", "Within 45 days of the Last Day of Service", "{ref:#8.2}"]
+            - ["Relieving Letter and service certificate issued", "After clearances and payment of dues, within the time in {ref:#9.1} as amended", "{ref:#9.1}"]
+
+circulars_intro: "The circulars below amend this Policy. Each prevails over the clause it amends from its effective date; the body of the Policy is reproduced unedited."
+
+circulars:
+  - number: HR/CIR/2025/04
+    date: "2025-04-07"
+    effective_from: "2025-04-15"
+    subject: Limit on buyout of the Notice Period
+    amends: ["5.4"]
+    issued_by: Chief People Officer
+    body:
+      - para: "To protect client delivery during transitions, with effect from 15 April 2025, an Employee may buy out not more than 50 per cent of the Notice Period under {ref:#5.4}. The balance must be served, unless it is waived by the Company under {ref:#5.3}."
+      - para: "For example, an Employee in Grade L3 with a Notice Period of 60 days must serve at least 30 days, and may buy out up to 30 days. Buyout during probation is not affected."
+
+  - number: HR/CIR/2026/07
+    date: "2026-06-08"
+    effective_from: "2026-06-15"
+    subject: Digital Relieving Letter
+    amends: ["9.1"]
+    issued_by: Head, HR Operations
+    body:
+      - para: "With effect from 15 June 2026, the Relieving Letter and the service certificate are issued digitally on the NPP, with a verifiable digital signature, within three Working Days after all clearances are completed and any amount due from the Employee is paid, instead of seven Working Days as stated in {ref:#9.1}. A copy is sent to the Employee's personal e-mail address."

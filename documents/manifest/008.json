@@ -1,0 +1,541 @@
+{
+ "doc_id": "008",
+ "title": "Separation and Exit Policy",
+ "number": "NTL/HR/POL/008",
+ "version": "3.0",
+ "effective_date": "2025-01-01",
+ "pdf": "NTL-HR-POL-008_Separation_and_Exit_Policy.pdf",
+ "pages": 12,
+ "built": "2026-09-28T18:57:24",
+ "toc": [
+  {
+   "level": 0,
+   "text": "1. Purpose, Scope and Precedence",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "2. Definitions",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "3. Ways in which Employment Ends",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "4. Resignation",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "5. Notice Period",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "6. Termination by the Company",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "7. Exit Process and Clearances",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "8. Full and Final Settlement",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "9. Relieving Letter and Other Documents",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "10. Obligations after Employment",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "11. Absconding",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "12. Retirement, Death and Rehire",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "13. Special Circumstances",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "14. Exits from Client Sites and Assignments Abroad",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "15. Communicating Departures",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "16. Appeals and Concerns",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "Annexure A: Exit Declaration",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure B: Illustration of a Full and Final Settlement",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure C: Frequently Asked Questions",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure D: Exit Timeline",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "Amendment Circulars",
+   "page": 12
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/04: Limit on buyout of the Notice Period",
+   "page": 12
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2026/07: Digital Relieving Letter",
+   "page": 12
+  }
+ ],
+ "anchors": {
+  "Section 1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.2": {
+   "start": 4,
+   "end": 4
+  },
+  "1.3": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.1": {
+   "start": 4,
+   "end": 4
+  },
+  "2.2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.3": {
+   "start": 4,
+   "end": 4
+  },
+  "2.4": {
+   "start": 4,
+   "end": 4
+  },
+  "2.5": {
+   "start": 4,
+   "end": 4
+  },
+  "2.6": {
+   "start": 4,
+   "end": 4
+  },
+  "2.7": {
+   "start": 4,
+   "end": 4
+  },
+  "2.8": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 3": {
+   "start": 4,
+   "end": 4
+  },
+  "3.1": {
+   "start": 4,
+   "end": 4
+  },
+  "3.2": {
+   "start": 4,
+   "end": 4
+  },
+  "3.3": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 4": {
+   "start": 4,
+   "end": 5
+  },
+  "4.1": {
+   "start": 4,
+   "end": 4
+  },
+  "4.2": {
+   "start": 4,
+   "end": 4
+  },
+  "4.3": {
+   "start": 4,
+   "end": 5
+  },
+  "4.4": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 5": {
+   "start": 5,
+   "end": 5
+  },
+  "5.1": {
+   "start": 5,
+   "end": 5
+  },
+  "Table 1": {
+   "start": 5,
+   "end": 5
+  },
+  "5.2": {
+   "start": 5,
+   "end": 5
+  },
+  "5.3": {
+   "start": 5,
+   "end": 5
+  },
+  "5.4": {
+   "start": 5,
+   "end": 5
+  },
+  "5.5": {
+   "start": 5,
+   "end": 5
+  },
+  "5.6": {
+   "start": 5,
+   "end": 5
+  },
+  "5.7": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 6": {
+   "start": 5,
+   "end": 6
+  },
+  "6.1": {
+   "start": 5,
+   "end": 5
+  },
+  "6.2": {
+   "start": 5,
+   "end": 6
+  },
+  "6.3": {
+   "start": 6,
+   "end": 6
+  },
+  "6.4": {
+   "start": 6,
+   "end": 6
+  },
+  "6.5": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 7": {
+   "start": 6,
+   "end": 6
+  },
+  "7.1": {
+   "start": 6,
+   "end": 6
+  },
+  "7.2": {
+   "start": 6,
+   "end": 6
+  },
+  "Table 2": {
+   "start": 6,
+   "end": 6
+  },
+  "7.3": {
+   "start": 6,
+   "end": 6
+  },
+  "7.4": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 8": {
+   "start": 6,
+   "end": 7
+  },
+  "8.1": {
+   "start": 6,
+   "end": 7
+  },
+  "8.2": {
+   "start": 7,
+   "end": 7
+  },
+  "8.3": {
+   "start": 7,
+   "end": 7
+  },
+  "8.4": {
+   "start": 7,
+   "end": 7
+  },
+  "8.5": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 9": {
+   "start": 7,
+   "end": 7
+  },
+  "9.1": {
+   "start": 7,
+   "end": 7
+  },
+  "9.2": {
+   "start": 7,
+   "end": 7
+  },
+  "9.3": {
+   "start": 7,
+   "end": 7
+  },
+  "9.4": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 10": {
+   "start": 7,
+   "end": 7
+  },
+  "10.1": {
+   "start": 7,
+   "end": 7
+  },
+  "10.2": {
+   "start": 7,
+   "end": 7
+  },
+  "10.3": {
+   "start": 7,
+   "end": 7
+  },
+  "10.4": {
+   "start": 7,
+   "end": 7
+  },
+  "10.5": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 11": {
+   "start": 7,
+   "end": 8
+  },
+  "11.1": {
+   "start": 8,
+   "end": 8
+  },
+  "11.2": {
+   "start": 8,
+   "end": 8
+  },
+  "11.3": {
+   "start": 8,
+   "end": 8
+  },
+  "11.4": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 12": {
+   "start": 8,
+   "end": 8
+  },
+  "12.1": {
+   "start": 8,
+   "end": 8
+  },
+  "12.2": {
+   "start": 8,
+   "end": 8
+  },
+  "12.3": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 13": {
+   "start": 8,
+   "end": 8
+  },
+  "13.1": {
+   "start": 8,
+   "end": 8
+  },
+  "13.2": {
+   "start": 8,
+   "end": 8
+  },
+  "13.3": {
+   "start": 8,
+   "end": 8
+  },
+  "13.4": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 14": {
+   "start": 8,
+   "end": 9
+  },
+  "14.1": {
+   "start": 9,
+   "end": 9
+  },
+  "14.2": {
+   "start": 9,
+   "end": 9
+  },
+  "14.3": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 15": {
+   "start": 9,
+   "end": 9
+  },
+  "15.1": {
+   "start": 9,
+   "end": 9
+  },
+  "15.2": {
+   "start": 9,
+   "end": 9
+  },
+  "15.3": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 16": {
+   "start": 9,
+   "end": 9
+  },
+  "16.1": {
+   "start": 9,
+   "end": 9
+  },
+  "16.2": {
+   "start": 9,
+   "end": 9
+  },
+  "Annexure A": {
+   "start": 10,
+   "end": 10
+  },
+  "Annexure B": {
+   "start": 10,
+   "end": 10
+  },
+  "B.1": {
+   "start": 10,
+   "end": 10
+  },
+  "Table 3": {
+   "start": 10,
+   "end": 10
+  },
+  "Annexure C": {
+   "start": 10,
+   "end": 11
+  },
+  "C.1": {
+   "start": 10,
+   "end": 10
+  },
+  "C.2": {
+   "start": 10,
+   "end": 10
+  },
+  "C.3": {
+   "start": 10,
+   "end": 10
+  },
+  "C.4": {
+   "start": 10,
+   "end": 10
+  },
+  "C.5": {
+   "start": 10,
+   "end": 10
+  },
+  "C.6": {
+   "start": 10,
+   "end": 11
+  },
+  "C.7": {
+   "start": 11,
+   "end": 11
+  },
+  "C.8": {
+   "start": 11,
+   "end": 11
+  },
+  "C.9": {
+   "start": 11,
+   "end": 11
+  },
+  "Annexure D": {
+   "start": 11,
+   "end": 11
+  },
+  "Table 4": {
+   "start": 11,
+   "end": 11
+  },
+  "HR/CIR/2025/04": {
+   "start": 12,
+   "end": 12
+  },
+  "HR/CIR/2026/07": {
+   "start": 12,
+   "end": 12
+  }
+ }
+}

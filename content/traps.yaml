@@ -216,3 +216,38 @@
   answer: "Rs. 6,000 per night excluding taxes, from 1 February 2025 (Circular HR/CIR/2025/01); Table 2 still shows Rs. 5,000 for L4-L5 in a Metro City."
   quotes:
     - {doc: "007", anchor: "HR/CIR/2025/01", text: "is increased from Rs. 5,000 to Rs. 6,000 per night, excluding taxes"}
+- id: T29
+  type: 2
+  doc: "008"
+  question: "I am an L5 leaving with 52 days of earned leave. How many days will be encashed in my full and final settlement?"
+  answer: "45 days. The Separation Policy (Clause 8.1) says a maximum of 30 days, but the Leave Policy (Clause 11.2) encashes up to the Grade accumulation limit (45 for L5) and states (Clause 11.5, via 1.4) that it prevails over a different limit in the Separation Policy. The Separation Policy itself (Clause 1.3) says payments follow the policy governing each payment."
+  quotes:
+    - {doc: "008", anchor: "8.1", text: "up to a maximum of 30 days, at Basic Salary divided by 26 for each day"}
+    - {doc: "001", anchor: "11.2", text: "is encashed up to the accumulation limit for the Employee's Grade"}
+    - {doc: "001", anchor: "11.5", text: "where that policy states a different limit on leave encashment"}
+- id: T30
+  type: 2
+  doc: "008"
+  question: "What is the notice period if I resign at L5?"
+  answer: "90 days (Separation Policy Clause 5.1, Table 1). The Employee Handbook table shows 60 days for L3 to L5, but the Separation Policy governs notice periods and prevails (Separation Clause 1.3; Handbook Clause 1.3). 15 days if still on probation."
+  quotes:
+    - {doc: "008", anchor: "5.1", text: "An Employee in Grades L5 to L8 serves a Notice Period of 90 days"}
+    - {doc: "002", anchor: "Table 7", text: "L3 to L5 60 days"}
+    - {doc: "008", anchor: "1.3", text: "Where the Employee Handbook (NTL/HR/POL/002) summarises Notice Periods differently, this Policy prevails"}
+- id: T31
+  type: 1
+  doc: "008"
+  question: "I am an L3 with 60 days' notice. Can I buy out the whole notice period and leave next week?"
+  answer: "No. Since 15 April 2025 (Circular HR/CIR/2025/04) buyout is limited to 50 per cent of the Notice Period, so an L3 must serve at least 30 days unless the Company waives the rest (Clause 5.3). Clause 5.4 (buyout of the whole period) is amended."
+  quotes:
+    - {doc: "008", anchor: "5.4", text: "may buy out the whole or any part of the unserved Notice Period"}
+    - {doc: "008", anchor: "HR/CIR/2025/04", text: "an Employee may buy out not more than 50 per cent of the Notice Period"}
+- id: T32
+  type: 6
+  doc: "008"
+  question: "I left on 31 March after seven years. When must my gratuity be paid?"
+  answer: "Within 30 days of becoming payable (the Payment of Gratuity Act, as stated in Compensation Policy Clause 7.3), not the 45 days in Separation Policy Clause 8.2; the Separation Policy itself (Clause 1.3) says a more favourable statutory time limit prevails. Interest is payable on delay."
+  quotes:
+    - {doc: "008", anchor: "8.2", text: "Gratuity, where payable, is paid together with the F&F within the same 45 days"}
+    - {doc: "005", anchor: "7.3", text: "within 30 days of the date it becomes payable"}
+    - {doc: "008", anchor: "1.3", text: "where a statute provides a more favourable time limit or amount, the statute prevails"}

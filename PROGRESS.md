@@ -51,6 +51,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 2, doc 007 Travel: 12 pages (target 14 ±2), traps T26-T28 verified (D-027). Running total 108 pages / 28 traps.
 
+- [x] Phase 2, doc 008 Separation: 12 pages (target 14 ±2), traps T29-T32 verified; conflicts C02 and C04 complete (D-028). Running total 120 pages / 32 traps. NEXT: doc 009 IT Security, then final all-document checks.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 
