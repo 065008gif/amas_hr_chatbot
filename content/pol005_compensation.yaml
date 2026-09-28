@@ -1,0 +1,690 @@
+doc_id: "005"
+title: Compensation and Benefits Policy
+number: NTL/HR/POL/005
+version: "7.0"
+effective_date: "2025-01-01"
+target_pages: 20
+lowercase_ok: [wages]
+
+control:
+  owner: Head, Total Rewards
+  approver: Chief People Officer and Chief Financial Officer, noted by the Nomination and Remuneration Committee
+  approval_date: "2024-12-16"
+  classification: Internal - Confidential
+  supersedes: Compensation and Benefits Policy version 6.2 dated 1 April 2024
+  review_cycle: Annual, and on any change in tax or labour law
+  applicable_to: All Employees in Grades L1 to L8 on the Indian payroll of Nexora Technologies Limited
+  distribution: "Published on the NPP under Policies > Pay and Benefits. Individual compensation is communicated only in the compensation letter. Printed copies are uncontrolled."
+
+history:
+  - ["5.0", "2019-04-01", "Variable pay plan restated; ESOP Scheme 2019 summarised.", "Total Rewards / CPO and CFO"]
+  - ["6.0", "2022-04-01", "Salary structure aligned to the wage definition under the Code on Wages, 2019; Basic Salary set at 50 per cent of fixed pay.", "Total Rewards / CPO and CFO"]
+  - ["6.2", "2024-04-01", "Group medical sum insured revised; employer NPS contribution introduced for Grades L5 to L8.", "Total Rewards / CPO and CFO"]
+  - ["7.0", "2025-01-01", "Restructured; professional tax by State, ESI continuation and gratuity illustrations added.", "Total Rewards / CPO and CFO"]
+
+sections:
+  - num: 1
+    title: Purpose and Principles
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Policy sets out how Employees are paid, the components of pay, the statutory and Company benefits, the variable pay plan, the group insurance programme, the employee stock option scheme, and the annual pay review. It is read with each Employee's compensation letter, which states the individual amounts."
+      - clause: "1.2"
+        title: Principles
+        text: "The Company pays competitively against the Indian IT services market for each Grade and skill, links a part of pay to Company and individual performance, and pays men and women equally for the same work or work of a similar nature, as required by the {stat:COW_EQUAL_PAY|Code on Wages, 2019}. Pay decisions are free from discrimination on any ground listed in the {doc:004}."
+      - clause: "1.3"
+        title: Precedence
+        text: "Where the compensation letter of an Employee differs from this Policy, the letter prevails for that Employee, unless the letter provides less than applicable law. Where this Policy differs from the summary of pay and benefits in the {doc:002}, this Policy prevails."
+      - clause: "1.4"
+        title: Confidentiality
+        text: "Individual pay is confidential between the Employee and the Company. Employees may discuss their own pay if they wish, but Employees with access to pay data through their role shall not disclose any other Employee's pay."
+
+  - num: 2
+    title: Definitions
+    body:
+      - clause: "2.1"
+        term: Annual Fixed Pay
+        text: "means the total of Basic Salary, house rent allowance, leave travel allowance, communication allowance and special allowance payable in a year, before deductions."
+      - clause: "2.2"
+        term: Basic Salary
+        text: "means the component of pay designated as basic in the compensation letter, which is 50 per cent of Annual Fixed Pay for every Grade."
+      - clause: "2.3"
+        term: Cost to Company
+        text: "(CTC) means Annual Fixed Pay, plus the employer's contributions to provident fund and, where applicable, the National Pension System, plus the provision for gratuity at 4.81 per cent of Basic Salary, plus Target Variable Pay. Group insurance premiums are borne by the Company in addition to CTC."
+      - clause: "2.4"
+        term: Company Factor
+        text: "means the multiplier between 0 and 1.3 approved by the Board for a Performance Year on the basis of the Company's revenue and operating margin against plan."
+      - clause: "2.5"
+        term: Individual Factor
+        text: "means the multiplier linked to the Employee's performance rating for the Performance Year, as set out in {ref:#Table 3}."
+      - clause: "2.6"
+        term: Metro City
+        text: "means, for the purpose of the income tax exemption for house rent allowance only, Delhi, Mumbai, Kolkata and Chennai, being the cities specified in the {stat:IT_HRA_METRO|Income-tax Rules for this purpose}. Accordingly, among the Company's locations only Chennai is a Metro City for house rent allowance; Bengaluru, Pune, Hyderabad and Noida are not, even though they may be classified differently for other purposes such as travel."
+      - clause: "2.7"
+        term: Payout Date
+        text: "means the date on which variable pay for a Performance Year is credited, which is the salary date for the month of June following the end of the Performance Year."
+      - clause: "2.8"
+        term: Performance Year
+        text: "means the period from 1 April to 31 March."
+      - clause: "2.9"
+        term: Target Variable Pay
+        text: "means the percentage of Annual Fixed Pay set out for the Employee's Grade in {ref:#Table 1}, payable at a Company Factor and an Individual Factor of 1.0."
+
+  - num: 3
+    title: Salary Structure
+    body:
+      - clause: "3.1"
+        title: Components
+        text: "Annual Fixed Pay is divided into the components below. The percentages and amounts by Grade are set out in {ref:#Table 1}."
+        items:
+          - "Basic Salary: 50 per cent of Annual Fixed Pay, so that wages as defined in the {stat:COW_WAGES_50|Code on Wages, 2019} are not less than half of total remuneration;"
+          - "house rent allowance (HRA): 50 per cent of Basic Salary, paid at every location irrespective of whether the location is a Metro City;"
+          - "leave travel allowance (LTA): a fixed annual amount by Grade, paid in equal monthly instalments;"
+          - "communication allowance: a fixed monthly amount for Grades L5 to L8; and"
+          - "special allowance: the balance of Annual Fixed Pay after the above components."
+      - table:
+          id: Table 1
+          title: Salary structure and variable pay by Grade
+          grade_table: true
+          header: ["Grade", "Basic Salary", "HRA", "LTA per year", "Communication allowance per month", "Target Variable Pay (% of Annual Fixed Pay)", "Employer NPS"]
+          widths: [0.7, 1.2, 1.1, 1.1, 1.5, 1.7, 1.2]
+          rows:
+            - ["L1", "50% of fixed pay", "50% of Basic", "Nil", "Nil", "Nil", "Not eligible"]
+            - ["L2", "50% of fixed pay", "50% of Basic", "Nil", "Nil", "8%", "Not eligible"]
+            - ["L3", "50% of fixed pay", "50% of Basic", "Rs. 30,000", "Nil", "8%", "Not eligible"]
+            - ["L4", "50% of fixed pay", "50% of Basic", "Rs. 30,000", "Nil", "10%", "Not eligible"]
+            - ["L5", "50% of fixed pay", "50% of Basic", "Rs. 50,000", "Rs. 2,000", "12%", "Up to 10% of Basic"]
+            - ["L6", "50% of fixed pay", "50% of Basic", "Rs. 50,000", "Rs. 2,000", "15%", "Up to 10% of Basic"]
+            - ["L7", "50% of fixed pay", "50% of Basic", "Rs. 80,000", "Rs. 3,000", "20%", "Up to 10% of Basic"]
+            - ["L8", "50% of fixed pay", "50% of Basic", "Rs. 80,000", "Rs. 3,000", "25%", "Up to 10% of Basic"]
+          note: "An illustrative breakup of CTC is given in {ref:#Annexure A}. Employer NPS is optional and is funded by restructuring the special allowance; it does not increase CTC."
+      - clause: "3.2"
+        title: House rent allowance and tax
+        text: "HRA is paid at the same rate at every location. The income tax exemption on HRA, available only under the old tax regime, is the least of the HRA received, the rent paid minus 10 per cent of Basic Salary, and {stat:IT_HRA_EXEMPT|50 per cent of Basic Salary for an Employee living in a Metro City or 40 per cent elsewhere}. Payroll computes the exemption on the basis of the city in which the Employee pays rent, applying the definition of Metro City in {ref:#2.6}."
+      - clause: "3.3"
+        title: Meal card
+        text: "An Employee may choose to receive up to Rs. 2,200 a month of the special allowance as a prepaid meal card, which may be used only for food and non-alcoholic beverages. The tax treatment of meal cards depends on the tax regime chosen and the {stat:IT_MEAL_VOUCHER|limits under the Income-tax Rules}."
+      - clause: "3.4"
+        title: Changes to the structure
+        text: "An Employee may change the meal card and employer NPS elections once a year in April through the NPP. The structure is otherwise fixed and cannot be varied by individual request."
+
+  - num: 4
+    title: Payroll
+    body:
+      - clause: "4.1"
+        title: Pay date and cut-off
+        text: "Salary is credited on the last Working Day of each month. Inputs such as joining, leave without pay, arrears and claims approved by the 20th of a month are processed in that month's payroll; inputs received later are processed in the following month."
+      - clause: "4.2"
+        title: Payslip
+        text: "The payslip, showing each component, deduction and year-to-date total, is available on the NPP on the pay date. An Employee who believes the payslip is incorrect raises a ticket in the Payroll category within 30 days; corrections are made in the next payroll."
+      - clause: "4.3"
+        title: Statutory deductions
+        text: "The Company deducts income tax at source, the Employee's provident fund contribution, the Employee's ESI contribution where applicable, and professional tax where levied by the State, and remits them to the authorities within the time allowed by law."
+      - clause: "4.4"
+        title: Professional tax by State
+        text: "Professional tax is a State levy, and the amount deducted depends on the Employee's Base Location, as set out in {ref:#Table 2}. No professional tax is deducted for Employees based in Noida, because Uttar Pradesh does not levy professional tax on salaried employees."
+      - table:
+          id: Table 2
+          title: Professional tax deduction by location
+          header: ["Location", "State", "Deduction"]
+          widths: [1.4, 1.6, 5]
+          rows:
+            - ["Bengaluru", "Karnataka", "{stat:PT_KA|Rs. 200 a month where monthly gross salary exceeds the State threshold}"]
+            - ["Pune", "Maharashtra", "{stat:PT_MH|Rs. 200 a month, and Rs. 300 in February, where monthly gross salary exceeds the State threshold}"]
+            - ["Hyderabad", "Telangana", "{stat:PT_TG|Rs. 200 a month where monthly gross salary exceeds the State threshold}"]
+            - ["Chennai", "Tamil Nadu", "{stat:PT_TN|Deducted half-yearly, in September and March, at the rate notified by the Greater Chennai Corporation for the half-yearly income}"]
+            - ["Noida", "Uttar Pradesh", "{stat:PT_UP|Not levied}"]
+          note: "{stat:PT_CAP|Professional tax cannot exceed Rs. 2,500 in a year for any person, under the Constitution of India.} State rates and thresholds change from time to time; payroll applies the rates in force."
+      - clause: "4.5"
+        title: Loss of pay
+        text: "For each day of Leave Without Pay or unauthorised absence, fixed pay is reduced by one-thirtieth of the monthly fixed pay, irrespective of the number of days in the month."
+      - clause: "4.6"
+        title: Recoveries
+        text: "Salary advances, notice period shortfall, unreturned assets and other amounts due to the Company are recovered from salary or the full and final settlement only as permitted by law and after informing the Employee of the amount and the reason."
+
+  - num: 5
+    title: Provident Fund
+    body:
+      - clause: "5.1"
+        title: Coverage
+        text: "Every Employee is a member of the Employees' Provident Fund under the {stat:EPF_ACT|Employees' Provident Funds and Miscellaneous Provisions Act, 1952} from the date of joining. The Company's provident fund is administered by the Employees' Provident Fund Organisation (EPFO)."
+      - clause: "5.2"
+        title: Contributions
+        text: "The Employee contributes {stat:EPF_RATE|12 per cent of Basic Salary} each month, deducted from salary. The Company contributes an equal amount, of which {stat:EPS_SHARE|8.33 per cent of wages up to a wage ceiling of Rs. 15,000 a month} is credited to the Employees' Pension Scheme and the balance to the Employee's provident fund account. The Company contributes on the actual Basic Salary, without restricting it to the wage ceiling."
+      - clause: "5.3"
+        title: Voluntary contribution
+        text: "An Employee may make a voluntary provident fund contribution of up to 100 per cent of Basic Salary in addition to the statutory 12 per cent, by election on the NPP in April. The Company does not match the voluntary contribution."
+      - clause: "5.4"
+        title: Universal Account Number and transfers
+        text: "Each Employee's contributions are credited to the Universal Account Number (UAN) linked to the Employee's Aadhaar. A new Employee provides the UAN from the previous employer; the transfer of the previous balance is initiated by the Employee on the EPFO portal and approved by the Company within 15 days."
+      - clause: "5.5"
+        title: Withdrawals
+        text: "Withdrawals and advances from the provident fund are governed by the EPFO rules and are applied for by the Employee on the EPFO portal. The Company does not approve or restrict them, except to confirm employment details where the rules require."
+
+  - num: 6
+    title: Employees' State Insurance
+    body:
+      - clause: "6.1"
+        title: Coverage
+        text: "An Employee whose gross monthly wages do not exceed {stat:ESI_THRESHOLD|Rs. 21,000} is covered by the Employees' State Insurance scheme. Coverage is determined at the start of each contribution period, which runs from April to September and from October to March."
+      - clause: "6.2"
+        title: Contributions
+        text: "The covered Employee contributes {stat:ESI_RATES|0.75 per cent of gross wages and the Company contributes 3.25 per cent}. The Employee receives medical care through ESI dispensaries and hospitals, and cash benefits for sickness, maternity and employment injury from the ESI Corporation."
+      - clause: "6.3"
+        title: Continuation after a pay increase
+        text: "An Employee who is covered at the start of a contribution period {stat:ESI_CONTINUATION|remains covered, and contributions continue, until the end of that contribution period} even if wages rise above the threshold during the period. Coverage ends from the start of the next contribution period."
+      - clause: "6.4"
+        title: Group medical insurance for ESI-covered Employees
+        text: "An ESI-covered Employee is also covered by the group medical insurance in {ref:#Section 9}, which may be used for treatment at private hospitals. Maternity benefit for an ESI-covered woman Employee is paid by the ESI Corporation, and the Company pays any difference as described in the {doc:001}."
+
+  - num: 7
+    title: Gratuity
+    body:
+      - clause: "7.1"
+        title: Eligibility
+        text: "Gratuity is payable under the {stat:GRATUITY_ACT|Payment of Gratuity Act, 1972} to an Employee who leaves the Company by resignation, retirement or termination after {stat:GRATUITY_5_YEARS|not less than five years of continuous service}. The five-year condition does not apply where employment ends by death or disablement due to accident or disease."
+      - clause: "7.2"
+        title: Amount
+        text: "Gratuity is {stat:GRATUITY_FORMULA|fifteen days of the last drawn Basic Salary for every completed year of service, calculated as Basic Salary multiplied by 15 and divided by 26, multiplied by the number of completed years}. A part of a year exceeding six months is counted as a full year. Gratuity is subject to the {stat:GRATUITY_CEILING|ceiling of Rs. 20,00,000} in the Act."
+      - clause: "7.3"
+        title: Time of payment
+        text: "Gratuity becomes payable on the date employment ends, and the Company pays it {stat:GRATUITY_30_DAYS|within 30 days of the date it becomes payable}, whether or not the rest of the full and final settlement has been completed. If payment is delayed beyond this period, the Company pays simple interest at the rate notified under the Act."
+      - clause: "7.4"
+        title: Nomination and forfeiture
+        text: "Each Employee nominates one or more persons for gratuity on the NPP within 30 days of joining. Gratuity may be wholly or partly forfeited only in the {stat:GRATUITY_FORFEIT|circumstances set out in the Act}, such as termination for an act that caused damage to the Company's property, to the extent of the damage, or for riotous or violent conduct or an offence involving moral turpitude."
+      - clause: "7.5"
+        title: Illustration
+        text: "Worked examples are given in {ref:#Annexure B}."
+
+  - num: 8
+    title: Variable Pay
+    body:
+      - clause: "8.1"
+        title: Eligibility
+        text: "Employees in Grades L2 to L8 are eligible for variable pay at the Target Variable Pay for their Grade in {ref:#Table 1}. Employees in Grade L1 are not eligible; Graduate Engineer Trainees receive a one-time completion bonus described in their offer letter instead."
+      - clause: "8.2"
+        title: Calculation
+        text: "Variable pay for a Performance Year equals Target Variable Pay multiplied by the Company Factor and the Individual Factor. The Individual Factor for each rating is set out in {ref:#Table 3}."
+      - table:
+          id: Table 3
+          title: Individual Factor by performance rating
+          header: ["Performance rating", "Individual Factor"]
+          widths: [3, 3]
+          rows:
+            - ["5 - Outstanding", "1.5"]
+            - ["4 - Exceeds expectations", "1.2"]
+            - ["3 - Meets expectations", "1.0"]
+            - ["2 - Partially meets expectations", "0.5"]
+            - ["1 - Does not meet expectations", "0"]
+      - clause: "8.3"
+        title: Proration
+        text: "An Employee who joins during a Performance Year receives variable pay prorated for the number of complete months of service in that year. An Employee who joins after 31 December is not rated for that year and receives no variable pay for it. Periods of maternity, adoption and paternity leave count as service for proration; periods of Leave Without Pay of more than 30 days do not."
+      - clause: "8.4"
+        title: Condition of payment
+        text: "Variable pay is paid on the Payout Date only to an Employee who is on the rolls of the Company on the Payout Date and who has not resigned or been given notice of termination on or before that date. An Employee who is serving notice on the Payout Date is not eligible for variable pay for the preceding Performance Year, subject only to the exceptions in {ref:#8.5}."
+      - clause: "8.5"
+        title: Exceptions
+        text: "Variable pay for the completed months of the Performance Year is paid, at the Company Factor for the year and an Individual Factor of 1.0, where employment ends because of death, permanent disability or retirement on superannuation, or is terminated by the Company for reasons other than misconduct or performance, such as a restructuring."
+      - clause: "8.6"
+        title: Discretion and clawback
+        text: "The Board may reduce the Company Factor where results are restated, and the Company may recover variable pay paid on the basis of results or conduct later found to have been misstated or fraudulent."
+
+  - num: 9
+    title: Group Insurance
+    body:
+      - clause: "9.1"
+        title: Group medical insurance
+        text: "Every Employee is covered from the date of joining by a group medical insurance policy on a family floater basis for the Employee, spouse and up to two children. The policy year runs from 1 July to 30 June. Pre-existing diseases are covered from the first day, and the waiting periods for maternity and specified illnesses are waived."
+      - clause: "9.2"
+        title: Sum insured
+        text: "The family floater sum insured depends on Grade, as set out in {ref:#Table 4}."
+      - table:
+          id: Table 4
+          title: Group medical sum insured and room rent limits
+          header: ["Grades", "Family floater sum insured", "Room rent limit per day", "Maternity sub-limit"]
+          widths: [1.4, 2.2, 2.4, 2.4]
+          rows:
+            - ["L1 to L3", "Rs. 3,00,000", "1% of sum insured", "Rs. 50,000 normal; Rs. 75,000 caesarean"]
+            - ["L4 and L5", "Rs. 5,00,000", "1% of sum insured", "Rs. 50,000 normal; Rs. 75,000 caesarean"]
+            - ["L6 and L7", "Rs. 7,50,000", "Single private room", "Rs. 75,000 normal; Rs. 1,00,000 caesarean"]
+            - ["L8", "Rs. 10,00,000", "Single private room", "Rs. 75,000 normal; Rs. 1,00,000 caesarean"]
+      - clause: "9.3"
+        title: Parents and top-up
+        text: "An Employee may cover parents or parents-in-law, but not both, under a separate parental policy with a sum insured of Rs. 3,00,000 or Rs. 5,00,000, and may buy a top-up of the family floater of up to Rs. 10,00,000. The premium for both is paid by the Employee through salary deduction in twelve instalments."
+      - clause: "9.4"
+        title: Claims
+        text: "Cashless treatment is available at network hospitals through the third-party administrator, whose details are on the insurance card on the NPP. For treatment at other hospitals, the claim is submitted to the administrator within 30 days of discharge. Claim disputes are escalated to the HR Helpdesk in the Benefits category."
+      - clause: "9.5"
+        title: What is covered
+        text: "The principal inclusions and exclusions of the group medical policy are summarised in {ref:#Table 5}. The policy document on the NPP prevails over this summary."
+      - table:
+          id: Table 5
+          title: Group medical insurance - principal inclusions and exclusions
+          header: ["Covered", "Not covered"]
+          widths: [4, 4]
+          rows:
+            - ["In-patient hospitalisation of 24 hours or more, including room, nursing, surgery and medicines", "Out-patient consultations and medicines, except as part of day-care treatment"]
+            - ["Day-care procedures that need less than 24 hours because of technology, such as cataract surgery and dialysis", "Cosmetic and aesthetic treatment, unless required after an accident"]
+            - ["Pre-hospitalisation expenses for 30 days and post-hospitalisation expenses for 60 days", "Treatment of infertility, except as specified in the policy"]
+            - ["Maternity expenses within the sub-limit, and newborn cover from the first day", "Dental treatment and spectacles, unless required after an accident"]
+            - ["Ambulance charges up to Rs. 3,000 for each hospitalisation", "Self-inflicted injury and treatment arising from substance abuse"]
+            - ["Treatment of mental illness on the same terms as physical illness, as required by law", "Experimental or unproven treatment"]
+      - clause: "9.6"
+        title: Personal accident and term life insurance
+        text: "Every Employee is covered by group personal accident insurance for death and permanent disability, and by group term life insurance, each for three times Annual Fixed Pay. Nominees are recorded on the NPP."
+      - clause: "9.7"
+        title: Adding dependants
+        text: "Dependants are added within 30 days of joining. A new spouse or a newborn child is added within 30 days of the marriage or birth and is covered from the date of the event. Other additions take effect from the next policy renewal on 1 July."
+
+  - num: 10
+    title: Employee Stock Options
+    body:
+      - clause: "10.1"
+        title: Scheme
+        text: "Stock options are granted under the Nexora Employee Stock Option Scheme 2022, approved by the shareholders. The Scheme document prevails over this summary."
+      - clause: "10.2"
+        title: Eligibility
+        text: "Employees in Grades L6 to L8 may be considered for a grant each year, on the recommendation of the Business Unit Head and the approval of the Nomination and Remuneration Committee. A grant is discretionary and does not create an entitlement to future grants. Employees in Grades L1 to L5 are not eligible under the Scheme."
+      - clause: "10.3"
+        title: Vesting
+        text: "Options vest over four years in equal instalments of 25 per cent on each anniversary of the grant date, subject to continued employment on the vesting date. No option vests before the first anniversary."
+      - clause: "10.4"
+        title: Exercise
+        text: "Vested options may be exercised within three years of vesting, at the exercise price stated in the grant letter, during an open Trading Window under the {doc:004}. On exercise, the difference between the fair market value and the exercise price is taxed as a {stat:IT_ESOP_PERQ|perquisite in the hands of the Employee} and tax is deducted through payroll."
+      - clause: "10.5"
+        title: On leaving the Company
+        text: "On resignation or termination, unvested options lapse on the last day of service, and vested options may be exercised within 90 days of that date. On death or permanent disability, all unvested options vest immediately and may be exercised by the Employee or the nominee within 12 months."
+      - clause: "10.6"
+        title: Illustration
+        text: "An Employee in Grade L6 is granted 4,000 options on 1 August 2024 at an exercise price of Rs. 400. Of these, 1,000 options vest on each of 1 August 2025, 2026, 2027 and 2028. If the Employee exercises 1,000 vested options when the fair market value is Rs. 700, the perquisite value is 1,000 multiplied by Rs. 300, which is Rs. 3,00,000, taxed as salary in that month. If the Employee resigns with a last day of service of 31 December 2026, the 2,000 options due to vest in 2027 and 2028 lapse, and the 2,000 vested options may be exercised by 31 March 2027."
+
+  - num: 11
+    title: National Pension System
+    body:
+      - clause: "11.1"
+        title: Employer contribution
+        text: "An Employee in Grades L5 to L8 may elect an employer contribution to the Employee's National Pension System account of up to 10 per cent of Basic Salary, funded by an equivalent reduction in special allowance. The election is made on the NPP in April and applies for the Performance Year."
+      - clause: "11.2"
+        title: Tax
+        text: "The employer contribution is eligible for deduction {stat:IT_80CCD2|under section 80CCD(2) of the Income-tax Act, 1961, within the percentage of salary allowed for the tax regime chosen}. Contributions above the limit are taxable."
+
+  - num: 12
+    title: Allowances and Other Benefits
+    body:
+      - clause: "12.1"
+        title: Leave travel allowance
+        text: "LTA is paid monthly as part of Annual Fixed Pay. Under the old tax regime, an Employee may claim exemption for the cost of travel within India for the Employee and family, for {stat:IT_LTA|two journeys in a block of four calendar years}, by submitting tickets on the NPP by 15 January."
+      - clause: "12.2"
+        title: Leave condition for LTA
+        text: "An LTA exemption claim is accepted only where the journey was undertaken during a spell of Earned Leave of at least 5 Working Days recorded on the NPP."
+      - clause: "12.3"
+        title: Communication allowance
+        text: "Employees in Grades L5 to L8 receive a communication allowance towards mobile and internet costs, as shown in {ref:#Table 1}, and do not claim these costs separately. Employees in lower Grades on hybrid work claim internet reimbursement as described in the {doc:002}."
+      - clause: "12.4"
+        title: Car lease
+        text: "An Employee in Grade L7 or L8 may lease a car through the Company's leasing partner by restructuring special allowance. The tax on the perquisite is calculated under the Income-tax Rules and deducted through payroll. The car and all costs remain within the Employee's CTC."
+
+  - num: 13
+    title: Annual Pay Review
+    body:
+      - clause: "13.1"
+        title: Cycle
+        text: "Pay is reviewed once a year. Revised pay is effective from 1 July and communicated through a revised compensation letter on the NPP by 30 June. Arrears, if any, are paid in the July payroll."
+      - clause: "13.2"
+        title: Increase guidelines
+        text: "The budget for increases is approved by the Board each year. Within the budget, increases are guided by performance rating and by the Employee's position in the pay range for the Grade, as set out in {ref:#Table 6}."
+      - table:
+          id: Table 6
+          title: Indicative merit increase by rating
+          header: ["Performance rating", "Indicative increase in Annual Fixed Pay", "Remarks"]
+          widths: [2, 2.6, 3.6]
+          rows:
+            - ["5", "12% to 15%", "Upper end where pay is below the midpoint of the range"]
+            - ["4", "9% to 12%", "Upper end where pay is below the midpoint of the range"]
+            - ["3", "6% to 9%", "Lower end where pay is above the midpoint of the range"]
+            - ["2", "0% to 3%", "Increase at the discretion of the Business Unit Head"]
+            - ["1", "Nil", "Performance improvement plan applies"]
+          note: "The ranges are indicative and apply at a budget of 8 per cent. They are scaled up or down in proportion to the budget approved for the year."
+      - clause: "13.3"
+        title: Promotion increase
+        text: "An Employee promoted on 1 July receives a promotion increase of 10 to 15 per cent of Annual Fixed Pay in addition to the merit increase, subject to the minimum of the pay range of the new Grade."
+      - clause: "13.4"
+        title: Pay equity review
+        text: "Each year, before increases are finalised, Total Rewards reviews pay within each Grade and role for unexplained differences between men and women and between locations, and reports the result to the Chief People Officer with corrective proposals."
+
+  - num: 14
+    title: Pay Ranges and Offers
+    body:
+      - clause: "14.1"
+        title: Pay ranges
+        text: "Each Grade has a pay range for Annual Fixed Pay, reviewed every year against market surveys for the Indian IT services industry. The ranges in force from 1 January 2025 are set out in {ref:#Table 7}. Ranges for niche skills may be extended by up to 20 per cent above the maximum with the approval of the Head, Total Rewards."
+      - table:
+          id: Table 7
+          title: Annual Fixed Pay ranges by Grade (Rs. lakh a year)
+          grade_table: true
+          header: ["Grade", "Minimum", "Midpoint", "Maximum"]
+          widths: [1, 1.5, 1.5, 1.5]
+          rows:
+            - ["L1", "3.6", "4.5", "5.4"]
+            - ["L2", "5.0", "6.5", "8.0"]
+            - ["L3", "8.0", "10.5", "13.0"]
+            - ["L4", "12.0", "15.5", "19.0"]
+            - ["L5", "18.0", "23.0", "28.0"]
+            - ["L6", "26.0", "33.0", "40.0"]
+            - ["L7", "38.0", "48.0", "58.0"]
+            - ["L8", "55.0", "75.0", "100.0"]
+          note: "The ranges are the same at every location; the Company does not apply location differentials within India."
+      - clause: "14.2"
+        title: Offers to new Employees
+        text: "An offer is made within the range for the Grade, taking into account the candidate's current pay, skills and the pay of Employees in the same role. An offer above the midpoint requires the approval of the Business Unit Head, and an offer above the maximum requires the approval of the Head, Total Rewards."
+      - clause: "14.3"
+        title: Joining bonus
+        text: "A joining bonus may be offered to compensate a candidate for a bonus or benefit forfeited on leaving a previous employer. It is paid with the first salary and is recovered in full if the Employee resigns, or is terminated for misconduct, within 12 months of joining."
+      - clause: "14.4"
+        title: Retention bonus
+        text: "A retention bonus may be awarded to an Employee in a critical role, in writing, specifying the amount, the retention period and the payment date. It is paid only if the Employee is on the rolls and not serving notice on the payment date, and is not pro-rated on early exit."
+
+  - num: 15
+    title: Statutory Bonus
+    body:
+      - clause: "15.1"
+        title: Eligibility
+        text: "An Employee whose salary or wage, as defined in the {stat:BONUS_ACT|Payment of Bonus Act, 1965}, does not exceed {stat:BONUS_ELIGIBILITY|Rs. 21,000 a month} and who has worked for at least 30 working days in the accounting year is entitled to statutory bonus for that year."
+      - clause: "15.2"
+        title: Amount and payment
+        text: "Statutory bonus is paid at {stat:BONUS_RATE|not less than 8.33 per cent and not more than 20 per cent of the salary or wage earned}, calculated on a salary or wage of Rs. 7,000 a month or the minimum wage for the scheduled employment, whichever is higher. It is paid by 30 November following the end of the accounting year on 31 March."
+      - clause: "15.3"
+        title: Relationship with variable pay
+        text: "Most Employees earn above the eligibility limit and are not entitled to statutory bonus. For an eligible Employee, statutory bonus is paid in addition to any variable pay, and variable pay is not reduced on account of it."
+
+  - num: 16
+    title: Income Tax Administration
+    body:
+      - clause: "16.1"
+        title: Choice of tax regime
+        text: "Each Employee chooses the old or the new tax regime for the purpose of monthly tax deduction, through the NPP in April or within 30 days of joining. If no choice is made, tax is deducted under the {stat:IT_DEFAULT_REGIME|new regime, which is the default under the Income-tax Act}."
+      - clause: "16.2"
+        title: Declarations and proofs
+        text: "Under the old regime, the Employee declares proposed investments, rent and interest on housing loans on the NPP in April, and submits proofs, including rent receipts and the landlord's permanent account number where annual rent exceeds {stat:IT_LANDLORD_PAN|Rs. 1,00,000}, by 15 January. Tax for the months of February and March is adjusted to reflect the proofs actually submitted."
+      - clause: "16.3"
+        title: Income from a previous employer
+        text: "A new Employee who received salary from another employer in the same financial year submits the details on the NPP within 30 days of joining, so that tax can be deducted on total income. If the details are not provided, the Employee is responsible for any tax payable on filing the return."
+      - clause: "16.4"
+        title: Form 16 and annual statement
+        text: "The Company issues Form 16 through the NPP by 15 June each year. Employees are responsible for filing their own income tax returns and for any tax on income from other sources."
+      - clause: "16.5"
+        title: Perquisites
+        text: "The value of taxable perquisites, including leased cars, ESOP exercises, gift vouchers above the exempt limit and interest-free loans above the exempt amount, is added to salary and tax is deducted in the month in which the perquisite arises."
+
+  - num: 17
+    title: Pay in Special Circumstances
+    body:
+      - clause: "17.1"
+        title: During paid leave
+        text: "Full fixed pay is paid during all paid leave under the {doc:001}. Leave Without Pay reduces pay as described in {ref:#4.5}."
+      - clause: "17.2"
+        title: During the notice period
+        text: "An Employee serving notice continues to receive full pay and benefits until the last day of service. Where the Company waives the notice period, pay is made up to the last day of service as agreed; where the Employee does not serve the notice required, the shortfall is recovered as provided in the {doc:008}."
+      - clause: "17.3"
+        title: During suspension
+        text: "An Employee suspended pending inquiry receives the subsistence allowance provided in the {doc:004}. Benefits under group insurance continue during suspension."
+      - clause: "17.4"
+        title: During a sabbatical
+        text: "No salary is paid during a sabbatical. Group medical insurance for the Employee alone continues at the Company's cost, as provided in the Leave Policy, and provident fund contributions are suspended."
+      - clause: "17.5"
+        title: Death in service
+        text: "On the death of an Employee in service, in addition to gratuity, insurance and the encashment of leave, the Company pays the nominee a family support amount equal to three months' Annual Fixed Pay divided by twelve, within 15 days of receiving the death certificate. The Company also continues group medical insurance for the spouse and children for 12 months at its cost."
+      - clause: "17.6"
+        title: Education support for children
+        text: "Where an Employee dies in service, the Company reimburses the tuition fees of up to two children, up to Rs. 1,00,000 a year for each child, until the child completes a first undergraduate degree or reaches 23 years of age, whichever is earlier."
+
+  - num: 18
+    title: Pay on Assignments Abroad
+    body:
+      - clause: "18.1"
+        title: Home-based pay
+        text: "An Employee on an assignment abroad of more than 90 days under the {doc:002} continues to receive Annual Fixed Pay in India, and provident fund contributions continue. The Employee also receives a host allowance, housing and other benefits stated in the assignment letter, paid in the host currency."
+      - clause: "18.2"
+        title: Host allowance
+        text: "The host allowance is set by country group, as shown in {ref:#Table 8}, to meet reasonable daily living costs other than housing. It is not part of Annual Fixed Pay, is not counted for gratuity, variable pay or pay review, and stops on the last day of the assignment."
+      - table:
+          id: Table 8
+          title: Host allowance by country group (per month)
+          header: ["Country group", "Examples", "Grades L1 to L4", "Grades L5 to L8"]
+          widths: [1.4, 3.2, 1.8, 1.8]
+          rows:
+            - ["A", "United States, United Kingdom, Switzerland, Singapore", "USD 1,800", "USD 2,400"]
+            - ["B", "Germany, Netherlands, Australia, Canada, Japan", "USD 1,500", "USD 2,000"]
+            - ["C", "United Arab Emirates, Poland, Malaysia, South Africa", "USD 1,100", "USD 1,500"]
+          note: "Housing is provided separately through a Company-leased apartment. Countries not listed are assigned to a group by the Head, Total Rewards."
+      - clause: "18.3"
+        title: Tax equalisation
+        text: "Assignments of more than 183 days in a year are tax-equalised: the Employee bears the tax the Employee would have paid in India on home-based pay, and the Company bears any additional tax in the host country. Tax returns in both countries are prepared by the Company's appointed advisor."
+
+  - num: 19
+    title: Loans and Advances
+    body:
+      - clause: "19.1"
+        title: Salary advance
+        text: "The interest-free salary advance for medical emergencies described in the Employee Handbook is administered by Payroll and recovered in not more than six equal monthly instalments."
+      - clause: "19.2"
+        title: Emergency loan
+        text: "A Confirmed Employee in Grades L1 to L4 facing hospitalisation of the Employee or a member of the Immediate Family, or damage to the Employee's home from a natural calamity, may apply for an interest-free emergency loan of up to Rs. 2,00,000, recovered in not more than 24 monthly instalments. Only one emergency loan may be outstanding at a time."
+      - clause: "19.3"
+        title: Tax on loans
+        text: "An interest-free loan is a taxable perquisite, except {stat:IT_LOAN_PERQ|where the aggregate loan does not exceed Rs. 20,000 or the loan is for the treatment of specified diseases}. The perquisite, where taxable, is calculated at the rate prescribed in the Income-tax Rules and included in salary."
+      - clause: "19.4"
+        title: Recovery on exit
+        text: "Any outstanding loan or advance is recovered from the full and final settlement. Where the settlement is insufficient, the Employee repays the balance before the relieving letter is issued, or agrees a repayment schedule with Payroll."
+
+  - num: 20
+    title: Recognition Awards
+    body:
+      - clause: "20.1"
+        title: Spot and quarterly awards
+        text: "Managers may give spot awards of Rs. 5,000 to Rs. 25,000 for exceptional contributions, within the business unit budget. Quarterly awards carry a cash prize of up to Rs. 50,000 for an individual and Rs. 1,00,000 for a team, shared equally."
+      - clause: "20.2"
+        title: Payment and tax
+        text: "Awards are paid through payroll and are taxable as salary. Non-cash awards, such as gift vouchers and long-service awards, are taxable as perquisites above the exempt limit, and the tax is deducted in the month of the award."
+
+  - num: 21
+    title: Overpayments and Pay Concerns
+    body:
+      - clause: "21.1"
+        title: Overpayments
+        text: "Where an Employee is paid more than the amount due, for example because of a delayed Leave Without Pay input, Payroll informs the Employee of the amount and the reason, and recovers it from salary in instalments not exceeding 25 per cent of the monthly net pay, unless the Employee chooses to repay it earlier."
+      - clause: "21.2"
+        title: Underpayments
+        text: "Any underpayment is paid as arrears in the next payroll after it is identified, without the Employee having to apply."
+      - clause: "21.3"
+        title: Raising a concern about pay
+        text: "An Employee who has a concern about pay, including a concern that pay is not equal to that of colleagues doing the same work, may raise it with the HR Business Partner or as a ticket in the Payroll category. Concerns about pay equity are reviewed by Total Rewards, which responds in writing within 30 days. The Employee may escalate an unresolved concern through the grievance process in the Employee Handbook."
+
+  - num: 22
+    title: Compensation Governance
+    body:
+      - clause: "22.1"
+        title: Approvals
+        text: "The pay ranges, the salary structure, the Target Variable Pay percentages and the annual increase budget are approved by the Chief People Officer and the Chief Financial Officer, and noted by the Nomination and Remuneration Committee of the Board. The pay of Employees in Grade L8 who are key managerial personnel is approved by the Committee and, where required by law, by the Board and the shareholders."
+      - clause: "22.2"
+        title: Exceptions
+        text: "Any exception to this Policy for an individual, such as pay above the range maximum, a retention bonus above Rs. 10,00,000, or a variation of variable pay terms, requires the written approval of the Head, Total Rewards and the Chief People Officer, and is recorded in the exceptions register reviewed by Internal Audit each year."
+      - clause: "22.3"
+        title: Data and audit
+        text: "Payroll data is processed in the payroll system with access restricted to Payroll and Total Rewards staff, and is audited each year by Internal Audit and the statutory auditors. Changes to an Employee's pay are made only on the basis of an approved record on the NPP, and every change is logged."
+
+  - num: 23
+    title: Support for Disability
+    body:
+      - clause: "23.1"
+        title: Dependent children with disabilities
+        text: "A child with a disability of 40 per cent or more, certified by a competent medical authority, remains covered under the family floater of the group medical insurance without any age limit, whereas other children are covered up to the age of 25 years. The certificate is uploaded on the NPP at the time of enrolment or renewal."
+      - clause: "23.2"
+        title: Assistive devices and accessibility
+        text: "The cost of assistive devices and software needed by an Employee with a disability to perform the role, such as screen readers, hearing aids used at work and adapted furniture, is borne by the Company outside CTC, on the recommendation of the HR Business Partner under the reasonable accommodation process in the Employee Handbook."
+      - clause: "23.3"
+        title: Transport allowance
+        text: "An Employee with a locomotor or visual disability who does not use Company transport receives a transport allowance of Rs. 3,200 a month in addition to Annual Fixed Pay. The {stat:IT_DISABILITY_TRANSPORT|tax treatment of this allowance depends on the tax regime chosen}."
+
+annexures:
+  - id: A
+    title: Illustrative CTC Breakup
+    body:
+      - para: "The example below is for an Employee in Grade L3 with a monthly Basic Salary of Rs. 40,000 based in Bengaluru. Figures are rounded to the nearest rupee."
+      - table:
+          id: Table 9
+          title: Illustration of CTC for Grade L3
+          header: ["Component", "Monthly (Rs.)", "Annual (Rs.)"]
+          widths: [3.6, 2, 2]
+          rows:
+            - ["Basic Salary (50% of Annual Fixed Pay)", "40,000", "4,80,000"]
+            - ["House rent allowance (50% of Basic Salary)", "20,000", "2,40,000"]
+            - ["Leave travel allowance", "2,500", "30,000"]
+            - ["Special allowance (balance)", "17,500", "2,10,000"]
+            - ["Annual Fixed Pay", "80,000", "9,60,000"]
+            - ["Employer provident fund (12% of Basic Salary)", "4,800", "57,600"]
+            - ["Gratuity provision (4.81% of Basic Salary)", "1,924", "23,088"]
+            - ["Target Variable Pay (8% of Annual Fixed Pay)", "Paid annually", "76,800"]
+            - ["Cost to Company", "", "11,17,488"]
+          note: "Monthly deductions in this example are the Employee's provident fund contribution of Rs. 4,800, professional tax as in {ref:#Table 2}, and income tax. Group insurance premiums are paid by the Company outside CTC."
+
+  - id: B
+    title: Gratuity Illustrations
+    body:
+      - clause: "B.1"
+        title: Resignation after seven years and eight months
+        text: "An Employee with a last drawn Basic Salary of Rs. 60,000 a month resigns after 7 years and 8 months of continuous service. The part-year of 8 months exceeds six months and is counted as a full year, giving 8 years. Gratuity is Rs. 60,000 multiplied by 15, divided by 26, multiplied by 8, which is Rs. 2,76,923, payable within 30 days of the last day of service."
+      - clause: "B.2"
+        title: Resignation after four years and ten months
+        text: "An Employee resigns after 4 years and 10 months. The Employee has not completed five years of continuous service, so no gratuity is payable on resignation. The rounding of part-years in {ref:#7.2} applies only to the calculation of the amount, not to the five-year condition for eligibility."
+      - clause: "B.3"
+        title: Death in service after three years
+        text: "An Employee dies after 3 years and 2 months of service with a last drawn Basic Salary of Rs. 50,000. The five-year condition does not apply on death, so gratuity for 3 years is paid to the nominee: Rs. 50,000 multiplied by 15, divided by 26, multiplied by 3, which is Rs. 86,538."
+
+  - id: C
+    title: Variable Pay Illustrations and Frequently Asked Questions
+    body:
+      - clause: "C.1"
+        title: How is my variable pay calculated?
+        text: "An Employee in Grade L5 has Annual Fixed Pay of Rs. 20,00,000, so Target Variable Pay at 12 per cent is Rs. 2,40,000. For a year with a Company Factor of 0.9 and a rating of 4 (Individual Factor 1.2), variable pay is Rs. 2,40,000 multiplied by 0.9 and 1.2, which is Rs. 2,59,200. If the Employee had joined on 1 July, nine complete months of service would give Rs. 1,94,400."
+      - clause: "C.2"
+        title: I resigned in May. Will I receive variable pay in June for the year that ended in March?
+        text: "No. Under {ref:#8.4}, an Employee who has resigned on or before the Payout Date is not eligible, even though the Performance Year was completed. The exceptions in {ref:#8.5} cover death, permanent disability, retirement and termination by the Company for reasons other than misconduct or performance; they do not cover resignation."
+      - clause: "C.3"
+        title: I live in Bengaluru. Can I claim HRA exemption at 50 per cent?
+        text: "No. For HRA exemption, only Delhi, Mumbai, Kolkata and Chennai are Metro Cities under {ref:#2.6}, so the limit for an Employee paying rent in Bengaluru is 40 per cent of Basic Salary. The HRA itself is paid at 50 per cent of Basic Salary at every location; only the tax exemption differs."
+      - clause: "C.4"
+        title: My salary increased and I am no longer below the ESI limit. When does ESI stop?
+        text: "ESI continues until the end of the current contribution period, that is, until 30 September or 31 March, under {ref:#6.3}. From the next period the Employee is no longer covered and relies on the group medical insurance."
+      - clause: "C.5"
+        title: I am in Noida. Why is there no professional tax on my payslip?
+        text: "Uttar Pradesh does not levy professional tax on salaried employees, so none is deducted, as stated in {ref:#4.4}."
+
+      - clause: "C.6"
+        title: Can I opt out of provident fund because I want a higher take-home salary?
+        text: "No. Every Employee is a member of the provident fund from joining under {ref:#5.1}, and the Company contributes on actual Basic Salary. The Employee may, however, choose not to make a voluntary contribution above 12 per cent."
+      - clause: "C.7"
+        title: I joined on 15 January. Will I get variable pay for this year?
+        text: "No. An Employee who joins after 31 December is not rated for that Performance Year and receives no variable pay for it under {ref:#8.3}. Variable pay starts from the next Performance Year beginning on 1 April."
+      - clause: "C.8"
+        title: Can I add both my parents and my parents-in-law to the parental insurance?
+        text: "No. Under {ref:#9.3}, an Employee may cover either parents or parents-in-law, but not both. The premium is paid by the Employee through salary deduction."
+      - clause: "C.9"
+        title: When do my unvested stock options lapse if I resign?
+        text: "Unvested options lapse on the last day of service. Options that have already vested can be exercised within 90 days after the last day of service, during an open Trading Window, under {ref:#10.5}."
+      - clause: "C.10"
+        title: Is my HRA paid at 40 per cent because I am in Pune?
+        text: "No. HRA is paid at 50 per cent of Basic Salary at every location under {ref:#3.1}. The Metro City definition affects only how much of the HRA is exempt from income tax under the old regime."
+      - clause: "C.11"
+        title: I was on maternity leave for six months. Will my variable pay be reduced?
+        text: "No. Periods of maternity, adoption and paternity leave count as service for proration under {ref:#8.3}, and the rating is based on the period actually worked, as provided in the Leave Policy."
+      - clause: "C.12"
+        title: My sum insured was used up in the middle of the year. Is there any further cover?
+        text: "The family floater is shared by all members in the policy year. Where the sum insured is exhausted, further expenses are covered only by an optional top-up bought under {ref:#9.3}, or by the Employee's own insurance. The HR Helpdesk can advise on a corporate buffer, which the Chief People Officer may approve in exceptional cases."
+      - clause: "C.13"
+        title: Why does my CTC differ from the total of my twelve payslips?
+        text: "CTC includes the employer's provident fund contribution, the gratuity provision and Target Variable Pay, none of which appear as monthly earnings on the payslip. Variable pay is paid once a year in June, and gratuity only when employment ends after the qualifying period."
+      - clause: "C.14"
+        title: Does the Company pay statutory bonus to me?
+        text: "Only if the Employee's salary or wage, as defined in the Payment of Bonus Act, 1965, is within the eligibility limit in {ref:#15.1}. Most Employees earn above the limit and receive variable pay instead."
+  - id: D
+    title: Summary of Statutory Benefits
+    body:
+      - para: "The table below summarises the statutory benefits described in this Policy and the Company's practice where it goes beyond the law. The governing clause should be read for the complete rule."
+      - table:
+          id: Table 10
+          title: Statutory benefits and Company practice
+          header: ["Benefit", "Who is covered", "Statutory position", "Company practice"]
+          widths: [1.5, 2, 2.6, 2.6]
+          rows:
+            - ["Provident fund", "All Employees", "12 per cent employee and employer contribution", "Employer contribution on actual Basic Salary, not restricted to the wage ceiling"]
+            - ["Employees' State Insurance", "Gross wages up to the threshold", "0.75 per cent employee and 3.25 per cent employer contribution", "Group medical insurance also provided"]
+            - ["Gratuity", "Five years' continuous service, or death or disablement", "Fifteen days' wages per year, subject to the ceiling; paid within 30 days", "Paid within 30 days irrespective of the settlement date"]
+            - ["Statutory bonus", "Salary or wage up to the eligibility limit", "8.33 to 20 per cent", "Paid in addition to variable pay"]
+            - ["Maternity benefit", "Women meeting the eligibility condition", "Up to 26 weeks' paid leave", "Full salary paid; ESI benefit topped up"]
+  - id: E
+    title: Insurance Claim Checklist
+    body:
+      - table:
+          title: Documents for a reimbursement claim under group medical insurance
+          header: ["Document", "Required for", "Notes"]
+          widths: [3, 2.2, 3]
+          rows:
+            - ["Claim form signed by the Employee", "All claims", "Downloaded from the insurance section of the NPP"]
+            - ["Original hospital bills and payment receipts", "All claims", "Itemised bill showing room, pharmacy and investigation charges"]
+            - ["Discharge summary", "Hospitalisation", "Signed by the treating doctor"]
+            - ["Investigation reports and prescriptions", "All claims", "Including pre-hospitalisation (30 days) and post-hospitalisation (60 days) expenses"]
+            - ["Cancelled cheque of the Employee", "Reimbursement claims", "For payment by bank transfer"]
+            - ["First information report or medico-legal certificate", "Accident cases", "Where one was registered"]
+
+  - id: F
+    title: Tax Treatment of Pay Components
+    body:
+      - para: "The table below is a general guide to the income tax treatment of each component as applied by Payroll. Tax law changes each year and the individual position depends on the regime chosen; Employees should consult their own tax advisor."
+      - table:
+          id: Table 11
+          title: Tax treatment of pay components
+          header: ["Component", "Old tax regime", "New tax regime"]
+          widths: [2.4, 3, 3]
+          rows:
+            - ["Basic Salary, special allowance, communication allowance", "Taxable", "Taxable"]
+            - ["House rent allowance", "{stat:IT_HRA_EXEMPT|Partly exempt, as computed under the HRA rules}", "Fully taxable"]
+            - ["Leave travel allowance", "{stat:IT_LTA|Exempt for eligible journeys, two in a block of four years}", "Fully taxable"]
+            - ["Meal card", "{stat:IT_MEAL_VOUCHER|Exempt within the per-meal limit}", "Treated as per the rules applicable to the regime"]
+            - ["Employer provident fund contribution", "{stat:IT_PF_LIMIT|Not taxable up to the prescribed limit}", "Not taxable up to the prescribed limit"]
+            - ["Employer NPS contribution", "{stat:IT_80CCD2|Deductible within the limit}", "Deductible within the limit"]
+            - ["Variable pay, awards, joining and retention bonus", "Taxable in the year paid", "Taxable in the year paid"]
+            - ["ESOP exercise", "{stat:IT_ESOP_PERQ|Perquisite on exercise}", "Perquisite on exercise"]
+            - ["Gratuity on leaving", "{stat:IT_GRATUITY_EXEMPT|Exempt up to the statutory limit}", "Exempt up to the statutory limit"]
+            - ["Leave encashment on separation", "{stat:IT_LEAVE_ENCASH|Exempt up to the notified limit}", "Exempt up to the notified limit"]
+
+circulars_intro: "The circulars below amend this Policy with the approval of the Chief People Officer and the Chief Financial Officer. Each prevails over the clause it amends from its effective date; the body is reproduced unedited."
+
+circulars:
+  - number: HR/CIR/2025/03
+    date: "2025-03-10"
+    effective_from: "2025-04-01"
+    subject: Extension of employer NPS contribution to Grades L3 and L4
+    amends: ["11.1", "Table 1"]
+    issued_by: Chief People Officer and Chief Financial Officer
+    body:
+      - para: "With effect from 1 April 2025, the option of an employer contribution to the National Pension System under {ref:#11.1} is extended to Employees in Grades L3 and L4, on the same terms as for Grades L5 to L8. Employees in Grades L1 and L2 remain ineligible. {ref:#Table 1} stands amended accordingly."
+
+  - number: HR/CIR/2025/06
+    date: "2025-06-05"
+    effective_from: "2025-07-01"
+    subject: Revision of group medical sum insured for Grades L1 to L3
+    amends: ["9.2", "Table 4"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from the policy renewal on 1 July 2025, the family floater sum insured under the group medical insurance for Employees in Grades L1 to L3 is increased from Rs. 3,00,000 to Rs. 4,00,000. The room rent limit remains 1 per cent of the sum insured per day, that is, Rs. 4,000 per day."
+      - para: "The sum insured for Grades L4 to L8 in {ref:#Table 4} is unchanged."
+
+  - number: HR/CIR/2026/05
+    date: "2026-04-10"
+    effective_from: "2026-04-15"
+    subject: Leave condition for LTA claims
+    amends: ["12.2"]
+    issued_by: Head, Total Rewards
+    body:
+      - para: "With effect from 15 April 2026, an LTA exemption claim under {ref:#12.1} is accepted where the journey was undertaken during a spell of Earned Leave of at least 3 Working Days, instead of 5 Working Days as stated in {ref:#12.2}. The spell may include Casual Leave combined with Earned Leave as permitted by the Leave Policy."

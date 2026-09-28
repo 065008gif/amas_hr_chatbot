@@ -1,0 +1,827 @@
+{
+ "doc_id": "005",
+ "title": "Compensation and Benefits Policy",
+ "number": "NTL/HR/POL/005",
+ "version": "7.0",
+ "effective_date": "2025-01-01",
+ "pdf": "NTL-HR-POL-005_Compensation_and_Benefits_Policy.pdf",
+ "pages": 18,
+ "built": "2026-09-28T18:47:05",
+ "toc": [
+  {
+   "level": 0,
+   "text": "1. Purpose and Principles",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "2. Definitions",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "3. Salary Structure",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "4. Payroll",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "5. Provident Fund",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "6. Employees' State Insurance",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "7. Gratuity",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "8. Variable Pay",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "9. Group Insurance",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "10. Employee Stock Options",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "11. National Pension System",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "12. Allowances and Other Benefits",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "13. Annual Pay Review",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "14. Pay Ranges and Offers",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "15. Statutory Bonus",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "16. Income Tax Administration",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "17. Pay in Special Circumstances",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "18. Pay on Assignments Abroad",
+   "page": 12
+  },
+  {
+   "level": 0,
+   "text": "19. Loans and Advances",
+   "page": 12
+  },
+  {
+   "level": 0,
+   "text": "20. Recognition Awards",
+   "page": 12
+  },
+  {
+   "level": 0,
+   "text": "21. Overpayments and Pay Concerns",
+   "page": 13
+  },
+  {
+   "level": 0,
+   "text": "22. Compensation Governance",
+   "page": 13
+  },
+  {
+   "level": 0,
+   "text": "23. Support for Disability",
+   "page": 13
+  },
+  {
+   "level": 0,
+   "text": "Annexure A: Illustrative CTC Breakup",
+   "page": 14
+  },
+  {
+   "level": 0,
+   "text": "Annexure B: Gratuity Illustrations",
+   "page": 14
+  },
+  {
+   "level": 0,
+   "text": "Annexure C: Variable Pay Illustrations and Frequently Asked Questions",
+   "page": 14
+  },
+  {
+   "level": 0,
+   "text": "Annexure D: Summary of Statutory Benefits",
+   "page": 15
+  },
+  {
+   "level": 0,
+   "text": "Annexure E: Insurance Claim Checklist",
+   "page": 16
+  },
+  {
+   "level": 0,
+   "text": "Annexure F: Tax Treatment of Pay Components",
+   "page": 16
+  },
+  {
+   "level": 0,
+   "text": "Amendment Circulars",
+   "page": 18
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/03: Extension of employer NPS contribution to Grades L3 and L4",
+   "page": 18
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/06: Revision of group medical sum insured for Grades L1 to L3",
+   "page": 18
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2026/05: Leave condition for LTA claims",
+   "page": 18
+  }
+ ],
+ "anchors": {
+  "Section 1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.2": {
+   "start": 4,
+   "end": 4
+  },
+  "1.3": {
+   "start": 4,
+   "end": 4
+  },
+  "1.4": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.1": {
+   "start": 4,
+   "end": 4
+  },
+  "2.2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.3": {
+   "start": 4,
+   "end": 4
+  },
+  "2.4": {
+   "start": 4,
+   "end": 4
+  },
+  "2.5": {
+   "start": 4,
+   "end": 4
+  },
+  "2.6": {
+   "start": 4,
+   "end": 4
+  },
+  "2.7": {
+   "start": 4,
+   "end": 4
+  },
+  "2.8": {
+   "start": 4,
+   "end": 4
+  },
+  "2.9": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 3": {
+   "start": 4,
+   "end": 5
+  },
+  "3.1": {
+   "start": 4,
+   "end": 5
+  },
+  "Table 1": {
+   "start": 5,
+   "end": 5
+  },
+  "3.2": {
+   "start": 5,
+   "end": 5
+  },
+  "3.3": {
+   "start": 5,
+   "end": 5
+  },
+  "3.4": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 4": {
+   "start": 5,
+   "end": 6
+  },
+  "4.1": {
+   "start": 5,
+   "end": 5
+  },
+  "4.2": {
+   "start": 5,
+   "end": 5
+  },
+  "4.3": {
+   "start": 5,
+   "end": 5
+  },
+  "4.4": {
+   "start": 5,
+   "end": 5
+  },
+  "Table 2": {
+   "start": 5,
+   "end": 6
+  },
+  "4.5": {
+   "start": 6,
+   "end": 6
+  },
+  "4.6": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 5": {
+   "start": 6,
+   "end": 6
+  },
+  "5.1": {
+   "start": 6,
+   "end": 6
+  },
+  "5.2": {
+   "start": 6,
+   "end": 6
+  },
+  "5.3": {
+   "start": 6,
+   "end": 6
+  },
+  "5.4": {
+   "start": 6,
+   "end": 6
+  },
+  "5.5": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 6": {
+   "start": 6,
+   "end": 7
+  },
+  "6.1": {
+   "start": 6,
+   "end": 6
+  },
+  "6.2": {
+   "start": 6,
+   "end": 6
+  },
+  "6.3": {
+   "start": 6,
+   "end": 6
+  },
+  "6.4": {
+   "start": 6,
+   "end": 7
+  },
+  "Section 7": {
+   "start": 7,
+   "end": 7
+  },
+  "7.1": {
+   "start": 7,
+   "end": 7
+  },
+  "7.2": {
+   "start": 7,
+   "end": 7
+  },
+  "7.3": {
+   "start": 7,
+   "end": 7
+  },
+  "7.4": {
+   "start": 7,
+   "end": 7
+  },
+  "7.5": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 8": {
+   "start": 7,
+   "end": 8
+  },
+  "8.1": {
+   "start": 7,
+   "end": 7
+  },
+  "8.2": {
+   "start": 7,
+   "end": 7
+  },
+  "Table 3": {
+   "start": 7,
+   "end": 7
+  },
+  "8.3": {
+   "start": 7,
+   "end": 7
+  },
+  "8.4": {
+   "start": 7,
+   "end": 7
+  },
+  "8.5": {
+   "start": 7,
+   "end": 8
+  },
+  "8.6": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 9": {
+   "start": 8,
+   "end": 9
+  },
+  "9.1": {
+   "start": 8,
+   "end": 8
+  },
+  "9.2": {
+   "start": 8,
+   "end": 8
+  },
+  "Table 4": {
+   "start": 8,
+   "end": 8
+  },
+  "9.3": {
+   "start": 8,
+   "end": 8
+  },
+  "9.4": {
+   "start": 8,
+   "end": 8
+  },
+  "9.5": {
+   "start": 8,
+   "end": 8
+  },
+  "Table 5": {
+   "start": 8,
+   "end": 8
+  },
+  "9.6": {
+   "start": 8,
+   "end": 8
+  },
+  "9.7": {
+   "start": 8,
+   "end": 9
+  },
+  "Section 10": {
+   "start": 9,
+   "end": 9
+  },
+  "10.1": {
+   "start": 9,
+   "end": 9
+  },
+  "10.2": {
+   "start": 9,
+   "end": 9
+  },
+  "10.3": {
+   "start": 9,
+   "end": 9
+  },
+  "10.4": {
+   "start": 9,
+   "end": 9
+  },
+  "10.5": {
+   "start": 9,
+   "end": 9
+  },
+  "10.6": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 11": {
+   "start": 9,
+   "end": 9
+  },
+  "11.1": {
+   "start": 9,
+   "end": 9
+  },
+  "11.2": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 12": {
+   "start": 9,
+   "end": 9
+  },
+  "12.1": {
+   "start": 9,
+   "end": 9
+  },
+  "12.2": {
+   "start": 9,
+   "end": 9
+  },
+  "12.3": {
+   "start": 9,
+   "end": 9
+  },
+  "12.4": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 13": {
+   "start": 9,
+   "end": 10
+  },
+  "13.1": {
+   "start": 10,
+   "end": 10
+  },
+  "13.2": {
+   "start": 10,
+   "end": 10
+  },
+  "Table 6": {
+   "start": 10,
+   "end": 10
+  },
+  "13.3": {
+   "start": 10,
+   "end": 10
+  },
+  "13.4": {
+   "start": 10,
+   "end": 10
+  },
+  "Section 14": {
+   "start": 10,
+   "end": 11
+  },
+  "14.1": {
+   "start": 10,
+   "end": 10
+  },
+  "Table 7": {
+   "start": 10,
+   "end": 10
+  },
+  "14.2": {
+   "start": 10,
+   "end": 10
+  },
+  "14.3": {
+   "start": 10,
+   "end": 10
+  },
+  "14.4": {
+   "start": 10,
+   "end": 11
+  },
+  "Section 15": {
+   "start": 11,
+   "end": 11
+  },
+  "15.1": {
+   "start": 11,
+   "end": 11
+  },
+  "15.2": {
+   "start": 11,
+   "end": 11
+  },
+  "15.3": {
+   "start": 11,
+   "end": 11
+  },
+  "Section 16": {
+   "start": 11,
+   "end": 11
+  },
+  "16.1": {
+   "start": 11,
+   "end": 11
+  },
+  "16.2": {
+   "start": 11,
+   "end": 11
+  },
+  "16.3": {
+   "start": 11,
+   "end": 11
+  },
+  "16.4": {
+   "start": 11,
+   "end": 11
+  },
+  "16.5": {
+   "start": 11,
+   "end": 11
+  },
+  "Section 17": {
+   "start": 11,
+   "end": 12
+  },
+  "17.1": {
+   "start": 11,
+   "end": 11
+  },
+  "17.2": {
+   "start": 11,
+   "end": 11
+  },
+  "17.3": {
+   "start": 11,
+   "end": 11
+  },
+  "17.4": {
+   "start": 11,
+   "end": 11
+  },
+  "17.5": {
+   "start": 11,
+   "end": 12
+  },
+  "17.6": {
+   "start": 12,
+   "end": 12
+  },
+  "Section 18": {
+   "start": 12,
+   "end": 12
+  },
+  "18.1": {
+   "start": 12,
+   "end": 12
+  },
+  "18.2": {
+   "start": 12,
+   "end": 12
+  },
+  "Table 8": {
+   "start": 12,
+   "end": 12
+  },
+  "18.3": {
+   "start": 12,
+   "end": 12
+  },
+  "Section 19": {
+   "start": 12,
+   "end": 12
+  },
+  "19.1": {
+   "start": 12,
+   "end": 12
+  },
+  "19.2": {
+   "start": 12,
+   "end": 12
+  },
+  "19.3": {
+   "start": 12,
+   "end": 12
+  },
+  "19.4": {
+   "start": 12,
+   "end": 12
+  },
+  "Section 20": {
+   "start": 12,
+   "end": 13
+  },
+  "20.1": {
+   "start": 12,
+   "end": 12
+  },
+  "20.2": {
+   "start": 12,
+   "end": 13
+  },
+  "Section 21": {
+   "start": 13,
+   "end": 13
+  },
+  "21.1": {
+   "start": 13,
+   "end": 13
+  },
+  "21.2": {
+   "start": 13,
+   "end": 13
+  },
+  "21.3": {
+   "start": 13,
+   "end": 13
+  },
+  "Section 22": {
+   "start": 13,
+   "end": 13
+  },
+  "22.1": {
+   "start": 13,
+   "end": 13
+  },
+  "22.2": {
+   "start": 13,
+   "end": 13
+  },
+  "22.3": {
+   "start": 13,
+   "end": 13
+  },
+  "Section 23": {
+   "start": 13,
+   "end": 13
+  },
+  "23.1": {
+   "start": 13,
+   "end": 13
+  },
+  "23.2": {
+   "start": 13,
+   "end": 13
+  },
+  "23.3": {
+   "start": 13,
+   "end": 13
+  },
+  "Annexure A": {
+   "start": 14,
+   "end": 14
+  },
+  "Table 9": {
+   "start": 14,
+   "end": 14
+  },
+  "Annexure B": {
+   "start": 14,
+   "end": 14
+  },
+  "B.1": {
+   "start": 14,
+   "end": 14
+  },
+  "B.2": {
+   "start": 14,
+   "end": 14
+  },
+  "B.3": {
+   "start": 14,
+   "end": 14
+  },
+  "Annexure C": {
+   "start": 14,
+   "end": 15
+  },
+  "C.1": {
+   "start": 14,
+   "end": 14
+  },
+  "C.2": {
+   "start": 14,
+   "end": 14
+  },
+  "C.3": {
+   "start": 14,
+   "end": 14
+  },
+  "C.4": {
+   "start": 14,
+   "end": 14
+  },
+  "C.5": {
+   "start": 14,
+   "end": 15
+  },
+  "C.6": {
+   "start": 15,
+   "end": 15
+  },
+  "C.7": {
+   "start": 15,
+   "end": 15
+  },
+  "C.8": {
+   "start": 15,
+   "end": 15
+  },
+  "C.9": {
+   "start": 15,
+   "end": 15
+  },
+  "C.10": {
+   "start": 15,
+   "end": 15
+  },
+  "C.11": {
+   "start": 15,
+   "end": 15
+  },
+  "C.12": {
+   "start": 15,
+   "end": 15
+  },
+  "C.13": {
+   "start": 15,
+   "end": 15
+  },
+  "C.14": {
+   "start": 15,
+   "end": 15
+  },
+  "Annexure D": {
+   "start": 15,
+   "end": 16
+  },
+  "Table 10": {
+   "start": 15,
+   "end": 16
+  },
+  "Annexure E": {
+   "start": 16,
+   "end": 16
+  },
+  "Annexure F": {
+   "start": 16,
+   "end": 17
+  },
+  "Table 11": {
+   "start": 16,
+   "end": 17
+  },
+  "HR/CIR/2025/03": {
+   "start": 18,
+   "end": 18
+  },
+  "HR/CIR/2025/06": {
+   "start": 18,
+   "end": 18
+  },
+  "HR/CIR/2026/05": {
+   "start": 18,
+   "end": 18
+  }
+ }
+}

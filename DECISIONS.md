@@ -176,3 +176,15 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
 - Traps: T15 (type 1: gift cards), T16 (type 2: C03), T17 (type 3: Designated Persons and pre-clearance by grade and function), T18 (type 4: "Relative" includes parents-in-law, unlike the Leave Policy's "Immediate Family").
 - The first draft was 13 pages. Real sections were added (AML and sanctions, human rights and supply chain, health, safety and environment, conduct away from the office, virtual meetings and recording, personal data).
 - **Page-total policy:** the user asked to *cap* the total at about 150 pages to preserve usage. Documents are kept within their own ±2 range, and we don't overshoot to reach exactly 150. Running total: 67 pages against 74 targeted.
+
+**D-025 (2026-09-28): Compensation and Benefits Policy (NTL/HR/POL/005) is complete: 18 pages against a target of 20 ±2.**
+- 23 sections, 12 tables and 6 annexures (CTC illustration, gratuity illustrations, variable pay FAQs, statutory benefits summary, claim checklist, tax treatment of components), plus 3 circulars (HR/CIR/2025/03 employer NPS extended to L3 and L4; 2025/06 group medical L1 to L3 Rs. 3 → 4 lakh; 2026/05 LTA leave condition 5 → 3 Working Days). About 7,500 words, and 36 statutory claims (tax, PF, ESI, gratuity, bonus, professional tax); all are UNVERIFIED.
+- **Arithmetic was checked before writing:**
+  - CTC illustration: L3, Basic Rs. 40,000 a month → fixed pay Rs. 9,60,000 + PF 57,600 + gratuity 23,088 + variable pay 76,800 = Rs. 11,17,488.
+  - Gratuity: Rs. 60,000 × 15/26 × 8 = Rs. 2,76,923, and Rs. 50,000 × 15/26 × 3 = Rs. 86,538.
+  - Variable pay: Rs. 2,40,000 × 0.9 × 1.2 = Rs. 2,59,200.
+  - ESOP: 1,000 × Rs. 300 = Rs. 3,00,000.
+- **Variable pay basis changed** from "% of CTC" to "% of Annual Fixed Pay". With CTC as the base, the illustration became circular, because CTC includes variable pay. The Handbook summary (Clause 7.4) and `shared_facts` were updated to match, so no unplanned conflict was created. The Handbook was rebuilt and still passes.
+- Traps: T19 (type 1: medical sum insured circular), T20 (type 4: HRA "Metro City" = Delhi, Mumbai, Kolkata, Chennai; Bengaluru is not), T21 (type 3: no variable pay after resigning before the payout date), T22 (type 3, location: no professional tax in Noida/UP).
+- **Tooling bug found:** `renumber_tables.py` didn't update table names inside a circular's `amends:` list, so circular 2025/06 briefly pointed at the wrong table. The checker couldn't catch it, because that table number existed. The script now also rewrites `amends:` lists, and the circular was corrected.
+- **Word estimates were consistently about 40% too high.** A full page holds about 500 words. From now on, the first draft is sized by measured words per page. Running total: 85 pages against 94 targeted.

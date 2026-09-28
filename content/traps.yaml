@@ -140,3 +140,33 @@
   quotes:
     - {doc: "004", anchor: "2.6", text: "and the Employee's parents-in-law"}
     - {doc: "004", anchor: "2.6", text: "wider than the definition of Immediate Family used in the Leave Policy"}
+- id: T19
+  type: 1
+  doc: "005"
+  question: "I am an L2. What is my group medical insurance sum insured?"
+  answer: "Rs. 4,00,000 family floater from the 1 July 2025 renewal (Circular HR/CIR/2025/06); Table 5 still shows Rs. 3,00,000 for L1 to L3. Room rent limit 1 per cent, i.e. Rs. 4,000 per day."
+  quotes:
+    - {doc: "005", anchor: "HR/CIR/2025/06", text: "is increased from Rs. 3,00,000 to Rs. 4,00,000"}
+- id: T20
+  type: 4
+  doc: "005"
+  question: "I rent a flat in Bengaluru. Is Bengaluru a metro city for my HRA exemption?"
+  answer: "No. For HRA exemption the Compensation Policy defines Metro City as Delhi, Mumbai, Kolkata and Chennai only (Clause 2.6), so the limit in Bengaluru is 40 per cent of Basic Salary, even if Bengaluru is treated as a metro for other purposes such as travel."
+  quotes:
+    - {doc: "005", anchor: "2.6", text: "among the Company's locations only Chennai is a Metro City for house rent allowance"}
+    - {doc: "005", anchor: "C.3", text: "the limit for an Employee paying rent in Bengaluru is 40 per cent of Basic Salary"}
+- id: T21
+  type: 3
+  doc: "005"
+  question: "I resigned on 10 May. Will I get my variable pay for last year in the June salary?"
+  answer: "No. Variable pay is paid only to Employees on the rolls who have not resigned on or before the Payout Date (Clause 8.4); the exceptions (death, disability, retirement, Company-initiated termination not for misconduct or performance, Clause 8.5) do not include resignation (Annexure C, C.2)."
+  quotes:
+    - {doc: "005", anchor: "8.4", text: "who has not resigned or been given notice of termination on or before that date"}
+    - {doc: "005", anchor: "C.2", text: "they do not cover resignation"}
+- id: T22
+  type: 3
+  doc: "005"
+  question: "Why is no professional tax deducted from my salary? I work in Noida."
+  answer: "Uttar Pradesh does not levy professional tax on salaried employees, so none is deducted for Noida-based Employees (Clause 4.4, Table 2); other locations have State professional tax."
+  quotes:
+    - {doc: "005", anchor: "4.4", text: "No professional tax is deducted for Employees based in Noida, because Uttar Pradesh does not levy professional tax on salaried employees"}

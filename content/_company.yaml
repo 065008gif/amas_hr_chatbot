@@ -101,7 +101,7 @@ shared_facts:
   notice_period_days: {governed_by: "008", Probationer: 15, L1: 30, L2: 30, L3: 60, L4: 60, L5: 90, L6: 90, L7: 90, L8: 90}
   probation_months: {governed_by: "002", L1-L3: 6, L4-L8: 3}
   group_medical_sum_insured_lakh: {governed_by: "005", L1-L3: 3, L4-L5: 5, L6-L7: 7.5, L8: 10, note: "L1-L3 raised to 4 by HR/CIR/2025/06"}
-  variable_pay_target_pct_of_ctc: {governed_by: "005", L1: 0, L2: 8, L3: 8, L4: 10, L5: 12, L6: 15, L7: 20, L8: 25}
+  variable_pay_target_pct_of_annual_fixed_pay: {governed_by: "005", L1: 0, L2: 8, L3: 8, L4: 10, L5: 12, L6: 15, L7: 20, L8: 25}
   hotel_cap_per_night_metro_nonmetro_rs: {governed_by: "007", L1-L3: [3500, 2500], L4-L5: [5000, 3500], L6: [7000, 5000], L7-L8: [10000, 7000]}
   per_diem_domestic_rs: {governed_by: "007", L1-L3: 800, L4-L5: 1000, L6: 1200, L7-L8: 1500}
   wfh_days_per_week: {governed_by: "006", all: 2, note: "anchor office days Tue-Thu for L1-L6 from HR/CIR/2025/10"}

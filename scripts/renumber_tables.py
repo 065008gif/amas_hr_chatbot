@@ -15,4 +15,7 @@ changed = {o: n for o, n in mapping.items() if o != n}
 print("mapping:", changed or "already in order")
 if changed:
     text = re.sub(r"(id: |\{ref:#)(Table \d+)\b", lambda m: m.group(1) + "\0" + mapping.get(m.group(2), m.group(2)), text)
+    # circular 'amends:' lists name tables without a marker
+    text = re.sub(r"^(\s*amends: .*)$", lambda m: re.sub(r"\b(Table \d+)\b",
+                  lambda n: "\0" + mapping.get(n.group(1), n.group(1)), m.group(1)), text, flags=re.M)
     path.write_text(text.replace("\0", ""), encoding="utf-8")
