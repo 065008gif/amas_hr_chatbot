@@ -53,9 +53,13 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 2, doc 008 Separation: 12 pages (target 14 ±2), traps T29-T32 verified; conflicts C02 and C04 complete (D-028). Running total 120 pages / 32 traps. NEXT: doc 009 IT Security, then final all-document checks.
 
+- [x] Phase 2, doc 009 IT Security: 14 pages, traps T33-T36 (D-029).
+- [x] **Phase 2 FINAL CHECKS PASSED** (D-030): 9 PDFs, 134 pages, all within target ±2; TOC 260/260; footers 125/125; 0 errors/warnings/pending refs; 36/36 traps verified (all 6 types); 77 statutory claims, all UNVERIFIED.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 
 ## Next
-- [ ] Documents 003-009 in order, one per turn (008 must plant conflict C02: EL encashment limit of 30 days). Check `circulars_used` in `_company.yaml` before numbering circulars.
-- [ ] End of Phase 2: `check_content.py --all --final`, `verify_pdfs.py --all`, `verify_traps.py --final` (>= 25 traps, all 6 types), user reads 2-3 PDFs, then commit and user pushes
+- [ ] **USER reviews 2-3 PDFs** (suggest 001 Leave, 005 Compensation, 008 Separation) for realism and density; fix anything that reads thin or repetitive.
+- [ ] **USER pushes Phase 2** (`git push`) after the secret scan; Claude verifies with `git ls-remote`.
+- [ ] Then Phase 3: ingestion (`backend/ingest.py`), using pdfplumber tables for table chunks (D-021).

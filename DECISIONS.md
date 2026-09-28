@@ -210,3 +210,15 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
 - F&F arithmetic was checked: 1,00,000 + 86,538 + 2,59,615 − 1,50,000 = Rs. 2,96,153. The 30 days bought out are within the circular's 50% limit.
 - Traps: T29 (type 2: C02), T30 (type 2: C04; its Handbook quote is taken from a table row and verified on the PDF), T31 (type 1: buyout circular), T32 (type 6: gratuity 30 days).
 - Running total: 120 pages against 134 targeted, and 32 traps.
+
+**D-029 (2026-09-28): IT, Information Security and Acceptable Use Policy (NTL/HR/POL/009) is complete: 14 pages against a target of 16 ±2.**
+- 19 sections, 6 annexures (incident form, BYOD enrolment, FAQs, quick reference, employee privacy notice, classification examples) and 2 circulars (HR/CIR/2025/02 passwords: no 90-day rotation, 14 characters; HR/CIR/2025/13 generative AI tools). 6 statutory claims (DPDP Act safeguards, rights and breach notification; CERT-In 6 hours and logs; IT Act); all are UNVERIFIED.
+- Traps: T33 (type 1: password rotation withdrawn), T34 (type 1: public AI tools prohibited for client data), T35 (type 3: personal laptops only for L7 and L8, through the virtual desktop), T36 (type 5: home electricity bill not covered).
+- The employee privacy notice (Annexure E) will support evaluation question B4 (privacy) in the report.
+
+**D-030 (2026-09-28): Phase 2 final checks all pass. The user must now review the PDFs before the push.**
+- **All 9 PDFs were rebuilt from scratch.** `check_content.py --all --final`: 0 errors, 0 warnings, **0 pending references**. One cross-document duplicate sentence (Handbook vs IT policy, on public Wi-Fi) was reworded.
+- **`verify_pdfs.py --all`:** every document is within its ±2 target. TOC entries are verified on their stated pages (260/260), and the "Page N of M" footers are correct (125/125). **Total: 134 pages.**
+- **`verify_traps.py --final`:** 36/36 traps verified on the stated PDF pages. By type: 1 (circular override) ×14, 2 (cross-document conflict) ×4, 3 (grade or location) ×10, 4 (definition) ×4, 5 (not covered) ×3, 6 (statute prevails) ×4.
+- **Honest note on size:** 134 pages is below the original 220 and below the reduced "about 150", because every document landed 1 or 2 pages under its target (still within ±2). The user's instruction was to *cap* at about 150 to save usage, so we didn't pad. In the report we cite "134 pages across 9 documents".
+- **Content totals:** about 51,500 words, 873 clauses, 70 tables, 20 amendment circulars, and 77 statutory claims, all marked UNVERIFIED for Akshit to check against the Acts.

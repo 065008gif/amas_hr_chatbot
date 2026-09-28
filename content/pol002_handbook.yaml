@@ -378,7 +378,7 @@ sections:
         text: "Every Employee protects the information of the Company and its clients. In practice this means: locking the screen when leaving the desk; never sharing passwords or one-time codes; using only Company-approved software and cloud services; never copying client data to a personal device, personal e-mail or unapproved storage; and completing the annual security training."
       - clause: "14.2"
         title: Working remotely
-        text: "When working from home, Employees use the Company laptop and the virtual private network, work where screens cannot be overlooked, and do not print client documents at home. Public Wi-Fi may be used only with the virtual private network connected."
+        text: "When working from home, Employees use the Company laptop and the virtual private network, work where screens cannot be overlooked, and do not print client documents at home. Public Wi-Fi is acceptable only when the virtual private network is switched on."
       - clause: "14.3"
         title: Reporting incidents
         text: "A lost laptop or phone, a suspicious e-mail, or any suspected disclosure of data is reported immediately to the IT Service Desk at itsd@nexora.example. Early reporting limits harm and is never penalised; concealing an incident is misconduct."
