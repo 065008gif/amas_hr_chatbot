@@ -56,10 +56,13 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 2, doc 009 IT Security: 14 pages, traps T33-T36 (D-029).
 - [x] **Phase 2 FINAL CHECKS PASSED** (D-030): 9 PDFs, 134 pages, all within target ±2; TOC 260/260; footers 125/125; 0 errors/warnings/pending refs; 36/36 traps verified (types 1:12, 2:4, 3:10, 4:4, 5:3, 6:3); 98 statutory claims, all UNVERIFIED.
 
+- [x] USER pushed Phase 2; verified `origin/main` = `6239b9c` = local. `verify_traps.py --final` re-run: 36/36 PASS.
+- [x] **Phase 3 ingestion DONE** (D-031 to D-033): `backend/config.py`, `backend/indexstore.py`, `backend/ingest.py`, `tests/verify_chunks.py`. `python -m backend.ingest` gives 9 docs, 134 pages, 386 chunks (clause 231, table 81, annexure 39, circular 29, definition 6), 202 tokens average (median 193), largest 438, 0 over 600. Manifest cross-check 918/918. Chunk page check 30/30 (seed 42) and 386/386 (`--all`); negative control 386/386 caught. Cold load 0.35 s. Index committed in `backend/index/` (2.2 MB).
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 
 ## Next
-- [ ] **USER reviews 2-3 PDFs** (suggest 001 Leave, 005 Compensation, 008 Separation) for realism and density; fix anything that reads thin or repetitive.
-- [ ] **USER pushes Phase 2** (`git push`) after the secret scan; Claude verifies with `git ls-remote`.
-- [ ] Then Phase 3: ingestion (`backend/ingest.py`), using pdfplumber tables for table chunks (D-021).
+- [ ] **USER pushes Phase 3** (`git push`) after the secret scan; Claude verifies with `git ls-remote`.
+- [ ] Phase 4: retrieval (`backend/retrieve.py`): hybrid BM25 top 30 + dense top 30 with RRF, follow-up rewriting, metadata boosting (use chunk `grades`/`locations`), circular precedence (use `amended_by`/`amends`), rerank to top 6-8, and a confidence threshold. Add a query-side question-word stoplist (D-033). Then `tests/retrieval_eval.py`: recall@8 and MRR on the traps (map each trap's evidence page + clause to chunk ids via `clause_pages`).
+- [ ] Phase 5 will need a `requirements.txt` (so far: pdfplumber, fastembed, rank-bm25, numpy, PyYAML, reportlab).

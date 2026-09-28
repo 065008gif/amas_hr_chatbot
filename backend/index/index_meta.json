@@ -1,0 +1,114 @@
+{
+ "built": "2026-09-28T19:27:38",
+ "embed_model": "BAAI/bge-small-en-v1.5",
+ "embed_dim": 384,
+ "chunks": 386,
+ "documents": [
+  {
+   "doc_id": "001",
+   "title": "Leave Policy",
+   "number": "NTL/HR/POL/001",
+   "version": "4.2",
+   "effective_date": "2025-04-01",
+   "pages": 15,
+   "pdf": "NTL-HR-POL-001_Leave_Policy.pdf",
+   "sha256": "0bdedf86be5b6c1dce9971a3a8eeb2d32cdd57ab7bd9fac76d36f86ee0428e93",
+   "chunks": 44
+  },
+  {
+   "doc_id": "002",
+   "title": "Employee Handbook",
+   "number": "NTL/HR/POL/002",
+   "version": "6.0",
+   "effective_date": "2025-04-01",
+   "pages": 24,
+   "pdf": "NTL-HR-POL-002_Employee_Handbook.pdf",
+   "sha256": "0ab78e58d27c71a8fcf73255f901cc67ff993d290376da34b761e24d4a3d2c35",
+   "chunks": 75
+  },
+  {
+   "doc_id": "003",
+   "title": "Policy on Prevention of Sexual Harassment (POSH)",
+   "number": "NTL/HR/POL/003",
+   "version": "3.0",
+   "effective_date": "2025-01-01",
+   "pages": 12,
+   "pdf": "NTL-HR-POL-003_Policy_on_Prevention_of_Sexual_Harassment_POSH.pdf",
+   "sha256": "9884b171066c2e2c7d22bf519ed6fefc1599b3a5ec17b1beb86693ec68437a0a",
+   "chunks": 30
+  },
+  {
+   "doc_id": "004",
+   "title": "Code of Conduct and Ethics",
+   "number": "NTL/HR/POL/004",
+   "version": "5.1",
+   "effective_date": "2025-04-01",
+   "pages": 16,
+   "pdf": "NTL-HR-POL-004_Code_of_Conduct_and_Ethics.pdf",
+   "sha256": "857ad22076d53a1157a6fb2854c93135b529ed6b404f9e42cabe2c22e14b3b68",
+   "chunks": 44
+  },
+  {
+   "doc_id": "005",
+   "title": "Compensation and Benefits Policy",
+   "number": "NTL/HR/POL/005",
+   "version": "7.0",
+   "effective_date": "2025-01-01",
+   "pages": 18,
+   "pdf": "NTL-HR-POL-005_Compensation_and_Benefits_Policy.pdf",
+   "sha256": "efb321811e9ea865e0c00f61520f491deafa3b65d3a29c27cecfe1d7510bc783",
+   "chunks": 59
+  },
+  {
+   "doc_id": "006",
+   "title": "Attendance, Hybrid Work and Overtime Policy",
+   "number": "NTL/HR/POL/006",
+   "version": "3.2",
+   "effective_date": "2025-04-01",
+   "pages": 11,
+   "pdf": "NTL-HR-POL-006_Attendance_Hybrid_Work_and_Overtime_Policy.pdf",
+   "sha256": "a43b60ebc91c5f2e38a29b2d50a48ebc3eb44f2949d7678b8dab2bd88029cc5d",
+   "chunks": 28
+  },
+  {
+   "doc_id": "007",
+   "title": "Travel and Expense Reimbursement Policy",
+   "number": "NTL/HR/POL/007",
+   "version": "4.0",
+   "effective_date": "2024-10-01",
+   "pages": 12,
+   "pdf": "NTL-HR-POL-007_Travel_and_Expense_Reimbursement_Policy.pdf",
+   "sha256": "ea402be628bec1013db23a23bc2adc7db34119e286c80f4547cc120437694daa",
+   "chunks": 36
+  },
+  {
+   "doc_id": "008",
+   "title": "Separation and Exit Policy",
+   "number": "NTL/HR/POL/008",
+   "version": "3.0",
+   "effective_date": "2025-01-01",
+   "pages": 12,
+   "pdf": "NTL-HR-POL-008_Separation_and_Exit_Policy.pdf",
+   "sha256": "b8ce1634f46bb5ec6dd471887dba2d0e6ada6a2bebfce10e3085213b86e86fe5",
+   "chunks": 33
+  },
+  {
+   "doc_id": "009",
+   "title": "IT, Information Security and Acceptable Use Policy",
+   "number": "NTL/HR/POL/009",
+   "version": "5.0",
+   "effective_date": "2024-10-01",
+   "pages": 14,
+   "pdf": "NTL-HR-POL-009_IT_Information_Security_and_Acceptable_Use_Policy.pdf",
+   "sha256": "18ab914a68465169c57c2015ecad3adc2f99e081ddb44e2736073da72a33c8c9",
+   "chunks": 37
+  }
+ ],
+ "chunking": {
+  "CHUNK_MAX_TOKENS": 450,
+  "CHUNK_MIN_TOKENS": 150,
+  "CHUNK_OVERLAP_SENTENCES": 1,
+  "CHUNK_SPLIT_TARGET": 350,
+  "CHUNK_WARN_TOKENS": 600
+ }
+}
