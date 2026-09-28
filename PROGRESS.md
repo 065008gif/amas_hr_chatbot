@@ -34,5 +34,13 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] **Phase 1 pushed**: verified `origin/main` = `61c1506` = local.
 - [x] Scope change D-019: about 150 pages total (targets ±2: Leave 16, Handbook 26, POSH 14, CoC 18, Comp 20, Attendance 12, Travel 14, Separation 14, IT 16). Keep chat output lean (checker results, page counts, first 2 pages' text only).
 
+- [x] Phase 2 build plan approved by user.
+- [x] Phase 2 tooling (D-020): `content/_company.yaml`, `content/STATUTORY_CLAIMS.md` (1 entry so far), `content/traps.yaml` (empty), `scripts/nexdocs/{common,render}.py`, `scripts/build_docs.py`, `scripts/check_content.py`, `scripts/verify_pdfs.py`, `scripts/verify_traps.py`. Packages: reportlab 5.0.1, PyYAML 6.0.3, pdfplumber 0.11.10. Self-test passed plus negative tests (9/9 errors caught, 2/2 TOC tampering caught); self-test files deleted.
+
+## Per-document routine (use for every document)
+`python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
+
 ## Next
-- [ ] Phase 2: present the build plan and WAIT for user approval. Then Leave Policy (NTL/HR/POL/001, target 16 ±2 pages). Before writing it: agree the content format (YAML in `content/`), the generator design (ReportLab, two-pass TOC), the checker, `content/STATUTORY_CLAIMS.md` and `tests/traps.json`. One document at a time; show page count and the first 2 pages' text after each.
+- [ ] Phase 2, document 1: Leave Policy (`content/pol001_leave.yaml`, NTL/HR/POL/001, target 16 ±2 pages, about 3 traps)
+- [ ] Documents 002-009 in order, one per turn
+- [ ] End of Phase 2: `check_content.py --all --final`, `verify_pdfs.py --all`, `verify_traps.py --final` (>= 25 traps, all 6 types), user reads 2-3 PDFs, then commit and user pushes

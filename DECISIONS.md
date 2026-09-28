@@ -125,3 +125,17 @@ New per-document **targets** (not minimums), each within about ±2 pages:
 
 Everything else in the brief is unchanged: all 9 documents, cover, document control, version history, a TOC with verified page numbers, definitions, L1 to L8 grade tables, amendment circulars that override body clauses, annexures, cross-references, and at least 25 verified traps. The reduction comes from **fewer clauses per section**, never from lower realism or density, and there's no filler.
 Effect on the report: we cite "about 150 pages across 9 documents", not 220. Retrieval is still a real problem at this size (hundreds of chunks, many near-identical grade tables and clauses). Also at the user's request, chat output is kept lean: only checker results, page counts and the first two pages' extracted text are shown, never full document contents.
+
+**D-020 (2026-09-28): Phase 2 tooling design (approved by the user before any document text was written).**
+- **Content:** one YAML file per document in `content/`, plus `content/_company.yaml`, the single source of truth. It holds the company, grades, locations, contacts (reserved `.example` domain only), the document register, the precedence order and the planned cross-document conflicts.
+- **Markers inside the text** (`{ref:...}`, `{doc:...}`, `{stat:ID|text}`) turn every cross-reference and legal figure into something a script can check. The checker also warns when a reference is typed by hand without a marker.
+- **Renderer:** `scripts/nexdocs/render.py` using ReportLab 5.0.1. `multiBuild` gives a TOC with final page numbers. A deferred canvas draws the "Page N of M" footer. `LongTable` repeats the header row when a table splits across pages. The cover has no header or footer, but every page counts, so the footer "Page N" = the physical page = the page used in citations. PDF bookmarks are included.
+- **Anchors:** zero-size markers record the physical start and end page of every section, clause, table, annexure and circular into `documents/manifest/NNN.json`. Trap page numbers are taken from the PDF text, and must also fall inside the anchor's page range. They're never typed by hand.
+- **Reading PDFs: `pdfplumber` 0.11.10, not `pypdf`.** It keeps word positions and table rows better, which matters for "never cut a table mid-row" in Phase 3. The checkers use the same reader as ingestion, so they test exactly the text the bot will see.
+- **Currency is written as "Rs."/"INR", not ₹.** The standard PDF fonts have no ₹ glyph, and a missing glyph would also break text extraction.
+- **Defined terms** are written with initial capitals ("Working Day"), as in real Indian policy documents. The checker warns if a defined term is ever used in lower case.
+- **Layout fix found during the self-test:** a caption kept together with a long table pushed the whole table to the next page and left a mostly empty page. Now only tables of 12 rows or fewer stay with their caption. A long table starts on the current page if at least 45 mm is free, and otherwise moves to the next page.
+- **Checkers were tested against deliberately broken content.**
+  - `check_content.py` caught 9 of 9 planted errors: clause numbering gap, invalid grade L9, short table row, broken grade table, unknown statute ID, broken clause reference, broken table reference, a circular amending a missing clause, and a repeated sentence. It also warned on the planted hand-typed reference.
+  - `verify_pdfs.py` caught 2 of 2 tampered TOC page numbers.
+  - The self-test document was then deleted.

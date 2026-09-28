@@ -1,0 +1,64 @@
+# Single source of truth for all nine Nexora policy documents.
+# EVERYTHING HERE IS FICTIONAL (college project). Documents must agree with these facts,
+# except for the deliberate conflicts listed under `planned_conflicts`.
+
+company:
+  name: Nexora Technologies Limited
+  short: Nexora
+  description: an Indian IT-services company (fictional)
+  headquarters: Bengaluru
+  registered_office: "Nexora Campus, Tower B, 14th Main Road, HSR Layout, Bengaluru 560102, Karnataka (fictional address)"
+  employees_approx: 18000
+  leave_year: "1 April to 31 March"
+  portal: Nexora People Portal (NPP)
+  portal_short: NPP
+  fictional_notice: "Nexora Technologies Limited is a fictional company. This document was created for a college project and is not real HR policy or legal advice."
+
+grades:                     # L1 (trainee) to L8 (director and above)
+  L1: Graduate Engineer Trainee / Trainee Associate
+  L2: Associate Engineer / Associate
+  L3: Software Engineer / Senior Associate
+  L4: Senior Software Engineer / Team Lead
+  L5: Technical Lead / Assistant Manager
+  L6: Manager / Solution Architect
+  L7: Senior Manager / Principal Architect
+  L8: Director and above
+
+locations:                  # city: state (governing Shops and Establishments law differs by state)
+  Bengaluru: {state: Karnataka, role: "Headquarters and delivery centre"}
+  Pune: {state: Maharashtra, role: "Delivery centre"}
+  Hyderabad: {state: Telangana, role: "Delivery centre"}
+  Chennai: {state: Tamil Nadu, role: "Delivery centre"}
+  Noida: {state: Uttar Pradesh, role: "Delivery centre"}
+
+contacts:                   # reserved .example domain: never a real address
+  hr_helpdesk: {email: hrhelpdesk@nexora.example, phone: "1800-000-0000 (extension 4)", hours: "Monday to Friday, 9:00 a.m. to 6:00 p.m. IST"}
+  internal_committee: {email: ic@nexora.example, presiding_officer: "Presiding Officer, Internal Committee"}
+  ethics: {email: ethics@nexora.example, hotline: "1800-000-0000 (extension 7)"}
+  eap: {name: "Employee Assistance Programme (EAP)", phone: "1800-000-0000 (extension 9), 24x7", provider: "an external counselling partner (fictional)"}
+  it_service_desk: {email: itsd@nexora.example}
+  payroll: {email: payroll@nexora.example}
+  travel_desk: {email: traveldesk@nexora.example}
+
+# Registry of all nine documents. `file` is the YAML file in content/; the PDF name is derived from it.
+documents:
+  "001": {title: Leave Policy, number: NTL/HR/POL/001, target_pages: 16, file: pol001_leave.yaml}
+  "002": {title: Employee Handbook, number: NTL/HR/POL/002, target_pages: 26, file: pol002_handbook.yaml}
+  "003": {title: Policy on Prevention of Sexual Harassment (POSH), number: NTL/HR/POL/003, target_pages: 14, file: pol003_posh.yaml}
+  "004": {title: Code of Conduct and Ethics, number: NTL/HR/POL/004, target_pages: 18, file: pol004_conduct.yaml}
+  "005": {title: Compensation and Benefits Policy, number: NTL/HR/POL/005, target_pages: 20, file: pol005_compensation.yaml}
+  "006": {title: "Attendance, Hybrid Work and Overtime Policy", number: NTL/HR/POL/006, target_pages: 12, file: pol006_attendance.yaml}
+  "007": {title: Travel and Expense Reimbursement Policy, number: NTL/HR/POL/007, target_pages: 14, file: pol007_travel.yaml}
+  "008": {title: Separation and Exit Policy, number: NTL/HR/POL/008, target_pages: 14, file: pol008_separation.yaml}
+  "009": {title: "IT, Information Security and Acceptable Use Policy", number: NTL/HR/POL/009, target_pages: 16, file: pol009_itsecurity.yaml}
+
+# Policy hierarchy that every document restates in its own words (so the bot can explain which prevails):
+precedence:
+  - "Applicable law (a statute prevails over any weaker company rule)"
+  - "An amendment circular, from its effective date, over the body clause it amends"
+  - "The specific policy on a subject over the Employee Handbook (the Handbook is a summary)"
+  - "Between two policies, the one that governs the subject matter (e.g. Separation Policy for notice periods)"
+
+# Deliberate cross-document conflicts (trap type 2). Filled in as documents are written; each must
+# name both sides and which one prevails under `precedence`, and each gets a trap in content/traps.yaml.
+planned_conflicts: []
