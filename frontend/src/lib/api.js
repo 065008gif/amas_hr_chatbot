@@ -1,5 +1,6 @@
 // Backend client. The address comes from VITE_API_URL (set in Vercel for the deployed site).
-export const API_URL = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(/\/$/, '')
+// Same origin on Vercel: the backend is the /api function. Local dev sets VITE_API_URL (.env.development).
+export const API_URL = (import.meta.env.VITE_API_URL || '/api').replace(/\/$/, '')
 
 export class ApiError extends Error {
   constructor(kind, message, status) {

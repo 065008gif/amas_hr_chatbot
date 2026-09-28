@@ -170,20 +170,19 @@ class Retriever:
         self.circular_ids = {(c["doc_id"], c["circular_no"]): i for i, c in enumerate(self.index.chunks)
                              if c.get("circular_no")}
 
-    # -- models are loaded lazily, once per process --
+    # -- models are loaded lazily, once per process (backend/onnx_models.py) --
     @property
     def embedder(self):
         if self._embedder is None:
-            from fastembed import TextEmbedding
-            self._embedder = TextEmbedding(config.EMBED_MODEL, cache_dir=str(config.EMBED_CACHE_DIR))
+            from backend import onnx_models
+            self._embedder = onnx_models.embedder()
         return self._embedder
 
     @property
     def reranker(self):
         if self._reranker is None:
-            from fastembed.rerank.cross_encoder import TextCrossEncoder
-            self._reranker = TextCrossEncoder(config.RERANK_MODEL, cache_dir=str(config.EMBED_CACHE_DIR),
-                                              threads=config.RERANK_THREADS)
+            from backend import onnx_models
+            self._reranker = onnx_models.reranker()
         return self._reranker
 
     # -- stages --
@@ -196,8 +195,7 @@ class Retriever:
         return [int(i) for i in order if scores[i] > 0]
 
     def _dense_ranking(self, query):
-        qv = np.array(list(self.embedder.embed([self.query_prefix + query])), dtype=np.float32)[0]
-        qv /= np.linalg.norm(qv)
+        qv = self.embedder.embed([self.query_prefix + query])[0]
         sims = self.index.vectors @ qv
         order = np.argsort(-sims)[:config.DENSE_TOP_K]
         return [int(i) for i in order], sims
@@ -246,7 +244,7 @@ class Retriever:
         raw = {}
         if self.use_rerank and candidates:
             top = candidates[:config.RERANK_CANDIDATES]
-            ce = self.reranker.rerank(query, [self.index.chunks[i]["embed_text"] for i in top])
+            ce = self.reranker.score(query, [self.index.chunks[i]["embed_text"] for i in top])
             raw = dict(zip(top, (float(s) for s in ce)))
             for r, i in enumerate(sorted(top, key=lambda i: -raw[i])):
                 fused[i] += rrf(r)

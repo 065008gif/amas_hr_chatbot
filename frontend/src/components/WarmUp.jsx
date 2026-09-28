@@ -11,10 +11,10 @@ export default function WarmUp({ status, attempts, error, retry }) {
         <p className="muted" style={{ marginTop: '.5rem' }}>
           {failed
             ? (error || 'The free server did not respond. It may be restarting. Please try again.')
-            : 'The demo runs on a free server that sleeps when nobody uses it. The first visit can take up to a minute while it loads the policy index and search models.'}
+            : 'The demo runs on free serverless hosting. After a quiet period the first request starts a fresh instance, which loads the policy index and search models (usually a few seconds).'}
         </p>
         {!failed && <div className="progress" aria-hidden="true"><span style={{ width: `${pct}%` }} /></div>}
-        {!failed && <div className="tiny muted">{status === 'sleeping' ? 'Starting the server…' : status === 'connecting' ? 'Connecting…' : 'Loading search models…'}</div>}
+        {!failed && <div className="tiny muted">{status === 'sleeping' ? 'Starting the server…' : status === 'connecting' ? 'Starting the assistant and loading search models…' : 'Loading search models…'}</div>}
         {failed && <button className="btn btn-primary" style={{ marginTop: '1rem' }} onClick={retry}><RefreshCw size={16} />Try again</button>}
       </div>
     </div>

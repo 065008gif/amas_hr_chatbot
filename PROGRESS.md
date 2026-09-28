@@ -66,6 +66,9 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] **Phase 6 frontend DONE** (D-038): `frontend/` React + Vite portal. Local run: terminal 1 `uvicorn backend.app:app --port 8000`; terminal 2 `cd frontend && npm run dev`, then open http://localhost:5173.
 
+- [x] **Deployment re-planned (D-040):** Hugging Face gave 402 (needs PRO); Render rejected (too slow). One Vercel Hobby project: static portal + Python function `api/index.py`. Bundle 287 MB (limit 500), cold start 1.2-1.6 s on 1 core (local measurement). Tickets in Upstash Redis via the Vercel Marketplace (free, no card), else `/tmp` (resets, stated on the About page). Local run: `uvicorn api.index:app --port 8000` + `cd frontend && npm run dev`.
+- [ ] USER: remove `HF_TOKEN` from `.env` (nano); push; import to Vercel; add env vars; connect Upstash; send the live URL. Then Claude runs `bash scripts/smoke_test.sh <URL>` and starts Phase 7.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 

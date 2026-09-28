@@ -48,6 +48,9 @@ logs/
 .cache/
 models/
 *.onnx
+# ...except the two runtime models bundled into the Vercel function (D-040)
+!backend/models/
+!backend/models/**
 *.bin
 *.safetensors
 

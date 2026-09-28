@@ -24,23 +24,35 @@ app.add_middleware(CORSMiddleware, allow_origins=config.CORS_ORIGINS, allow_orig
                    allow_headers=["Content-Type", "X-Employee-Id"])
 
 STATE = {"started": time.time(), "ready": False, "warm_error": None, "warm_seconds": None}
+_warm_lock = threading.Lock()
 
 
 def _warm():
-    """Load the index and both local models at start-up, so the first question is not slow."""
-    t = time.perf_counter()
-    try:
-        r = chatmod.retriever()
-        r.search("warm-up: annual leave entitlement")
-        store.db()
-        STATE["ready"] = True
-    except Exception as e:  # reported by /health
-        STATE["warm_error"] = f"{type(e).__name__}: {e}"
-    STATE["warm_seconds"] = round(time.perf_counter() - t, 1)
+    """Load the index, both local models and storage once per instance (idempotent)."""
+    with _warm_lock:
+        if STATE["ready"]:
+            return
+        t = time.perf_counter()
+        try:
+            r = chatmod.retriever()
+            r.search("warm-up: annual leave entitlement")
+            store.db()
+            STATE["ready"], STATE["warm_error"] = True, None
+        except Exception as e:  # reported by /health
+            STATE["warm_error"] = f"{type(e).__name__}: {e}"
+        STATE["warm_seconds"] = round(time.perf_counter() - t, 2)
+
+
+def ensure_ready():
+    """Warm up on the first request that needs data. Serverless (Vercel) and mounted apps
+    (api/index.py) get no start-up hook, so this is the path that always works."""
+    if not STATE["ready"]:
+        _warm()
 
 
 @app.on_event("startup")
 def startup():
+    # Only when this app is served directly by a long-running server (uvicorn backend.app:app).
     threading.Thread(target=_warm, daemon=True).start()
 
 
@@ -93,6 +105,7 @@ class TicketIn(BaseModel):
 # ------------------------------------------------------------------ endpoints
 @app.get("/health")
 def health():
+    ensure_ready()                   # the portal's "waking up" screen waits on this call
     idx = chatmod._retriever.index if chatmod._retriever else None
     return {
         "status": "ok" if STATE["ready"] else ("error" if STATE["warm_error"] else "warming_up"),
@@ -100,12 +113,15 @@ def health():
         "uptime_seconds": round(time.time() - STATE["started"]),
         "index": {"chunks": len(idx.chunks), "built": idx.meta.get("built"), "documents": len(idx.meta["documents"])} if idx else None,
         "providers": {"order": config.PROVIDER_ORDER, "gemini_models": config.GEMINI_MODELS, "status": llm.provider_status()},
+        "storage": store.storage_info() if STATE["ready"] else None,
+        "platform": "vercel" if config.ON_VERCEL else "local",
         "demo": True,
     }
 
 
 @app.post("/chat")
 def chat(body: ChatIn, request: Request, x_employee_id: str | None = Header(default=None)):
+    ensure_ready()
     if not STATE["ready"]:
         return not_ready()
     ip = request.headers.get("x-forwarded-for", request.client.host if request.client else "?").split(",")[0].strip()
@@ -160,6 +176,7 @@ def my_tickets(x_employee_id: str | None = Header(default=None)):
 
 
 def _index():
+    ensure_ready()
     if not chatmod._retriever:
         raise HTTPException(503, "Warming up")
     return chatmod._retriever.index

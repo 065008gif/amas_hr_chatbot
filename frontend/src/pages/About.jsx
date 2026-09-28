@@ -1,4 +1,6 @@
-import { Bot, Database, FileSearch, Lock, ShieldCheck, TriangleAlert } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { Bot, Cloud, Database, FileSearch, Lock, ShieldCheck, TriangleAlert } from 'lucide-react'
+import { api } from '../lib/api.js'
 
 const Section = ({ Icon, title, children }) => (
   <section className="card card-pad">
@@ -8,6 +10,8 @@ const Section = ({ Icon, title, children }) => (
 )
 
 export default function About() {
+  const [storage, setStorage] = useState(null)
+  useEffect(() => { api('/health').then((h) => setStorage(h.storage)).catch(() => {}) }, [])
   return (
     <div className="content fade-in" style={{ maxWidth: 900 }}>
       <div className="page-head"><div><h1>About Nia and this portal</h1><p>A college project (AI Application, PGDM Business Data Analytics).</p></div></div>
@@ -26,6 +30,12 @@ export default function About() {
           <p><b>Your questions are sent to a third-party AI provider</b> (Ollama, or Google if the fallback is used) together with the relevant policy text, so that an answer can be written. Do not type personal, health or confidential information. Free-tier providers may use submitted data to improve their services.</p>
           <p>This server does <b>not store the text of your messages</b>. It keeps anonymised statistics (route, topic, response time, token counts and a one-way hash of the question) for the HR Insights page. Your chat history and profile (grade, location) are kept only in your own browser; "New chat" clears the conversation.</p>
           <p>Leave balances and tickets belong to fictional demo employees. Nia only ever shows the signed-in demo employee's own data.</p>
+        </Section>
+        <Section Icon={Cloud} title="Hosting and where data lives">
+          <p>The whole portal runs on <b>Vercel's free Hobby plan</b> as one site: the web pages are static files, and the assistant is a Python serverless function. The policy index, the two search models and the PDFs are packaged inside that function, so searching needs no outside service. After a quiet period the first request starts a fresh instance, which takes a few seconds (the "waking up" screen).</p>
+          {storage?.persistent
+            ? <p><b>Tickets are saved</b> in a free Upstash Redis database connected to the project, so they survive restarts. The answer cache and the anonymised usage statistics are kept there too.</p>
+            : <div className="alert warn"><TriangleAlert size={16} /><div><b>Tickets reset.</b> No database is connected, so tickets, the answer cache and usage statistics are kept in the server's temporary storage and are lost whenever the serverless instance restarts. Ticket IDs may then repeat.</div></div>}
         </Section>
         <Section Icon={ShieldCheck} title="Guardrails">
           <p>Prompt-injection screening (including other languages and encoded text), no access to other employees' data, 800-character messages, 20 questions per chat, per-network rate limits, and answers limited to the policy documents.</p>

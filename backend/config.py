@@ -34,15 +34,22 @@ CHUNK_WARN_TOKENS = 600         # reported by the statistics as "too large"
 BM25_TOP_K = 30                 # keyword candidates
 DENSE_TOP_K = 30                # semantic candidates
 RRF_K = 60                      # Reciprocal Rank Fusion constant (standard value)
-RERANK_THREADS = 2              # like a free Hugging Face Space
 EMBED_QUERY_PREFIX = "Represent this sentence for searching relevant passages: "  # bge query instruction
-RERANK_MODEL = "Xenova/ms-marco-MiniLM-L-6-v2"   # small ONNX cross-encoder, via fastembed
+RERANK_MODEL = "Xenova/ms-marco-MiniLM-L-6-v2"   # small ONNX cross-encoder
+# Runtime copies of both models (bundled with the app, run with onnxruntime; see backend/onnx_models.py)
+MODELS_DIR = ROOT / "backend" / "models"
+EMBED_MODEL_DIR = MODELS_DIR / "bge-small-en-v1.5"
+EMBED_MODEL_FILE = "model_optimized.onnx"
+RERANK_MODEL_DIR = MODELS_DIR / "ms-marco-MiniLM-L-6-v2"
+RERANK_MODEL_FILE = os.environ.get("RERANK_MODEL_FILE", "model_quantized.onnx")   # int8: 23 MB, 2x faster (D-040)
+ONNX_THREADS = int(os.environ.get("ONNX_THREADS", "2"))   # Vercel Hobby functions have 1 vCPU
 RERANK_CANDIDATES = 15          # fused candidates scored by the reranker (0.6 s on 2 CPU threads)
 FINAL_TOP_K = 8                 # chunks given to the answer model (the brief: 6 to 8)
 MAIN_TOP_K = 6                  # best-ranked chunks kept before amending circulars are added
 BOOST_RRF = 0.15                # fused-score multiplier per matched grade/location/leave type/document
-CONFIDENCE_THRESHOLD = 0.0015   # reranker probability of the best chunk; below it: "not found, offer a ticket".
-                                # Set on the DEV set as 1/10 of the lowest answerable score (D-035).
+CONFIDENCE_THRESHOLD = 0.0011   # reranker probability of the best chunk; below it: "not found, offer a ticket".
+                                # DEV rule (D-035): 1/10 of the lowest answerable score; re-derived for the
+                                # quantized reranker in D-040 (was 0.0015 with the fp32 file).
 
 # ---- Chat models (Phase 5). Keys come ONLY from environment variables (.env / Space secrets). ----
 PROVIDER_ORDER = ["ollama", "gemini"]        # first that answers wins (D-014)
@@ -69,7 +76,9 @@ CACHE_ENABLED = True
 
 # ---- Data and storage ----
 EMPLOYEES_CSV = ROOT / "data" / "employees.csv"   # DEMO data (fictional)
-RUNTIME_DIR = Path(os.environ.get("HRBOT_RUNTIME_DIR", ROOT / "data" / "runtime"))  # SQLite; git-ignored
+ON_VERCEL = bool(os.environ.get("VERCEL"))     # set by Vercel in every deployment
+# SQLite fallback location: git-ignored locally; /tmp on Vercel (the only writable place, not persistent).
+RUNTIME_DIR = Path(os.environ.get("HRBOT_RUNTIME_DIR", "/tmp/hrbot" if ON_VERCEL else ROOT / "data" / "runtime"))
 DB_PATH = RUNTIME_DIR / "hrbot.sqlite"
 TICKET_PREFIX = "NXR-HR"
 TICKET_CATEGORIES = ["Leave", "Payroll", "Benefits", "POSH/Grievance", "Policy Clarification", "IT Access", "Other"]

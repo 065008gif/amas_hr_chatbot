@@ -1,55 +1,196 @@
-"""SQLite storage: tickets, the answer cache and anonymised logs; plus the DEMO employee file.
+"""Storage for tickets, the answer cache and anonymised logs; plus the DEMO employee file.
 
-Privacy (brief Part F, Phase 5): full user messages are NOT stored. The log keeps only the route,
-latency, token counts, confidence, provider, cache hit, a coarse topic and a SHA-256 hash of the
-normalised question (so repeats can be counted without keeping the text).
+Two interchangeable backends, chosen at start-up:
+  - Upstash Redis (REST API) when KV_REST_API_URL/KV_REST_API_TOKEN or UPSTASH_REDIS_REST_URL/
+    UPSTASH_REDIS_REST_TOKEN are set (added by the Vercel Marketplace integration): data persists.
+  - SQLite otherwise (this PC, or /tmp on Vercel without Redis: data resets when an instance stops).
+
+Privacy (brief Part F, Phase 5): full user messages are NOT stored. A log record keeps only the
+route, topic, latency, provider, token counts, confidence, cache hit, citation count and a
+SHA-256 prefix of the normalised question (so repeats can be counted without keeping the text).
 """
 import csv
 import hashlib
 import json
+import os
 import random
 import re
 import sqlite3
 import threading
 import time
+from collections import Counter
 from datetime import datetime, timedelta, timezone
+
+import httpx
 
 from backend import config
 
 IST = timezone(timedelta(hours=5, minutes=30))
-_lock = threading.RLock()   # re-entrant: db() may seed tickets while a caller holds it
-_conn = None
-
-SCHEMA = """
-CREATE TABLE IF NOT EXISTS tickets (
-  id TEXT PRIMARY KEY, employee_id TEXT NOT NULL, category TEXT NOT NULL, summary TEXT NOT NULL,
-  priority TEXT NOT NULL, status TEXT NOT NULL, created_at TEXT NOT NULL, updated_at TEXT NOT NULL,
-  source TEXT NOT NULL DEFAULT 'chat', history TEXT NOT NULL DEFAULT '[]');
-CREATE TABLE IF NOT EXISTS cache (
-  key TEXT PRIMARY KEY, response TEXT NOT NULL, created_at REAL NOT NULL, hits INTEGER NOT NULL DEFAULT 0);
-CREATE TABLE IF NOT EXISTS logs (
-  ts REAL NOT NULL, route TEXT, topic TEXT, latency_ms INTEGER, provider TEXT, tokens_in INTEGER,
-  tokens_out INTEGER, confidence REAL, cache_hit INTEGER, question_hash TEXT, citations INTEGER);
-CREATE TABLE IF NOT EXISTS counters (name TEXT PRIMARY KEY, value INTEGER NOT NULL);
-"""
-
-
-def db():
-    global _conn
-    if _conn is None:
-        config.RUNTIME_DIR.mkdir(parents=True, exist_ok=True)
-        _conn = sqlite3.connect(config.DB_PATH, check_same_thread=False)
-        _conn.row_factory = sqlite3.Row
-        _conn.executescript(SCHEMA)
-        _seed_demo_tickets()
-    return _conn
+_lock = threading.RLock()   # re-entrant: seeding creates tickets while backend() holds it
+LOG_KEEP = 5000             # most recent log records kept
+CACHE_TTL = 7 * 24 * 3600   # seconds an answer stays cached in Redis
 
 
 def now_iso():
     return datetime.now(IST).isoformat(timespec="seconds")
 
 
-# ---------------------------------------------------------------- employees (DEMO data)
+# ================================================================ backends
+class RedisBackend:
+    name = "upstash-redis"
+    persistent = True
+
+    def __init__(self, url, token):
+        self.url = url.rstrip("/")
+        self.http = httpx.Client(timeout=httpx.Timeout(8.0, connect=5.0), headers={"Authorization": f"Bearer {token}"})
+
+    def cmd(self, *args):
+        r = self.http.post(self.url, json=[str(a) for a in args])
+        r.raise_for_status()
+        return r.json().get("result")
+
+    def pipe(self, *cmds):
+        r = self.http.post(f"{self.url}/pipeline", json=[[str(a) for a in c] for c in cmds])
+        r.raise_for_status()
+        return [x.get("result") for x in r.json()]
+
+    def next_ticket_number(self):
+        return int(self.pipe(["SETNX", "nia:ticket:counter", 122], ["INCR", "nia:ticket:counter"])[1])
+
+    def save_ticket(self, t, new):
+        cmds = [["SET", f"nia:ticket:{t['id']}", json.dumps(t)]]
+        if new:
+            cmds.append(["LPUSH", f"nia:tickets:{t['employee_id']}", t["id"]])
+        self.pipe(*cmds)
+
+    def load_ticket(self, tid):
+        v = self.cmd("GET", f"nia:ticket:{tid}")
+        return json.loads(v) if v else None
+
+    def employee_tickets(self, emp):
+        ids = self.cmd("LRANGE", f"nia:tickets:{emp}", 0, 199) or []
+        vals = self.cmd("MGET", *[f"nia:ticket:{i}" for i in ids]) if ids else []
+        return [json.loads(v) for v in vals if v]
+
+    def claim_seed(self):
+        return bool(self.cmd("SET", "nia:seeded", "1", "NX"))
+
+    def cache_get(self, key):
+        v = self.cmd("GET", f"nia:cache:{key}")
+        return json.loads(v) if v else None
+
+    def cache_put(self, key, value):
+        self.cmd("SET", f"nia:cache:{key}", json.dumps(value), "EX", CACHE_TTL)
+
+    def add_log(self, rec):
+        self.pipe(["LPUSH", "nia:logs", json.dumps(rec)], ["LTRIM", "nia:logs", 0, LOG_KEEP - 1])
+
+    def logs(self):
+        return [json.loads(x) for x in (self.cmd("LRANGE", "nia:logs", 0, LOG_KEEP - 1) or [])]
+
+    def chat_ticket_categories(self):
+        flat = self.cmd("HGETALL", "nia:chat-ticket-categories") or []
+        return {flat[i]: int(flat[i + 1]) for i in range(0, len(flat), 2)}
+
+    def count_chat_ticket(self, category):
+        self.cmd("HINCRBY", "nia:chat-ticket-categories", category, 1)
+
+
+class SQLiteBackend:
+    name = "sqlite"
+    SCHEMA = """
+    CREATE TABLE IF NOT EXISTS tickets (id TEXT PRIMARY KEY, employee_id TEXT NOT NULL, data TEXT NOT NULL, created_at TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS cache (key TEXT PRIMARY KEY, response TEXT NOT NULL, created_at REAL NOT NULL);
+    CREATE TABLE IF NOT EXISTS logs (ts REAL NOT NULL, data TEXT NOT NULL);
+    CREATE TABLE IF NOT EXISTS kv (name TEXT PRIMARY KEY, value TEXT NOT NULL);
+    """
+
+    def __init__(self, path):
+        path.parent.mkdir(parents=True, exist_ok=True)
+        self.persistent = not str(path).startswith("/tmp")
+        self.conn = sqlite3.connect(path, check_same_thread=False)
+        self.conn.executescript(self.SCHEMA)
+
+    def _kv(self, name, default=None):
+        row = self.conn.execute("SELECT value FROM kv WHERE name=?", (name,)).fetchone()
+        return row[0] if row else default
+
+    def _set_kv(self, name, value):
+        self.conn.execute("INSERT OR REPLACE INTO kv VALUES(?, ?)", (name, value))
+        self.conn.commit()
+
+    def next_ticket_number(self):
+        n = int(self._kv("ticket", 122)) + 1
+        self._set_kv("ticket", str(n))
+        return n
+
+    def save_ticket(self, t, new):
+        self.conn.execute("INSERT OR REPLACE INTO tickets VALUES (?,?,?,?)", (t["id"], t["employee_id"], json.dumps(t), t["created_at"]))
+        self.conn.commit()
+
+    def load_ticket(self, tid):
+        row = self.conn.execute("SELECT data FROM tickets WHERE id=?", (tid,)).fetchone()
+        return json.loads(row[0]) if row else None
+
+    def employee_tickets(self, emp):
+        return [json.loads(r[0]) for r in self.conn.execute(
+            "SELECT data FROM tickets WHERE employee_id=? ORDER BY created_at DESC", (emp,)).fetchall()]
+
+    def claim_seed(self):
+        if self._kv("seeded"):
+            return False
+        self._set_kv("seeded", "1")
+        return True
+
+    def cache_get(self, key):
+        row = self.conn.execute("SELECT response FROM cache WHERE key=?", (key,)).fetchone()
+        return json.loads(row[0]) if row else None
+
+    def cache_put(self, key, value):
+        self.conn.execute("INSERT OR REPLACE INTO cache VALUES (?,?,?)", (key, json.dumps(value), time.time()))
+        self.conn.commit()
+
+    def add_log(self, rec):
+        self.conn.execute("INSERT INTO logs VALUES (?,?)", (rec["ts"], json.dumps(rec)))
+        self.conn.commit()
+
+    def logs(self):
+        return [json.loads(r[0]) for r in self.conn.execute("SELECT data FROM logs ORDER BY ts DESC LIMIT ?", (LOG_KEEP,)).fetchall()]
+
+    def chat_ticket_categories(self):
+        return json.loads(self._kv("chat_ticket_categories", "{}"))
+
+    def count_chat_ticket(self, category):
+        c = self.chat_ticket_categories()
+        c[category] = c.get(category, 0) + 1
+        self._set_kv("chat_ticket_categories", json.dumps(c))
+
+
+_backend = None
+
+
+def backend():
+    global _backend
+    with _lock:
+        if _backend is None:
+            url = os.environ.get("KV_REST_API_URL") or os.environ.get("UPSTASH_REDIS_REST_URL")
+            token = os.environ.get("KV_REST_API_TOKEN") or os.environ.get("UPSTASH_REDIS_REST_TOKEN")
+            _backend = RedisBackend(url, token) if url and token else SQLiteBackend(config.DB_PATH)
+            _seed_demo_tickets(_backend)   # _backend is already set, so create_ticket() can use it
+        return _backend
+
+
+def db():
+    """Initialise storage (used by the warm-up)."""
+    return backend()
+
+
+def storage_info():
+    b = backend()
+    return {"backend": b.name, "persistent": b.persistent}
+
+
+# ================================================================ employees (DEMO data)
 _employees = None
 
 
@@ -93,61 +234,42 @@ def leave_balance(emp_id):
     }
 
 
-# ---------------------------------------------------------------- tickets
-STATUS_FLOW = ["Open", "In Progress", "Awaiting Employee", "Resolved", "Closed"]
-
-
-def _next_ticket_id(conn):
-    year = datetime.now(IST).year
-    row = conn.execute("SELECT value FROM counters WHERE name='ticket'").fetchone()
-    n = (row["value"] if row else 122) + 1
-    conn.execute("INSERT OR REPLACE INTO counters(name, value) VALUES('ticket', ?)", (n,))
-    return f"{config.TICKET_PREFIX}-{year}-{n:06d}"
-
-
+# ================================================================ tickets
 def create_ticket(employee_id, category, summary, priority="Normal", source="chat", status="Open", created=None):
     if category not in config.TICKET_CATEGORIES:
         category = "Other"
     if priority not in ("Low", "Normal", "High", "Urgent"):
         priority = "Normal"
     summary = re.sub(r"\s+", " ", summary).strip()[:300] or "HR query"
+    b = backend()
     with _lock:
-        conn = _conn or db()
-        tid = _next_ticket_id(conn)
-        ts = created or now_iso()
-        hist = [{"status": "Open", "at": ts, "note": "Ticket created" + (" from chat with Nia" if source == "chat" else "")}]
-        if status != "Open":
-            hist.append({"status": status, "at": ts, "note": "Updated by HR Operations (demo)"})
-        conn.execute("INSERT INTO tickets VALUES (?,?,?,?,?,?,?,?,?,?)",
-                     (tid, employee_id, category, summary, priority, status, ts, ts, source, json.dumps(hist)))
-        conn.commit()
-    return get_ticket(tid, employee_id)
+        n = b.next_ticket_number()
+    ts = created or now_iso()
+    hist = [{"status": "Open", "at": ts, "note": "Ticket created" + (" from chat with Nia" if source == "chat" else "")}]
+    if status != "Open":
+        hist.append({"status": status, "at": ts, "note": "Updated by HR Operations (demo)"})
+    t = {"id": f"{config.TICKET_PREFIX}-{datetime.now(IST).year}-{n:06d}", "employee_id": employee_id, "category": category,
+         "summary": summary, "priority": priority, "status": status, "created_at": ts, "updated_at": ts,
+         "source": source, "history": hist}
+    b.save_ticket(t, new=True)
+    if source == "chat":
+        b.count_chat_ticket(category)
+    return t
 
 
 def get_ticket(tid, employee_id):
     """A ticket is returned only to the employee who owns it."""
-    row = db().execute("SELECT * FROM tickets WHERE id=? AND employee_id=?", (tid.upper(), employee_id)).fetchone()
-    if not row:
-        return None
-    t = dict(row)
-    t["history"] = json.loads(t["history"])
-    return t
+    t = backend().load_ticket(tid.upper())
+    return t if t and t["employee_id"] == employee_id else None
 
 
 def list_tickets(employee_id):
-    rows = db().execute("SELECT * FROM tickets WHERE employee_id=? ORDER BY created_at DESC", (employee_id,)).fetchall()
-    out = []
-    for r in rows:
-        t = dict(r)
-        t["history"] = json.loads(t["history"])
-        out.append(t)
-    return out
+    return sorted(backend().employee_tickets(employee_id), key=lambda t: t["created_at"], reverse=True)
 
 
-def _seed_demo_tickets():
+def _seed_demo_tickets(b):
     """Each demo account starts with a few past tickets in different states (DEMO data)."""
-    conn = _conn
-    if conn.execute("SELECT COUNT(*) FROM tickets").fetchone()[0]:
+    if not b.claim_seed():
         return
     samples = [("Leave", "EL credit for August not reflected on NPP", "Resolved"),
                ("Payroll", "Query on professional tax deduction in payslip", "In Progress"),
@@ -155,14 +277,14 @@ def _seed_demo_tickets():
                ("IT Access", "Access to client VDI for new project", "Closed"),
                ("Policy Clarification", "Is Holi a declared holiday at my location?", "Resolved")]
     rng = random.Random(7)
-    for k, acc in enumerate(sorted(demo_accounts(), key=lambda a: a["employee_id"])):
+    for acc in sorted(demo_accounts(), key=lambda a: a["employee_id"]):
         for j in rng.sample(range(len(samples)), 3):
             cat, summ, status = samples[j]
             created = (datetime.now(IST) - timedelta(days=rng.randint(3, 60))).isoformat(timespec="seconds")
             create_ticket(acc["employee_id"], cat, summ, source="portal", status=status, created=created)
 
 
-# ---------------------------------------------------------------- answer cache
+# ================================================================ answer cache
 def normalise_question(q):
     q = q.lower()
     q = re.sub(r"[^\w\s/.-]", " ", q)
@@ -179,51 +301,54 @@ def cache_key(question, profile):
 def cache_get(key):
     if not config.CACHE_ENABLED:
         return None
-    with _lock:
-        row = db().execute("SELECT response FROM cache WHERE key=?", (key,)).fetchone()
-        if row:
-            db().execute("UPDATE cache SET hits = hits + 1 WHERE key=?", (key,))
-            db().commit()
-    return json.loads(row["response"]) if row else None
+    try:
+        return backend().cache_get(key)
+    except Exception:
+        return None            # storage trouble must never break a chat turn
 
 
 def cache_put(key, response):
     if not config.CACHE_ENABLED:
         return
-    with _lock:
-        db().execute("INSERT OR REPLACE INTO cache(key, response, created_at) VALUES (?,?,?)",
-                     (key, json.dumps(response), time.time()))
-        db().commit()
+    try:
+        backend().cache_put(key, response)
+    except Exception:
+        pass
 
 
-# ---------------------------------------------------------------- anonymised logs and insights
+# ================================================================ anonymised logs and insights
 def log_turn(route, topic, latency_ms, provider, usage, confidence, cache_hit, question, citations):
-    qhash = hashlib.sha256(normalise_question(question).encode()).hexdigest()[:16]
-    with _lock:
-        db().execute("INSERT INTO logs VALUES (?,?,?,?,?,?,?,?,?,?,?)",
-                     (time.time(), route, topic, int(latency_ms), provider, (usage or {}).get("in", 0),
-                      (usage or {}).get("out", 0), confidence, int(bool(cache_hit)), qhash, citations))
-        db().commit()
+    rec = {"ts": time.time(), "route": route, "topic": topic, "latency_ms": int(latency_ms), "provider": provider,
+           "tokens_in": (usage or {}).get("in", 0), "tokens_out": (usage or {}).get("out", 0), "confidence": confidence,
+           "cache_hit": int(bool(cache_hit)), "citations": citations,
+           "question_hash": hashlib.sha256(normalise_question(question).encode()).hexdigest()[:16]}
+    try:
+        backend().add_log(rec)
+    except Exception:
+        pass
 
 
 def insights():
-    """Aggregates only: never message text (there is none stored)."""
-    c = db()
-    total = c.execute("SELECT COUNT(*) FROM logs").fetchone()[0]
-    rows = lambda sql: [dict(r) for r in c.execute(sql).fetchall()]  # noqa: E731
+    """Aggregates only: there is no message text to show."""
+    logs = backend().logs()
+
+    def count(key, rows):
+        return [{key: k, "n": n} for k, n in Counter(r.get(key) for r in rows if r.get(key)).most_common()]
+
+    policy = [r for r in logs if r["route"] in ("answer", "not_found", "clarify")]
+    fresh = [r["latency_ms"] for r in logs if not r["cache_hit"]]
+    days = Counter(datetime.fromtimestamp(r["ts"], IST).strftime("%Y-%m-%d") for r in logs)
+    hashes = Counter(r["question_hash"] for r in logs)
     return {
-        "total_questions": total,
-        "by_route": rows("SELECT route, COUNT(*) AS n FROM logs GROUP BY route ORDER BY n DESC"),
-        "by_topic": rows("SELECT topic, COUNT(*) AS n FROM logs WHERE topic IS NOT NULL GROUP BY topic ORDER BY n DESC"),
-        "unanswered_topics": rows("SELECT topic, COUNT(*) AS n FROM logs WHERE route='not_found' AND topic IS NOT NULL "
-                                  "GROUP BY topic ORDER BY n DESC LIMIT 8"),
-        "cache_hit_rate": (c.execute("SELECT AVG(cache_hit) FROM logs WHERE route IN ('answer','not_found','clarify')")
-                           .fetchone()[0] or 0),
-        "avg_latency_ms": c.execute("SELECT AVG(latency_ms) FROM logs WHERE cache_hit=0").fetchone()[0] or 0,
-        "by_provider": rows("SELECT provider, COUNT(*) AS n FROM logs WHERE provider IS NOT NULL GROUP BY provider"),
-        "daily": rows("SELECT date(ts, 'unixepoch', '+5 hours', '+30 minutes') AS day, COUNT(*) AS n FROM logs "
-                      "GROUP BY day ORDER BY day DESC LIMIT 14"),
-        "repeat_questions": c.execute("SELECT COUNT(*) FROM (SELECT question_hash FROM logs GROUP BY question_hash "
-                                      "HAVING COUNT(*) > 1)").fetchone()[0],
-        "tickets_by_category": rows("SELECT category, COUNT(*) AS n FROM tickets WHERE source='chat' GROUP BY category"),
+        "total_questions": len(logs),
+        "by_route": count("route", logs),
+        "by_topic": count("topic", logs),
+        "unanswered_topics": count("topic", [r for r in logs if r["route"] == "not_found"])[:8],
+        "cache_hit_rate": (sum(r["cache_hit"] for r in policy) / len(policy)) if policy else 0,
+        "avg_latency_ms": (sum(fresh) / len(fresh)) if fresh else 0,
+        "by_provider": count("provider", logs),
+        "daily": [{"day": d, "n": n} for d, n in sorted(days.items(), reverse=True)[:14]],
+        "repeat_questions": sum(1 for n in hashes.values() if n > 1),
+        "tickets_by_category": [{"category": k, "n": v} for k, v in backend().chat_ticket_categories().items()],
+        "storage": storage_info(),
     }

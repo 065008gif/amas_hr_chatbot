@@ -21,14 +21,17 @@ function useBackendReady() {
   const check = useCallback(async (attempt = 0) => {
     if (stopped.current) return
     try {
-      const r = await fetch(`${API_URL}/health`, { cache: 'no-store' })
+      // On Vercel the first call after a cold start loads the index and models (a few seconds).
+      const ctrl = new AbortController()
+      const timer = setTimeout(() => ctrl.abort(), 60000)
+      const r = await fetch(`${API_URL}/health`, { cache: 'no-store', signal: ctrl.signal }).finally(() => clearTimeout(timer))
       const h = await r.json()
       if (h.ready) { setState({ ready: true, attempts: attempt, status: 'ok', error: null }); return }
       setState({ ready: false, attempts: attempt, status: h.status || 'warming_up', error: h.warm_error })
     } catch {
       setState((s) => ({ ...s, attempts: attempt, status: 'sleeping' }))
     }
-    if (attempt < 80) setTimeout(() => check(attempt + 1), 3000)
+    if (attempt < 40) setTimeout(() => check(attempt + 1), 3000)
     else setState((s) => ({ ...s, status: 'gave_up' }))
   }, [])
   useEffect(() => { check(0); return () => { stopped.current = true } }, [check])
