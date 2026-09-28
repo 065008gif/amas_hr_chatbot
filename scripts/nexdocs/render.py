@@ -85,6 +85,15 @@ class NexDoc(BaseDocTemplate):
     def beforeDocument(self):
         self.toc_log = []
 
+    def handle_flowable(self, flowables):
+        """Anchors are recorded here and never laid out, so they cannot spill onto a blank page."""
+        f = flowables[0]
+        if isinstance(f, Anchor):
+            flowables.pop(0)
+            f.store.setdefault(f.key, {})[f.edge] = self.page
+            return
+        super().handle_flowable(flowables)
+
     def afterFlowable(self, f):
         level = getattr(f, "toc_level", None)
         if level is None:

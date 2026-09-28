@@ -154,7 +154,9 @@ def check_definitions(doc, r):
     for t in terms:
         word = r"\b" + re.escape(t) + r"s?\b"
         uses = len(re.findall(word, text)) - 1
-        lower = [m.group(0) for m in re.finditer(word, text, re.I) if not m.group(0).startswith(t)]
+        ok = {w.lower() for w in doc.get("lowercase_ok", [])}   # ordinary English uses, e.g. "an act of"
+        lower = [m.group(0) for m in re.finditer(word, text, re.I)
+                 if not m.group(0).startswith(t) and m.group(0).lower() not in ok]
         if uses < 1:
             r.warn(f"Defined term '{t}' is never used after its definition")
         if lower:

@@ -41,6 +41,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 2, doc 002 Employee Handbook: 24 pages (target 26 ±2), TOC 42/42, 0 errors/warnings, traps T09-T12 verified (all 6 types now covered). Conflicts C01 and C04 planted. D-022. Helper: `bash scripts/doc_cycle.sh NNN` runs the whole routine; `python scripts/renumber_tables.py NNN` fixes table order.
 
+- [x] Phase 2, doc 003 POSH: 12 pages (target 14 ±2), TOC ok, traps T13-T14 verified. Renderer blank-page bug fixed (D-023). Running total 51 pages / 14 traps.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 

@@ -1,0 +1,409 @@
+doc_id: "003"
+title: Policy on Prevention of Sexual Harassment (POSH)
+number: NTL/HR/POL/003
+version: "3.0"
+effective_date: "2025-01-01"
+target_pages: 14
+lowercase_ok: [act, acts, days, employee, complainants]   # ordinary English uses, reviewed
+
+control:
+  owner: Presiding Officer, Internal Committee (Bengaluru), with the Head, HR Operations
+  approver: Board of Directors, on the recommendation of the Chief People Officer
+  approval_date: "2024-12-12"
+  classification: Internal
+  supersedes: Policy on Prevention of Sexual Harassment version 2.1 dated 1 April 2022
+  review_cycle: Annual, and on any amendment of the Act or the Rules
+  applicable_to: All Employees, and every woman who is at a Workplace of the Company, at all locations in India
+  distribution: "Published on the NPP and on the notice boards of every location, together with the names and contact details of the members of the Internal Committee. Printed copies are uncontrolled."
+
+history:
+  - ["1.0", "2014-02-01", "First issue, following the enactment of the Act.", "HR Operations / Board"]
+  - ["2.0", "2019-04-01", "Internal Committees constituted at each location; online complaint address introduced.", "HR Operations / Board"]
+  - ["2.1", "2022-04-01", "Workplace definition extended to remote work and virtual meetings.", "Internal Committee / Board"]
+  - ["3.0", "2025-01-01", "Restructured; inquiry timelines table and interim relief clarified; illustrative scenarios added.", "Internal Committee / Board"]
+
+sections:
+  - num: 1
+    title: Policy Statement
+    body:
+      - clause: "1.1"
+        title: Commitment
+        text: "The Company is committed to a Workplace free from Sexual Harassment, where every person is treated with dignity. Sexual Harassment is a violation of the fundamental rights to equality and to life with dignity, and is also misconduct under the {doc:004}. The Company has zero tolerance for Sexual Harassment and for retaliation against anyone who raises a concern."
+      - clause: "1.2"
+        title: Legal framework
+        text: "This Policy is framed in accordance with the {stat:POSH_ACT|Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013} and the rules made under it. Where this Policy is silent or inconsistent with the Act or the Rules, the Act and the Rules prevail."
+      - clause: "1.3"
+        title: What this Policy does
+        text: "This Policy explains what Sexual Harassment is, how the Internal Committee is constituted, how a complaint is made and inquired into, the timelines at each stage, the relief available during an inquiry, the action that follows, and the protection given to Complainants and witnesses."
+
+  - num: 2
+    title: Scope
+    body:
+      - clause: "2.1"
+        title: Who is protected
+        text: "This Policy protects every Aggrieved Woman, whether she is an Employee, a consultant, a trainee, an intern, a visitor, a candidate for interview, or an employee of a client, vendor or contractor, who is subjected to Sexual Harassment at a Workplace of the Company or by an Employee."
+      - clause: "2.2"
+        title: Protection limited to women
+        text: "The complaint and inquiry procedure under this Policy is available to women, as provided in the Act. Complaints of harassment by or against persons of any gender that are not within the Act are dealt with under the grievance procedure described in the {doc:002} and the {doc:004}."
+      - clause: "2.3"
+        title: Who may be a Respondent
+        text: "A complaint may be made against any Employee, irrespective of Grade, including a member of the senior leadership. Where the Respondent is not an Employee, for example an employee of a client or a vendor, the Internal Committee receives the complaint and the Company takes up the matter with the Respondent's employer, and supports the Complainant in any process of that employer or of the Local Committee."
+      - clause: "2.4"
+        title: Where the Policy applies
+        text: "This Policy applies at every Workplace as defined in {ref:#3.10}, at all locations of the Company in India, whether the conduct occurs during or outside working hours."
+
+  - num: 3
+    title: Definitions
+    body:
+      - para: "In this Policy, the following terms have the meanings given below. Terms not defined here have the meanings given in the Act."
+      - clause: "3.1"
+        term: Act
+        text: "means the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013, and includes the rules made under it."
+      - clause: "3.2"
+        term: Aggrieved Woman
+        text: "means a woman of any age, whether employed or not, who alleges that she has been subjected to any act of Sexual Harassment at a Workplace."
+      - clause: "3.3"
+        term: Complainant
+        text: "means the Aggrieved Woman who makes a complaint, or the person who makes a complaint on her behalf under {ref:#6.4}."
+      - clause: "3.4"
+        term: Days
+        text: "means calendar days, including weekly offs and holidays, which is how periods are counted under the Act."
+      - clause: "3.5"
+        term: Employee
+        text: "means any person employed at a Workplace for any work on regular, temporary, ad hoc or daily wage basis, directly or through an agent or contractor, with or without the knowledge of the Company, whether for remuneration or not, and includes a trainee, apprentice, intern, consultant and probationer."
+      - clause: "3.6"
+        term: Internal Committee
+        text: "(IC) means the committee constituted by the Company at each location under {ref:#Section 5}."
+      - clause: "3.7"
+        term: Local Committee
+        text: "means the committee constituted by the District Officer under the Act, which receives complaints where the Respondent is the employer or where no Internal Committee has been constituted."
+      - clause: "3.8"
+        term: Respondent
+        text: "means the person against whom a complaint has been made."
+      - clause: "3.9"
+        term: Sexual Harassment
+        text: "includes any one or more of the following unwelcome conduct or behaviour, whether directly or by implication: physical contact and advances; a demand or request for sexual favours; making sexually coloured remarks; showing pornography; or any other unwelcome physical, verbal or non-verbal conduct of a sexual nature. It also includes the following circumstances when they occur in relation to or are connected with such conduct: an implied or explicit promise of preferential treatment in employment; an implied or explicit threat of detrimental treatment; an implied or explicit threat about present or future employment status; interference with work or creating an intimidating, offensive or hostile work environment; and humiliating treatment likely to affect health or safety."
+      - clause: "3.10"
+        term: Workplace
+        text: "means any place visited by an Employee arising out of or during the course of employment, and includes: every office of the Company; a client's premises; any place of training, conference, off-site or team event, whether or not organised by the Company; transport provided by the Company or used for travel on work; hotels and other places of stay during business travel; the Employee's home or any other place when used for work; and any virtual space in which work-related interaction occurs, including video calls, chat tools, e-mail, and messaging applications or groups used by colleagues, whether on a Company or a personal device and whether during or outside working hours."
+
+  - num: 4
+    title: Understanding Sexual Harassment
+    body:
+      - clause: "4.1"
+        title: The test is the impact
+        text: "Whether conduct is Sexual Harassment is judged by whether it was unwelcome to the recipient, not by the intention of the person engaging in it. Conduct may be Sexual Harassment even if it happened once, even if the recipient did not object at the time, and even if others present did not find it offensive."
+      - clause: "4.2"
+        title: Examples
+        text: "Examples of conduct that may amount to Sexual Harassment include:"
+        items:
+          - "touching, patting, pinching or brushing against a person, or standing unnecessarily close, where this is unwelcome;"
+          - "comments or jokes about a person's body, appearance, clothing, sexual life or sexual orientation, or sexual innuendo;"
+          - "repeated requests for dates or personal meetings after the person has shown disinterest;"
+          - "sending or displaying sexually explicit messages, images, memes, videos or links, including in chat groups;"
+          - "staring, leering, whistling or making sexual gestures;"
+          - "suggesting that a rating, promotion, allocation or extension of contract depends on a personal or sexual relationship; and"
+          - "following, repeatedly calling or messaging a person, or contacting a person on social media, in a manner that is unwelcome."
+      - clause: "4.3"
+        title: What is not Sexual Harassment
+        text: "Legitimate feedback on performance, allocation of work, or a decision under a Company policy is not Sexual Harassment unless it is connected with conduct of a sexual nature. A consensual relationship between adults is not Sexual Harassment, but a relationship within a reporting line must be declared under the {doc:004}, and conduct that was once welcome can become unwelcome."
+
+  - num: 5
+    title: Internal Committee
+    body:
+      - clause: "5.1"
+        title: Constitution
+        text: "The Company has constituted an Internal Committee at each of its locations, in writing, in accordance with {stat:POSH_IC_COMPOSITION|Section 4 of the Act}. Each Internal Committee consists of:"
+        items:
+          - "a Presiding Officer, who is a woman employed at a senior level at the location;"
+          - "not less than two members from amongst Employees, preferably committed to the cause of women or having experience in social work or legal knowledge; and"
+          - "one external member from a non-governmental organisation or association committed to the cause of women, or a person familiar with issues relating to Sexual Harassment."
+      - clause: "5.2"
+        title: Composition rules
+        text: "At least one half of the members of each Internal Committee are women. Members hold office for a term not exceeding three years. The external member is paid a fee for each sitting, as permitted by the Rules. A member who is a party to, or has a conflict of interest in, a complaint withdraws from that complaint and is replaced for that complaint by a member nominated by the Presiding Officer."
+      - clause: "5.3"
+        title: Quorum
+        text: "The Internal Committee proceeds with an inquiry only when at least three members are present, including the Presiding Officer or, in her absence, a member nominated by her, and ordinarily including the external member."
+      - clause: "5.4"
+        title: Contact details
+        text: "The Internal Committee at each location may be contacted at the addresses in {ref:#Table 1}. The names of members are displayed on the notice board at each office and on the NPP, and are updated within seven Days of any change."
+      - table:
+          id: Table 1
+          title: Internal Committees and contact addresses
+          header: ["Location", "Internal Committee address", "Presiding Officer (designation)"]
+          widths: [1.4, 3.2, 3.4]
+          rows:
+            - ["Bengaluru", "ic.bengaluru@nexora.example", "Vice President, Delivery (Banking and Financial Services)"]
+            - ["Pune", "ic.pune@nexora.example", "Director, Delivery (Retail and Consumer)"]
+            - ["Hyderabad", "ic.hyderabad@nexora.example", "Director, Cloud and Infrastructure Services"]
+            - ["Chennai", "ic.chennai@nexora.example", "Director, Healthcare and Life Sciences"]
+            - ["Noida", "ic.noida@nexora.example", "Associate Director, Digital Engineering"]
+            - ["Any location", "ic@nexora.example (forwarded to the relevant committee)", "Not applicable"]
+          note: "The addresses in this table are fictional placeholders created for a college project."
+      - clause: "5.5"
+        title: Which committee hears a complaint
+        text: "A complaint is heard by the Internal Committee of the location where the Aggrieved Woman is based. Where the Respondent is based at another location, that committee may co-opt one member of the Internal Committee of the Respondent's location for the inquiry. Where the Respondent is the Presiding Officer or a member of an Internal Committee, the complaint is heard by the committee of another location nominated by the Chief People Officer."
+
+  - num: 6
+    title: Making a Complaint
+    body:
+      - clause: "6.1"
+        title: Who may complain
+        text: "An Aggrieved Woman may make a complaint of Sexual Harassment to the Internal Committee. She may first speak informally to any member of the Internal Committee, the HR Business Partner or the Employee Assistance Programme for guidance, and doing so does not amount to making a complaint."
+      - clause: "6.2"
+        title: Time limit
+        text: "A complaint is made in writing within {stat:POSH_TIME_LIMIT|three months from the date of the incident and, in the case of a series of incidents, within three months from the date of the last incident}. The Internal Committee may extend the time limit by {stat:POSH_EXTENSION|a further period not exceeding three months} if it is satisfied that circumstances prevented the Aggrieved Woman from complaining within the first period, recording its reasons in writing."
+      - clause: "6.3"
+        title: Form of complaint
+        text: "A complaint is submitted in the form in {ref:#Annexure A}, or in any written form, by e-mail to the Internal Committee or in a sealed envelope addressed to the Presiding Officer. It should describe the incidents, dates, places and any witnesses, and attach any documents or messages available. Where the Aggrieved Woman cannot make the complaint in writing, the Presiding Officer or any member renders all reasonable assistance to her to reduce it to writing."
+      - clause: "6.4"
+        title: Complaint on behalf of the Aggrieved Woman
+        text: "Where the Aggrieved Woman is unable to make a complaint on account of physical or mental incapacity, or death, or otherwise, {stat:POSH_ON_BEHALF|her legal heir, a relative, a friend, a co-worker or another person specified in the Rules} may make the complaint, with her written consent where the Rules require it."
+      - clause: "6.5"
+        title: Complaints received elsewhere
+        text: "A manager, HR Business Partner or any other Employee who receives a complaint or disclosure of Sexual Harassment forwards it to the Internal Committee within one Working Day, shares it with no one else, and takes no action on it personally."
+
+  - num: 7
+    title: Conciliation
+    body:
+      - clause: "7.1"
+        title: At the request of the Aggrieved Woman only
+        text: "Before starting an inquiry, the Internal Committee may, at the request of the Aggrieved Woman and only at her request, take steps to settle the matter between her and the Respondent through conciliation. The Internal Committee does not suggest or encourage conciliation."
+      - clause: "7.2"
+        title: No monetary settlement
+        text: "{stat:POSH_NO_MONEY_SETTLEMENT|No monetary settlement} may be made as a basis of conciliation."
+      - clause: "7.3"
+        title: Effect of settlement
+        text: "Where a settlement is arrived at, the Internal Committee records it and forwards it to the Company for appropriate action, and provides copies to the Aggrieved Woman and the Respondent. No further inquiry is conducted, unless the Aggrieved Woman informs the Internal Committee that a term of the settlement has not been complied with, in which case the Internal Committee proceeds with the inquiry."
+
+  - num: 8
+    title: Inquiry
+    body:
+      - clause: "8.1"
+        title: Notice to the Respondent
+        text: "The Internal Committee sends a copy of the complaint to the Respondent within {stat:POSH_NOTICE_DAYS|seven Days} of receiving it. The Respondent files a reply with a list of documents and the names and addresses of witnesses within {stat:POSH_REPLY_DAYS|ten Days} of receiving the copy."
+      - clause: "8.2"
+        title: Principles of natural justice
+        text: "The inquiry is conducted in accordance with the principles of natural justice. Each party is given an opportunity to be heard, to present evidence and witnesses, and to receive a copy of the findings. {stat:POSH_NO_LAWYER|The parties may not be represented by a legal practitioner at any stage of the proceedings before the Internal Committee.}"
+      - clause: "8.3"
+        title: Powers
+        text: "For the purpose of the inquiry, the Internal Committee has {stat:POSH_CIVIL_COURT|the powers vested in a civil court} in respect of summoning and enforcing the attendance of any person, examining a person on oath, and requiring the discovery and production of documents. Employees are required to cooperate with the inquiry."
+      - clause: "8.4"
+        title: Absence of a party
+        text: "Where the Complainant or the Respondent fails, without sufficient cause, to be present at {stat:POSH_EXPARTE|three consecutive hearings} convened by the Presiding Officer, the Internal Committee may terminate the proceedings or give an ex parte decision, after giving fifteen Days' written notice to the party concerned."
+      - clause: "8.5"
+        title: Time for completing the inquiry
+        text: "The inquiry is completed within {stat:POSH_INQUIRY_DAYS|ninety Days} of the receipt of the complaint. The Internal Committee provides its report of findings and recommendations to the Company and to both parties within {stat:POSH_REPORT_DAYS|ten Days} of the completion of the inquiry. The Company acts on the recommendations within {stat:POSH_ACTION_DAYS|sixty Days} of receiving the report. The complete sequence of steps is shown in {ref:#Annexure B}."
+      - clause: "8.6"
+        title: Complaints that may also be offences
+        text: "Where the conduct complained of may also be an offence under the {stat:BNS_2023|Bharatiya Nyaya Sanhita, 2023} or any other law, the Internal Committee informs the Aggrieved Woman of her right to report it to the police, and the Company assists her if she decides to do so. The Company itself reports the matter to the police where it is required by law to do so."
+
+  - num: 9
+    title: Interim Relief
+    body:
+      - clause: "9.1"
+        title: Relief during the inquiry
+        text: "During the pendency of an inquiry, on a written request by the Aggrieved Woman, the Internal Committee may recommend to the Company to:"
+        items:
+          - "transfer the Aggrieved Woman or the Respondent to another team, shift or location;"
+          - "grant leave to the Aggrieved Woman of {stat:POSH_INTERIM_LEAVE|up to three months}, in addition to the leave to which she is otherwise entitled under the {doc:001}; and"
+          - "restrain the Respondent from reporting on the work performance of the Aggrieved Woman, or from writing her performance review, and assign that responsibility to another officer."
+      - clause: "9.2"
+        title: Implementation
+        text: "The Company implements a recommendation for interim relief within five Working Days and informs the Internal Committee. Interim relief is not a finding against the Respondent and does not affect the Respondent's pay."
+
+  - num: 10
+    title: Outcome and Action
+    body:
+      - clause: "10.1"
+        title: Where the allegation is proved
+        text: "Where the Internal Committee concludes that the allegation is proved, it recommends action under the {doc:004}, which may include a written apology, a warning, a reprimand or censure, withholding of promotion, pay increase or variable pay, termination of employment, undergoing counselling, or community service."
+      - clause: "10.2"
+        title: Compensation
+        text: "The Internal Committee may also recommend deduction from the salary of the Respondent of such sum as it considers appropriate to be paid to the Aggrieved Woman, having regard to the mental trauma, pain, suffering and emotional distress caused to her; the loss of career opportunity; medical expenses; and the income and financial status of the Respondent. The sum may be paid in a lump sum or in instalments."
+      - clause: "10.3"
+        title: Where the allegation is not proved
+        text: "Where the Internal Committee concludes that the allegation is not proved, it recommends that no action is required. The Company ensures that neither party suffers any consequence merely because a complaint was made or defended."
+      - clause: "10.4"
+        title: False or malicious complaints
+        text: "Where the Internal Committee concludes that a complaint was made with malicious intent, knowing it to be false, or on the basis of a forged or misleading document, it may recommend action against the person who made it. {stat:POSH_NOT_MALICIOUS|A mere inability to substantiate a complaint or provide adequate proof does not attract such action.} Malicious intent must be established through an inquiry before any action is recommended."
+
+  - num: 11
+    title: Confidentiality
+    body:
+      - clause: "11.1"
+        title: What is confidential
+        text: "The identity and addresses of the Aggrieved Woman, the Respondent and the witnesses, the contents of the complaint, the conciliation and inquiry proceedings, the recommendations of the Internal Committee and the action taken by the Company are confidential and are {stat:POSH_CONFIDENTIALITY|not published, communicated or made known to the public, the press or the media in any manner}. Information on the justice secured may be disseminated without disclosing names or identifying details."
+      - clause: "11.2"
+        title: Breach of confidentiality
+        text: "Any person who breaches confidentiality under this Section is liable to action under the {doc:004}, and the Company may recover a penalty from that person as provided in the Rules."
+      - clause: "11.3"
+        title: Records
+        text: "Complaint files are kept by the Presiding Officer in a restricted repository to which only members of the Internal Committee have access, and are retained for eight years after closure."
+
+  - num: 12
+    title: Appeal
+    body:
+      - clause: "12.1"
+        title: Right of appeal
+        text: "Any person aggrieved by the recommendations of the Internal Committee, or by the non-implementation of the recommendations, may prefer an appeal to the appellate authority notified under the Act {stat:POSH_APPEAL|within ninety Days of the recommendations}."
+      - clause: "12.2"
+        title: Pending appeal
+        text: "The Company implements the recommendations unless an appellate authority stays them. An Employee who files an appeal informs the Presiding Officer so that the record can be preserved."
+
+  - num: 13
+    title: Protection against Retaliation
+    body:
+      - clause: "13.1"
+        title: No victimisation
+        text: "No Complainant, witness, member of the Internal Committee or person who assists in an inquiry shall be victimised, discriminated against or subjected to any adverse action in work allocation, rating, promotion, transfer or continuation of employment for doing so."
+      - clause: "13.2"
+        title: Reporting retaliation
+        text: "Any retaliation is reported to the Presiding Officer or the Ethics Office. Retaliation is treated as a separate act of misconduct and dealt with under the {doc:004}, independently of the outcome of the original complaint."
+
+  - num: 14
+    title: Responsibilities and Awareness
+    body:
+      - clause: "14.1"
+        title: The Company
+        text: "The Company provides a safe working environment; displays at each Workplace the consequences of Sexual Harassment and the composition of the Internal Committee; organises workshops and awareness programmes for Employees and orientation programmes for members of the Internal Committee; provides the Internal Committee with the facilities it needs; and assists in securing the attendance of the Respondent and witnesses."
+      - clause: "14.2"
+        title: Managers
+        text: "Managers set the tone for respectful conduct, intervene when they observe inappropriate behaviour, forward any complaint to the Internal Committee as required by {ref:#6.5}, and ensure that no Employee is disadvantaged for raising a concern."
+      - clause: "14.3"
+        title: Every Employee
+        text: "Every Employee is responsible for treating colleagues with respect, for speaking up or supporting a colleague who is being harassed, for cooperating with an inquiry, and for keeping inquiry matters confidential."
+      - clause: "14.4"
+        title: Training
+        text: "Every Employee completes the POSH module on joining and every year thereafter. Members of the Internal Committee complete an advanced programme on inquiry procedure within 60 Days of appointment and a refresher every year."
+      - clause: "14.5"
+        title: Annual report
+        text: "Each Internal Committee prepares an annual report giving the number of complaints received, disposed of and pending for more than ninety Days, and the awareness programmes held. The Company submits the report to the District Officer and includes the number of cases in its annual report, {stat:POSH_ANNUAL_REPORT|as required by the Act}."
+
+  - num: 15
+    title: Special Situations
+    body:
+      - clause: "15.1"
+        title: Complaint against a senior leader
+        text: "Where the Respondent is in Grade L8 or is a member of the leadership team, the Presiding Officer informs the Chief People Officer, or where the Chief People Officer is the Respondent, the Chair of the Audit Committee of the Board, so that the Respondent's authority cannot be used to influence the inquiry. The inquiry follows the same procedure and timelines as any other complaint."
+      - clause: "15.2"
+        title: Both parties in the same team
+        text: "Where the Complainant and the Respondent work in the same team, the HR Business Partner, on the request of the Internal Committee, arranges for them not to attend the same meetings during the inquiry, without disadvantage to the Complainant and without this being treated as a finding against the Respondent."
+      - clause: "15.3"
+        title: The Complainant or the Respondent leaves the Company
+        text: "The resignation or separation of either party does not end an inquiry that has begun. The Internal Committee completes the inquiry, and its findings are recorded. Where the Respondent has left, the recommendations are recorded in the Respondent's employment file and considered if the Respondent seeks re-employment."
+      - clause: "15.4"
+        title: More than one complaint against the same Respondent
+        text: "Where two or more complaints are received against the same Respondent, the Internal Committee may hear them together if the Complainants agree, while keeping the identity of each Complainant confidential from the others where requested. Each complaint is decided on its own evidence."
+      - clause: "15.5"
+        title: Complaints relating to online conduct
+        text: "Screenshots, chat exports, call recordings and e-mail are accepted as evidence. The Internal Committee may ask the IT Service Desk to preserve relevant Company records, without accessing their content, as soon as a complaint is received."
+      - clause: "15.6"
+        title: Withdrawal of a complaint
+        text: "A Complainant may ask to withdraw a complaint at any stage. The Internal Committee meets the Complainant privately to confirm that the request is voluntary and not the result of pressure. Where it has reason to believe that pressure has been applied, it records its concern and may recommend action for retaliation under {ref:#Section 13}."
+
+annexures:
+  - id: A
+    title: Complaint Form
+    body:
+      - para: "This form is optional; a complaint in any written form is accepted. Send it to the Internal Committee address in {ref:#Table 1}, or hand it in a sealed envelope to the Presiding Officer. Attach extra sheets if needed."
+      - table:
+          title: "Form IC-01: Complaint to the Internal Committee (confidential)"
+          form: true
+          widths: [1.8, 3]
+          rows:
+            - ["Name, Employee ID (if any), organisation and location of the Complainant", ""]
+            - ["If made on behalf of the Aggrieved Woman: name of the person making the complaint and relationship", ""]
+            - ["Name, designation and location of the Respondent (if known)", ""]
+            - ["Date(s), time(s) and place(s) of the incident(s), including any virtual platform", ""]
+            - ["Description of what happened", ""]
+            - ["Names of any witnesses", ""]
+            - ["Documents, messages or other evidence attached", ""]
+            - ["Is interim relief requested? If so, what?", ""]
+            - ["Does the Complainant request conciliation before inquiry? (Yes / No)", ""]
+            - ["Signature and date", ""]
+
+  - id: B
+    title: Timeline of the Complaint and Inquiry Process
+    body:
+      - table:
+          id: Table 2
+          title: Steps and time limits
+          header: ["Step", "Action", "Time limit", "By whom"]
+          widths: [0.6, 3.6, 2.6, 1.8]
+          rows:
+            - ["1", "Complaint made in writing", "Within three months of the incident or the last incident; extendable by up to three months", "Complainant"]
+            - ["2", "Acknowledgement of complaint to the Complainant", "Within two Working Days of receipt", "Presiding Officer"]
+            - ["3", "Conciliation, if requested by the Aggrieved Woman", "Before the inquiry begins", "Internal Committee"]
+            - ["4", "Copy of complaint sent to the Respondent", "Within seven Days of receipt", "Internal Committee"]
+            - ["5", "Reply of the Respondent with documents and witnesses", "Within ten Days of receiving the copy", "Respondent"]
+            - ["6", "Hearings of parties and witnesses", "As scheduled; ex parte after three unexcused absences and fifteen Days' notice", "Internal Committee"]
+            - ["7", "Inquiry completed", "Within ninety Days of receipt of the complaint", "Internal Committee"]
+            - ["8", "Report of findings and recommendations", "Within ten Days of completion of the inquiry", "Internal Committee"]
+            - ["9", "Action on the recommendations", "Within sixty Days of receipt of the report", "Company"]
+            - ["10", "Appeal", "Within ninety Days of the recommendations", "Either party"]
+          note: "Days are calendar days. The ninety-Day limit for the inquiry runs from the date the complaint is received, not from the date of the Respondent's reply."
+
+  - id: C
+    title: Frequently Asked Questions and Illustrations
+    body:
+      - clause: "C.1"
+        title: Does this Policy cover messages sent late at night on a personal phone?
+        text: "Yes, if the messages arise out of the working relationship. A Workplace under {ref:#3.10} includes messaging applications and groups used by colleagues, on any device and at any hour. For example, unwelcome sexual messages from a colleague on a personal messaging application at 11 p.m. on a Sunday are within this Policy."
+      - clause: "C.2"
+        title: The incident happened at a team dinner that the team paid for. Is it covered?
+        text: "Yes. An off-site or team event is a Workplace whether or not it is organised or paid for by the Company, provided it is connected with work."
+      - clause: "C.3"
+        title: Can I complain about something that happened five months ago?
+        text: "The time limit is three months from the incident, or from the last incident in a series. The Internal Committee may extend it by up to a further three months if circumstances prevented a complaint earlier, so a complaint five months after the incident may be accepted with reasons. You should approach the Internal Committee as soon as you can."
+      - clause: "C.4"
+        title: Will my manager be told about my complaint?
+        text: "Only to the extent strictly necessary, for example to implement interim relief. The complaint and the inquiry are confidential under {ref:#Section 11}."
+      - clause: "C.5"
+        title: I only want the behaviour to stop. Do I have to file a formal complaint?
+        text: "No. You may speak to a member of the Internal Committee for guidance, and you may ask for conciliation under {ref:#Section 7}. The Internal Committee does not start an inquiry without a complaint, but it may arrange awareness sessions for a team without naming anyone."
+      - clause: "C.6"
+        title: Can my lawyer attend the hearing?
+        text: "No. Legal practitioners may not represent either party before the Internal Committee under {ref:#8.2}. You may consult a lawyer outside the proceedings."
+
+  - id: D
+    title: Support Resources
+    body:
+      - para: "Support is available to any person involved in a complaint, including the Respondent and witnesses, without affecting the inquiry."
+      - table:
+          title: Where to get support
+          header: ["Support", "How to reach it", "Notes"]
+          widths: [2.2, 3.2, 3]
+          rows:
+            - ["Internal Committee", "Addresses in {ref:#Table 1}", "For guidance and for complaints"]
+            - ["Employee Assistance Programme", "1800-000-0000 (extension 9), 24 hours", "Confidential counselling; the Company is not told who called"]
+            - ["HR Business Partner", "Through the NPP profile", "For interim practical support, such as a change of seating or shift"]
+            - ["Ethics Office", "ethics@nexora.example", "For reports of retaliation"]
+            - ["Local Committee of the district", "Through the District Officer", "Where the complaint is against the employer, or the Complainant prefers it where the Act allows"]
+          note: "Contact details are fictional placeholders created for a college project. In an emergency involving immediate danger, contact the police."
+
+circulars_intro: "The circulars below are issued with the approval of the Chief People Officer and, where required, the Board. Each prevails over the clause it amends from its effective date; the body of the Policy is not edited."
+
+circulars:
+  - number: HR/CIR/2025/05
+    date: "2025-05-12"
+    effective_from: "2025-05-15"
+    subject: Reconstitution of Internal Committees and confidential online complaint channel
+    amends: ["5.4", "6.3"]
+    issued_by: Chief People Officer
+    body:
+      - para: "The Internal Committees at Pune and Noida have been reconstituted with effect from 15 May 2025, following the completion of the three-year term of their members. The names of the new members are displayed on the NPP and the notice boards as required by {ref:#5.4}."
+      - para: "In addition to the methods in {ref:#6.3}, a complaint may now be submitted through the confidential Internal Committee module of the NPP, which is visible only to the members of the relevant Internal Committee. Submission through the module has the same effect as a written complaint, and the date of submission is the date of receipt for all time limits."
+
+  - number: HR/CIR/2026/04
+    date: "2026-03-02"
+    effective_from: "2026-03-08"
+    subject: Extension of the complaint procedure to Employees of all genders
+    amends: ["2.2"]
+    issued_by: Chief People Officer, with the approval of the Board
+    body:
+      - para: "With effect from 8 March 2026, notwithstanding {ref:#2.2}, the Company extends the complaint, inquiry, interim relief and non-retaliation provisions of this Policy, as a matter of Company policy, to complaints of Sexual Harassment made by an Employee of any gender, including men and transgender persons."
+      - items:
+          - "Such complaints are received and inquired into by the Internal Committee following the same procedure and timelines as a complaint under the Act."
+          - "Remedies and appeals under the Act remain available only where the Act applies, that is, to an Aggrieved Woman. For other complainants the outcome is implemented under the {doc:004}."
+          - "All other provisions of the Policy remain unchanged."

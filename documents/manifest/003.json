@@ -1,0 +1,492 @@
+{
+ "doc_id": "003",
+ "title": "Policy on Prevention of Sexual Harassment (POSH)",
+ "number": "NTL/HR/POL/003",
+ "version": "3.0",
+ "effective_date": "2025-01-01",
+ "pdf": "NTL-HR-POL-003_Policy_on_Prevention_of_Sexual_Harassment_POSH.pdf",
+ "pages": 12,
+ "built": "2026-09-28T18:36:19",
+ "toc": [
+  {
+   "level": 0,
+   "text": "1. Policy Statement",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "2. Scope",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "3. Definitions",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "4. Understanding Sexual Harassment",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "5. Internal Committee",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "6. Making a Complaint",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "7. Conciliation",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "8. Inquiry",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "9. Interim Relief",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "10. Outcome and Action",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "11. Confidentiality",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "12. Appeal",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "13. Protection against Retaliation",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "14. Responsibilities and Awareness",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "15. Special Situations",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "Annexure A: Complaint Form",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure B: Timeline of the Complaint and Inquiry Process",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure C: Frequently Asked Questions and Illustrations",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "Annexure D: Support Resources",
+   "page": 11
+  },
+  {
+   "level": 0,
+   "text": "Amendment Circulars",
+   "page": 12
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/05: Reconstitution of Internal Committees and confidential online complaint channel",
+   "page": 12
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2026/04: Extension of the complaint procedure to Employees of all genders",
+   "page": 12
+  }
+ ],
+ "anchors": {
+  "Section 1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.2": {
+   "start": 4,
+   "end": 4
+  },
+  "1.3": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.1": {
+   "start": 4,
+   "end": 4
+  },
+  "2.2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.3": {
+   "start": 4,
+   "end": 4
+  },
+  "2.4": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 3": {
+   "start": 4,
+   "end": 5
+  },
+  "3.1": {
+   "start": 4,
+   "end": 4
+  },
+  "3.2": {
+   "start": 4,
+   "end": 4
+  },
+  "3.3": {
+   "start": 4,
+   "end": 4
+  },
+  "3.4": {
+   "start": 4,
+   "end": 4
+  },
+  "3.5": {
+   "start": 4,
+   "end": 4
+  },
+  "3.6": {
+   "start": 4,
+   "end": 4
+  },
+  "3.7": {
+   "start": 4,
+   "end": 5
+  },
+  "3.8": {
+   "start": 5,
+   "end": 5
+  },
+  "3.9": {
+   "start": 5,
+   "end": 5
+  },
+  "3.10": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 4": {
+   "start": 5,
+   "end": 5
+  },
+  "4.1": {
+   "start": 5,
+   "end": 5
+  },
+  "4.2": {
+   "start": 5,
+   "end": 5
+  },
+  "4.3": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 5": {
+   "start": 5,
+   "end": 6
+  },
+  "5.1": {
+   "start": 5,
+   "end": 6
+  },
+  "5.2": {
+   "start": 6,
+   "end": 6
+  },
+  "5.3": {
+   "start": 6,
+   "end": 6
+  },
+  "5.4": {
+   "start": 6,
+   "end": 6
+  },
+  "Table 1": {
+   "start": 6,
+   "end": 6
+  },
+  "5.5": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 6": {
+   "start": 6,
+   "end": 7
+  },
+  "6.1": {
+   "start": 6,
+   "end": 6
+  },
+  "6.2": {
+   "start": 6,
+   "end": 6
+  },
+  "6.3": {
+   "start": 6,
+   "end": 6
+  },
+  "6.4": {
+   "start": 6,
+   "end": 6
+  },
+  "6.5": {
+   "start": 6,
+   "end": 7
+  },
+  "Section 7": {
+   "start": 7,
+   "end": 7
+  },
+  "7.1": {
+   "start": 7,
+   "end": 7
+  },
+  "7.2": {
+   "start": 7,
+   "end": 7
+  },
+  "7.3": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 8": {
+   "start": 7,
+   "end": 7
+  },
+  "8.1": {
+   "start": 7,
+   "end": 7
+  },
+  "8.2": {
+   "start": 7,
+   "end": 7
+  },
+  "8.3": {
+   "start": 7,
+   "end": 7
+  },
+  "8.4": {
+   "start": 7,
+   "end": 7
+  },
+  "8.5": {
+   "start": 7,
+   "end": 7
+  },
+  "8.6": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 9": {
+   "start": 7,
+   "end": 8
+  },
+  "9.1": {
+   "start": 7,
+   "end": 7
+  },
+  "9.2": {
+   "start": 7,
+   "end": 8
+  },
+  "Section 10": {
+   "start": 8,
+   "end": 8
+  },
+  "10.1": {
+   "start": 8,
+   "end": 8
+  },
+  "10.2": {
+   "start": 8,
+   "end": 8
+  },
+  "10.3": {
+   "start": 8,
+   "end": 8
+  },
+  "10.4": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 11": {
+   "start": 8,
+   "end": 8
+  },
+  "11.1": {
+   "start": 8,
+   "end": 8
+  },
+  "11.2": {
+   "start": 8,
+   "end": 8
+  },
+  "11.3": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 12": {
+   "start": 8,
+   "end": 8
+  },
+  "12.1": {
+   "start": 8,
+   "end": 8
+  },
+  "12.2": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 13": {
+   "start": 8,
+   "end": 8
+  },
+  "13.1": {
+   "start": 8,
+   "end": 8
+  },
+  "13.2": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 14": {
+   "start": 8,
+   "end": 9
+  },
+  "14.1": {
+   "start": 9,
+   "end": 9
+  },
+  "14.2": {
+   "start": 9,
+   "end": 9
+  },
+  "14.3": {
+   "start": 9,
+   "end": 9
+  },
+  "14.4": {
+   "start": 9,
+   "end": 9
+  },
+  "14.5": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 15": {
+   "start": 9,
+   "end": 9
+  },
+  "15.1": {
+   "start": 9,
+   "end": 9
+  },
+  "15.2": {
+   "start": 9,
+   "end": 9
+  },
+  "15.3": {
+   "start": 9,
+   "end": 9
+  },
+  "15.4": {
+   "start": 9,
+   "end": 9
+  },
+  "15.5": {
+   "start": 9,
+   "end": 9
+  },
+  "15.6": {
+   "start": 9,
+   "end": 9
+  },
+  "Annexure A": {
+   "start": 10,
+   "end": 10
+  },
+  "Annexure B": {
+   "start": 10,
+   "end": 10
+  },
+  "Table 2": {
+   "start": 10,
+   "end": 10
+  },
+  "Annexure C": {
+   "start": 11,
+   "end": 11
+  },
+  "C.1": {
+   "start": 11,
+   "end": 11
+  },
+  "C.2": {
+   "start": 11,
+   "end": 11
+  },
+  "C.3": {
+   "start": 11,
+   "end": 11
+  },
+  "C.4": {
+   "start": 11,
+   "end": 11
+  },
+  "C.5": {
+   "start": 11,
+   "end": 11
+  },
+  "C.6": {
+   "start": 11,
+   "end": 11
+  },
+  "Annexure D": {
+   "start": 11,
+   "end": 11
+  },
+  "HR/CIR/2025/05": {
+   "start": 12,
+   "end": 12
+  },
+  "HR/CIR/2026/04": {
+   "start": 12,
+   "end": 12
+  }
+ }
+}

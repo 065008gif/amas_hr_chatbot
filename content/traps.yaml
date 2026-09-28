@@ -91,3 +91,19 @@
   answer: "Not covered by the documents; the bot must say so and offer an HR ticket (Benefits)."
   expected_route: not_found
   absent_terms: ["egg freezing", "oocyte", "fertility preservation"]
+- id: T13
+  type: 1
+  doc: "003"
+  question: "I am a male employee. Can I file a sexual harassment complaint with the Internal Committee?"
+  answer: "Yes, from 8 March 2026. Clause 2.2 limits the procedure to women (as in the Act), but Circular HR/CIR/2026/04 extends the complaint, inquiry, interim relief and non-retaliation provisions to Employees of all genders as Company policy; statutory remedies and appeals under the Act remain available only to women."
+  quotes:
+    - {doc: "003", anchor: "2.2", text: "The complaint and inquiry procedure under this Policy is available to women, as provided in the Act"}
+    - {doc: "003", anchor: "HR/CIR/2026/04", text: "to complaints of Sexual Harassment made by an Employee of any gender, including men and transgender persons"}
+- id: T14
+  type: 4
+  doc: "003"
+  question: "A colleague keeps sending me inappropriate messages on WhatsApp late at night. That is not at work, so does the POSH policy apply?"
+  answer: "Yes. The POSH Policy's definition of Workplace (Clause 3.10) includes messaging applications and groups used by colleagues, on any device and outside working hours; Annexure C, C.1 gives this exact example."
+  quotes:
+    - {doc: "003", anchor: "3.10", text: "messaging applications or groups used by colleagues, whether on a Company or a personal device and whether during or outside working hours"}
+    - {doc: "003", anchor: "C.1", text: "unwelcome sexual messages from a colleague on a personal messaging application at 11 p.m. on a Sunday are within this Policy"}

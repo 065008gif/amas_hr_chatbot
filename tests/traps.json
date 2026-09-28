@@ -280,5 +280,59 @@
   "expected_route": "not_found",
   "evidence": [],
   "verified": true
+ },
+ {
+  "id": "T13",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "I am a male employee. Can I file a sexual harassment complaint with the Internal Committee?",
+  "answer": "Yes, from 8 March 2026. Clause 2.2 limits the procedure to women (as in the Act), but Circular HR/CIR/2026/04 extends the complaint, inquiry, interim relief and non-retaliation provisions to Employees of all genders as Company policy; statutory remedies and appeals under the Act remain available only to women.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Policy on Prevention of Sexual Harassment (POSH)",
+    "doc_id": "003",
+    "number": "NTL/HR/POL/003",
+    "page": 4,
+    "clause": "2.2",
+    "quote": "The complaint and inquiry procedure under this Policy is available to women, as provided in the Act"
+   },
+   {
+    "document": "Policy on Prevention of Sexual Harassment (POSH)",
+    "doc_id": "003",
+    "number": "NTL/HR/POL/003",
+    "page": 12,
+    "clause": "HR/CIR/2026/04",
+    "quote": "to complaints of Sexual Harassment made by an Employee of any gender, including men and transgender persons"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T14",
+  "type": 4,
+  "type_name": "definition changes meaning",
+  "question": "A colleague keeps sending me inappropriate messages on WhatsApp late at night. That is not at work, so does the POSH policy apply?",
+  "answer": "Yes. The POSH Policy's definition of Workplace (Clause 3.10) includes messaging applications and groups used by colleagues, on any device and outside working hours; Annexure C, C.1 gives this exact example.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Policy on Prevention of Sexual Harassment (POSH)",
+    "doc_id": "003",
+    "number": "NTL/HR/POL/003",
+    "page": 5,
+    "clause": "3.10",
+    "quote": "messaging applications or groups used by colleagues, whether on a Company or a personal device and whether during or outside working hours"
+   },
+   {
+    "document": "Policy on Prevention of Sexual Harassment (POSH)",
+    "doc_id": "003",
+    "number": "NTL/HR/POL/003",
+    "page": 11,
+    "clause": "C.1",
+    "quote": "unwelcome sexual messages from a colleague on a personal messaging application at 11 p.m. on a Sunday are within this Policy"
+   }
+  ],
+  "verified": true
  }
 ]

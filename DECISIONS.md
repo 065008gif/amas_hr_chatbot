@@ -160,3 +160,12 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
   2. `scripts/renumber_tables.py` renumbers tables in order of appearance after sections are inserted.
   3. The defined-term checker now matches whole words (it had flagged "upgraded" for "Grade") and ignores statutory wording inside `{stat:}` markers.
   4. Contents-page rows have no cell padding, so up to about 45 entries fit on one page. The Leave Policy was rebuilt and still passes.
+
+**D-023 (2026-09-28): POSH Policy (NTL/HR/POL/003) is complete: 12 pages against a target of 14 ±2.**
+- 15 sections, 69 clauses, 2 numbered tables and 4 annexures (complaint form, inquiry timeline, FAQs, support resources), plus 2 circulars (HR/CIR/2025/05 IC reconstitution and complaints through the NPP module; HR/CIR/2026/04 procedure extended to all genders as Company policy). About 4,700 words. 20 statutory claims were added (POSH Act and Rules sections, and the BNS); all are UNVERIFIED.
+- Traps: T13 (type 1: gender-neutral circular vs Clause 2.2), T14 (type 4: "Workplace" includes late-night messages on personal devices).
+- **Renderer bug found:** when a page filled exactly, the zero-size page anchor spilled onto a fresh page, and the next page break then left a completely blank page. Anchors are now recorded in `handle_flowable` without being laid out. Docs 001 to 003 were rebuilt and all pass. POSH went from 13 pages (one blank) to 12.
+- **Checker refinements:**
+  - A document may list `lowercase_ok` words that are ordinary English (for POSH: "an act of", "calendar days", "an employee of a client"). These are reviewed rather than rewritten into unnatural text.
+  - Capitalising "Sexual Harassment" broke trap T13's quote. The trap check caught it, and the quote was updated.
+- Running page total: 51 against 56 targeted for docs 001 to 003. The remaining documents aim slightly above target so the total stays near 150.
