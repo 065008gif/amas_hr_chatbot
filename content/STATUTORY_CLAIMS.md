@@ -109,3 +109,7 @@ relevant state's rules) before relying on it. The documents are fictional; the l
 | CERTIN_6H | Specified cyber security incidents must be reported to CERT-In within six hours of noticing them | CERT-In Directions of 28 April 2022 under Section 70B(6) of the IT Act | 009 | UNVERIFIED, to be checked against the Act |
 | CERTIN_LOGS | ICT system logs must be maintained for a rolling period of 180 days within India | CERT-In Directions of 28 April 2022 | 009 | UNVERIFIED, to be checked against the Act |
 | IT_ACT_2000 | The Information Technology Act, 2000 governs cyber security incident reporting and offences such as unauthorised disclosure | Information Technology Act, 2000 (including Sections 43, 70B, 72A) | 009 | UNVERIFIED, to be checked against the Act |
+
+## Chatbot (Phase 5)
+
+- **SC-CHAT-01** Tele-MANAS national mental health helpline: 14416 (24x7), and the national emergency number 112. Shown by the chatbot to users in distress. **UNVERIFIED, to be checked against the official Government of India source before the demo.**

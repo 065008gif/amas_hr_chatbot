@@ -62,6 +62,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 3 pushed (verified `origin/main` = `3862e4c`).
 - [x] **Phase 4 retrieval DONE** (D-035): `backend/retrieve.py`, `tests/retrieval_dev.yaml`, `tests/retrieval_eval.py` -> `tests/results/retrieval_eval.{json,md}`. TEST (traps) recall@8 0.939, MRR 0.732; DEV recall@8 0.925. Threshold 0.0015 (0 answerable refused). Follow-ups 5/5.
 
+- [x] **Phase 5 backend DONE** (D-036, D-037): FastAPI endpoints `/chat /health /ticket /ticket/{id} /tickets /leave-balance /docs-list /pdf/{doc_id} /demo-employees /me /circulars /insights`. Route tour: all routes demonstrated. Run locally: `uvicorn backend.app:app --port 8000`, then `python scripts/ask.py --demo`.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 

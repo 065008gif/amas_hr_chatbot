@@ -645,6 +645,8 @@ def main():
     indexstore.BM25_FILE.write_text(json.dumps([indexstore.tokenize(c["embed_text"]) for c in all_chunks]),
                                     encoding="utf-8")
     np.save(indexstore.VECTORS_FILE, vectors)
+    indexstore.PAGES_FILE.write_text(json.dumps(
+        {d["doc_id"]: indexstore.page_texts(config.DOCUMENTS_DIR / d["pdf"]) for d in docs}), encoding="utf-8")
     indexstore.META_FILE.write_text(json.dumps({
         "built": datetime.now().isoformat(timespec="seconds"),
         "embed_model": config.EMBED_MODEL, "embed_dim": int(vectors.shape[1]),
