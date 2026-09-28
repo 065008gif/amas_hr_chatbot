@@ -48,7 +48,7 @@ function Detail({ t, onClose }) {
     <Portal>
       <div className="drawer-backdrop" onClick={onClose} />
       <aside className="drawer" role="dialog" aria-modal="true" aria-label={`Ticket ${t.id}`}>
-        <div className="panel-head"><TicketIcon size={18} className="muted" /><div style={{ flex: 1 }}><div className="mono" style={{ fontWeight: 650, color: 'var(--ink)' }}>{t.id}</div><div className="tiny muted">{t.category} · {t.priority} priority</div></div>
+        <div className="panel-head"><span className="head-ic c-rose" aria-hidden="true"><TicketIcon size={16} /></span><div style={{ flex: 1 }}><div className="mono" style={{ fontWeight: 650, color: 'var(--ink)' }}>{t.id}</div><div className="tiny muted">{t.category} · {t.priority} priority</div></div>
           <button className="btn btn-ghost icon-btn" onClick={onClose} aria-label="Close"><X size={18} /></button></div>
         <div className="panel-body card-body stack">
           <div className="row"><StatusBadge status={t.status} /><span className="small muted">Raised {fmtDate(t.created_at)} via {t.source === 'chat' ? 'Ask Nia' : 'the portal'}</span></div>
@@ -84,14 +84,14 @@ export default function Tickets() {
         <button className="btn btn-primary" onClick={() => setShowNew(true)}><Plus size={16} />New ticket</button>
       </div>
       <div className="chips" style={{ marginTop: 0, marginBottom: '1rem' }} role="tablist" aria-label="Filter by status">
-        {FILTERS.map((f) => <button key={f} role="tab" aria-selected={filter === f} className={`chip ${filter === f ? 'cite active' : ''}`} onClick={() => setFilter(f)}>{f}{data && f !== 'All' ? ` (${data.tickets.filter((t) => t.status === f).length})` : ''}</button>)}
+        {FILTERS.map((f) => <button key={f} role="tab" aria-selected={filter === f} className={`chip filter ${filter === f ? 'active' : ''}`} onClick={() => setFilter(f)}>{f}{data && f !== 'All' ? ` (${data.tickets.filter((t) => t.status === f).length})` : ''}</button>)}
       </div>
       <section className="card">
         {err && <div className="card-body"><div className="alert danger">{err}</div></div>}
         {!data && !err && <div className="card-body stack">{[0, 1, 2].map((i) => <Skeleton key={i} h={44} />)}</div>}
         {data && !list.length && <Empty icon={Inbox} title="No tickets here">{filter === 'All' ? 'Raise one with the New ticket button.' : 'Try another filter.'}</Empty>}
         {data && list.length > 0 && (
-          <div className="table-wrap">
+          <div className="table-wrap ticket-table">
             <table className="table">
               <thead><tr><th>Ticket</th><th>Summary</th><th>Status</th><th>Category</th><th>Raised</th></tr></thead>
               <tbody>{list.map((t) => (
@@ -103,6 +103,17 @@ export default function Tickets() {
                   <td style={{ whiteSpace: 'nowrap' }}>{fmtDate(t.created_at)}</td>
                 </tr>))}</tbody>
             </table>
+          </div>
+        )}
+        {data && list.length > 0 && (
+          <div className="ticket-cards">
+            {list.map((t) => (
+              <button key={t.id} className="ticket-card" onClick={() => setParams({ id: t.id })}>
+                <div className="row"><span className="mono tiny" style={{ color: 'var(--ink)', fontWeight: 650 }}>{t.id}</span><span className="spacer" /><StatusBadge status={t.status} /></div>
+                <div className="t">{t.summary}</div>
+                <div className="tiny muted">{t.category} · {fmtDate(t.created_at)}</div>
+              </button>
+            ))}
           </div>
         )}
       </section>

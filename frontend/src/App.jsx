@@ -68,7 +68,9 @@ function Shell() {
 function DemoStrip() {
   return (
     <div className="demo-strip">
-      <strong>College project demo.</strong> Nexora Technologies is a fictional company; policies and employee data are fictional.
+      <strong>College project demo.</strong>
+      <span className="long">Nexora Technologies is a fictional company; policies and employee data are fictional.</span>
+      <span className="short">Fictional company, policies and data.</span>
     </div>
   )
 }

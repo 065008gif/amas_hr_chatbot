@@ -5,6 +5,10 @@ import { getDocs } from '../lib/docs.js'
 import { fmtDate } from '../lib/format.js'
 import { Empty, Skeleton } from '../components/ui.jsx'
 
+// One accent per document, so a policy is recognisable at a glance (the title is always shown too).
+const DOC_COLOURS = ['c-indigo', 'c-violet', 'c-rose', 'c-amber', 'c-emerald', 'c-sky']
+const docColour = (docId) => DOC_COLOURS[(parseInt(docId, 10) - 1) % DOC_COLOURS.length] || 'c-indigo'
+
 export default function Library() {
   const nav = useNavigate()
   const [docs, setDocs] = useState(null)
@@ -30,8 +34,8 @@ export default function Library() {
       <div className="page-head">
         <div><h1>Policy Library</h1><p>Nexora's 9 HR policy documents (fictional). Search titles, sections and amendment circulars.</p></div>
       </div>
-      <div className="composer" style={{ maxWidth: 560, margin: '0 0 1.25rem', padding: '.35rem .8rem' }}>
-        <Search size={18} className="muted" style={{ alignSelf: 'center' }} />
+      <div className="search-box">
+        <Search size={18} aria-hidden="true" />
         <label htmlFor="lib-q" className="sr-only">Search policies</label>
         <input id="lib-q" className="input" style={{ border: 0, boxShadow: 'none', padding: '.35rem .2rem' }} placeholder="Try “gratuity”, “hotel”, “HR/CIR/2025”, “probation”…" value={q} onChange={(e) => setQ(e.target.value)} />
       </div>
@@ -39,7 +43,7 @@ export default function Library() {
       <div className="grid grid-3">
         {!docs && !err && Array.from({ length: 6 }).map((_, i) => <div key={i} className="card card-pad"><Skeleton h={48} w={40} /><Skeleton h={16} style={{ marginTop: 12 }} /><Skeleton h={12} w="60%" style={{ marginTop: 8 }} /></div>)}
         {results.map(({ d, matches }) => (
-          <button key={d.doc_id} className="card doc-card" onClick={() => nav(`/library/${d.doc_id}`)}>
+          <button key={d.doc_id} className={`card doc-card ${docColour(d.doc_id)}`} onClick={() => nav(`/library/${d.doc_id}`)}>
             <div className="row" style={{ gap: '.8rem', alignItems: 'flex-start' }}>
               <div className="doc-icon"><FileText size={20} /></div>
               <div style={{ minWidth: 0 }}>
@@ -48,7 +52,7 @@ export default function Library() {
               </div>
             </div>
             <div className="doc-meta">
-              <span className="badge brand">v{d.version}</span>
+              <span className="badge tool">v{d.version}</span>
               <span className="badge">Effective {fmtDate(d.effective_date)}</span>
               <span className="badge">{d.pages} pages</span>
               {d.circulars.length > 0 && <span className="badge outline">{d.circulars.length} circulars</span>}

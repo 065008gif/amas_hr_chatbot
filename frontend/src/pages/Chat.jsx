@@ -8,19 +8,27 @@ import { api } from '../lib/api.js'
 import { load, save } from '../lib/storage.js'
 import { useSession } from '../lib/session.jsx'
 import { fmtDate } from '../lib/format.js'
+import { leaveStyle } from '../lib/leave.js'
 import PdfViewer from '../components/PdfViewer.jsx'
 import { DemoTag, RouteBadge, StatusBadge } from '../components/ui.jsx'
 
 const GRADES = ['L1', 'L2', 'L3', 'L4', 'L5', 'L6', 'L7', 'L8']
 const LOCATIONS = ['Bengaluru', 'Pune', 'Hyderabad', 'Chennai', 'Noida']
 const STARTERS = [
-  { Icon: CalendarDays, q: 'How many days of paternity leave do I get?' },
-  { Icon: Plane, q: 'Can I claim a cab from the airport at L4?' },
-  { Icon: Scale, q: 'What is the notice period if I resign at L5?' },
-  { Icon: FileText, q: 'What is my leave balance?' },
+  { Icon: CalendarDays, c: 'c-indigo', q: 'How many days of paternity leave do I get?' },
+  { Icon: Plane, c: 'c-sky', q: 'Can I claim a cab from the airport at L4?' },
+  { Icon: Scale, c: 'c-amber', q: 'What is the notice period if I resign at L5?' },
+  { Icon: FileText, c: 'c-emerald', q: 'What is my leave balance?' },
 ]
 const WELCOME = "Hi, I'm Nia, Nexora's AI HR assistant. I'm an AI, not a person. I answer only from Nexora's HR policy documents and show the exact page for every answer. If the documents don't cover something, I'll say so and can raise a ticket for a person in HR."
 const uid = () => Math.random().toString(36).slice(2, 10)
+
+// Colour of a Nia bubble's left border: green answered, amber conflict, rose escalated, sky not found.
+function routeClass(r) {
+  if (!r) return 'r-intro'
+  if (r.route === 'answer' && r.conflicts?.length) return 'r-conflict'
+  return `r-${r.route}`
+}
 
 // "[S1][S2]" -> clickable reference chips; blank lines -> paragraphs.
 function AnswerText({ text, citations, onCite }) {
@@ -30,12 +38,16 @@ function AnswerText({ text, citations, onCite }) {
     <div className="answer">
       {paras.map((p, i) => (
         <p key={i}>
-          {p.split(/(\[S\d+\])/g).map((part, j) => {
-            const m = part.match(/^\[(S\d+)\]$/)
-            if (!m) return <Fragment key={j}>{part.split('\n').map((l, k) => <Fragment key={k}>{k > 0 && <br />}{l}</Fragment>)}</Fragment>
-            const c = byId[m[1]]
-            if (!c) return null
-            return <button key={j} className="cite-ref" onClick={() => onCite(c)} title={c.label} aria-label={`Source: ${c.label}`}>{c.id.slice(1)}</button>
+          {p.split(/((?:\[S\d+\])+[.,;:!?)]?)/g).map((part, j) => {
+            if (!/^\[S\d+\]/.test(part)) return <Fragment key={j}>{part.split('\n').map((l, k) => <Fragment key={k}>{k > 0 && <br />}{l}</Fragment>)}</Fragment>
+            const punct = part.replace(/(\[S\d+\])+/, '')
+            const refs = (part.match(/S\d+/g) || []).map((id) => byId[id]).filter(Boolean)
+            return (
+              <span key={j} className="cite-group">
+                {refs.map((c) => <button key={c.id} className="cite-ref" onClick={() => onCite(c)} title={c.label} aria-label={`Source: ${c.label}`}>{c.id.slice(1)}</button>)}
+                {punct}
+              </span>
+            )
           })}
         </p>
       ))}
@@ -48,9 +60,9 @@ function LeaveCard({ data }) {
     <div className="inline-card">
       <div className="row" style={{ marginBottom: '.6rem' }}><b style={{ color: 'var(--ink)' }}>Leave balance</b><span className="small muted">as of {fmtDate(data.as_of)}</span><div className="spacer" /><DemoTag /></div>
       <div className="grid grid-4" style={{ gap: '.6rem' }}>
-        {data.balances.map((b) => (
-          <div key={b.code} className="card" style={{ padding: '.6rem .7rem' }} title={b.detail}>
-            <div className="tiny muted" style={{ fontWeight: 600 }}>{b.type}</div>
+        {data.balances.map((b, i) => (
+          <div key={b.code} className={`card stat ${leaveStyle(b.code, i).c}`} style={{ padding: '.6rem .7rem' }} title={b.detail}>
+            <div className="tiny" style={{ fontWeight: 650, color: 'var(--text)' }}>{b.type}</div>
             <div style={{ fontSize: '1.35rem', fontWeight: 700, color: 'var(--ink)' }}>{b.balance}<span className="tiny muted"> days</span></div>
           </div>
         ))}
@@ -63,7 +75,7 @@ function TicketCard({ t }) {
   if (!t) return null
   return (
     <div className="inline-card row wrap" style={{ gap: '.7rem' }}>
-      <TicketIcon size={18} className="muted" />
+      <TicketIcon size={18} style={{ color: 'var(--danger-text)', flex: 'none' }} />
       <div style={{ flex: 1, minWidth: 180 }}>
         <div className="mono" style={{ fontWeight: 600, color: 'var(--ink)' }}>{t.id}</div>
         <div className="small muted">{t.category} · {t.summary}</div>
@@ -107,9 +119,9 @@ function BotMessage({ m, onCite, onFollow, onTicket, activeCite, onRetry, busy }
       {tool?.type === 'ticket' && <TicketCard t={tool.data} />}
       {tool?.type === 'ticket_list' && tool.data.map((t) => <TicketCard key={t.id} t={t} />)}
       {r.escalation && (
-        <div className="inline-card row" style={{ gap: '.6rem', background: 'var(--danger-bg)', borderColor: '#f5c2cc' }}>
-          <LifeBuoy size={18} style={{ color: 'var(--danger)', flex: 'none' }} />
-          <div className="small" style={{ color: '#7f1d2d' }}>This topic is handled by people, not by Nia. Your conversation is not shared with HR unless you choose to raise a ticket.</div>
+        <div className="inline-card escalation row" style={{ gap: '.6rem' }}>
+          <LifeBuoy size={18} style={{ flex: 'none' }} />
+          <div className="small">This topic is handled by people, not by Nia. Your conversation is not shared with HR unless you choose to raise a ticket.</div>
         </div>
       )}
       {r.citations?.length > 0 && (
@@ -123,7 +135,7 @@ function BotMessage({ m, onCite, onFollow, onTicket, activeCite, onRetry, busy }
       )}
       {r.ticket_offer && !m.ticket && (
         <div className="inline-card row wrap" style={{ gap: '.6rem' }}>
-          <TicketIcon size={18} className="muted" />
+          <TicketIcon size={18} style={{ color: 'var(--danger-text)', flex: 'none' }} />
           <div className="small" style={{ flex: 1, minWidth: 200 }}>Want a person in HR to follow up? I'll raise a <b>{r.ticket_offer.category}</b> ticket{r.ticket_offer.priority === 'High' ? ' marked high priority' : ''}.</div>
           <button className="btn btn-primary btn-sm" onClick={() => onTicket(m)} disabled={m.ticketBusy}>{m.ticketBusy ? 'Raising…' : 'Raise HR ticket'}</button>
         </div>
@@ -239,13 +251,13 @@ export default function Chat() {
                 <h2 style={{ fontSize: '1.35rem' }}>Ask Nia about Nexora's HR policies</h2>
                 <p className="muted" style={{ maxWidth: 560, margin: '.5rem auto 0' }}>{WELCOME}</p>
                 <div className="starters">
-                  {STARTERS.map(({ Icon, q }) => <button key={q} className="starter" onClick={() => send(q)}><Icon size={17} />{q}</button>)}
+                  {STARTERS.map(({ Icon, c, q }) => <button key={q} className={`starter ${c}`} onClick={() => send(q)}><span className="s-ic" aria-hidden="true"><Icon size={17} /></span>{q}</button>)}
                 </div>
               </div>
             ) : (
               <div className="msg bot fade-in">
                 <div className="bot-avatar" aria-hidden="true">N</div>
-                <div className="bubble"><div className="msg-meta"><span className="name">Nia</span><span className="badge outline">AI assistant</span></div><p>{WELCOME}</p></div>
+                <div className="bubble r-intro"><div className="msg-meta"><span className="name">Nia</span><span className="badge outline">AI assistant</span></div><p>{WELCOME}</p></div>
               </div>
             )}
             {messages.map((m) => (m.role === 'user' ? (
@@ -253,7 +265,7 @@ export default function Chat() {
             ) : (
               <div key={m.id} className="msg bot fade-in">
                 <div className="bot-avatar" aria-hidden="true">N</div>
-                <div className="bubble" style={m.error ? { padding: 0, border: 0, background: 'none', boxShadow: 'none', width: '100%' } : undefined}>
+                <div className={`bubble ${routeClass(m.response)}`} style={m.error ? { padding: 0, border: 0, background: 'none', boxShadow: 'none', width: '100%' } : undefined}>
                   <BotMessage m={m} busy={busy} activeCite={panel} onCite={setPanel} onFollow={send} onTicket={raiseTicket} onRetry={() => retry(m)} />
                 </div>
               </div>
@@ -261,7 +273,7 @@ export default function Chat() {
             {busy && (
               <div className="msg bot fade-in" aria-label="Nia is typing">
                 <div className="bot-avatar" aria-hidden="true">N</div>
-                <div className="bubble"><div className="msg-meta"><span className="name">Nia</span><span className="small muted">is checking the policies…</span></div><div className="typing"><span /><span /><span /></div></div>
+                <div className="bubble r-intro"><div className="msg-meta"><span className="name">Nia</span><span className="small muted">is checking the policies…</span></div><div className="typing"><span /><span /><span /></div></div>
               </div>
             )}
             <div ref={endRef} />
@@ -271,7 +283,7 @@ export default function Chat() {
         <div className="composer-wrap">
           <form className="composer" onSubmit={(e) => { e.preventDefault(); send() }}>
             <label htmlFor="msg" className="sr-only">Your question</label>
-            <textarea id="msg" ref={inputRef} rows={1} value={text} maxLength={800} autoFocus placeholder="Ask about leave, pay, travel, exits, IT policy…"
+            <textarea id="msg" ref={inputRef} rows={1} value={text} maxLength={800} autoFocus placeholder={window.innerWidth < 560 ? 'Ask an HR question…' : 'Ask about leave, pay, travel, exits, IT policy…'}
               onChange={(e) => { setText(e.target.value); e.target.style.height = 'auto'; e.target.style.height = `${Math.min(160, e.target.scrollHeight)}px` }}
               onKeyDown={onKey} />
             <button className="btn btn-primary icon-btn" type="submit" disabled={busy || !text.trim()} aria-label="Send"><ArrowUp size={18} /></button>
@@ -287,7 +299,7 @@ export default function Chat() {
       {panel && (
         <aside className="panel" aria-label="Cited source">
           <div className="panel-head">
-            <FileText size={18} className="muted" />
+            <span className="head-ic c-sky" aria-hidden="true"><FileText size={16} /></span>
             <div style={{ flex: 1, minWidth: 0 }}>
               <div style={{ fontWeight: 650, color: 'var(--ink)', fontSize: '.92rem' }}>{panel.document}</div>
               <div className="tiny muted">{panel.number} · v{panel.version}</div>

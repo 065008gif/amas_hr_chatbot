@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
-import { Bar, BarChart, CartesianGrid, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { BarChart3, Lock, RefreshCw, Table2 } from 'lucide-react'
+import { Bar, BarChart, CartesianGrid, Cell, LabelList, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { BarChart3, Clock, Database, Lock, MessagesSquare, RefreshCw, Table2, Target } from 'lucide-react'
 import { api } from '../lib/api.js'
 import { Empty, Skeleton } from '../components/ui.jsx'
 
-// Single-series charts: one validated hue (reference palette slot 1), text in ink tokens.
-const SERIES = '#2a78d6'
-const AXIS = { fontSize: 12, fill: '#64748b' }
+// Accent palette (600 steps: each is at least 3:1 against white; validated with the dataviz palette checker).
+// Single-series charts use one hue each; "How questions were handled" colours each bar by its route
+// (same meaning as the chat badges), and every bar also carries a text label, so colour is never the only cue.
+const HUE = { indigo: '#4f46e5', violet: '#7c3aed', emerald: '#059669', amber: '#d97706', rose: '#e11d48', sky: '#0284c7' }
+const ROUTE_HUE = { answer: HUE.emerald, not_found: HUE.sky, escalate: HUE.rose, tool: HUE.indigo, refused: HUE.violet, clarify: HUE.amber, error: HUE.amber }
+const AXIS = { fontSize: 12, fill: '#5f5c7e' }
 const ROUTE_LABEL = { answer: 'Answered', not_found: 'Not found', escalate: 'Escalated to HR', tool: 'Tool (balance, tickets)',
   refused: 'Declined', clarify: 'Asked to clarify', error: 'Service busy' }
 
@@ -21,7 +24,7 @@ function ChartTip({ active, payload, unit = 'questions' }) {
   )
 }
 
-function VizCard({ title, note, data, horizontal = true, height }) {
+function VizCard({ title, note, data, horizontal = true, height, color = HUE.indigo }) {
   const [table, setTable] = useState(false)
   const h = height || Math.max(160, data.length * 34 + 30)
   return (
@@ -39,21 +42,24 @@ function VizCard({ title, note, data, horizontal = true, height }) {
             <ResponsiveContainer>
               {horizontal ? (
                 <BarChart data={data} layout="vertical" margin={{ top: 4, right: 36, bottom: 4, left: 4 }} barCategoryGap={6}>
-                  <CartesianGrid horizontal={false} stroke="#eef2f6" />
+                  <CartesianGrid horizontal={false} stroke="#ebe7fb" />
                   <XAxis type="number" allowDecimals={false} tick={AXIS} axisLine={false} tickLine={false} />
-                  <YAxis type="category" dataKey="name" width={150} tick={{ ...AXIS, fill: '#334155' }} axisLine={false} tickLine={false} />
-                  <Tooltip content={<ChartTip />} cursor={{ fill: 'rgba(42,120,214,.06)' }} />
-                  <Bar dataKey="n" fill={SERIES} radius={[0, 4, 4, 0]} maxBarSize={22}>
-                    <LabelList dataKey="n" position="right" style={{ fontSize: 12, fill: '#334155', fontWeight: 600 }} />
+                  <YAxis type="category" dataKey="name" width={150} tick={{ ...AXIS, fill: '#3b3a58' }} axisLine={false} tickLine={false} />
+                  <Tooltip content={<ChartTip />} cursor={{ fill: 'rgba(124,58,237,.06)' }} />
+                  <Bar dataKey="n" fill={color} radius={[0, 4, 4, 0]} maxBarSize={22} isAnimationActive={false}>
+                    {data.map((d) => <Cell key={d.name} fill={d.color || color} />)}
+                    <LabelList dataKey="n" position="right" style={{ fontSize: 12, fill: '#1e1b4b', fontWeight: 650 }} />
                   </Bar>
                 </BarChart>
               ) : (
                 <BarChart data={data} margin={{ top: 16, right: 8, bottom: 4, left: -16 }} barCategoryGap={4}>
-                  <CartesianGrid vertical={false} stroke="#eef2f6" />
+                  <CartesianGrid vertical={false} stroke="#ebe7fb" />
                   <XAxis dataKey="name" tick={AXIS} axisLine={false} tickLine={false} />
                   <YAxis allowDecimals={false} tick={AXIS} axisLine={false} tickLine={false} />
-                  <Tooltip content={<ChartTip />} cursor={{ fill: 'rgba(42,120,214,.06)' }} />
-                  <Bar dataKey="n" fill={SERIES} radius={[4, 4, 0, 0]} maxBarSize={36} />
+                  <Tooltip content={<ChartTip />} cursor={{ fill: 'rgba(124,58,237,.06)' }} />
+                  <Bar dataKey="n" fill={color} radius={[4, 4, 0, 0]} maxBarSize={36} isAnimationActive={false}>
+                    <LabelList dataKey="n" position="top" style={{ fontSize: 12, fill: '#1e1b4b', fontWeight: 650 }} />
+                  </Bar>
                 </BarChart>
               )}
             </ResponsiveContainer>
@@ -74,17 +80,17 @@ export default function Insights() {
   const policyQs = d ? d.by_route.filter((r) => ['answer', 'not_found', 'clarify'].includes(r.route)).reduce((a, r) => a + r.n, 0) : 0
   const answered = d?.by_route.find((r) => r.route === 'answer')?.n || 0
   const kpis = d ? [
-    { k: 'Questions handled', v: d.total_questions, d: `${d.repeat_questions} asked more than once` },
-    { k: 'Answer rate', v: policyQs ? `${Math.round((answered / policyQs) * 100)}%` : '–', d: 'answered with sources, of answered + not found + clarify' },
-    { k: 'Cache hit rate', v: `${Math.round((d.cache_hit_rate || 0) * 100)}%`, d: 'repeat questions cost no model quota' },
-    { k: 'Avg response time', v: d.avg_latency_ms ? `${(d.avg_latency_ms / 1000).toFixed(1)} s` : '–', d: 'excluding cached answers' },
+    { k: 'Questions handled', Icon: MessagesSquare, c: 'c-indigo', v: d.total_questions, d: `${d.repeat_questions} asked more than once` },
+    { k: 'Answer rate', Icon: Target, c: 'c-emerald', v: policyQs ? `${Math.round((answered / policyQs) * 100)}%` : '–', d: 'answered with sources, of answered + not found + clarify' },
+    { k: 'Cache hit rate', Icon: Database, c: 'c-sky', v: `${Math.round((d.cache_hit_rate || 0) * 100)}%`, d: 'repeat questions cost no model quota' },
+    { k: 'Avg response time', Icon: Clock, c: 'c-amber', v: d.avg_latency_ms ? `${(d.avg_latency_ms / 1000).toFixed(1)} s` : '–', d: 'excluding cached answers' },
   ] : []
 
   return (
     <div className="content fade-in">
       <div className="page-head">
         <div><h1>HR Insights</h1><p>What employees ask Nia, from anonymised usage logs.</p></div>
-        <span className="spacer" /><span className="badge warn">Demo admin view</span>
+        <span className="spacer" /><span className="badge vio">Demo admin view</span>
         <button className="btn btn-secondary btn-sm" onClick={load}><RefreshCw size={14} />Refresh</button>
       </div>
       <div className="alert info" style={{ marginBottom: '1.25rem' }}>
@@ -96,13 +102,13 @@ export default function Insights() {
       {d && (
         <>
           <div className="kpi-row">
-            {kpis.map((x) => <div key={x.k} className="card stat"><div className="k">{x.k}</div><div className="v">{x.v}</div><div className="d">{x.d}</div></div>)}
+            {kpis.map((x) => <div key={x.k} className={`card stat ${x.c}`}><div className="k"><span className="stat-ic" aria-hidden="true"><x.Icon size={17} /></span>{x.k}</div><div className="v">{x.v}</div><div className="d">{x.d}</div></div>)}
           </div>
           <div className="grid grid-2" style={{ marginTop: '1.25rem' }}>
-            <VizCard title="Questions by topic" data={d.by_topic.map((t) => ({ name: t.topic, n: t.n }))} note="Topic = the policy document of the best-matching source." />
-            <VizCard title="How questions were handled" data={d.by_route.map((r) => ({ name: ROUTE_LABEL[r.route] || r.route, n: r.n }))} />
-            <VizCard title="Top unanswered topics" data={d.unanswered_topics.map((t) => ({ name: t.topic, n: t.n }))} note="Candidates for new policy content or FAQs." />
-            <VizCard title="Questions per day" horizontal={false} height={220} data={[...d.daily].reverse().map((x) => ({ name: x.day.slice(5), n: x.n }))} />
+            <VizCard title="Questions by topic" color={HUE.indigo} data={d.by_topic.map((t) => ({ name: t.topic, n: t.n }))} note="Topic = the policy document of the best-matching source." />
+            <VizCard title="How questions were handled" data={d.by_route.map((r) => ({ name: ROUTE_LABEL[r.route] || r.route, n: r.n, color: ROUTE_HUE[r.route] || HUE.violet }))} />
+            <VizCard title="Top unanswered topics" color={HUE.amber} data={d.unanswered_topics.map((t) => ({ name: t.topic, n: t.n }))} note="Candidates for new policy content or FAQs." />
+            <VizCard title="Questions per day" color={HUE.sky} horizontal={false} height={220} data={[...d.daily].reverse().map((x) => ({ name: x.day.slice(5), n: x.n }))} />
           </div>
         </>
       )}

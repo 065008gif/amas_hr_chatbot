@@ -4,11 +4,11 @@ import { AlertTriangle, BookOpen, CheckCircle2, CircleHelp, HelpCircle, LifeBuoy
 // Route of a chat answer -> label, tone and icon. Colour is never the only signal: every badge has text.
 export const ROUTES = {
   answer: { label: 'Answer', tone: 'ok', Icon: CheckCircle2 },
-  not_found: { label: 'Not found', tone: 'warn', Icon: SearchX },
+  not_found: { label: 'Not found', tone: 'info', Icon: SearchX },
   escalate: { label: 'Escalated to HR', tone: 'danger', Icon: LifeBuoy },
   tool: { label: 'Tool result', tone: 'tool', Icon: Wrench },
-  refused: { label: 'Declined', tone: '', Icon: ShieldAlert },
-  clarify: { label: 'Needs detail', tone: 'info', Icon: HelpCircle },
+  refused: { label: 'Declined', tone: 'vio', Icon: ShieldAlert },
+  clarify: { label: 'Needs detail', tone: 'warn', Icon: HelpCircle },
   error: { label: 'Service busy', tone: 'warn', Icon: AlertTriangle },
 }
 
