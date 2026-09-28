@@ -31,6 +31,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 1, Step 6 DONE: Hugging Face `Akshit065008` (email verified; API lookup HTTP 200); Vercel via GitHub `065008gif`. GitHub already existed. (D-018)
 - [x] **Phase 1 CHECK PASSED** (2026-09-28): Ollama `gpt-oss:120b` → 200 'ready' (after one connect timeout on the college network, see D-017); Gemini `gemini-3.1-flash-lite` → 200 'ready'; connectivity recorded in D-015. Secret scan CLEAN.
 
+- [x] **Phase 1 pushed**: verified `origin/main` = `61c1506` = local.
+- [x] Scope change D-019: about 150 pages total (targets ±2: Leave 16, Handbook 26, POSH 14, CoC 18, Comp 20, Attendance 12, Travel 14, Separation 14, IT 16). Keep chat output lean (checker results, page counts, first 2 pages' text only).
+
 ## Next
-- [ ] **User pushes Phase 1** (`git push`) from a second terminal tab. Then Claude verifies with `git ls-remote origin main`.
-- [ ] Phase 2, first document only: Leave Policy (NTL/HR/POL/001, 22+ pages). Before writing it: agree the content format (YAML in `content/`), the generator design (ReportLab, two-pass TOC), the checker, `content/STATUTORY_CLAIMS.md` and `tests/traps.json`. One document at a time; show page count and the first 2 pages' text after each.
+- [ ] Phase 2: present the build plan and WAIT for user approval. Then Leave Policy (NTL/HR/POL/001, target 16 ±2 pages). Before writing it: agree the content format (YAML in `content/`), the generator design (ReportLab, two-pass TOC), the checker, `content/STATUTORY_CLAIMS.md` and `tests/traps.json`. One document at a time; show page count and the first 2 pages' text after each.

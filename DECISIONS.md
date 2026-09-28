@@ -103,3 +103,25 @@ Design change for Phase 5: split the timeout into **connect = 10 s** and **read 
 - Hugging Face: username `Akshit065008`, email verified. We confirmed the account exists: `huggingface.co/api/users/Akshit065008/overview` returned HTTP 200. The backend Space URL will look like `https://akshit065008-<space-name>.hf.space` (the exact form will be confirmed when the Space is created in Phase 8).
 - Vercel: Hobby (free) plan, signed up with GitHub `065008gif`.
 - No Hugging Face token, Space or Vercel project has been created yet. Those come in Phase 8.
+
+## Phase 2: Policy documents
+
+**D-019 (2026-09-28): The page target is reduced from at least 220 to about 150 pages, at the user's request.**
+Reason: to preserve the user's Claude Pro usage limit. Writing the document text is the largest single cost in the project.
+New per-document **targets** (not minimums), each within about ±2 pages:
+
+| # | Document | No. | Target |
+|---|---|---|---|
+| 1 | Leave Policy | NTL/HR/POL/001 | 16 |
+| 2 | Employee Handbook | NTL/HR/POL/002 | 26 |
+| 3 | POSH Policy | NTL/HR/POL/003 | 14 |
+| 4 | Code of Conduct and Ethics | NTL/HR/POL/004 | 18 |
+| 5 | Compensation and Benefits | NTL/HR/POL/005 | 20 |
+| 6 | Attendance, Hybrid Work and Overtime | NTL/HR/POL/006 | 12 |
+| 7 | Travel and Expense Reimbursement | NTL/HR/POL/007 | 14 |
+| 8 | Separation and Exit | NTL/HR/POL/008 | 14 |
+| 9 | IT, Information Security and Acceptable Use | NTL/HR/POL/009 | 16 |
+| | **Total** | | **150** |
+
+Everything else in the brief is unchanged: all 9 documents, cover, document control, version history, a TOC with verified page numbers, definitions, L1 to L8 grade tables, amendment circulars that override body clauses, annexures, cross-references, and at least 25 verified traps. The reduction comes from **fewer clauses per section**, never from lower realism or density, and there's no filler.
+Effect on the report: we cite "about 150 pages across 9 documents", not 220. Retrieval is still a real problem at this size (hundreds of chunks, many near-identical grade tables and clauses). Also at the user's request, chat output is kept lean: only checker results, page counts and the first two pages' extracted text are shown, never full document contents.
