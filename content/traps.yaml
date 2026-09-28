@@ -251,3 +251,32 @@
     - {doc: "008", anchor: "8.2", text: "Gratuity, where payable, is paid together with the F&F within the same 45 days"}
     - {doc: "005", anchor: "7.3", text: "within 30 days of the date it becomes payable"}
     - {doc: "008", anchor: "1.3", text: "where a statute provides a more favourable time limit or amount, the statute prevails"}
+- id: T33
+  type: 1
+  doc: "009"
+  question: "My password is 80 days old. Do I need to change it before 90 days?"
+  answer: "No. Since 1 March 2025 (Circular HR/CIR/2025/02) the 90-day change rule in Clause 5.2 is withdrawn; change it only if it may have been compromised or the SOC requires it. New passwords must be at least 14 characters and not on breached-password lists."
+  quotes:
+    - {doc: "009", anchor: "5.2", text: "are changed every 90 days"}
+    - {doc: "009", anchor: "HR/CIR/2025/02", text: "the requirement to change passwords every 90 days under Clause 5.2 is withdrawn"}
+- id: T34
+  type: 1
+  doc: "009"
+  question: "Can I paste some client source code into ChatGPT to debug it?"
+  answer: "No. Circular HR/CIR/2025/13 prohibits entering Internal, Confidential or Restricted Company or Client Data into any public or consumer AI tool; the approved Company AI assistant may be used with Client Data only with the client's written approval. Doing so is treated as disclosure of Client Data (Clause 16.3)."
+  quotes:
+    - {doc: "009", anchor: "HR/CIR/2025/13", text: "must not be entered into any public or consumer generative AI tool"}
+    - {doc: "009", anchor: "14.2", text: "Any other cloud service is prohibited for Company or Client Data"}
+- id: T35
+  type: 3
+  doc: "009"
+  question: "I am an L3. Can I use my personal laptop for work when my office laptop is being repaired?"
+  answer: "No. Personal laptops are permitted only for Grades L7 and L8, and only through the Company virtual desktop (Clause 7.1, Table 2, FAQ C.1). An L3 may use a personal mobile only for e-mail, chat and calendar via the managed work profile; ask the IT Service Desk for a loaner laptop."
+  quotes:
+    - {doc: "009", anchor: "C.1", text: "Personal laptops and computers are permitted only for Grades L7 and L8"}
+- id: T36
+  type: 5
+  question: "Will Nexora reimburse my home electricity bill when I work from home?"
+  answer: "Not covered by the documents (only a one-time home office allowance and internet reimbursement for L1-L4 are described); the bot must say electricity is not covered and offer an HR ticket."
+  expected_route: not_found
+  absent_terms: ["electricity", "power bill"]

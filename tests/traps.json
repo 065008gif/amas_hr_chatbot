@@ -820,5 +820,88 @@
    }
   ],
   "verified": true
+ },
+ {
+  "id": "T33",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "My password is 80 days old. Do I need to change it before 90 days?",
+  "answer": "No. Since 1 March 2025 (Circular HR/CIR/2025/02) the 90-day change rule in Clause 5.2 is withdrawn; change it only if it may have been compromised or the SOC requires it. New passwords must be at least 14 characters and not on breached-password lists.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "IT, Information Security and Acceptable Use Policy",
+    "doc_id": "009",
+    "number": "NTL/HR/POL/009",
+    "page": 5,
+    "clause": "5.2",
+    "quote": "are changed every 90 days"
+   },
+   {
+    "document": "IT, Information Security and Acceptable Use Policy",
+    "doc_id": "009",
+    "number": "NTL/HR/POL/009",
+    "page": 14,
+    "clause": "HR/CIR/2025/02",
+    "quote": "the requirement to change passwords every 90 days under Clause 5.2 is withdrawn"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T34",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "Can I paste some client source code into ChatGPT to debug it?",
+  "answer": "No. Circular HR/CIR/2025/13 prohibits entering Internal, Confidential or Restricted Company or Client Data into any public or consumer AI tool; the approved Company AI assistant may be used with Client Data only with the client's written approval. Doing so is treated as disclosure of Client Data (Clause 16.3).",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "IT, Information Security and Acceptable Use Policy",
+    "doc_id": "009",
+    "number": "NTL/HR/POL/009",
+    "page": 14,
+    "clause": "HR/CIR/2025/13",
+    "quote": "must not be entered into any public or consumer generative AI tool"
+   },
+   {
+    "document": "IT, Information Security and Acceptable Use Policy",
+    "doc_id": "009",
+    "number": "NTL/HR/POL/009",
+    "page": 9,
+    "clause": "14.2",
+    "quote": "Any other cloud service is prohibited for Company or Client Data"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T35",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "I am an L3. Can I use my personal laptop for work when my office laptop is being repaired?",
+  "answer": "No. Personal laptops are permitted only for Grades L7 and L8, and only through the Company virtual desktop (Clause 7.1, Table 2, FAQ C.1). An L3 may use a personal mobile only for e-mail, chat and calendar via the managed work profile; ask the IT Service Desk for a loaner laptop.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "IT, Information Security and Acceptable Use Policy",
+    "doc_id": "009",
+    "number": "NTL/HR/POL/009",
+    "page": 11,
+    "clause": "C.1",
+    "quote": "Personal laptops and computers are permitted only for Grades L7 and L8"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T36",
+  "type": 5,
+  "type_name": "not answered in documents",
+  "question": "Will Nexora reimburse my home electricity bill when I work from home?",
+  "answer": "Not covered by the documents (only a one-time home office allowance and internet reimbursement for L1-L4 are described); the bot must say electricity is not covered and offer an HR ticket.",
+  "expected_route": "not_found",
+  "evidence": [],
+  "verified": true
  }
 ]
