@@ -542,5 +542,78 @@
    }
   ],
   "verified": true
+ },
+ {
+  "id": "T23",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "I am an L4 on hybrid work. Can I choose Wednesday as one of my work-from-home days?",
+  "answer": "No. From 1 October 2025 (Circular HR/CIR/2025/10), Tuesday, Wednesday and Thursday are anchor office days for Grades L1 to L6, so Remote Work Days can only be Monday and Friday. Clause 5.2 (days agreed with the manager) no longer applies to L1-L6; L7-L8 still agree days with their manager.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Attendance, Hybrid Work and Overtime Policy",
+    "doc_id": "006",
+    "number": "NTL/HR/POL/006",
+    "page": 5,
+    "clause": "5.2",
+    "quote": "The days are agreed between the Employee and the Reporting Manager"
+   },
+   {
+    "document": "Attendance, Hybrid Work and Overtime Policy",
+    "doc_id": "006",
+    "number": "NTL/HR/POL/006",
+    "page": 11,
+    "clause": "HR/CIR/2025/10",
+    "quote": "Remote Work Days under Clause 5.2 may therefore be taken only on Monday and Friday"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T24",
+  "type": 6,
+  "type_name": "statute overrides company rule",
+  "question": "I am an L2 and worked 6 hours of approved overtime. At what rate will I be paid?",
+  "answer": "Clause 9.3 says 1.5 times the Ordinary Rate of Wages, but Clause 1.3 says the State Shops and Establishments law requires twice the ordinary rate and that the law prevails. So overtime is paid at twice the ordinary rate (for the Clause 9.6 example, Rs. 250 x 2 x 6 = Rs. 3,000, not Rs. 2,250).",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Attendance, Hybrid Work and Overtime Policy",
+    "doc_id": "006",
+    "number": "NTL/HR/POL/006",
+    "page": 7,
+    "clause": "9.3",
+    "quote": "Overtime is paid at one and a half times the Ordinary Rate of Wages"
+   },
+   {
+    "document": "Attendance, Hybrid Work and Overtime Policy",
+    "doc_id": "006",
+    "number": "NTL/HR/POL/006",
+    "page": 4,
+    "clause": "1.3",
+    "quote": "requires Overtime to be paid at twice the ordinary rate of wages"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T25",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "I am an L6 manager on the US night shift. How much shift allowance do I get?",
+  "answer": "None. Shift allowance is only for Grades L1 to L5 (Clause 6.2); Grades L6 to L8 are not eligible. (For L1-L5 the Night Shift rate is Rs. 650 per day from 1 June 2026 under Circular HR/CIR/2026/06.)",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Attendance, Hybrid Work and Overtime Policy",
+    "doc_id": "006",
+    "number": "NTL/HR/POL/006",
+    "page": 6,
+    "clause": "6.2",
+    "quote": "Employees in Grades L6 to L8 are not eligible for shift allowance"
+   }
+  ],
+  "verified": true
  }
 ]

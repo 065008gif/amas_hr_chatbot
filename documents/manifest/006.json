@@ -1,0 +1,450 @@
+{
+ "doc_id": "006",
+ "title": "Attendance, Hybrid Work and Overtime Policy",
+ "number": "NTL/HR/POL/006",
+ "version": "3.2",
+ "effective_date": "2025-04-01",
+ "pdf": "NTL-HR-POL-006_Attendance_Hybrid_Work_and_Overtime_Policy.pdf",
+ "pages": 11,
+ "built": "2026-09-28T18:50:37",
+ "toc": [
+  {
+   "level": 0,
+   "text": "1. Purpose, Scope and Applicable Law",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "2. Definitions",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "3. Working Hours",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "4. Recording Attendance",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "5. Hybrid Work",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "6. Shifts and Shift Allowance",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "7. Night Work and Safety of Women Employees",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "8. Transport",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "9. Overtime",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "10. Records and Compliance",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "11. Travel Time",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "12. Breaks, Wellbeing and Disconnecting",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "13. Attendance in Special Situations",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "Annexure A: Hybrid Work Arrangement",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "Annexure B: Consent for Night Shift Work",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "Annexure C: Frequently Asked Questions",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "Annexure D: Quick Reference by Location",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Amendment Circulars",
+   "page": 11
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/10: Anchor days for office attendance",
+   "page": 11
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2026/06: Revision of Night Shift allowance",
+   "page": 11
+  }
+ ],
+ "anchors": {
+  "Section 1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.2": {
+   "start": 4,
+   "end": 4
+  },
+  "1.3": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.1": {
+   "start": 4,
+   "end": 4
+  },
+  "2.2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.3": {
+   "start": 4,
+   "end": 4
+  },
+  "2.4": {
+   "start": 4,
+   "end": 4
+  },
+  "2.5": {
+   "start": 4,
+   "end": 4
+  },
+  "2.6": {
+   "start": 4,
+   "end": 4
+  },
+  "2.7": {
+   "start": 4,
+   "end": 4
+  },
+  "2.8": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 3": {
+   "start": 4,
+   "end": 4
+  },
+  "3.1": {
+   "start": 4,
+   "end": 4
+  },
+  "3.2": {
+   "start": 4,
+   "end": 4
+  },
+  "3.3": {
+   "start": 4,
+   "end": 4
+  },
+  "3.4": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 4": {
+   "start": 4,
+   "end": 5
+  },
+  "4.1": {
+   "start": 5,
+   "end": 5
+  },
+  "4.2": {
+   "start": 5,
+   "end": 5
+  },
+  "4.3": {
+   "start": 5,
+   "end": 5
+  },
+  "4.4": {
+   "start": 5,
+   "end": 5
+  },
+  "4.5": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 5": {
+   "start": 5,
+   "end": 5
+  },
+  "5.1": {
+   "start": 5,
+   "end": 5
+  },
+  "5.2": {
+   "start": 5,
+   "end": 5
+  },
+  "5.3": {
+   "start": 5,
+   "end": 5
+  },
+  "5.4": {
+   "start": 5,
+   "end": 5
+  },
+  "5.5": {
+   "start": 5,
+   "end": 5
+  },
+  "5.6": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 6": {
+   "start": 5,
+   "end": 6
+  },
+  "6.1": {
+   "start": 6,
+   "end": 6
+  },
+  "6.2": {
+   "start": 6,
+   "end": 6
+  },
+  "Table 1": {
+   "start": 6,
+   "end": 6
+  },
+  "6.3": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 7": {
+   "start": 6,
+   "end": 6
+  },
+  "7.1": {
+   "start": 6,
+   "end": 6
+  },
+  "7.2": {
+   "start": 6,
+   "end": 6
+  },
+  "7.3": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 8": {
+   "start": 6,
+   "end": 7
+  },
+  "8.1": {
+   "start": 6,
+   "end": 6
+  },
+  "8.2": {
+   "start": 6,
+   "end": 6
+  },
+  "8.3": {
+   "start": 6,
+   "end": 7
+  },
+  "Section 9": {
+   "start": 7,
+   "end": 7
+  },
+  "9.1": {
+   "start": 7,
+   "end": 7
+  },
+  "9.2": {
+   "start": 7,
+   "end": 7
+  },
+  "9.3": {
+   "start": 7,
+   "end": 7
+  },
+  "9.4": {
+   "start": 7,
+   "end": 7
+  },
+  "9.5": {
+   "start": 7,
+   "end": 7
+  },
+  "9.6": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 10": {
+   "start": 7,
+   "end": 7
+  },
+  "10.1": {
+   "start": 7,
+   "end": 7
+  },
+  "10.2": {
+   "start": 7,
+   "end": 7
+  },
+  "10.3": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 11": {
+   "start": 7,
+   "end": 7
+  },
+  "11.1": {
+   "start": 7,
+   "end": 7
+  },
+  "11.2": {
+   "start": 7,
+   "end": 7
+  },
+  "11.3": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 12": {
+   "start": 7,
+   "end": 8
+  },
+  "12.1": {
+   "start": 8,
+   "end": 8
+  },
+  "12.2": {
+   "start": 8,
+   "end": 8
+  },
+  "12.3": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 13": {
+   "start": 8,
+   "end": 8
+  },
+  "13.1": {
+   "start": 8,
+   "end": 8
+  },
+  "13.2": {
+   "start": 8,
+   "end": 8
+  },
+  "13.3": {
+   "start": 8,
+   "end": 8
+  },
+  "13.4": {
+   "start": 8,
+   "end": 8
+  },
+  "13.5": {
+   "start": 8,
+   "end": 8
+  },
+  "Annexure A": {
+   "start": 9,
+   "end": 9
+  },
+  "Annexure B": {
+   "start": 9,
+   "end": 9
+  },
+  "Annexure C": {
+   "start": 9,
+   "end": 10
+  },
+  "C.1": {
+   "start": 9,
+   "end": 9
+  },
+  "C.2": {
+   "start": 9,
+   "end": 9
+  },
+  "C.3": {
+   "start": 9,
+   "end": 9
+  },
+  "C.4": {
+   "start": 9,
+   "end": 9
+  },
+  "C.5": {
+   "start": 9,
+   "end": 9
+  },
+  "C.6": {
+   "start": 9,
+   "end": 9
+  },
+  "C.7": {
+   "start": 9,
+   "end": 10
+  },
+  "C.8": {
+   "start": 10,
+   "end": 10
+  },
+  "Annexure D": {
+   "start": 10,
+   "end": 10
+  },
+  "Table 2": {
+   "start": 10,
+   "end": 10
+  },
+  "HR/CIR/2025/10": {
+   "start": 11,
+   "end": 11
+  },
+  "HR/CIR/2026/06": {
+   "start": 11,
+   "end": 11
+  }
+ }
+}

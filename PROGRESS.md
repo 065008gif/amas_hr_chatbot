@@ -47,6 +47,8 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 2, doc 005 Compensation: 18 pages (target 20 ±2), traps T19-T22 verified (D-025). Running total 85 pages / 22 traps. Sizing rule: about 500 words per full page.
 
+- [x] Phase 2, doc 006 Attendance: 11 pages (target 12 ±2), traps T23-T25 verified; 25 traps reached (D-026). Running total 96 pages.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 

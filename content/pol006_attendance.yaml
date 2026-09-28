@@ -1,0 +1,358 @@
+doc_id: "006"
+title: "Attendance, Hybrid Work and Overtime Policy"
+number: NTL/HR/POL/006
+version: "3.2"
+effective_date: "2025-04-01"
+target_pages: 12
+
+control:
+  owner: Head, HR Operations
+  approver: Chief People Officer
+  approval_date: "2025-03-19"
+  classification: Internal
+  supersedes: Attendance and Hybrid Work Policy version 3.1 dated 1 April 2024
+  review_cycle: Annual, and on any change in the Shops and Establishments legislation of a State in which the Company operates
+  applicable_to: All Employees in Grades L1 to L8 at all locations in India
+  distribution: "Published on the NPP under Policies > Attendance. Printed copies are uncontrolled."
+
+history:
+  - ["2.0", "2020-06-01", "Remote work provisions introduced.", "HR Operations / CPO"]
+  - ["3.0", "2022-04-01", "Hybrid work model of up to two remote days a week; shift allowance restated.", "HR Operations / CPO"]
+  - ["3.1", "2024-04-01", "Night transport safeguards expanded; on-call allowance introduced.", "HR Operations / CPO"]
+  - ["3.2", "2025-04-01", "Overtime eligibility clarified; attendance regularisation limit revised.", "HR Operations / CPO"]
+
+sections:
+  - num: 1
+    title: Purpose, Scope and Applicable Law
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Policy sets out the working hours of the Company, how attendance is recorded, the rules for Hybrid Work, shifts and on-call support, the payment of Overtime, and the transport and safety arrangements for Employees who work early or late."
+      - clause: "1.2"
+        title: Scope
+        text: "This Policy applies to every Employee in Grades L1 to L8. Leave is governed by the {doc:001}. Where an Employee is deployed at a client site, the client's working hours apply where the Company has agreed to them, but the limits and payments in this Policy continue to apply."
+      - clause: "1.3"
+        title: Applicable law
+        text: "Working hours, rest intervals, Overtime and the employment of women at night are regulated by the Shops and Establishments legislation of each State, listed in the {doc:001}. Notwithstanding anything in this Policy, where the law of the State in which the Employee works provides a limit or a payment more favourable to the Employee, the law prevails. In particular, {stat:SE_OT_DOUBLE|the Shops and Establishments legislation of the States in which the Company operates requires Overtime to be paid at twice the ordinary rate of wages}, and that rate applies wherever it exceeds the rate in this Policy."
+
+  - num: 2
+    title: Definitions
+    body:
+      - clause: "2.1"
+        term: Base Location
+        text: "means the office of the Company to which the Employee is attached, as recorded on the NPP."
+      - clause: "2.2"
+        term: Core Hours
+        text: "means 11:00 a.m. to 4:00 p.m. on a Working Day, in the time zone of the Base Location, during which every Employee on the general shift is expected to be available."
+      - clause: "2.3"
+        term: Hybrid Work
+        text: "means an arrangement under which an Employee works on some Working Days from the Base Location and on others from home, as approved under {ref:#Section 5}."
+      - clause: "2.4"
+        term: Night Shift
+        text: "means any shift that ends after 10:00 p.m. or begins before 6:00 a.m."
+      - clause: "2.5"
+        term: Ordinary Rate of Wages
+        text: "means the Employee's monthly Basic Salary and allowances forming part of Annual Fixed Pay, excluding variable pay, bonus and Overtime payments, divided by 26 for a daily rate and further divided by 8 for an hourly rate."
+      - clause: "2.6"
+        term: Overtime
+        text: "means work performed at the direction of the Reporting Manager in excess of nine hours in a day or 48 hours in a week, excluding the rest interval."
+      - clause: "2.7"
+        term: Remote Work Day
+        text: "means a Working Day on which the Employee works from home under an approved Hybrid Work arrangement."
+      - clause: "2.8"
+        term: Working Day
+        text: "has the meaning given in the {doc:001}, namely a day from Monday to Friday that is not a declared holiday for the Base Location."
+
+  - num: 3
+    title: Working Hours
+    body:
+      - clause: "3.1"
+        title: Standard workday
+        text: "The standard workday on the general shift is nine hours, including a rest interval of one hour, on each Working Day, giving about 45 hours of presence and 40 hours of work in a week. Within this, an Employee may choose the start time between 8:00 a.m. and 11:00 a.m., provided the Core Hours are covered."
+      - clause: "3.2"
+        title: Statutory limits
+        text: "No Employee is required to work more than {stat:SE_HOURS_LIMIT|nine hours in a day or 48 hours in a week}, excluding Overtime permitted under {ref:#Section 9}, or to work for more than {stat:SE_REST_INTERVAL|five hours continuously without a rest interval of at least half an hour}. The spread-over of a workday, including rest intervals, does not exceed the limit prescribed by the law of the State."
+      - clause: "3.3"
+        title: Weekly off
+        text: "Saturday and Sunday are weekly offs for the general shift. An Employee on a shift roster that includes a Saturday or Sunday receives two other days as weekly offs in the same week, recorded on the roster."
+      - clause: "3.4"
+        title: Workload
+        text: "Reporting Managers plan work so that Employees are not routinely required to work beyond the standard workday. Sustained long hours are reviewed by the HR Business Partner, who may require additional staffing or a change in the plan."
+
+  - num: 4
+    title: Recording Attendance
+    body:
+      - clause: "4.1"
+        title: How attendance is recorded
+        text: "On days worked at an office, attendance is recorded by the identity card at the entry gates; entry and exit times are transferred to the NPP daily. On a Remote Work Day, the Employee marks attendance on the NPP before 11:00 a.m. At a client site, the Employee marks attendance on the NPP and the Reporting Manager confirms it weekly."
+      - clause: "4.2"
+        title: Full and half days
+        text: "A day with at least eight hours of presence at the office, or on which attendance has been marked on a Remote Work Day, is a full day. A day with at least four and a half but less than eight hours of presence is a half day, and the remaining half is debited to leave or, if no leave is applied for within three Working Days, treated as Leave Without Pay. Less than four and a half hours is treated as absence unless regularised."
+      - clause: "4.3"
+        title: Regularisation
+        text: "An Employee who forgot the identity card, was on official duty outside the office, or has an incorrect record may regularise attendance on the NPP, with the approval of the Reporting Manager, up to three times in a calendar month and within seven days of the date concerned. Regularisation for official duty, such as a client visit recorded on the NPP, does not count towards the limit."
+      - clause: "4.4"
+        title: Unauthorised absence
+        text: "Absence without leave or regularisation is treated as Leave Without Pay, and continued absence is dealt with under the {doc:001} and the {doc:004}."
+      - clause: "4.5"
+        title: Integrity of records
+        text: "Marking attendance for another Employee, allowing another person to use one's identity card, or marking attendance on a Remote Work Day without working is falsification of records and is major misconduct under the {doc:004}."
+
+  - num: 5
+    title: Hybrid Work
+    body:
+      - clause: "5.1"
+        title: Eligibility
+        text: "Hybrid Work is available to an Employee whose role can be performed remotely without affecting client commitments or information security, as confirmed by the Reporting Manager. It is not available to Graduate Engineer Trainees during the training programme, to an Employee during the first four weeks after joining, or to an Employee on a performance improvement plan unless the plan provides otherwise."
+      - clause: "5.2"
+        title: Number of Remote Work Days
+        text: "An eligible Employee may work from home for up to two Working Days in a week. The days are agreed between the Employee and the Reporting Manager, may differ between members of a team, and are recorded on the NPP at least one week in advance. Remote Work Days cannot be accumulated or carried to another week."
+      - clause: "5.3"
+        title: Conditions
+        text: "On a Remote Work Day the Employee is available during Core Hours on the approved chat and telephone, attends scheduled meetings with the camera available when requested, uses only the Company laptop and virtual private network, works from a place where confidential information cannot be seen or heard by others, and complies with the {doc:009}."
+      - clause: "5.4"
+        title: Office attendance on request
+        text: "The Reporting Manager may require attendance at the office on a planned Remote Work Day for a client visit, workshop, audit or team event, giving at least two Working Days' notice. Where a client contract requires work only from a Company or client office, Hybrid Work is not available for that project."
+      - clause: "5.5"
+        title: Working from another city or abroad
+        text: "Working remotely from a city other than the Base Location, and working from outside India, are governed by the {doc:002}. A Remote Work Day under this Section is from the Employee's residence in the city of the Base Location."
+      - clause: "5.6"
+        title: Withdrawal
+        text: "Hybrid Work is an arrangement, not an entitlement. It may be suspended for an individual by the Reporting Manager, with the reasons recorded on the NPP, where the conditions in {ref:#5.3} are not met, and may be changed for a location or business unit by the Chief People Officer by circular."
+
+  - num: 6
+    title: Shifts and Shift Allowance
+    body:
+      - clause: "6.1"
+        title: Shift rosters
+        text: "Employees supporting clients in other time zones may be placed on a shift roster, published on the NPP at least one week in advance. An Employee is not placed on a Night Shift for more than four consecutive weeks without a change to a day shift for at least one week, unless the Employee requests otherwise in writing."
+      - clause: "6.2"
+        title: Shift allowance
+        text: "Employees in Grades L1 to L5 receive a shift allowance for each day worked on a shift other than the general shift, at the rates in {ref:#Table 1}. Employees in Grades L6 to L8 are not eligible for shift allowance, as their pay takes account of such work. Shift allowance is paid with the salary of the following month and is taxable."
+      - table:
+          id: Table 1
+          title: Shifts and shift allowance (Grades L1 to L5)
+          header: ["Shift", "Typical timing (IST)", "Allowance per day worked"]
+          widths: [2, 3, 2.4]
+          rows:
+            - ["General shift", "8:00 a.m. to 8:00 p.m. window, nine hours", "Nil"]
+            - ["Early shift", "6:00 a.m. to 3:00 p.m.", "Rs. 200"]
+            - ["UK shift", "1:00 p.m. to 10:00 p.m.", "Rs. 250"]
+            - ["Night Shift (including US shift)", "6:00 p.m. to 3:00 a.m. or 9:00 p.m. to 6:00 a.m.", "Rs. 500"]
+            - ["Weekend or holiday support day on the roster", "As rostered", "Rs. 1,000, in addition to the weekly offs under {ref:#3.3}"]
+      - clause: "6.3"
+        title: On-call support
+        text: "An Employee in Grades L1 to L5 who is designated on-call for a week, available by telephone outside working hours to respond to incidents, receives an on-call allowance of Rs. 1,500 for that week. Time spent actually working on an incident outside the shift is recorded on the NPP and, for Employees in Grades L1 to L3, counts towards Overtime."
+
+  - num: 7
+    title: Night Work and Safety of Women Employees
+    body:
+      - clause: "7.1"
+        title: Consent
+        text: "No woman Employee is required to work on a Night Shift without her written consent, given in the form in {ref:#Annexure B}. Consent may be withdrawn with two weeks' notice, and a woman Employee who declines or withdraws consent suffers no adverse consequence."
+      - clause: "7.2"
+        title: Safeguards
+        text: "Where a woman Employee works on a Night Shift, the Company provides the safeguards {stat:SE_WOMEN_NIGHT|required by the Shops and Establishments legislation of the State and the conditions of the Company's registration}, which include at a minimum:"
+        items:
+          - "transport from the office to the residence and back, in a Company-arranged vehicle fitted with GPS tracking;"
+          - "a security guard in the vehicle where a woman Employee is the first to be picked up or the last to be dropped, and the driver's and guard's verification by the police;"
+          - "adequate lighting, security and a separate rest room at the office; and"
+          - "a helpline monitored by the transport desk until every Employee on the Night Shift has reached home."
+      - clause: "7.3"
+        title: Reporting incidents
+        text: "Any incident or concern during Company transport is reported immediately to the transport desk helpline, which escalates it to Security and the HR Business Partner. Misconduct by a driver or guard results in removal from Company duty."
+
+  - num: 8
+    title: Transport
+    body:
+      - clause: "8.1"
+        title: Eligibility
+        text: "The Company provides transport from the office to the residence, and from the residence to the office, for any Employee whose shift ends after 9:00 p.m. or begins before 6:00 a.m., within a radius of 30 kilometres from the office. Transport is free of charge and is booked on the NPP by 4:00 p.m. on the day."
+      - clause: "8.2"
+        title: Conduct in transport
+        text: "Employees follow the transport rules published on the NPP, wear seat belts, and do not ask the driver to deviate from the route. An Employee who is not at the pickup point within five minutes of the scheduled time may miss the trip, and the Company is not then required to arrange another vehicle."
+      - clause: "8.3"
+        title: Late working without a shift
+        text: "An Employee on the general shift who is asked by the Reporting Manager to stay beyond 9:00 p.m. may book Company transport through the Reporting Manager's approval on the NPP, or claim reimbursement of a taxi fare under the {doc:007}."
+
+  - num: 9
+    title: Overtime
+    body:
+      - clause: "9.1"
+        title: Eligibility
+        text: "Overtime is payable only to Employees in Grades L1 to L3. Employees in Grades L4 to L8 hold positions of supervision, management or specialised responsibility, and their pay takes account of occasional additional hours; they are not paid for Overtime but may receive compensatory off where eligible under the {doc:001}."
+      - clause: "9.2"
+        title: Prior approval
+        text: "Overtime is worked only at the written direction of the Reporting Manager recorded on the NPP before the work is done, except in an emergency, where it is recorded within one Working Day. Additional hours worked without direction are not Overtime."
+      - clause: "9.3"
+        title: Rate
+        text: "Overtime is paid at one and a half times the Ordinary Rate of Wages for each hour of Overtime, rounded to the nearest half hour, with the salary of the following month."
+      - clause: "9.4"
+        title: Limits
+        text: "Total Overtime for an Employee shall not exceed {stat:SE_OT_LIMIT|the quarterly limit prescribed by the law of the State}, and in any case shall not exceed 50 hours in a calendar quarter. The Reporting Manager monitors the limit on the NPP, which blocks further Overtime once the limit is reached."
+      - clause: "9.5"
+        title: Overtime or compensatory off, not both
+        text: "For the same hours of work on a weekly off or holiday, an Employee receives either Overtime payment or compensatory off under the {doc:001}, but not both. The Employee chooses on the NPP when the work is recorded."
+      - clause: "9.6"
+        title: Illustration
+        text: "An Employee in Grade L2 with Annual Fixed Pay of Rs. 6,24,000 has monthly fixed pay of Rs. 52,000, a daily rate of Rs. 2,000 and an hourly Ordinary Rate of Wages of Rs. 250. For six hours of approved Overtime in a month, the amount under {ref:#9.3} is Rs. 250 multiplied by 1.5 and by 6, which is Rs. 2,250."
+
+  - num: 10
+    title: Records and Compliance
+    body:
+      - clause: "10.1"
+        title: Statutory registers
+        text: "HR Operations maintains, in electronic form on the NPP, the registers of attendance, working hours, Overtime and wages {stat:SE_REGISTERS|required by the Shops and Establishments legislation of each State}, and produces them to an inspector on request."
+      - clause: "10.2"
+        title: Monitoring
+        text: "HR Operations reviews attendance, shift and Overtime data each month, and reports to the Business Unit Head any team in which Employees routinely exceed the standard workday or the Overtime limit."
+      - clause: "10.3"
+        title: Queries
+        text: "Queries on attendance, shift allowance or Overtime are raised as a ticket in the Leave or Payroll category through the HR Helpdesk."
+
+  - num: 11
+    title: Travel Time
+    body:
+      - clause: "11.1"
+        title: Travel on a Working Day
+        text: "Time spent travelling on Company business during a Working Day counts as working time. Where business travel extends the day beyond the standard workday, the extra time is not Overtime, but the Reporting Manager may allow a later start on the following day."
+      - clause: "11.2"
+        title: Travel on a weekly off or holiday
+        text: "Where an Employee is required to travel on a weekly off or declared holiday to reach a client location, an Employee in Grades L1 to L4 is entitled to compensatory off for the day under the {doc:001}. Travel on a weekly off at the Employee's own choice, for example to extend a stay, does not qualify."
+      - clause: "11.3"
+        title: Attendance while travelling
+        text: "Days of business travel approved on the NPP are recorded as on duty and do not need regularisation."
+
+  - num: 12
+    title: Breaks, Wellbeing and Disconnecting
+    body:
+      - clause: "12.1"
+        title: Breaks
+        text: "In addition to the one-hour rest interval, Employees may take short breaks during the day. Employees who work at a screen for long periods are encouraged to take a five-minute break every hour, and the ergonomic guidance on the NPP applies at home and in the office."
+      - clause: "12.2"
+        title: Nursing breaks
+        text: "A woman Employee returning from maternity leave is entitled, {stat:MB_NURSING_BREAKS|until the child attains the age of fifteen months, to two breaks a day of the prescribed duration for nursing the child}, in addition to the rest interval. On a Remote Work Day the breaks are taken at home; at the office the Employee may use the lactation room or the creche, as described in the {doc:002}."
+      - clause: "12.3"
+        title: Disconnecting after hours
+        text: "Except for Employees on shift, on call or handling a declared incident, no Employee is expected to respond to non-urgent calls or messages between 8:00 p.m. and 8:00 a.m. or on weekly offs, as set out in the Employee Handbook. Reporting Managers who repeatedly contact team members outside these hours for non-urgent work are counselled by the HR Business Partner."
+
+  - num: 13
+    title: Attendance in Special Situations
+    body:
+      - clause: "13.1"
+        title: Bandh, strike or civil disturbance
+        text: "Where a bandh, strike or civil disturbance is announced in a city, the location Crisis Management Team decides by 6:00 a.m. whether the office is open. Employees who can work from home do so, and the day is recorded as a Remote Work Day that does not count towards the weekly limit in {ref:#5.2}. Employees who cannot work are granted special leave as provided in the {doc:001}."
+      - clause: "13.2"
+        title: Polling day
+        text: "On the day of a Lok Sabha or State Legislative Assembly election in the constituency where an Employee is registered, the Employee receives a paid holiday under the {doc:001}. An Employee who must work on that day for a critical client commitment is given sufficient time off to vote."
+      - clause: "13.3"
+        title: Medical appointments
+        text: "An Employee may attend a medical appointment during working hours by recording a half day of Sick Leave, or, for an appointment of less than two hours, by agreeing a later start or an earlier finish with the Reporting Manager and completing the Core Hours."
+      - clause: "13.4"
+        title: Religious observance
+        text: "Reporting Managers accommodate reasonable requests to adjust working hours for religious observance, such as prayer times or fasting, provided that the Core Hours and client commitments are met. Requests are not refused on the ground of the religion concerned."
+      - clause: "13.5"
+        title: Attendance at a client site or abroad
+        text: "An Employee deployed at a client site in India follows the client's workdays, but a Saturday or Sunday worked at the client's request is treated as a weekly off worked for the purposes of compensatory off and Overtime. An Employee on assignment abroad follows the working hours and holidays of the host location stated in the assignment letter."
+
+annexures:
+  - id: A
+    title: Hybrid Work Arrangement
+    body:
+      - table:
+          title: "Form HR-HW-01: Hybrid Work arrangement (recorded on the NPP)"
+          form: true
+          widths: [2.2, 3]
+          rows:
+            - ["Employee ID, name, Grade and Base Location", ""]
+            - ["Project and client (confirm that the client permits remote work)", ""]
+            - ["Proposed Remote Work Days", ""]
+            - ["Home work location address (city of the Base Location)", ""]
+            - ["I confirm that I will comply with the conditions in {ref:#5.3} and the {doc:009}", ""]
+            - ["Reporting Manager approval and date", ""]
+
+  - id: B
+    title: Consent for Night Shift Work
+    body:
+      - para: "To be completed by a woman Employee before being placed on a Night Shift. The consent may be withdrawn at any time with two weeks' notice under {ref:#7.1}."
+      - table:
+          title: "Form HR-NS-01: Consent to work on a Night Shift"
+          form: true
+          widths: [2.2, 3]
+          rows:
+            - ["Employee ID, name and Base Location", ""]
+            - ["Shift and period for which consent is given", ""]
+            - ["Residence address for pickup and drop", ""]
+            - ["Emergency contact name and number", ""]
+            - ["I give my consent voluntarily and understand that I may withdraw it without any adverse consequence", ""]
+            - ["Signature and date", ""]
+
+  - id: C
+    title: Frequently Asked Questions
+    body:
+      - clause: "C.1"
+        title: I came to office for six hours and then worked from home. How is the day recorded?
+        text: "Office presence of six hours is a half day under {ref:#4.2}. If the Reporting Manager agreed to the split day, the Employee regularises the day as a full day; this counts towards the three regularisations allowed in a month."
+      - clause: "C.2"
+        title: Can I carry forward an unused Remote Work Day to next week?
+        text: "No. Remote Work Days cannot be accumulated or carried forward under {ref:#5.2}."
+      - clause: "C.3"
+        title: I am an L4 and worked 12 hours on a release day. Do I get Overtime?
+        text: "No. Overtime is payable only to Grades L1 to L3 under {ref:#9.1}. An Employee in Grade L4 may be eligible for compensatory off only if the work was on a weekly off or holiday, as provided in the Leave Policy."
+      - clause: "C.4"
+        title: I am on the UK shift. Do I get Company transport?
+        text: "Yes, because the UK shift ends at 10:00 p.m., after 9:00 p.m., under {ref:#8.1}."
+      - clause: "C.5"
+        title: Is shift allowance paid on a Remote Work Day?
+        text: "Yes, if the Employee worked the rostered shift that day. Shift allowance depends on the shift worked, not on the place of work."
+
+      - clause: "C.6"
+        title: I am breastfeeding my ten-month-old child. Can I take breaks at work?
+        text: "Yes. Until the child is fifteen months old, two nursing breaks a day are allowed in addition to the rest interval, under {ref:#12.2}."
+      - clause: "C.7"
+        title: My manager messages me at 11 p.m. about next week's work. Must I reply?
+        text: "No. Non-urgent messages outside 8:00 a.m. to 8:00 p.m. need not be answered until the next Working Day under {ref:#12.3}. If this happens repeatedly, speak to the HR Business Partner."
+      - clause: "C.8"
+        title: There is a city bandh tomorrow and I have already used two Remote Work Days this week. Can I work from home?
+        text: "Yes. A day worked from home because of a bandh, strike or civil disturbance does not count towards the weekly limit, under {ref:#13.1}."
+  - id: D
+    title: Quick Reference by Location
+    body:
+      - para: "The table below summarises how the principal limits apply at each location. The law of each State is listed in the Leave Policy; where the law differs from this summary, the law prevails."
+      - table:
+          id: Table 2
+          title: Working time rules by location
+          header: ["Location", "Weekly limit on working hours", "Overtime rate", "Night work by women"]
+          widths: [1.4, 2.2, 2.2, 2.6]
+          rows:
+            - ["Bengaluru", "{stat:SE_HOURS_LIMIT|48 hours}", "{stat:SE_OT_DOUBLE|Twice the ordinary rate}", "{stat:SE_WOMEN_NIGHT|With consent and safeguards}"]
+            - ["Pune", "{stat:SE_HOURS_LIMIT|48 hours}", "{stat:SE_OT_DOUBLE|Twice the ordinary rate}", "{stat:SE_WOMEN_NIGHT|With consent and safeguards}"]
+            - ["Hyderabad", "{stat:SE_HOURS_LIMIT|48 hours}", "{stat:SE_OT_DOUBLE|Twice the ordinary rate}", "{stat:SE_WOMEN_NIGHT|With consent and safeguards}"]
+            - ["Chennai", "{stat:SE_HOURS_LIMIT|48 hours}", "{stat:SE_OT_DOUBLE|Twice the ordinary rate}", "{stat:SE_WOMEN_NIGHT|With consent and safeguards}"]
+            - ["Noida", "{stat:SE_HOURS_LIMIT|48 hours}", "{stat:SE_OT_DOUBLE|Twice the ordinary rate}", "{stat:SE_WOMEN_NIGHT|With consent and safeguards}"]
+          note: "Company practice in this Policy (nine hours a day, 45 hours of presence a week, Overtime only for Grades L1 to L3) operates within these limits."
+
+circulars_intro: "The circulars below amend this Policy. Each prevails over the clause it amends from its effective date; the body of the Policy is not edited."
+
+circulars:
+  - number: HR/CIR/2025/10
+    date: "2025-09-01"
+    effective_from: "2025-10-01"
+    subject: Anchor days for office attendance
+    amends: ["5.2"]
+    issued_by: Chief People Officer
+    body:
+      - para: "To strengthen collaboration, with effect from 1 October 2025, Tuesday, Wednesday and Thursday are anchor days on which every Employee in Grades L1 to L6 on Hybrid Work attends the Base Location. Remote Work Days under {ref:#5.2} may therefore be taken only on Monday and Friday, and the choice of days by agreement with the Reporting Manager no longer applies to Grades L1 to L6."
+      - items:
+          - "Employees in Grades L7 and L8 continue to agree their Remote Work Days with their Reporting Manager, within the limit of two days a week."
+          - "Where an anchor day is a declared holiday, the Employee is not required to attend on another day in its place."
+          - "Exceptions for medical reasons, disability or caregiving are approved by the HR Business Partner and recorded on the NPP."
+
+  - number: HR/CIR/2026/06
+    date: "2026-05-12"
+    effective_from: "2026-06-01"
+    subject: Revision of Night Shift allowance
+    amends: ["6.2", "Table 1"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 1 June 2026, the allowance for each day worked on a Night Shift in {ref:#Table 1} is increased from Rs. 500 to Rs. 650 for Employees in Grades L1 to L5. The other rates in {ref:#Table 1} are unchanged, and Grades L6 to L8 remain ineligible."
