@@ -43,3 +43,16 @@ This is a local-network issue only. The Hugging Face Space uses its own DNS, and
 
 **D-012 (2026-09-28): Ollama free-tier limits are UNVERIFIED.**
 Ollama doesn't publish exact free-tier numbers in a form we could check here. We treat them as unknown and design for them: an answer cache, one retry, failover to Gemini, and a friendly message on HTTP 429. The user can see actual usage on their ollama.com account page.
+
+**D-013 (2026-09-28): Gemini fallback uses `gemini-3.1-flash-lite` for now and keeps an ordered list of models to try.**
+The AI Studio key works: the model list call succeeded. Test results on 2026-09-28, about 17:35 IST:
+- `gemini-2.5-flash` → **404**, "no longer available to new users". Google recommended `gemini-3.8-flash`.
+- `gemini-3.8-flash` → **503 UNAVAILABLE**, "high demand", twice (3.0 s and 23.6 s).
+- `gemini-flash-latest` → 503. `gemini-3.5-flash-lite` → 503.
+- `gemini-3.1-flash-lite` → **HTTP 200, content `'ready'`**, 4.7 s.
+
+Consequences:
+1. The config holds an **ordered list** of Gemini models. It starts with `gemini-3.1-flash-lite` (proven to work), then `gemini-3.8-flash`. A 503 on one model moves on to the next, and everything is still subject to the 30 s timeout.
+2. The backend treats **503 like 429**: retry once, fail over, and show a friendly message. It never shows the raw error.
+3. We'll re-test `gemini-3.8-flash` in Phase 5. If it's reliably available, it may go first, because it's a stronger model.
+4. Model names and availability change often. This is threat A5 ("model deprecation") in the report, and we've already seen it happen once (the `gemini-2.5-flash` 404).
