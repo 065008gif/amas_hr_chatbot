@@ -18,11 +18,12 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 0, Step 5: `git init -b main`, repo-local identity (Akshit Kansal / GitHub no-reply email), credential.helper blanked for this repo (global was unset), remote `origin` added, `.gitignore` created before the first commit
 - [x] Phase 0, Step 6: `DECISIONS.md` (D-001 to D-009) and `PROGRESS.md`
 - [x] Phase 0, first commit made on `main`
+- [x] **Phase 0 pushed** by user. Verified: `origin/main` = `6000955` = local `main` (`git ls-remote`). No token saved (repo credential.helper blank, no `~/.git-credentials`).
+- [x] Phase 1, Step 1 (prep): `.env.example` (fake values, tracked); `.env` created with empty `OLLAMA_API_KEY=` / `GEMINI_API_KEY=`, `chmod 600` (`-rw-------`), confirmed ignored by git; `scripts/test_ollama.sh` written (reads key without printing it, shows HTTP code, time, content, whether `thinking` is present, token counts).
+- [x] Phase 1, Step 1 DONE: user added the key; `bash scripts/test_ollama.sh` → HTTP 200, content 'ready', `thinking` field present (never shown to users). Slow first call (36.7 s) traced to college DNS (about 5 s per uncached lookup); the model itself takes about 1 s. DECISIONS D-010 to D-012. Committed locally (push at end of Phase 1).
 
 ## Next
-- [ ] **User pushes Phase 0** (`git push -u origin main`) from a second terminal tab. Confirm with `git log origin/main --oneline`.
-- [ ] Phase 1, Step 1: Ollama cloud API key in `.env` (user types it with nano; `chmod 600 .env`), then a curl test of `gpt-oss:120b`
-- [ ] Phase 1, Step 2: Gemini key and curl test
+- [ ] Phase 1, Step 2: Gemini key. **User** creates it in Google AI Studio and types it into `.env` (`GEMINI_API_KEY=`) with nano. Claude writes `scripts/test_gemini.sh` (same style as the Ollama test) and runs it.
 - [ ] Phase 1, Steps 3-5: free-tier limits, network test (huggingface.co, github.com, vercel.com, pypi.org), embedding model download and timing
 - [ ] Phase 1, Step 6: Hugging Face and Vercel accounts (GitHub already exists, skip)
 - [ ] End of Phase 1: secret scan, commit, user pushes

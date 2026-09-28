@@ -30,3 +30,16 @@ This keeps an off-machine backup of each finished phase, which matters on a shar
 
 **D-009 (2026-09-28): Skip the GitHub account step in Phase 1.**
 The user already has an account (`065008gif`).
+
+## Phase 1: Accounts, keys and connectivity
+
+**D-010 (2026-09-28): Ollama cloud `gpt-oss:120b` works with our key.**
+Test: `scripts/test_ollama.sh` → HTTP 200, content `'ready'`, 72 input / 52 output tokens, server-side `total_duration` 0.44 s. The response **does** include a `thinking` field (the model's reasoning). The backend reads only `message.content` and never shows, logs or stores `thinking`.
+
+**D-011 (2026-09-28): The college DNS is slow, so the backend reuses one HTTP connection and uses a 30 s timeout.**
+The first call took 36.7 s in total, even though the server-side time was 0.44 s. `curl` timings showed the delay was DNS lookup (10 s, 5 s, then 0.009 s). `getent` confirmed that the first uncached lookup of `ollama.com` takes about 5.0 s, and a repeat takes 0.013 s. The system resolver forwards to college DNS `192.240.1.6`/`.5` (then 8.8.8.8, 1.1.1.1). Once connected, a full reply takes about 1.0 s.
+We don't change the system DNS, because that's outside `~/hrbot` on a shared PC. Instead, the backend uses a single persistent `httpx` client (keep-alive, so the DNS lookup happens once per process) plus the answer cache. The brief's 30 s timeout is kept and is enough.
+This is a local-network issue only. The Hugging Face Space uses its own DNS, and we'll re-measure latency there in Phase 8.
+
+**D-012 (2026-09-28): Ollama free-tier limits are UNVERIFIED.**
+Ollama doesn't publish exact free-tier numbers in a form we could check here. We treat them as unknown and design for them: an answer cache, one retry, failover to Gemini, and a friendly message on HTTP 429. The user can see actual usage on their ollama.com account page.
