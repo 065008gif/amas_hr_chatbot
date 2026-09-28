@@ -1,0 +1,60 @@
+# ---- Secrets (repo is PUBLIC: never commit these) ----
+.env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+secrets/
+credentials*.json
+service-account*.json
+.netrc
+.git-credentials
+*token*.txt
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Node / frontend ----
+node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/.vercel/
+.vercel/
+.netlify/
+npm-debug.log*
+
+# ---- Local runtime data (regenerated, may contain user input) ----
+*.sqlite
+*.sqlite3
+*.db
+data/cache/
+logs/
+*.log
+
+# ---- Model downloads / large artefacts ----
+.cache/
+models/
+*.onnx
+*.bin
+*.safetensors
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*~
