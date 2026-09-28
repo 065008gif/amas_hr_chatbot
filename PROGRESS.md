@@ -28,6 +28,9 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 - [x] Phase 1, Step 4 DONE: all needed hosts reachable, no TLS interception, about 32 MB/s from PyPI; occasional 5-15 s DNS stalls only (D-015).
 - [x] Phase 1, Step 5 DONE: `fastembed` 0.8.1 + `BAAI/bge-small-en-v1.5` installed and cached in `.cache/fastembed`. 100 chunks embed in 1.90 s (28 cores) / 5.92 s (2 threads); query 3-5 ms; sanity PASS. `scripts/test_embeddings.py` (D-016). Scripts must set `HF_HOME=~/hrbot/.cache/huggingface`.
 
+- [x] Phase 1, Step 6 DONE: Hugging Face `Akshit065008` (email verified; API lookup HTTP 200); Vercel via GitHub `065008gif`. GitHub already existed. (D-018)
+- [x] **Phase 1 CHECK PASSED** (2026-09-28): Ollama `gpt-oss:120b` → 200 'ready' (after one connect timeout on the college network, see D-017); Gemini `gemini-3.1-flash-lite` → 200 'ready'; connectivity recorded in D-015. Secret scan CLEAN.
+
 ## Next
-- [ ] Phase 1, Step 6: Hugging Face and Vercel accounts (GitHub already exists, skip)
-- [ ] End of Phase 1: secret scan, commit, user pushes
+- [ ] **User pushes Phase 1** (`git push`) from a second terminal tab. Then Claude verifies with `git ls-remote origin main`.
+- [ ] Phase 2, first document only: Leave Policy (NTL/HR/POL/001, 22+ pages). Before writing it: agree the content format (YAML in `content/`), the generator design (ReportLab, two-pass TOC), the checker, `content/STATUTORY_CLAIMS.md` and `tests/traps.json`. One document at a time; show page count and the first 2 pages' text after each.

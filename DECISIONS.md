@@ -94,3 +94,12 @@ Consequence: `git push`, `pip install`, `npm install` and model downloads can al
   - sanity check PASS: "How many days of paternity leave do I get?" put 3 paternity-leave chunks at the top (cosine about 0.82)
 - **Consequence:** the full index (expected to be a few thousand chunks) is built **once, on this PC**, and shipped inside the Docker image. The Space only embeds the user's query, which is milliseconds. The model files must also be baked into the image, so a sleeping Space doesn't re-download 65 MB on wake-up. That will be done in Phase 8.
 - Caches are kept inside the project by setting `HF_HOME=~/hrbot/.cache/huggingface` and `cache_dir=~/hrbot/.cache/fastembed`. We checked that nothing was created outside `~/hrbot`.
+
+**D-017 (2026-09-28): The college network sometimes drops a connection, so the backend uses a short connect timeout and retries.**
+During the Phase 1 check, `scripts/test_ollama.sh` failed with `curl: (28) Connection timed out after 60000 milliseconds`. The request never connected at all. The very next 4 attempts all succeeded (HTTP 200, connect 0.03 to 0.31 s, total 0.97 to 4.5 s), and so did a re-run of the test script (200, `'ready'`, 2.3 s). A similar one-off timeout happened in the network test (D-015). ollama.com resolves to a single IPv4 address (34.36.133.15), so this isn't an IPv6 problem. It's an intermittent drop on the local network. Across the Ollama requests counted in D-010, D-011, D-014, D-015 and D-017, **2 of about 16** failed to connect.
+Design change for Phase 5: split the timeout into **connect = 10 s** and **read = 30 s** (both in the config). A stuck connection then fails fast and goes to the one retry or failover, instead of using up the whole 30 s. The deployed Space isn't on this network, and we'll re-measure there in Phase 8.
+
+**D-018 (2026-09-28): Hosting accounts were created by the user.**
+- Hugging Face: username `Akshit065008`, email verified. We confirmed the account exists: `huggingface.co/api/users/Akshit065008/overview` returned HTTP 200. The backend Space URL will look like `https://akshit065008-<space-name>.hf.space` (the exact form will be confirmed when the Space is created in Phase 8).
+- Vercel: Hobby (free) plan, signed up with GitHub `065008gif`.
+- No Hugging Face token, Space or Vercel project has been created yet. Those come in Phase 8.
