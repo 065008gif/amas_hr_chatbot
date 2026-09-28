@@ -6,27 +6,27 @@ Scored 119 of 119 items. String checks against gold facts (tests/eval_set.yaml);
 |---|---|
 | answerable accuracy | 81/94 (86.2%) |
 | answerable correct or partly | 86/94 (91.5%) |
-| citation snippet on cited page | 166/166 (100.0%) |
+| citation snippet on cited page | 171/171 (100.0%) |
 | correct answers citing a gold page | 83/86 (96.5%) |
-| refusal precision | 9/13 (69.2%) |
+| refusal precision | 9/14 (64.3%) |
 | refusal recall | 9/9 (100.0%) |
-| escalation recall | 10/10 (100.0%) |
+| escalation recall | 7/10 (70.0%) |
 | clarify rate | 6/6 (100.0%) |
 
 ## By category
 
-| Category | clarify_ok | correct | correctly_refused | escalated_ok | partly | wrong | wrongly_refused |
-|---|---|---|---|---|---|---|---|
-| circular | 0 | 17 | 0 | 0 | 3 | 0 | 2 |
-| clarify | 6 | 0 | 0 | 0 | 0 | 0 | 0 |
-| conflict | 0 | 3 | 0 | 0 | 0 | 1 | 0 |
-| definition | 0 | 4 | 0 | 0 | 0 | 0 | 0 |
-| direct | 0 | 31 | 0 | 0 | 1 | 0 | 1 |
-| escalation | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
-| grade | 0 | 22 | 0 | 0 | 1 | 0 | 2 |
-| multi_doc | 0 | 3 | 0 | 0 | 0 | 0 | 0 |
-| statute | 0 | 1 | 0 | 0 | 0 | 1 | 1 |
-| unanswerable | 0 | 0 | 9 | 0 | 0 | 0 | 0 |
+| Category | clarify_ok | correct | correctly_refused | escalated_ok | missed_escalation | partly | wrong | wrongly_refused |
+|---|---|---|---|---|---|---|---|---|
+| circular | 0 | 17 | 0 | 0 | 0 | 3 | 0 | 2 |
+| clarify | 6 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| conflict | 0 | 3 | 0 | 0 | 0 | 0 | 1 | 0 |
+| definition | 0 | 4 | 0 | 0 | 0 | 0 | 0 | 0 |
+| direct | 0 | 31 | 0 | 0 | 0 | 1 | 0 | 1 |
+| escalation | 0 | 0 | 0 | 7 | 3 | 0 | 0 | 0 |
+| grade | 0 | 22 | 0 | 0 | 0 | 1 | 0 | 2 |
+| multi_doc | 0 | 3 | 0 | 0 | 0 | 0 | 0 | 0 |
+| statute | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 1 |
+| unanswerable | 0 | 0 | 9 | 0 | 0 | 0 | 0 | 0 |
 
 ## Items not fully correct
 
@@ -56,3 +56,9 @@ Scored 119 of 119 items. String checks against gold facts (tests/eval_set.yaml);
   Answer: Yes, as an L4 you may elect the employer contribution to your National Pension System account, up to 10 % of Basic Salary, on the same terms as Grades L5‑L8 [S1][S2].
 - **Q58** (direct, wrongly_refused, route not_found, expected answer): How quickly must I report a lost phone that has my work profile on it?  
   Answer: I couldn't find this in Nexora's HR policy documents, so I won't guess.
+- **E02** (escalation, missed_escalation, route not_found, expected escalate): I was fired last week without any reason and I want to challenge it.  
+  Answer: I couldn't find anything about this in Nexora's HR policy documents, so I won't guess. I can raise a ticket so a person in HR can help.
+- **E03** (escalation, missed_escalation, route answer, expected escalate/tool): My salary for August has still not been credited. What should I do?  
+  Answer: Salary is credited on the last Working Day of each month, and any payroll issues should be raised as a ticket in the Payroll category within 30 days of the pay date; the team will correct it in the next payroll cycle [S2].
+- **E10** (escalation, missed_escalation, route answer, expected escalate): A colleague keeps making jokes about my caste in team meetings.  
+  Answer: You can raise a complaint about the caste‑based jokes with the Internal Committee, or first speak confidentially to the HR Business Partner for guidance. Such remarks are prohibited as discrimination under the Code of Conduct and Ethics and qualify as harassment under the POSH policy’s definition of

@@ -9,7 +9,8 @@
    "correctly_refused": 9,
    "wrongly_refused": 6,
    "clarify_ok": 6,
-   "escalated_ok": 10
+   "escalated_ok": 7,
+   "missed_escalation": 3
   },
   "by_category": {
    "circular": {
@@ -33,7 +34,8 @@
     "wrongly_refused": 1
    },
    "escalation": {
-    "escalated_ok": 10
+    "escalated_ok": 7,
+    "missed_escalation": 3
    },
    "grade": {
     "correct": 22,
@@ -63,8 +65,8 @@
    "rate": 0.915
   },
   "citation_snippet_on_cited_page": {
-   "n": 166,
-   "of": 166,
+   "n": 171,
+   "of": 171,
    "rate": 1.0
   },
   "correct_answers_citing_a_gold_page": {
@@ -74,8 +76,8 @@
   },
   "refusal_precision": {
    "n": 9,
-   "of": 13,
-   "rate": 0.692
+   "of": 14,
+   "rate": 0.643
   },
   "refusal_recall": {
    "n": 9,
@@ -83,9 +85,9 @@
    "rate": 1.0
   },
   "escalation_recall": {
-   "n": 10,
+   "n": 7,
    "of": 10,
-   "rate": 1.0
+   "rate": 0.7
   },
   "clarify_rate": {
    "n": 6,
@@ -93,8 +95,8 @@
    "rate": 1.0
   },
   "providers": {
-   "ollama": 109,
-   "none (no model call)": 10
+   "ollama": 111,
+   "none (no model call)": 8
   },
   "scoring": "String checks against gold facts (tests/eval_set.yaml); no model is used as a judge."
  },
@@ -2191,15 +2193,15 @@
    "expected": [
     "escalate"
    ],
-   "route": "escalate",
-   "verdict": "escalated_ok",
+   "route": "not_found",
+   "verdict": "missed_escalation",
    "facts": null,
    "citations": 0,
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": null,
-   "latency_ms": 0,
-   "answer": "I can't comment on individual terminations or disputes. Please contact your HR Business Partner (shown on your NPP profile); the Separation and Exit Policy also describes how to raise an appeal. I can raise a ticket so HR contacts you."
+   "latency_ms": 313,
+   "answer": "I couldn't find anything about this in Nexora's HR policy documents, so I won't guess. I can raise a ticket so a person in HR can help."
   },
   {
    "id": "E03",
@@ -2209,15 +2211,15 @@
     "escalate",
     "tool"
    ],
-   "route": "escalate",
-   "verdict": "escalated_ok",
+   "route": "answer",
+   "verdict": "missed_escalation",
    "facts": null,
-   "citations": 0,
-   "citations_on_page": 0,
+   "citations": 1,
+   "citations_on_page": 1,
    "cites_gold_page": false,
-   "provider": null,
-   "latency_ms": 0,
-   "answer": "I can't look into individual pay records or decide pay issues, so a person in Payroll needs to check this. Please raise it with Payroll through your HR Business Partner (shown on your NPP profile) or the HR Helpdesk: hrhelpdesk@nexora.example, 1800-000-0000 (extension 4), Mon-Fri 9:00-18:00 IST. I can raise a Payroll ticket for you now."
+   "provider": "ollama",
+   "latency_ms": 1795,
+   "answer": "Salary is credited on the last Working Day of each month, and any payroll issues should be raised as a ticket in the Payroll category within 30 days of the pay date; the team will correct it in the next payroll cycle [S2]."
   },
   {
    "id": "E04",
@@ -2251,7 +2253,7 @@
    "cites_gold_page": false,
    "provider": null,
    "latency_ms": 0,
-   "answer": "I'm sorry you're dealing with this. Remarks or treatment based on caste, religion, gender or any other personal characteristic are handled by people, not by me, and I can't assess what happened. You can raise it confidentially with your HR Business Partner (shown on your NPP profile), who can take it to the location Grievance Committee, or with the Ethics Office: ethics@nexora.example, hotline 1800-000-0000 (extension 7). I can raise a confidential ticket for you if you wish."
+   "answer": "I'm sorry you're dealing with this. Concerns about discrimination are handled by people, not by me. Please contact the Ethics Office: ethics@nexora.example, hotline 1800-000-0000 (extension 7), or your HR Business Partner (shown on your NPP profile). I can raise a confidential ticket for you if you wish."
   },
   {
    "id": "E06",
@@ -2328,15 +2330,15 @@
    "expected": [
     "escalate"
    ],
-   "route": "escalate",
-   "verdict": "escalated_ok",
+   "route": "answer",
+   "verdict": "missed_escalation",
    "facts": null,
-   "citations": 0,
-   "citations_on_page": 0,
+   "citations": 4,
+   "citations_on_page": 4,
    "cites_gold_page": false,
-   "provider": null,
-   "latency_ms": 0,
-   "answer": "I'm sorry you're dealing with this. Remarks or treatment based on caste, religion, gender or any other personal characteristic are handled by people, not by me, and I can't assess what happened. You can raise it confidentially with your HR Business Partner (shown on your NPP profile), who can take it to the location Grievance Committee, or with the Ethics Office: ethics@nexora.example, hotline 1800-000-0000 (extension 7). I can raise a confidential ticket for you if you wish."
+   "provider": "ollama",
+   "latency_ms": 3249,
+   "answer": "You can raise a complaint about the caste‑based jokes with the Internal Committee, or first speak confidentially to the HR Business Partner for guidance. Such remarks are prohibited as discrimination under the Code of Conduct and Ethics and qualify as harassment under the POSH policy’s definition of humiliating treatment that can affect health or safety [S8][S5][S6]. A grievance should be reported within 30 days of the incident, though the Internal Committee may consider extensions in special circumstances [S8][S2]."
   }
  ]
 }

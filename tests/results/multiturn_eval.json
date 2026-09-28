@@ -1,0 +1,1798 @@
+{
+ "summary": {
+  "conversations_scored": 30,
+  "conversations_fully_correct": {
+   "n": 21,
+   "of": 30,
+   "rate": 0.7
+  },
+  "turn_accuracy_by_position": {
+   "1": {
+    "n": 29,
+    "of": 30,
+    "rate": 0.967
+   },
+   "2": {
+    "n": 27,
+    "of": 30,
+    "rate": 0.9
+   },
+   "3": {
+    "n": 24,
+    "of": 30,
+    "rate": 0.8
+   }
+  },
+  "by_kind": {
+   "follow": {
+    "turns_correct": {
+     "n": 66,
+     "of": 75,
+     "rate": 0.88
+    },
+    "fully_correct": {
+     "n": 17,
+     "of": 25,
+     "rate": 0.68
+    }
+   },
+   "memory": {
+    "turns_correct": {
+     "n": 5,
+     "of": 6,
+     "rate": 0.833
+    },
+    "fully_correct": {
+     "n": 1,
+     "of": 2,
+     "rate": 0.5
+    }
+   },
+   "switch": {
+    "turns_correct": {
+     "n": 3,
+     "of": 3,
+     "rate": 1.0
+    },
+    "fully_correct": {
+     "n": 1,
+     "of": 1,
+     "rate": 1.0
+    }
+   },
+   "vague": {
+    "turns_correct": {
+     "n": 6,
+     "of": 6,
+     "rate": 1.0
+    },
+    "fully_correct": {
+     "n": 2,
+     "of": 2,
+     "rate": 1.0
+    }
+   }
+  },
+  "pairs_scored": 40,
+  "paraphrase_consistency": {
+   "n": 36,
+   "of": 40,
+   "rate": 0.9
+  },
+  "paraphrase_same_route": {
+   "n": 36,
+   "of": 40,
+   "rate": 0.9
+  },
+  "paraphrase_both_correct": {
+   "n": 36,
+   "of": 40,
+   "rate": 0.9
+  },
+  "scoring": "Turns scored like single questions (string checks on gold facts). A pair is consistent when both wordings get the same route and the same fact verdict."
+ },
+ "conversations": [
+  {
+   "id": "M01",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How many days of earned leave does an L5 get in a year?",
+     "route": "answer",
+     "rewritten": "How many days of earned leave does an L5 get in a year?",
+     "answer": "You are entitled to 21 days of Earned Leave per Leave Year as a Grade L5 employee [S1][S3]."
+    },
+    {
+     "q": "What about L7?",
+     "route": "answer",
+     "rewritten": "How many days of earned leave does an L7 get in a year?",
+     "answer": "You are entitled to 24 days of Earned Leave per Leave Year as a Grade L7 employee [S1][S2]."
+    },
+    {
+     "q": "And how many of those days can an L7 encash each year?",
+     "route": "answer",
+     "rewritten": "How many days of earned leave does an L7 get in a year; how many of those days can an L7 encash each year?",
+     "answer": "You are entitled to 24 days of Earned Leave per Leave Year as a Grade L7 employee [S1][S2]. You may encash up to 10 days of Earned Leave each year, as specified for Grade L7 in the Leave Policy [S2][S3]."
+    }
+   ]
+  },
+  {
+   "id": "M02",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the hotel limit for an L6 in a metro city?",
+     "route": "answer",
+     "rewritten": "What is the hotel limit for an L6 in a metro city?",
+     "answer": "The hotel limit for a Grade L6 employee in a Metro City is Rs. 7,000 per night, excluding taxes. [S1]"
+    },
+    {
+     "q": "And in a non-metro city?",
+     "route": "answer",
+     "rewritten": "What is the hotel limit for an L6 in a metro city; in a non-metro city?",
+     "answer": "For a Grade L6 employee, the hotel limit is Rs. 7,000 per night in a Metro City and Rs. 5,000 per night in a non‑metro city, excluding taxes. [S1]"
+    },
+    {
+     "q": "What is the daily per diem for that grade?",
+     "route": "answer",
+     "rewritten": "What is the daily per diem for a Grade L6 employee?",
+     "answer": "The daily per diem for a Grade L6 employee is Rs. 1,200 per day. [S1]"
+    }
+   ]
+  },
+  {
+   "id": "M03",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "wrong"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "I'm an L3 in Pune. What is my notice period?",
+     "route": "answer",
+     "rewritten": "I'm an L3 in Pune. What is my notice period?",
+     "answer": "Your notice period is 60 calendar days [S1][S2][S6]."
+    },
+    {
+     "q": "Can I buy out all of it?",
+     "route": "answer",
+     "rewritten": "Can I buy out all of my notice period?",
+     "answer": "No, you cannot buy out the entire notice period. The circular limits the buyout to a maximum of 50 % of the notice period, so as an L3 you must serve at least 30 of the 60 days and may buy out up to the remaining 30 days [S1][S4]."
+    },
+    {
+     "q": "And what would it be if I were still on probation?",
+     "route": "answer",
+     "rewritten": "Can I buy out all of my notice period; what would it be if I were still on probation?",
+     "answer": "You cannot buy out the entire notice period. The circular limits buyout to a maximum of 50 % of the notice period, so you must serve at least half and may buy out the remaining half [S1][S4]."
+    }
+   ]
+  },
+  {
+   "id": "M04",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How many days of paternity leave do I get for a baby born in September 2025?",
+     "route": "answer",
+     "rewritten": "How many days of paternity leave do I get for a baby born in September 2025?",
+     "answer": "You are entitled to 10 Working Days of paternity leave for a baby born in September 2025, which can be taken in up to two spells within six months of the birth. [S1][S2]"
+    },
+    {
+     "q": "Can I split it into parts?",
+     "route": "answer",
+     "rewritten": "Can I split the paternity leave into parts?",
+     "answer": "Yes, you may split your paternity leave into up to two spells within six months of the birth, as the amendment allows this split despite the original rule requiring a single spell. [S2]"
+    },
+    {
+     "q": "By when do I have to upload the birth certificate?",
+     "route": "answer",
+     "rewritten": "By when do I have to upload the birth certificate?",
+     "answer": "You must upload the birth certificate (or hospital discharge summary) on the NPP within 30 Calendar Days of the birth of your child [S3][S4]."
+    }
+   ]
+  },
+  {
+   "id": "M05",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the group medical sum insured for an L4?",
+     "route": "answer",
+     "rewritten": "What is the group medical sum insured for an L4?",
+     "answer": "The family‑floater group medical sum insured for Grade L4 is Rs 5,00,000 [S2]."
+    },
+    {
+     "q": "Can I cover my parents too?",
+     "route": "answer",
+     "rewritten": "Can I cover my parents too?",
+     "answer": "Yes, you may add your parents to a separate parental insurance policy, but you cannot add both parents and parents‑in‑law at the same time [S5][S3]."
+    },
+    {
+     "q": "Who pays the premium for that?",
+     "route": "answer",
+     "rewritten": "Can I cover my parents too; Who pays the premium for that?",
+     "answer": "Yes, you may add your parents under a separate parental insurance policy, but you cannot add both parents and parents‑in‑law at the same time [S3][S4]. The premium for the parental policy is paid by you through salary deduction in twelve instalments [S3][S4]."
+    }
+   ]
+  },
+  {
+   "id": "M06",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How long is probation for an L4?",
+     "route": "answer",
+     "rewritten": "How long is probation for an L4?",
+     "answer": "Probation for Grade L4 is three months. [S1][S4]"
+    },
+    {
+     "q": "Can it be extended?",
+     "route": "answer",
+     "rewritten": "How long is probation for an L4; Can it be extended?",
+     "answer": "Probation for Grade L4 is three months, and it may be extended once by up to three months if performance or conduct is not satisfactory, with written reasons provided. [S1][S4]"
+    },
+    {
+     "q": "What notice do I have to give if I resign during it?",
+     "route": "answer",
+     "rewritten": "What notice do I have to give if I resign during probation for an L4?",
+     "answer": "If you resign while you are still a Probationer, you must give 15 days' notice, or pay in lieu of notice, as the Company’s policy states for all grades during probation [S2][S3]."
+    }
+   ]
+  },
+  {
+   "id": "M07",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the shift allowance for the UK shift?",
+     "route": "answer",
+     "rewritten": "What is the shift allowance for the UK shift?",
+     "answer": "The shift allowance for the UK shift is Rs. 250 per day worked. [S1]"
+    },
+    {
+     "q": "And for the night shift?",
+     "route": "answer",
+     "rewritten": "What is the shift allowance for the UK shift; for the night shift?",
+     "answer": "The UK shift allowance is Rs. 250 per day worked. The Night Shift allowance is Rs. 650 per day worked (increased from Rs. 500 by the 2026 amendment) for Grades L1‑L5. [S1][S2]"
+    },
+    {
+     "q": "Does an L6 get it?",
+     "route": "answer",
+     "rewritten": "What is the shift allowance for the UK shift; for the night shift; Does an L6 get it?",
+     "answer": "The UK shift allowance is Rs. 250 per day worked [S1][S3]. The Night Shift allowance is Rs. 500 per day (increased to Rs. 650 from 1 June 2026) but only for Grades L1‑L5; Grades L6‑L8 do not receive any shift allowance [S2][S3][S1]. As you are Grade L6, you are not eligible for either the UK shift or the Night Shift allowance [S1]."
+    }
+   ]
+  },
+  {
+   "id": "M08",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "wrongly_refused",
+    "correct"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "How many restricted holidays can I choose in a year?",
+     "route": "answer",
+     "rewritten": "How many restricted holidays can I choose in a year?",
+     "answer": "You may choose any two restricted holidays in a calendar year.[S1][S2]"
+    },
+    {
+     "q": "Can I carry forward the ones I don't use?",
+     "route": "not_found",
+     "rewritten": "Can I carry forward the ones I don't use?",
+     "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+    },
+    {
+     "q": "Is Holi a declared holiday in Noida?",
+     "route": "answer",
+     "rewritten": "Is Holi a declared holiday in Noida?",
+     "answer": "Yes, Holi is a declared holiday in Noida. [S1]"
+    }
+   ]
+  },
+  {
+   "id": "M09",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the referral bonus if someone I refer joins at L6?",
+     "route": "answer",
+     "rewritten": "What is the referral bonus if someone I refer joins at L6?",
+     "answer": "The referral bonus for a candidate who joins at Grade L6 is Rs. 1,00,000, as set out in Table 6 of the Employee Handbook [S1]. You are eligible to receive it because the exclusion applies only to Grades L7 and L8 [S3]."
+    },
+    {
+     "q": "Am I eligible if I work in Talent Acquisition?",
+     "route": "answer",
+     "rewritten": "Am I eligible if I work in Talent Acquisition?",
+     "answer": "You are not eligible for the referral bonus because employees in the Talent Acquisition function are excluded from the scheme [S3]."
+    },
+    {
+     "q": "When is the bonus paid?",
+     "route": "answer",
+     "rewritten": "Am I eligible if I work in Talent Acquisition; When is the bonus paid?",
+     "answer": "You are not eligible for the referral bonus because employees in the Talent Acquisition function are excluded from the scheme [S2]. The bonus is paid when the referred candidate joins and completes 90 days of service, and it is included in the monthly salary at that time [S2]."
+    }
+   ]
+  },
+  {
+   "id": "M10",
+   "kind": "vague",
+   "verdicts": [
+    "clarify_ok",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How much leave do I get?",
+     "route": "clarify",
+     "rewritten": "How much leave do I get?",
+     "answer": "Which grade are you in (L1 to L8)?"
+    },
+    {
+     "q": "L5",
+     "route": "answer",
+     "rewritten": "How much leave do I get? (L5)",
+     "answer": "As a Grade L5 employee you are entitled to 21 days of Earned Leave, 7 days of Casual Leave and 8 days of Sick Leave per Leave Year. [S2][S8]"
+    },
+    {
+     "q": "and sick leave?",
+     "route": "answer",
+     "rewritten": "How much leave do I get? (L5); sick leave?",
+     "answer": "As a Grade L5 employee you are entitled to 21 days of Earned Leave, 7 days of Casual Leave and 8 days of Sick Leave per Leave Year. [S2][S8]"
+    }
+   ]
+  },
+  {
+   "id": "M11",
+   "kind": "vague",
+   "verdicts": [
+    "clarify_ok",
+    "clarify_ok",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What's my notice period?",
+     "route": "clarify",
+     "rewritten": "What's my notice period?",
+     "answer": "Which grade are you in, L1 to L8?"
+    },
+    {
+     "q": "the usual one",
+     "route": "clarify",
+     "rewritten": "What's my notice period? (the usual one)",
+     "answer": "Which grade are you in, L1 to L8?"
+    },
+    {
+     "q": "I'm an L2, confirmed",
+     "route": "answer",
+     "rewritten": "What's my notice period? (the usual one) (I'm an L2, confirmed)",
+     "answer": "Your notice period is 30 calendar days [S1][S2]."
+    }
+   ]
+  },
+  {
+   "id": "M12",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "Can I claim a cab from the airport at L4?",
+     "route": "answer",
+     "rewritten": "Can I claim a cab from the airport at L4?",
+     "answer": "Yes. As an L4 you may use an app‑based cab in the standard category for airport transfers and claim the actual fare with receipt [S2]. If your flight arrives or departs between 9:00 p.m. and 7:00 a.m., the night‑time circular removes the Rs. 750 limit for all grades, so you can still claim the full fare [S3]."
+    },
+    {
+     "q": "What if I'm an L2 landing at midnight?",
+     "route": "answer",
+     "rewritten": "Can I claim a cab from the airport at L2; I'm an L2 landing at midnight?",
+     "answer": "Yes. As an L2 you may use an app‑based cab in the standard category for the airport transfer and claim the actual fare without the Rs 750 limit because your flight arrives between 9:00 p.m. and 7:00 a.m., and the night‑time circular removes that limit for all grades [S2][S3]."
+    },
+    {
+     "q": "And if an L2 lands in the afternoon?",
+     "route": "answer",
+     "rewritten": "Can I claim a cab from the airport at L2; I'm an L2 landing at midnight; if an L2 lands in the afternoon?",
+     "answer": "If your flight arrives between 9:00 p.m. and 7:00 a.m., the night‑time circular lets you, as an L2, use an app‑based cab in the standard category and claim the actual fare without the Rs 750 limit [S2][S3]. For arrivals during the day, the standard rule applies: L1‑L3 employees must use the airport bus, metro rail or a shared/pool cab and can be reimbursed up to Rs 750 per trip [S2]."
+    }
+   ]
+  },
+  {
+   "id": "M13",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the limit for accepting a gift from a vendor?",
+     "route": "answer",
+     "rewritten": "What is the limit for accepting a gift from a vendor?",
+     "answer": "The current limit for accepting an unsolicited gift from a vendor (Business Associate) is Rs 2,000 per calendar year from the same vendor, and gift cards, vouchers or cash equivalents may not be accepted at any amount. This amends the earlier Rs 5,000 limit in the Code. [S2]"
+    },
+    {
+     "q": "Can I accept a gift card within that limit?",
+     "route": "answer",
+     "rewritten": "Can I accept a gift card within that limit?",
+     "answer": "No, you may not accept a gift card at any amount; gift cards, vouchers and other cash equivalents are prohibited entirely, regardless of the Rs 2,000 limit for other gifts. [S1][S2]"
+    },
+    {
+     "q": "Do I have to record gifts somewhere?",
+     "route": "answer",
+     "rewritten": "Do I have to record gifts somewhere?",
+     "answer": "Yes, you must record every gift you receive in the gift register on the NPP within seven days, regardless of its value. This requirement comes from the amending circular that supersedes the earlier rule which only required recording gifts above Rs 1,000. [S2]"
+    }
+   ]
+  },
+  {
+   "id": "M14",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "wrong"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "How much internet reimbursement can an L4 on hybrid work claim?",
+     "route": "answer",
+     "rewritten": "How much internet reimbursement can an L4 on hybrid work claim?",
+     "answer": "You can claim reimbursement of up to Rs. 1,000 per month for your home internet charges while on hybrid work. [S1]"
+    },
+    {
+     "q": "And an L6?",
+     "route": "answer",
+     "rewritten": "How much internet reimbursement can an L6 on hybrid work claim?",
+     "answer": "You cannot claim a separate internet reimbursement; as a Grade L6 you receive a communication allowance as part of your fixed pay instead of a reimbursement claim. [S1][S2]"
+    },
+    {
+     "q": "How much is that allowance for an L6?",
+     "route": "answer",
+     "rewritten": "How much internet reimbursement can an L6 on hybrid work claim; How much is that allowance for an L6?",
+     "answer": "You cannot claim a separate internet reimbursement as a Grade L6 on hybrid work; instead you receive a communication allowance as part of your fixed pay [S1][S2]. The policy does not specify the monetary amount of that allowance in the provided documents [S2]."
+    }
+   ]
+  },
+  {
+   "id": "M15",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How is gratuity calculated?",
+     "route": "answer",
+     "rewritten": "How is gratuity calculated?",
+     "answer": "Gratuity equals fifteen days of your last drawn Basic Salary for each completed year of service. Calculate it as (Basic Salary × 15 ÷ 26) × number of completed years. Any fraction of a year over six months counts as a full year. The amount is capped at Rs. 20,00,000 as per the Payment of Gratuity Act [S1]."
+    },
+    {
+     "q": "How many years of service do I need to get it?",
+     "route": "answer",
+     "rewritten": "How is gratuity calculated; How many years of service do I need to get it?",
+     "answer": "Gratuity is calculated as (Basic Salary × 15 ÷ 26) × number of completed years of service, with any part‑year over six months counted as a full year, and the amount capped at Rs. 20,00,000 [S1][S2]. You become eligible for gratuity after completing at least five years of continuous service, unless your employment ends due to death or disablement, in which case the five‑year condition does not apply [S1][S2]."
+    },
+    {
+     "q": "How soon must it be paid after I leave?",
+     "route": "answer",
+     "rewritten": "How soon must gratuity be paid after I leave?",
+     "answer": "Gratuity becomes payable on your last day of employment, and the Company must pay it within 30 days of that date, even if the rest of the full‑and‑final settlement is not yet completed [S4]."
+    }
+   ]
+  },
+  {
+   "id": "M16",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How long is maternity leave?",
+     "route": "answer",
+     "rewritten": "How long is maternity leave?",
+     "answer": "Maternity leave is 26 weeks for a regular employee, with up to eight weeks possible before the expected delivery date. If the employee has two or more surviving children, the entitlement is reduced to 12 weeks, with up to six weeks before the expected delivery date. A probationer is eligible for only 12 weeks of maternity leave, with any additional time at the discretion of the HR Business Partner as leave without pay [S1][S2]."
+    },
+    {
+     "q": "What if I already have two children?",
+     "route": "answer",
+     "rewritten": "How long is maternity leave; I already have two children?",
+     "answer": "If you have two or more surviving children, your maternity leave entitlement is 12 weeks, with up to six weeks allowed before the expected delivery date [S1]."
+    },
+    {
+     "q": "Can I work from home after it ends?",
+     "route": "answer",
+     "rewritten": "Can I work from home after my maternity leave ends?",
+     "answer": "Yes. After your maternity leave you may work from home if the nature of your work permits it and you have a mutual agreement with your Reporting Manager [S1]."
+    }
+   ]
+  },
+  {
+   "id": "M17",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How many days of bereavement leave do I get?",
+     "route": "answer",
+     "rewritten": "How many days of bereavement leave do I get?",
+     "answer": "You are entitled to 5 Working Days of bereavement leave, to be taken within 15 Calendar Days of the death. This is the revised entitlement under the 2026 amendment, which supersedes the earlier provision of 3 Working Days [S1][S2]."
+    },
+    {
+     "q": "Does it apply if my mother-in-law dies?",
+     "route": "answer",
+     "rewritten": "Does the bereavement leave policy apply if my mother-in-law dies?",
+     "answer": "No. The definition of Immediate Family excludes parents‑in‑law, and the 2026 amendment did not change that, so bereavement leave does not apply to a mother‑in‑law death [S8][S2]."
+    },
+    {
+     "q": "What can I use instead?",
+     "route": "answer",
+     "rewritten": "Does the bereavement leave policy apply if my mother-in-law dies; What can I use instead?",
+     "answer": "No, bereavement leave does not apply to the death of a mother‑in‑law because parents‑in‑law are excluded from the Immediate Family definition. You may instead apply for Casual Leave (CL) or Earned Leave (EL) as permitted for other relatives [S1][S3]."
+    }
+   ]
+  },
+  {
+   "id": "M18",
+   "kind": "follow",
+   "verdicts": [
+    "wrong",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "At what rate is overtime paid to an L2 in Bengaluru?",
+     "route": "answer",
+     "rewritten": "At what rate is overtime paid to an L2 in Bengaluru?",
+     "answer": "Overtime for an L2 employee in Bengaluru is paid at one and a half times the ordinary rate of wages per hour [S3][S1]."
+    },
+    {
+     "q": "Is there a cap on overtime hours?",
+     "route": "answer",
+     "rewritten": "Is there a cap on overtime hours?",
+     "answer": "Yes. Total overtime for an employee must not exceed the quarterly limit prescribed by the State law and, in any case, cannot exceed 50 hours in a calendar quarter [S2][S5]."
+    },
+    {
+     "q": "Can I get comp off as well for the same hours?",
+     "route": "answer",
+     "rewritten": "Can I get comp off as well for the same overtime hours?",
+     "answer": "No. For the same hours of work on a weekly off or holiday you must choose either overtime payment or compensatory off, not both [S1][S3]."
+    }
+   ]
+  },
+  {
+   "id": "M19",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "wrong"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "Which days are anchor days for hybrid work?",
+     "route": "answer",
+     "rewritten": "Which days are anchor days for hybrid work?",
+     "answer": "The anchor days for hybrid work are Tuesday, Wednesday and Thursday [S1]."
+    },
+    {
+     "q": "Does that apply to L7 employees?",
+     "route": "answer",
+     "rewritten": "Which days are anchor days for hybrid work; Does that apply to L7 employees?",
+     "answer": "The anchor days for office attendance are Tuesday, Wednesday and Thursday, but this rule applies only to Employees in Grades L1 to L6. Employees in Grades L7 and L8, such as you, continue to agree their Remote Work Days with their Reporting Manager within the limit of two days a week [S1]."
+    },
+    {
+     "q": "So which days can an L4 work from home?",
+     "route": "answer",
+     "rewritten": "So which days can an L4 work from home?",
+     "answer": "As an L4 you may work from home for up to two Working Days in a week, on any days you agree with your Reporting Manager, provided they are not the anchor days (Tuesday, Wednesday, Thursday) which are required office attendance for Grades L1‑L6 [S1][S8]."
+    }
+   ]
+  },
+  {
+   "id": "M20",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the notice period at L5?",
+     "route": "answer",
+     "rewritten": "What is the notice period at L5?",
+     "answer": "The notice period for Grade L5 is 90 calendar days [S1][S3]."
+    },
+    {
+     "q": "The Employee Handbook says 60 days. Which is right?",
+     "route": "answer",
+     "rewritten": "The Employee Handbook says 60 days. Which is right?",
+     "answer": "The notice period for Grade L5 is 90 calendar days; the example in the Separation and Exit Policy shows an employee serving 60 of the 90 days required [S6]."
+    },
+    {
+     "q": "Why does that one prevail?",
+     "route": "answer",
+     "rewritten": "The Employee Handbook says 60 days. Which is right; Why does that one prevail?",
+     "answer": "The Separation and Exit Policy is the governing document for notice periods and therefore overrides the Handbook summary. It sets the notice period for Grade L5 at 90 calendar days, while the Handbook’s 60‑day figure is only a summary and does not prevail [S3][S6][S4]."
+    }
+   ]
+  },
+  {
+   "id": "M21",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "wrongly_refused",
+    "correct"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "How many days of earned leave can an L5 encash when leaving?",
+     "route": "answer",
+     "rewritten": "How many days of earned leave can an L5 encash when leaving?",
+     "answer": "When you leave, you can encash up to the accumulation limit of 45 days of Earned Leave for Grade L5 [S5]."
+    },
+    {
+     "q": "And an L7?",
+     "route": "not_found",
+     "rewritten": "How many days of earned leave can an L7 encash when leaving?",
+     "answer": "Nexora's policy documents do not specify how many Earned Leave days an L7 employee can encash upon separation."
+    },
+    {
+     "q": "At what rate per day is it paid?",
+     "route": "answer",
+     "rewritten": "At what rate per day is Earned Leave paid when encashed?",
+     "answer": "Earned Leave is paid at Basic Salary divided by 26 for each day encashed [S5][S6]."
+    }
+   ]
+  },
+  {
+   "id": "M22",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How long must my password be?",
+     "route": "answer",
+     "rewritten": "How long must my password be?",
+     "answer": "Your password must be at least 14 characters long. [S1]"
+    },
+    {
+     "q": "Do I still have to change it every 90 days?",
+     "route": "answer",
+     "rewritten": "Do I still have to change my password every 90 days?",
+     "answer": "No, you no longer need to change your password every 90 days; the requirement was withdrawn by the 2025 circular, which now only requires a change if compromise is indicated or the SOC directs it [S1][S2]."
+    },
+    {
+     "q": "Can I paste client code into ChatGPT to debug it?",
+     "route": "answer",
+     "rewritten": "Can I paste client code into ChatGPT to debug it?",
+     "answer": "No, you must not paste client code into ChatGPT. The 2025 generative AI circular prohibits entering Client Data into any public or consumer generative AI tool, and only approved AI assistants may be used with client information [S4][S2]."
+    }
+   ]
+  },
+  {
+   "id": "M23",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "Can an L3 use a personal laptop for work?",
+     "route": "answer",
+     "rewritten": "Can an L3 use a personal laptop for work?",
+     "answer": "No. Personal laptops or computers are not permitted for Grades L1 to L6, including L3; only a Company laptop may be used for work [S1][S2]."
+    },
+    {
+     "q": "Which grades can?",
+     "route": "answer",
+     "rewritten": "Can an L3 use a personal laptop for work; Which grades can?",
+     "answer": "No, an L3 cannot use a personal laptop for work. Personal laptops or computers are permitted only for Grades L7 and L8, and even then only through the Company virtual desktop with no local storage [S1][S2]."
+    },
+    {
+     "q": "How do they connect?",
+     "route": "answer",
+     "rewritten": "Can an L3 use a personal laptop for work; Which grades can; How do they connect?",
+     "answer": "You cannot use a personal laptop for work as an L3; personal laptops are not permitted for Grades L1 to L6 [S1][S2]. Only Grades L7 and L8 may use a personal laptop, and even then only through the Company virtual desktop with no local storage [S1][S2]. When working remotely you must connect to Company systems via the virtual private network or the Company virtual desktop [S5]."
+    }
+   ]
+  },
+  {
+   "id": "M24",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How much day-care reimbursement can I claim in Chennai?",
+     "route": "answer",
+     "rewritten": "How much day-care reimbursement can I claim in Chennai?",
+     "answer": "You can claim up to Rs 10,000 per month for each child (up to two children) aged six months to six years in Chennai. This amount is set by the amending circular HR/CIR/2025/09, which revises the earlier Rs 8,000 limit in Clause 8.2 of the Handbook [S1][S2]."
+    },
+    {
+     "q": "What about in Bengaluru?",
+     "route": "answer",
+     "rewritten": "How much day-care reimbursement can I claim in Bengaluru?",
+     "answer": "In Bengaluru the Company provides an on‑site creche free of charge for children aged six months to six years [S3]. Employees who live more than 15 km from the Bengaluru campus may opt for a day‑care reimbursement instead of using the creche, but the circular does not specify an amount for Bengaluru, only that the Rs 10,000 limit applies to Pune, Chennai and Noida [S1]."
+    },
+    {
+     "q": "Up to what age of the child?",
+     "route": "answer",
+     "rewritten": "Up to what age of the child?",
+     "answer": "The day‑care reimbursement (or creche use) applies to children aged six months up to six years [S1][S2]."
+    }
+   ]
+  },
+  {
+   "id": "M25",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "wrongly_refused",
+    "wrongly_refused"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "Who gets an annual health check?",
+     "route": "answer",
+     "rewritten": "Who gets an annual health check?",
+     "answer": "You are eligible for an annual preventive health check if you are in Grade L5 or higher, or if you are any Grade but 35 years of age or older [S1]."
+    },
+    {
+     "q": "I'm 40 and in L2. Am I eligible?",
+     "route": "not_found",
+     "rewritten": "I'm 40 and in L2. Am I eligible?",
+     "answer": "Nexora's policy documents do not cover eligibility for an annual health check."
+    },
+    {
+     "q": "Where is it done?",
+     "route": "not_found",
+     "rewritten": "I'm 40 and in L2. Am I eligible; Where is it done?",
+     "answer": "Nexora's policy documents do not cover eligibility for an annual health check."
+    }
+   ]
+  },
+  {
+   "id": "M26",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "wrong"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "What is the domestic per diem for an L4?",
+     "route": "answer",
+     "rewritten": "What is the domestic per diem for an L4?",
+     "answer": "The domestic per diem for a Grade L4 employee is Rs. 1,000 per day [S1][S6]."
+    },
+    {
+     "q": "What if the client provides lunch and dinner?",
+     "route": "answer",
+     "rewritten": "What is the domestic per diem for an L4; the client provides lunch and dinner?",
+     "answer": "The standard domestic per diem for a Grade L4 employee is Rs. 1,000 per day [S2]. Since the client provides both lunch and dinner, the per diem is reduced by 50 % for that day, resulting in Rs."
+    },
+    {
+     "q": "And for a day trip of under 12 hours?",
+     "route": "answer",
+     "rewritten": "What is the domestic per diem for an L4; the client provides lunch and dinner; for a day trip of under 12 hours?",
+     "answer": "The domestic per diem for a Grade L4 is Rs 1,000 per day [S2]."
+    }
+   ]
+  },
+  {
+   "id": "M27",
+   "kind": "follow",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "How much severance pay is given on redundancy?",
+     "route": "answer",
+     "rewritten": "How much severance pay is given on redundancy?",
+     "answer": "You receive severance pay of one month’s fixed pay for each completed year of service, with a minimum of two months and a maximum of six months [S1][S4]."
+    },
+    {
+     "q": "What is the maximum?",
+     "route": "answer",
+     "rewritten": "How much severance pay is given on redundancy; What is the maximum?",
+     "answer": "The maximum severance pay is six months’ fixed pay, regardless of years of service [S1][S4]."
+    },
+    {
+     "q": "Is any outplacement support given?",
+     "route": "answer",
+     "rewritten": "Is any outplacement support given?",
+     "answer": "Yes. Employees leaving by redundancy are offered three months of outplacement support from an external provider [S1]."
+    }
+   ]
+  },
+  {
+   "id": "M28",
+   "kind": "memory",
+   "verdicts": [
+    "correct",
+    "correct",
+    "wrong"
+   ],
+   "fully_correct": false,
+   "turns": [
+    {
+     "q": "I'm an L6 based in Hyderabad. What is my hotel limit in Mumbai?",
+     "route": "answer",
+     "rewritten": "I'm an L6 based in Hyderabad. What is my hotel limit in Mumbai?",
+     "answer": "Your hotel limit in Mumbai, a Metro City, is Rs. 7,000 per night, excluding taxes [S2]."
+    },
+    {
+     "q": "What is my notice period if I resign?",
+     "route": "answer",
+     "rewritten": "What is my notice period if I resign?",
+     "answer": "Your notice period as an L6 employee is 90 days [S1][S2][S3]."
+    },
+    {
+     "q": "And my per diem when travelling?",
+     "route": "answer",
+     "rewritten": "What is my notice period if I resign; my per diem when travelling?",
+     "answer": "Your notice period for resignation as an L6 employee is 90 days [S1][S2]. The Travel and Expense Reimbursement Policy provides per‑diem rates in Table 3, but the specific amount for your grade and location is not listed in the sources you provided, so the exact per‑diem cannot be determined from the available documents."
+    }
+   ]
+  },
+  {
+   "id": "M29",
+   "kind": "memory",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "I work in Noida as an L3. Is professional tax deducted from my salary?",
+     "route": "answer",
+     "rewritten": "I work in Noida as an L3. Is professional tax deducted from my salary?",
+     "answer": "No, professional tax is not deducted from your salary because Uttar Pradesh does not levy professional tax on salaried employees and the policy lists Noida as a location with no deduction [S1][S3]."
+    },
+    {
+     "q": "Is Holi a holiday at my office?",
+     "route": "answer",
+     "rewritten": "Is Holi a holiday at my office?",
+     "answer": "Yes, Holi is a declared holiday for the Noida office [S1][S3]."
+    },
+    {
+     "q": "How many days of earned leave can I encash this year?",
+     "route": "answer",
+     "rewritten": "How many days of earned leave can I encash this year?",
+     "answer": "You can encash up to 5 days of Earned Leave in a Leave Year as a Grade L3 employee [S2][S3]."
+    }
+   ]
+  },
+  {
+   "id": "M30",
+   "kind": "switch",
+   "verdicts": [
+    "correct",
+    "correct",
+    "correct"
+   ],
+   "fully_correct": true,
+   "turns": [
+    {
+     "q": "What is the time limit for making a POSH complaint?",
+     "route": "escalate",
+     "rewritten": "What is the time limit for making a POSH complaint?",
+     "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYou must submit a written POSH complaint within three months of the incident (or of the last incident in a series). The Internal Committee can extend this deadline by up to an additional three months if it is satisfied that circumstances prevented you from complaining earlier [S2][S3]."
+    },
+    {
+     "q": "Can that be extended?",
+     "route": "answer",
+     "rewritten": "What is the time limit for making a POSH complaint; Can that be extended?",
+     "answer": "A POSH complaint must be made in writing within three months of the incident (or of the last incident in a series) and the Internal Committee may extend this period by up to an additional three months if it is satisfied that circumstances prevented a timely complaint, recording its reasons in writing [S1][S2]."
+    },
+    {
+     "q": "Different question: how many casual leave days does an L4 get?",
+     "route": "answer",
+     "rewritten": "Different question: how many casual leave days does an L4 get?",
+     "answer": "You are entitled to 7 days of Casual Leave per Leave Year as a Grade L4 employee [S1][S2]."
+    }
+   ]
+  }
+ ],
+ "paraphrases": [
+  {
+   "id": "P01",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days of paternity leave do I get for a baby born in October 2025?",
+   "b": "My son was born in Oct 2025. How much paternity leave am I entitled to?",
+   "answers": [
+    "You are entitled to 10 Working Days of paternity leave for a baby born in October 2025, which can be taken in up to two spells within six months of the birth. [S1][S2]",
+    "You are entitled to 10 Working Days of paternity leave, which you can take in up to two separate spells within six months of the birth. This applies because the birth occurred on or after 1 July 2025, when the amendment increased the entitlement from 5 to 10 days [S1][S2]."
+   ]
+  },
+  {
+   "id": "P02",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the notice period for an L5?",
+   "b": "I'm a Technical Lead at grade L5. If I resign, how long do I have to serve?",
+   "answers": [
+    "Your notice period is 90 calendar days [S1][S3].",
+    "You must serve a notice period of 90 calendar days when you resign, as the notice period for Grades L5 to L8 is 90 days [S4][S5]."
+   ]
+  },
+  {
+   "id": "P03",
+   "routes": [
+    "not_found",
+    "not_found"
+   ],
+   "facts_ok": [
+    null,
+    null
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Does Nexora pay for egg freezing?",
+   "b": "Is oocyte cryopreservation covered by the company?",
+   "answers": [
+    "Nexora's policy documents do not cover egg freezing payments.",
+    "I couldn't find anything about this in Nexora's HR policy documents, so I won't guess. I can raise a ticket so a person in HR can help."
+   ]
+  },
+  {
+   "id": "P04",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the hotel limit for an L5 staying in Mumbai?",
+   "b": "As an L5 on a business trip to Mumbai, how much can I spend on a hotel per night?",
+   "answers": [
+    "The hotel limit for a Grade L5 employee staying in Mumbai (a Metro City) is Rs 6,000 per night, excluding taxes. [S1][S4]",
+    "For a Grade L5 employee traveling to a Metro City such as Mumbai, the hotel limit is Rs. 6,000 per night, excluding taxes, as revised by the 2025 amendment [S3][S2]."
+   ]
+  },
+  {
+   "id": "P05",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days of earned leave does an L7 get in a year?",
+   "b": "What is the annual EL entitlement for a senior manager at L7?",
+   "answers": [
+    "You are entitled to 24 days of Earned Leave per Leave Year as a Grade L7 employee [S1][S2].",
+    "Your annual Earned Leave entitlement is 24 days [S1][S2]."
+   ]
+  },
+  {
+   "id": "P06",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days of bereavement leave do I get if a parent dies?",
+   "b": "My mother passed away. How much bereavement leave can I take?",
+   "answers": [
+    "You are entitled to 5 Working Days of bereavement leave for the death of a parent [S1][S3].",
+    "You are entitled to 5 Working Days of bereavement leave for the death of your mother, to be taken within 15 Calendar Days of the death. [S3][S2]"
+   ]
+  },
+  {
+   "id": "P07",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days of marriage leave do I get?",
+   "b": "I'm getting married next month. How much leave does the company give for that?",
+   "answers": [
+    "You are entitled to 3 Working Days of marriage leave, taken once during your service [S1].",
+    "You are entitled to marriage leave of 3 Working Days, to be taken within one month of your marriage and usually combined with Earned Leave. [S6]"
+   ]
+  },
+  {
+   "id": "P08",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the maximum value of a gift I can accept from a vendor?",
+   "b": "Up to what amount can I keep a present from a supplier?",
+   "answers": [
+    "You may accept an unsolicited gift from a vendor up to Rs. 2,000, once per calendar year, and you cannot accept any gift cards or cash equivalents. [S2]",
+    "You may accept an unsolicited present (gift) from a supplier (Business Associate) up to Rs. 2,000, and only once in a calendar year from that same supplier. Gift cards, vouchers or other cash equivalents are not permitted at any amount. [S2]"
+   ]
+  },
+  {
+   "id": "P09",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How long must my password be?",
+   "b": "What is the minimum number of characters for a password?",
+   "answers": [
+    "Your password must be at least 14 characters long; a passphrase of several words is encouraged. This requirement replaces the earlier 12‑character rule. [S1]",
+    "The minimum password length is 14 characters [S1]."
+   ]
+  },
+  {
+   "id": "P10",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What percentage of my basic salary goes to provident fund?",
+   "b": "How much PF is deducted from my pay each month?",
+   "answers": [
+    "You and the Company each contribute 12 % of your Basic Salary to the Employees' Provident Fund. The employee contribution is deducted from your salary, and the employer contribution is made on the actual Basic Salary without a wage‑ceiling restriction. [S1]",
+    "Your salary deduction for the Provident Fund is 12 % of your Basic Salary each month [S2]."
+   ]
+  },
+  {
+   "id": "P11",
+   "routes": [
+    "not_found",
+    "answer"
+   ],
+   "facts_ok": [
+    false,
+    true
+   ],
+   "same_route": false,
+   "consistent": false,
+   "both_correct": false,
+   "a": "Up to what monthly wage is an employee covered by ESI?",
+   "b": "What is the salary limit for ESIC coverage?",
+   "answers": [
+    "I couldn't find this in Nexora's HR policy documents, so I won't guess.",
+    "ESIC coverage applies to Employees whose gross monthly wages do not exceed Rs. 21,000 [S1][S2]."
+   ]
+  },
+  {
+   "id": "P12",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days' salary per year of service is paid as gratuity?",
+   "b": "Gratuity is how many days of basic pay for each completed year?",
+   "answers": [
+    "Gratuity is calculated as fifteen days of the last drawn Basic Salary for each completed year of service [S1].",
+    "Gratuity is calculated as fifteen days of the last drawn Basic Salary for each completed year of service [S1]."
+   ]
+  },
+  {
+   "id": "P13",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the night shift allowance for an L3?",
+   "b": "I'm L3 and work nights. How much extra do I get per night shift?",
+   "answers": [
+    "The night shift allowance for an employee in Grade L3 is Rs. 650 per day worked on a Night Shift, as increased by the 2026 amendment [S1][S3].",
+    "You receive a night‑shift allowance of Rs. 650 per day worked on a night shift [S2]."
+   ]
+  },
+  {
+   "id": "P14",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the maximum overtime allowed in a quarter?",
+   "b": "How many overtime hours can I work in three months at most?",
+   "answers": [
+    "The total overtime an employee can work in a calendar quarter must not exceed 50 hours, regardless of the state‑law limit [S1].",
+    "You may work up to 50 overtime hours in a calendar quarter (three months) as the maximum allowed limit [S3]."
+   ]
+  },
+  {
+   "id": "P15",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the per diem for an L6 on domestic travel?",
+   "b": "How much daily allowance does a grade L6 get when travelling within India?",
+   "answers": [
+    "The domestic per diem for a Grade L6 employee is Rs. 1,200 per day [S1][S6].",
+    "You receive a domestic per diem of Rs. 1,200 per day when travelling within India. [S4]"
+   ]
+  },
+  {
+   "id": "P16",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How much is reimbursed per kilometre for using my own car on business?",
+   "b": "What mileage rate do I get if I drive my car for official work?",
+   "answers": [
+    "You are reimbursed at Rs. 12 per kilometre for a personal car used for Business Travel, provided you have your Reporting Manager’s approval and submit mileage shown by a mapping application. [S1]",
+    "If you use your personal car for Business Travel or local business trips with your Reporting Manager’s approval, you are reimbursed at Rs. 12 per kilometre for the car, plus any parking and toll receipts [S2]."
+   ]
+  },
+  {
+   "id": "P17",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Within how many days must I submit my travel expense claim?",
+   "b": "What is the deadline for filing a travel reimbursement after a trip?",
+   "answers": [
+    "You must submit your travel expense claim within 30 days of the end of the trip (or of the expense date for local claims). Claims submitted after 30 days need Business Unit Head approval, and any claim submitted after 90 days will not be reimbursed. [S2][S1]",
+    "You must submit your travel claim within 30 days of the end of the trip (or of the expense date for local claims). Claims submitted after 30 days can still be accepted if the Business Unit Head approves them, but any claim filed after 90 days will not be reimbursed [S2][S1]."
+   ]
+  },
+  {
+   "id": "P18",
+   "routes": [
+    "answer",
+    "not_found"
+   ],
+   "facts_ok": [
+    true,
+    false
+   ],
+   "same_route": false,
+   "consistent": false,
+   "both_correct": false,
+   "a": "After how long can Nexora rehire someone who resigned?",
+   "b": "If I quit, when can I come back to Nexora?",
+   "answers": [
+    "Nexora may rehire a former employee who left by resignation after six months from their last day of service. Employees terminated for misconduct or recorded as absconding are not eligible for rehire. [S1]",
+    "Nexora's policy documents do not cover re‑joining after resignation."
+   ]
+  },
+  {
+   "id": "P19",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How long is CCTV footage kept?",
+   "b": "What is the retention period for security camera recordings?",
+   "answers": [
+    "CCTV footage is retained for 90 days [S1].",
+    "Security camera recordings (CCTV footage) are retained for 90 days [S1]."
+   ]
+  },
+  {
+   "id": "P20",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Within how many hours are cyber incidents reported to CERT-In?",
+   "b": "How quickly does Nexora notify CERT-In about a security incident?",
+   "answers": [
+    "Cyber incidents that must be reported to CERT‑In are reported within six hours of the Company noticing them [S1].",
+    "Nexora must report specified cyber security incidents to CERT‑In within six hours of noticing them [S1]."
+   ]
+  },
+  {
+   "id": "P21",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What referral bonus is paid when someone I refer joins at L2?",
+   "b": "If my friend joins as an Associate at L2 through my referral, how much do I get?",
+   "answers": [
+    "The referral bonus for a candidate who joins at Grade L2 is Rs. 25,000 [S1][S3].",
+    "You would receive a referral bonus of Rs. 25,000 when your friend joins as an Associate at Grade L2 and completes 90 days of service [S1][S4]."
+   ]
+  },
+  {
+   "id": "P22",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many free EAP counselling sessions do I get per year?",
+   "b": "How many sessions with the Employee Assistance Programme counsellors are free each year?",
+   "answers": [
+    "You are entitled to up to six free Employee Assistance Programme counselling sessions per year [S1].",
+    "You can use up to six free counselling sessions per year through the Employee Assistance Programme.[S1]"
+   ]
+  },
+  {
+   "id": "P23",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Who is entitled to an annual health check?",
+   "b": "Which employees get a yearly preventive medical check-up?",
+   "answers": [
+    "You are entitled to an annual preventive health check if you are in Grade L5 or higher, or if you are any grade but 35 years of age or older [S1].",
+    "You receive a yearly preventive health check if you are in Grade L5 or higher, or if you are any grade but are 35 years of age or older [S1]."
+   ]
+  },
+  {
+   "id": "P24",
+   "routes": [
+    "answer",
+    "not_found"
+   ],
+   "facts_ok": [
+    true,
+    false
+   ],
+   "same_route": false,
+   "consistent": false,
+   "both_correct": false,
+   "a": "How many hours of learning must I complete each year?",
+   "b": "What is the annual training-hours target for employees?",
+   "answers": [
+    "You must complete at least 40 hours of learning in each performance year. [S1]",
+    "Nexora's policy documents do not specify an annual training-hours target for employees."
+   ]
+  },
+  {
+   "id": "P25",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How long must I be in my role before applying for an internal job posting?",
+   "b": "When can I apply for an internal transfer to another open position?",
+   "answers": [
+    "You may apply for an internal job posting after completing 9 months in your current role, provided you have a most recent rating of 3 or above and are not on a performance improvement plan. Graduate Engineer Trainees in Grade L1 remain ineligible until 12 months after deployment to their first project. [S2]",
+    "You may apply for an internal job posting after completing 9 months in your current role, provided your most recent rating is 3 or above and you are not on a performance improvement plan. Graduate Engineer Trainees in Grade L1 remain ineligible until 12 months after deployment to their first project. [S3]"
+   ]
+  },
+  {
+   "id": "P26",
+   "routes": [
+    "answer",
+    "not_found"
+   ],
+   "facts_ok": [
+    true,
+    false
+   ],
+   "same_route": false,
+   "consistent": false,
+   "both_correct": false,
+   "a": "How much LTA does an L5 get per year?",
+   "b": "What is the annual leave travel allowance at grade L5?",
+   "answers": [
+    "An employee in Grade L5 receives an annual Leave Travel Allowance of Rs. 50,000 per year [S6].",
+    "Nexora's policy documents do not specify the annual leave travel allowance amount for Grade L5."
+   ]
+  },
+  {
+   "id": "P27",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What is the target variable pay for an L6?",
+   "b": "As an L6 manager, what percentage of my fixed pay is target bonus?",
+   "answers": [
+    "The target variable pay for a Grade L6 employee is 15% of the annual fixed pay [S2].",
+    "Your target variable pay is 15 % of your annual fixed pay. [S2]"
+   ]
+  },
+  {
+   "id": "P28",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "What on-call allowance does an L3 get per week?",
+   "b": "How much am I paid for a week of on-call duty at L3?",
+   "answers": [
+    "You receive an on‑call allowance of Rs. 1,500 for each week you are designated on‑call. [S1]",
+    "You receive an on‑call allowance of Rs 1,500 for each week you are designated on‑call [S1]."
+   ]
+  },
+  {
+   "id": "P29",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "After how many minutes does a company laptop screen lock?",
+   "b": "What is the automatic screen-lock timeout on office laptops?",
+   "answers": [
+    "A company laptop screen locks automatically after five minutes of inactivity. [S1]",
+    "Office laptops automatically lock the screen after five minutes of inactivity [S1]."
+   ]
+  },
+  {
+   "id": "P30",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How quickly must I report a lost phone with my work profile?",
+   "b": "I lost my personal phone that has office email on it. How soon do I need to report it?",
+   "answers": [
+    "You must report a lost BYOD device to the SOC within one hour so the work profile can be removed [S3][S4].",
+    "You must report the loss of the device within one hour of discovering it [S1]."
+   ]
+  },
+  {
+   "id": "P31",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "I am an L6 manager and worked last Sunday. Do I get a comp off?",
+   "b": "Does a grade L6 employee earn compensatory off for working on a weekend?",
+   "answers": [
+    "You are not eligible for compensatory off for work on a Sunday, as employees in Grades L5 to L8 are not eligible for compensatory off under the Leave Policy [S3][S5].",
+    "No. Employees in Grades L5 to L8, including you as an L6, are not eligible for compensatory off for weekend work [S1]."
+   ]
+  },
+  {
+   "id": "P32",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Can an L4 employee take a sabbatical?",
+   "b": "Is a sabbatical possible for someone at grade L4?",
+   "answers": [
+    "Generally, sabbatical leave is limited to Grade L5 and above (Clause 8.3) [S2]. However, for a Grade L4 employee you may be granted a sabbatical of up to six months if you have at least five years of continuous service, are enrolled in a full‑time postgraduate programme sponsored by the Company, and obtain approval from the Business Unit Head and the Chief People Officer [S1].",
+    "Yes, you can take a sabbatical if you have at least five years of Continuous Service and are enrolled in a full‑time postgraduate programme sponsored by the Company, and you obtain approval from the Business Unit Head and the Chief People Officer. This exception applies only to Grade L4 and does not extend to Grades L1‑L3. The general rule limits sabbaticals to Grade L5 and above, but the carve‑out for Grade L4 is specified in the FAQ. [S1][S2]"
+   ]
+  },
+  {
+   "id": "P33",
+   "routes": [
+    "not_found",
+    "not_found"
+   ],
+   "facts_ok": [
+    null,
+    null
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How many days of menstrual leave do I get?",
+   "b": "Is there period leave for women employees?",
+   "answers": [
+    "Nexora's policy documents do not cover menstrual leave.",
+    "Nexora's policy documents do not cover period leave for women employees."
+   ]
+  },
+  {
+   "id": "P34",
+   "routes": [
+    "not_found",
+    "not_found"
+   ],
+   "facts_ok": [
+    null,
+    null
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Can I take paid leave to look after my sick pet?",
+   "b": "Does Nexora give leave to care for an ill dog?",
+   "answers": [
+    "Nexora's policy documents do not cover taking paid leave to look after a sick pet.",
+    "Nexora's policy documents do not cover leave for caring for an ill dog."
+   ]
+  },
+  {
+   "id": "P35",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "I am an L2. Can I encash my earned leave this year?",
+   "b": "Is EL encashment during service allowed for grade L2?",
+   "answers": [
+    "No, you cannot encash earned leave while you are in Grade L2. Encashment during service is only available to Grades L3 to L8, and Grade L2 is explicitly excluded [S1][S2][S3].",
+    "No. Employees in Grade L2 are not eligible for Earned Leave encashment during service; encashment is only available to Grades L3 to L8 [S1][S4][S2]."
+   ]
+  },
+  {
+   "id": "P36",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "My grandmother passed away. Can I take bereavement leave?",
+   "b": "Is bereavement leave available when a grandparent dies?",
+   "answers": [
+    "You cannot take bereavement leave for the death of a grandparent, as bereavement leave under Clause 7.1 applies only to members of the Immediate Family, which does not include grandparents. The recent circular (HR/CIR/2026/02) increased the amount of leave but did not change the definition, so the restriction remains [S1][S2].",
+    "No. Bereavement leave under Clause 7.1 is only for members of the Immediate Family, which does not include grandparents, and the 2026 amendment does not change that definition [S1][S2]."
+   ]
+  },
+  {
+   "id": "P37",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "How much day-care reimbursement can I claim in Pune?",
+   "b": "What is the monthly creche fee reimbursement for Pune employees?",
+   "answers": [
+    "You can claim up to Rs 10,000 per month for each child (aged six months to six years), for up to two children, when you are based in Pune. This amount reflects the increase made by the 2025‑09 circular, which amends the earlier limit of Rs 8,000 per month per child. [S1][S3]",
+    "The monthly reimbursement for day‑care fees for employees in Pune is Rs. 10,000 per child (up to two children) for children aged six months to six years. This amount was increased by the 2025 amendment to the original Rs. 8,000 limit [S1][S2]"
+   ]
+  },
+  {
+   "id": "P38",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "I am an L4 on hybrid work. Can I choose Wednesday as a work-from-home day?",
+   "b": "Can an L4 take Wednesdays as remote work days?",
+   "answers": [
+    "No. For Grades L1 to L6, including L4, the anchor days Tuesday, Wednesday and Thursday are mandatory office days, and Remote Work Days may only be taken on Monday or Friday; you cannot choose Wednesday as a work‑from‑home day [S2][S7].",
+    "No. For Grades L1 to L6, including L4, the anchor days are Tuesday, Wednesday and Thursday, which must be attended at the Base Location; Remote Work Days may be taken only on Monday and Friday [S2]."
+   ]
+  },
+  {
+   "id": "P39",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Do I have to change my password every 90 days?",
+   "b": "Is the 90-day password rotation still required?",
+   "answers": [
+    "No. The requirement to change passwords every 90 days was withdrawn by the 2025 amendment, so passwords are changed only when compromised or when the SOC requires it [S1][S2].",
+    "No. The revised password requirements circular withdraws the 90‑day mandatory change and now requires a password change only if it may be compromised or the SOC directs it [S1][S2]."
+   ]
+  },
+  {
+   "id": "P40",
+   "routes": [
+    "answer",
+    "answer"
+   ],
+   "facts_ok": [
+    true,
+    true
+   ],
+   "same_route": true,
+   "consistent": true,
+   "both_correct": true,
+   "a": "Can I paste client source code into ChatGPT to debug it?",
+   "b": "Is it OK to use a public AI chatbot with our client's code?",
+   "answers": [
+    "No. Pasting client source code into ChatGPT is prohibited because it is an unapproved AI tool and discloses client confidential information, which breaches the Code of Conduct and the IT, Information Security and Acceptable Use Policy [S2][S4].",
+    "No. Company policy states that client data classified as Internal, Confidential or Restricted must not be entered into any public or consumer generative AI tool, including free AI chat assistants, whether on a Company or personal device [S2]. This is reinforced by the confidentiality rule that client information may not be disclosed to third parties [S6]."
+   ]
+  }
+ ]
+}

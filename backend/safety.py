@@ -45,7 +45,11 @@ ESCALATIONS = [  # (category, pattern, ticket category, channel, allow a policy-
                  r"\b(comment|remark|joke|stare|staring)\w*\b.{0,40}\b(my|her|his) (appearance|body|looks|figure|dress|clothes|clothing)\b",
                  r"\b(asks?|asked|asking) me out\b"),
      "POSH/Grievance", "internal_committee", True),
-    ("discrimination", _rx(r"\bdiscriminat", r"\b(racis|sexis|casteis)", r"\bbecause (i am|i'm) (a )?(woman|pregnant|muslim|hindu|christian|dalit|gay|disabled)"),
+    ("discrimination", _rx(r"\bdiscriminat", r"\b(racis|sexis|casteis)", r"\bbecause (i am|i'm) (a )?(woman|pregnant|muslim|hindu|christian|dalit|gay|disabled)",
+                           r"\b(joke|comment|remark|slur|taunt|mock|insult)\w*\b.{0,40}\b(caste|religion|religious|race|skin colou?r|"
+                           r"disabilit|accent|region|community|sexual orientation|gender identity)",
+                           r"\b(caste|religion|race|skin colou?r)[- ]based\b",
+                           r"\bbecause of (my )?(caste|religion|race|gender|disability|age|pregnancy|skin colou?r|accent)\b"),
      "POSH/Grievance", "ethics", False),
     ("bullying", _rx(r"\bbull(y|ied|ying)\b", r"\bhumiliat", r"\bintimidat", r"\bshout(s|ed|ing)? at me\b", r"\babus(e|ed|ive)\b"),
      "POSH/Grievance", "ethics", False),
@@ -54,9 +58,13 @@ ESCALATIONS = [  # (category, pattern, ticket category, channel, allow a policy-
     ("legal", _rx(r"\b(sue|suing|lawsuit|lawyer|advocate|legal notice|labour court|labor court|court case|litigation|file a case)\b"),
      "Other", "hrbp", False),
     ("termination", _rx(r"\b(wrongful(ly)?|unfair(ly)?|illegal(ly)?)\b.{0,30}\b(terminat|fired|dismiss|sacked|let go)",
-                        r"\b(terminat|fired|dismiss|sacked)\w*\b.{0,40}\b(unfair|wrong|illegal|without reason|challenge|dispute)"),
+                        r"\b(terminat|fired|dismiss|sacked)\w*\b.{0,60}\b(unfair|wrong|illegal|without (any )?reason|challenge|dispute|contest)",
+                        r"\b(i was|i've been|i have been|i got|got me|they)\s+(fired|dismissed|sacked|terminated|let go)\b"),
      "POSH/Grievance", "hrbp", False),
-    ("salary_dispute", _rx(r"\bsalary (not|hasn'?t been|was not|wasn'?t) (paid|credited)", r"\b(underpaid|short[- ]?paid)\b",
+    ("salary_dispute", _rx(r"\bsalary (not|hasn'?t been|was not|wasn'?t) (paid|credited)",
+                           r"\bmy (salary|pay|wages?)\b.{0,30}(\bnot|n't|\bnever)\b.{0,20}\b(paid|credited|received|come|arrived)\b",
+                           r"(n't|\bnot)\s+my (salary|pay|wages?)\b.{0,20}\b(paid|credited|come|arrived)\b",
+                           r"\b(not|never|haven'?t|have not|didn'?t|did not) (been )?(received|got|gotten|paid)\b.{0,15}\b(my )?(salary|pay|wages?)\b", r"\b(underpaid|short[- ]?paid)\b",
                            r"\bpay (dispute|discrepancy)\b", r"\b(dispute|challenge|contest)\b.{0,30}\b(salary|pay|increment|bonus)\b",
                            r"\bsalary (was )?(cut|reduced|withheld|deducted wrongly)\b"),
      "Payroll", "hrbp", False),
@@ -64,12 +72,15 @@ ESCALATIONS = [  # (category, pattern, ticket category, channel, allow a policy-
                          r"\bdisciplinary (action|proceeding|inquiry)\b.{0,30}\b(against|on)\b", r"\bshow[- ]cause notice\b"),
      "POSH/Grievance", "hrbp", False),
 ]
+POLICY_QUESTION = re.compile(r"^\s*(is|are|will|would|does|do|can|could|when|how|which)\b", re.I)
 ESCALATION_TEXT = {
     "posh": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, "
             "but you can speak to the Internal Committee in confidence. {internal_committee}. You can also talk to "
             "the {eap}. If you are in immediate danger, call 112.",
-    "discrimination": "I'm sorry you're dealing with this. Concerns about discrimination are handled by people, not by me. "
-                      "Please contact the {ethics}, or {hrbp}. I can raise a confidential ticket for you if you wish.",
+    "discrimination": "I'm sorry you're dealing with this. Remarks or treatment based on caste, religion, gender or any other "
+                      "personal characteristic are handled by people, not by me, and I can't assess what happened. You can raise it "
+                      "confidentially with {hrbp}, who can take it to the location Grievance Committee, or with the {ethics}. "
+                      "I can raise a confidential ticket for you if you wish.",
     "bullying": "I'm sorry this is happening. Bullying or abusive behaviour is handled by people, not by me. Please contact "
                 "the {ethics}, or {hrbp}. I can raise a confidential ticket for you if you wish.",
     "threat": "If you are in immediate danger, call 112. Threats and violence at work must be reported to a person straight "
@@ -78,8 +89,8 @@ ESCALATION_TEXT = {
              "I can raise a ticket so HR contacts you.",
     "termination": "I can't comment on individual terminations or disputes. Please contact {hrbp}; the Separation and Exit "
                    "Policy also describes how to raise an appeal. I can raise a ticket so HR contacts you.",
-    "salary_dispute": "I can't look into or decide individual pay disputes. Please raise it with Payroll through {hrbp} or the "
-                      "{hr_helpdesk}. I can raise a Payroll ticket for you now.",
+    "salary_dispute": "I can't look into individual pay records or decide pay issues, so a person in Payroll needs to check this. "
+                      "Please raise it with Payroll through {hrbp} or the {hr_helpdesk}. I can raise a Payroll ticket for you now.",
     "disciplinary": "I can't advise on action against a specific person or on an individual disciplinary matter. Please contact "
                     "{hrbp} or the {ethics}. I can raise a confidential ticket if you wish.",
 }
@@ -171,6 +182,9 @@ def screen(message: str, employee_id: str | None = None) -> Screen | None:
                       "I can only show your own information, and I never share another employee's personal data, pay or "
                       "leave details. For team-level information, please speak to your HR Business Partner.")
     for cat, rx, tcat, channel, allow in ESCALATIONS:
+        # "Is salary not paid during LWP?" is a policy question; "My salary has not been credited" is a problem to hand off
+        if cat == "salary_dispute" and POLICY_QUESTION.match(msg):
+            continue
         if rx.search(probe):
             return Screen("escalate", cat, fill(ESCALATION_TEXT[cat]), allow_policy_answer=allow, ticket_category=tcat)
     if TICKET_ID_RE.search(msg):

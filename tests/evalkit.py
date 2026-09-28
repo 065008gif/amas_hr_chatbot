@@ -28,6 +28,7 @@ def norm(s):
     for a, b in {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " ", " ": " "}.items():
         s = s.replace(a, b)
     s = re.sub(r"(?<=\d),(?=\d)", "", s)                                   # 1,00,000 -> 100000
+    s = re.sub(r"(?<=\d) %", "%", s)                                        # "50 %" -> "50%"
     s = re.sub(r"\b(l\d)\s*(?:-|to|and)\s*(l\d)\b", r"\1-\2", s)           # grade ranges
     return re.sub(r"\s+", " ", s).strip()
 
@@ -64,5 +65,20 @@ def load_set():
             item.setdefault("route", t["expected_route"])
             item.setdefault("evidence", [{"doc": e["doc_id"], "page": e["page"], "quote": e["quote"]} for e in t["evidence"]])
             item["trap"] = True
-        item["routes"] = item["route"] if isinstance(item["route"], list) else [item["route"]]
+        item["routes"] = _routes(item["route"])
+    for conv in data.get("conversations") or []:
+        for n, turn in enumerate(conv["turns"], 1):
+            turn["id"] = f"{conv['id']}.{n}"
+            turn["routes"] = _routes(turn["route"])
+    for pair in data.get("paraphrases") or []:
+        pair["routes"] = _routes(pair["route"])
     return data
+
+
+def _routes(r):
+    return r if isinstance(r, list) else [r]
+
+
+def turn_items(data):
+    """Conversation turns as flat items (for checks that treat them like single questions)."""
+    return [t | {"cat": "conversation", "q": t["q"]} for c in data.get("conversations") or [] for t in c["turns"]]

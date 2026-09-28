@@ -14,6 +14,7 @@ can be run later.
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from collections import Counter, defaultdict
@@ -104,6 +105,21 @@ def score_item(it, r):
     return ("partly" if any(matched) else "wrong"), {"facts": matched}
 
 
+def snippet_on_page(snippet, page_text):
+    """Prose snippets must appear on the page word for word (first 120 characters). Table rows are quoted as
+    "Header: value | Header: value", which the PDF lays out in columns with wrapped cells, so for them every
+    word of every cell value must be on the page."""
+    from evalkit import norm
+    snip = norm(snippet)
+    if not snip:
+        return False
+    cells = [part.split(": ", 1)[1] for part in snip.split(" | ") if ": " in part]
+    if " | " in snip and cells:
+        words = set(re.findall(r"[a-z0-9.%/-]+", page_text))
+        return all(set(re.findall(r"[a-z0-9.%/-]+", c)) <= words for c in cells)
+    return snip[:120] in page_text
+
+
 def citation_checks(it, r, pages):
     """Independent citation accuracy: re-read the cited PDF page and look for the cited snippet, and
     check whether any citation points at a gold evidence page."""
@@ -113,8 +129,7 @@ def citation_checks(it, r, pages):
         doc = pages.get(c.get("doc_id"), [])
         p = c.get("page") or 0
         text = doc[p - 1] if 0 < p <= len(doc) else ""
-        snip = norm(c.get("snippet") or "")
-        out.append(bool(snip) and snip[:120] in text)
+        out.append(snippet_on_page(c.get("snippet") or "", text))
     gold = {(e["doc"], e["page"]) for e in it.get("evidence") or []}
     on_gold = any((c.get("doc_id"), c.get("page")) in gold for c in r.get("citations") or [])
     return out, on_gold

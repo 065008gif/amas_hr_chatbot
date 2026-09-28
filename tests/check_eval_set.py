@@ -17,7 +17,7 @@ from pathlib import Path
 import pdfplumber
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from evalkit import ROOT, alt_matches, load_set, norm  # noqa: E402
+from evalkit import ROOT, alt_matches, load_set, norm, turn_items  # noqa: E402
 
 ROUTES = {"answer", "not_found", "clarify", "escalate", "tool", "refused"}
 VERDICT = {"yes", "no", "can", "cannot", "may", "may not", "must not", "not", "none", "nil", "only", "is not", "does not",
@@ -56,7 +56,18 @@ def main():
     if dups:
         errors.append(f"duplicate ids: {sorted(dups)}")
 
-    for it in data["singles"]:
+    turns = turn_items(data)
+    ids += [t["id"] for t in turns] + [p["id"] for p in data.get("paraphrases") or []]
+    dups = {i for i in ids if ids.count(i) > 1}
+    if dups:
+        errors.append(f"duplicate ids: {sorted(dups)}")
+    for p in data.get("paraphrases") or []:
+        if p["routes"] != ["not_found"] and not p.get("facts"):
+            errors.append(f"{p['id']}: answer pair without facts")
+        if not (p.get("a") and p.get("b")) or p["a"] == p["b"]:
+            errors.append(f"{p['id']}: needs two different wordings")
+
+    for it in data["singles"] + turns:
         iid = it["id"]
         if not set(it["routes"]) <= ROUTES:
             errors.append(f"{iid}: unknown route {it['routes']}")
@@ -96,7 +107,8 @@ def main():
 
     from collections import Counter
     cats = Counter(i["cat"] for i in data["singles"])
-    print(f"Items: {len(data['singles'])}  ({len([i for i in data['singles'] if i.get('trap')])} traps)")
+    print(f"Items: {len(data['singles'])} single questions ({len([i for i in data['singles'] if i.get('trap')])} traps), "
+          f"{len(data.get('conversations') or [])} conversations ({len(turns)} turns), {len(data.get('paraphrases') or [])} paraphrase pairs")
     print("By category:", dict(sorted(cats.items())))
     print(f"Evidence quotes on their stated page: {n_quotes_ok}/{n_quotes}" + ("  (NEGATIVE CONTROL: pages shifted by 3)" if shift else ""))
     if not args.negative:

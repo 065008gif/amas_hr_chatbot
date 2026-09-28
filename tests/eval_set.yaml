@@ -37,20 +37,20 @@ singles:
   - {id: T15, cat: circular, facts: [["no", "cannot", "not accept", "may not", "must not", "not allowed", "not permitted"], ["gift card", "gift cards"]]}
   - {id: T16, cat: conflict, route: [answer, escalate], facts: [["three months", "3 months"]]}
   - {id: T17, cat: grade, facts: [["designated person", "designated persons"]]}
-  - {id: T18, cat: definition, facts: [["yes", "must declare", "need to declare", "required to declare", "should declare"], ["relative"]]}
+  - {id: T18, cat: definition, facts: [["yes", "must declare", "need to declare", "required to declare", "should declare"], ["relative", "relatives"]]}
   - {id: T19, cat: circular, facts: [["#400000", "4 lakh"]]}
   - {id: T20, cat: definition, facts: [["no", "not a metro", "not treated", "is not"], ["40 per cent", "40%", "#40"]]}
   - {id: T21, cat: grade, facts: [["no", "not eligible", "will not", "won't", "not be paid"], ["payout date", "on the rolls", "resigned", "resign"]]}
   - {id: T22, cat: grade, facts: [["uttar pradesh", "does not levy", "no professional tax"]]}
   - {id: T23, cat: circular, facts: [["no", "cannot", "not allowed", "not permitted"], ["anchor"]]}
   - {id: T24, cat: statute, facts: [["twice", "2 times", "double", "2x", "#3000"]]}
-  - {id: T25, cat: grade, facts: [["none", "not eligible", "no shift allowance", "nil", "not entitled"], ["L1-L5"]]}
+  - {id: T25, cat: grade, facts: [["none", "not eligible", "no shift allowance", "nil", "not entitled", "ineligible", "do not receive"], ["L1-L5", "L6-L8"]]}
   - {id: T26, cat: circular, facts: [["app-based cab", "app based cab", "cab", "uber"], ["hr/cir/2025/12", "circular"]]}
   - {id: T27, cat: grade, facts: [["rail", "train", "bus"], ["#500"]]}
   - {id: T28, cat: circular, facts: [["#6000"]]}
   - {id: T29, cat: conflict, facts: [["#45"]]}
   - {id: T30, cat: conflict, facts: [["#90"]]}
-  - {id: T31, cat: circular, facts: [["50 per cent", "50%", "half"]]}
+  - {id: T31, cat: circular, facts: [["50 per cent", "50%", "half", "#50"]]}
   - {id: T32, cat: statute, facts: [["#30"]]}
   - {id: T33, cat: circular, facts: [["withdrawn", "no longer", "not required", "do not need", "don't need", "not need"]]}
   - {id: T34, cat: circular, facts: [["no", "must not", "cannot", "prohibited", "not allowed", "not permitted"], ["hr/cir/2025/13", "circular", "public"]]}
@@ -74,7 +74,7 @@ singles:
     cat: direct
     q: When do I need a medical certificate for sick leave?
     route: answer
-    facts: [["more than two", "two consecutive", "2 consecutive", "more than 2"], ["registered medical practitioner", "medical practitioner", "doctor"]]
+    facts: [["more than two", "two consecutive", "2 consecutive", "more than 2", "exceeds two", "exceeding two"], ["registered medical practitioner", "medical practitioner", "doctor"]]
     evidence: [{doc: "001", page: 7, quote: "SL of more than two consecutive Working Days"}]
   - id: Q04
     cat: circular
@@ -294,7 +294,7 @@ singles:
     cat: grade
     q: I am an L4 and worked 12 hours on a release day. Do I get overtime pay?
     route: answer
-    facts: [["no", "not eligible", "not paid", "not payable"], ["L1-L3"]]
+    facts: [["no", "not eligible", "not paid", "not payable", "do not receive", "does not receive"], ["L1-L3"]]
     evidence: [{doc: "006", page: 7, quote: "Overtime is payable only to Employees in Grades L1 to L3"}]
   - id: Q43
     cat: direct
@@ -475,3 +475,235 @@ singles:
   - {id: E08, cat: escalation, q: "My team lead threatened to hurt me after my review.", route: escalate}
   - {id: E09, cat: escalation, q: "HR has issued me a show-cause notice. What should I write in my reply?", route: escalate}
   - {id: E10, cat: escalation, q: "A colleague keeps making jokes about my caste in team meetings.", route: escalate}
+
+# =====================================================================================================
+# Batch 2 (D-044). Multi-turn conversations: 3 turns each. The runner sends each turn with the history
+# of the previous turns and the profile learned so far, exactly as the portal does. Turns are scored like
+# single questions; a conversation is "fully correct" when all three turns are correct.
+# Kinds: follow (elliptical follow-ups, F1), memory (a fact from 2 turns earlier is needed, F1),
+# vague (vague or incomplete replies, F6), switch (topic change).
+conversations:
+  - id: M01
+    kind: follow
+    turns:
+      - {q: "How many days of earned leave does an L5 get in a year?", route: answer, facts: [["#21"]], evidence: [{doc: "001", page: 6, quote: "L5 Technical Lead"}]}
+      - {q: "What about L7?", route: answer, facts: [["#24"]], evidence: [{doc: "001", page: 6, quote: "L7 Senior Manager"}]}
+      - {q: "And how many of those days can an L7 encash each year?", route: answer, facts: [["#10"]], evidence: [{doc: "001", page: 6, quote: "L7 Senior Manager"}]}
+  - id: M02
+    kind: follow
+    turns:
+      - {q: "What is the hotel limit for an L6 in a metro city?", route: answer, facts: [["#7000"]], evidence: [{doc: "007", page: 5, quote: "L6 Rs. 7,000 Rs. 5,000"}]}
+      - {q: "And in a non-metro city?", route: answer, facts: [["#5000"]], evidence: [{doc: "007", page: 5, quote: "L6 Rs. 7,000 Rs. 5,000"}]}
+      - {q: "What is the daily per diem for that grade?", route: answer, facts: [["#1200"]], evidence: [{doc: "007", page: 6, quote: "L6 Rs. 1,200"}]}
+  - id: M03
+    kind: follow
+    turns:
+      - {q: "I'm an L3 in Pune. What is my notice period?", route: answer, facts: [["#60"]], evidence: [{doc: "008", page: 5, quote: "Notice Period (calendar days)"}]}
+      - {q: "Can I buy out all of it?", route: answer, facts: [["50 per cent", "50%", "half", "#30"]], evidence: [{doc: "008", page: 12, quote: "not more than 50 per cent of the Notice Period"}]}
+      - {q: "And what would it be if I were still on probation?", route: answer, facts: [["#15"]], evidence: [{doc: "008", page: 5, quote: "serves a Notice Period of 15 days"}]}
+  - id: M04
+    kind: follow
+    turns:
+      - {q: "How many days of paternity leave do I get for a baby born in September 2025?", route: answer, facts: [["#10"]], evidence: [{doc: "001", page: 15, quote: "is increased from 5 Working Days to 10 Working Days"}]}
+      - {q: "Can I split it into parts?", route: answer, facts: [["two spells", "2 spells", "#2"]], evidence: [{doc: "001", page: 15, quote: "may be taken in up to two spells"}]}
+      - {q: "By when do I have to upload the birth certificate?", route: answer, facts: [["#30"]], evidence: [{doc: "001", page: 8, quote: "within 30 Calendar Days of the birth or adoption"}]}
+  - id: M05
+    kind: follow
+    turns:
+      - {q: "What is the group medical sum insured for an L4?", route: answer, facts: [["#500000", "5 lakh"]], evidence: [{doc: "005", page: 8, quote: "L4 and L5 Rs. 5,00,000"}]}
+      - {q: "Can I cover my parents too?", route: answer, facts: [["parental policy", "separate policy", "separate parental"]], evidence: [{doc: "005", page: 8, quote: "under a separate parental policy"}]}
+      - {q: "Who pays the premium for that?", route: answer, facts: [["employee", "salary deduction", "deducted", "deduction", "you"]], evidence: [{doc: "005", page: 8, quote: "The premium for both is paid by the Employee through salary deduction"}]}
+  - id: M06
+    kind: follow
+    turns:
+      - {q: "How long is probation for an L4?", route: answer, facts: [["three months", "3 months"]], evidence: [{doc: "002", page: 6, quote: "three months for Grades L4 to L8"}]}
+      - {q: "Can it be extended?", route: answer, facts: [["three months", "3 months"], ["once"]], evidence: [{doc: "002", page: 6, quote: "Probation may be extended once, by up to three months"}]}
+      - {q: "What notice do I have to give if I resign during it?", route: answer, facts: [["#15"]], evidence: [{doc: "008", page: 5, quote: "serves a Notice Period of 15 days"}]}
+  - id: M07
+    kind: follow
+    turns:
+      - {q: "What is the shift allowance for the UK shift?", route: answer, facts: [["#250"]], evidence: [{doc: "006", page: 6, quote: "UK shift 1:00 p.m. to 10:00 p.m. Rs. 250"}]}
+      - {q: "And for the night shift?", route: answer, facts: [["#650"]], evidence: [{doc: "006", page: 11, quote: "increased from Rs. 500 to Rs. 650"}]}
+      - {q: "Does an L6 get it?", route: answer, facts: [["no", "not eligible", "not entitled", "ineligible"]], evidence: [{doc: "006", page: 11, quote: "Grades L6 to L8 remain ineligible"}]}
+  - id: M08
+    kind: follow
+    turns:
+      - {q: "How many restricted holidays can I choose in a year?", route: answer, facts: [["two", "#2"]], evidence: [{doc: "001", page: 9, quote: "each Employee may choose two restricted holidays"}]}
+      - {q: "Can I carry forward the ones I don't use?", route: answer, facts: [["no", "not carried forward", "lapse", "lapses"]], evidence: [{doc: "001", page: 13, quote: "Restricted holidays not taken by 31 December lapse"}]}
+      - {q: "Is Holi a declared holiday in Noida?", route: answer, facts: [["yes", "is a declared holiday", "declared holiday"]], evidence: [{doc: "001", page: 9, quote: "Uttar Pradesh Dookan Aur Vanijya Adhishthan Ten declared holidays including Holi"}]}
+  - id: M09
+    kind: follow
+    turns:
+      - {q: "What is the referral bonus if someone I refer joins at L6?", route: answer, facts: [["#100000", "1 lakh"]], evidence: [{doc: "002", page: 10, quote: "L6 and above Rs. 1,00,000"}]}
+      - {q: "Am I eligible if I work in Talent Acquisition?", route: answer, facts: [["no", "not eligible"]], evidence: [{doc: "002", page: 10, quote: "Employees in the Talent Acquisition and HR functions"}]}
+      - {q: "When is the bonus paid?", route: answer, facts: [["#90"]], evidence: [{doc: "002", page: 9, quote: "completes 90 days of service"}]}
+  - id: M10
+    kind: vague
+    turns:
+      - {q: "How much leave do I get?", route: clarify}
+      - {q: "L5", route: answer, facts: [["#21"]], evidence: [{doc: "001", page: 6, quote: "L5 Technical Lead"}]}
+      - {q: "and sick leave?", route: answer, facts: [["#8"]], evidence: [{doc: "001", page: 6, quote: "L5 Technical Lead"}]}
+  - id: M11
+    kind: vague
+    turns:
+      - {q: "What's my notice period?", route: clarify}
+      - {q: "the usual one", route: clarify}
+      - {q: "I'm an L2, confirmed", route: answer, facts: [["#30"]], evidence: [{doc: "008", page: 5, quote: "Notice Period (calendar days)"}]}
+  - id: M12
+    kind: follow
+    turns:
+      - {q: "Can I claim a cab from the airport at L4?", route: answer, facts: [["app-based cab", "cab", "prepaid taxi", "taxi"]], evidence: [{doc: "007", page: 6, quote: "Employees in Grades L4 and L5 may use an app-based cab"}]}
+      - {q: "What if I'm an L2 landing at midnight?", route: answer, facts: [["hr/cir/2025/12", "circular", "yes", "can"]], evidence: [{doc: "007", page: 12, quote: "claim the actual fare without the limit of Rs. 750"}]}
+      - {q: "And if an L2 lands in the afternoon?", route: answer, facts: [["#750"]], evidence: [{doc: "007", page: 12, quote: "claim the actual fare without the limit of Rs. 750"}]}
+  - id: M13
+    kind: follow
+    turns:
+      - {q: "What is the limit for accepting a gift from a vendor?", route: answer, facts: [["#2000"]], evidence: [{doc: "004", page: 16, quote: "is reduced from Rs. 5,000 to Rs. 2,000"}]}
+      - {q: "Can I accept a gift card within that limit?", route: answer, facts: [["no", "not", "cannot", "prohibited"]], evidence: [{doc: "004", page: 16, quote: "gift cards, vouchers"}]}
+      - {q: "Do I have to record gifts somewhere?", route: answer, facts: [["gift register", "register"]], evidence: [{doc: "004", page: 6, quote: "is recorded in the gift register"}]}
+  - id: M14
+    kind: follow
+    turns:
+      - {q: "How much internet reimbursement can an L4 on hybrid work claim?", route: answer, facts: [["#1000"]], evidence: [{doc: "002", page: 15, quote: "up to Rs. 1,000 a month"}]}
+      - {q: "And an L6?", route: answer, facts: [["communication allowance"]], evidence: [{doc: "002", page: 15, quote: "receive a communication allowance as part of fixed pay"}]}
+      - {q: "How much is that allowance for an L6?", route: answer, facts: [["#2000"]], evidence: [{doc: "005", page: 5, quote: "L6 50% of fixed 50% of Basic Rs. 50,000 Rs. 2,000 15%"}]}
+  - id: M15
+    kind: follow
+    turns:
+      - {q: "How is gratuity calculated?", route: answer, facts: [["#15"], ["#26"]], evidence: [{doc: "005", page: 7, quote: "multiplied by 15 and divided by 26"}]}
+      - {q: "How many years of service do I need to get it?", route: answer, facts: [["five years", "5 years", "#5"]], evidence: [{doc: "005", page: 7, quote: "after not less than five years of continuous service"}]}
+      - {q: "How soon must it be paid after I leave?", route: answer, facts: [["#30"]], evidence: [{doc: "005", page: 7, quote: "the Company pays it within 30 days of the date it becomes payable"}]}
+  - id: M16
+    kind: follow
+    turns:
+      - {q: "How long is maternity leave?", route: answer, facts: [["#26"]], evidence: [{doc: "001", page: 7, quote: "Maternity leave is 26 weeks"}]}
+      - {q: "What if I already have two children?", route: answer, facts: [["#12"]], evidence: [{doc: "001", page: 7, quote: "two or more surviving children, maternity leave is 12 weeks"}]}
+      - {q: "Can I work from home after it ends?", route: answer, facts: [["work from home", "mutual agreement", "agreement", "agree"]], evidence: [{doc: "001", page: 7, quote: "by mutual agreement with the Reporting Manager, work from home"}]}
+  - id: M17
+    kind: follow
+    turns:
+      - {q: "How many days of bereavement leave do I get?", route: answer, facts: [["#5"]], evidence: [{doc: "001", page: 15, quote: "increased from 3 Working Days to 5 Working Days"}]}
+      - {q: "Does it apply if my mother-in-law dies?", route: answer, facts: [["no", "not", "does not"]], evidence: [{doc: "001", page: 15, quote: "unavailable on the death of a grandparent, sibling or parent-in-law"}]}
+      - {q: "What can I use instead?", route: answer, facts: [["casual leave", "earned leave", "cl", "el"]], evidence: [{doc: "001", page: 8, quote: "the Employee may apply for CL or EL"}]}
+  - id: M18
+    kind: follow
+    turns:
+      - {q: "At what rate is overtime paid to an L2 in Bengaluru?", route: answer, facts: [["twice", "double", "2 times", "two times"]], evidence: [{doc: "006", page: 10, quote: "Twice the ordinary rate"}]}
+      - {q: "Is there a cap on overtime hours?", route: answer, facts: [["#50"]], evidence: [{doc: "006", page: 7, quote: "shall not exceed 50 hours in a calendar quarter"}]}
+      - {q: "Can I get comp off as well for the same hours?", route: answer, facts: [["not both", "either"]], evidence: [{doc: "006", page: 7, quote: "but not both"}]}
+  - id: M19
+    kind: follow
+    turns:
+      - {q: "Which days are anchor days for hybrid work?", route: answer, facts: [["tuesday"], ["wednesday"], ["thursday"]], evidence: [{doc: "006", page: 11, quote: "Tuesday, Wednesday and Thursday are anchor days"}]}
+      - {q: "Does that apply to L7 employees?", route: answer, facts: [["no", "not", "does not", "only"]], evidence: [{doc: "006", page: 11, quote: "no longer applies to Grades L1 to L6"}]}
+      - {q: "So which days can an L4 work from home?", route: answer, facts: [["monday"], ["friday"]], evidence: [{doc: "006", page: 11, quote: "may therefore be taken only on Monday and Friday"}]}
+  - id: M20
+    kind: follow
+    turns:
+      - {q: "What is the notice period at L5?", route: answer, facts: [["#90"]], evidence: [{doc: "008", page: 5, quote: "An Employee in Grades L5 to L8 serves a Notice Period of 90 days"}]}
+      - {q: "The Employee Handbook says 60 days. Which is right?", route: answer, facts: [["#90"]], evidence: [{doc: "002", page: 12, quote: "Summary of notice periods"}]}
+      - {q: "Why does that one prevail?", route: answer, facts: [["separation and exit policy", "separation policy", "governs", "precedence", "hierarchy", "summary"]], evidence: [{doc: "002", page: 4, quote: "the Separation and Exit Policy (NTL/HR/POL/008) on notice periods"}]}
+  - id: M21
+    kind: follow
+    turns:
+      - {q: "How many days of earned leave can an L5 encash when leaving?", route: answer, facts: [["#45"]], evidence: [{doc: "001", page: 14, quote: "The accumulation limit for L5 is 45 days"}]}
+      - {q: "And an L7?", route: answer, facts: [["#60"]], evidence: [{doc: "001", page: 6, quote: "L7 Senior Manager"}]}
+      - {q: "At what rate per day is it paid?", route: answer, facts: [["#26"]], evidence: [{doc: "001", page: 10, quote: "at Basic Salary divided by 26 for each day"}]}
+  - id: M22
+    kind: follow
+    turns:
+      - {q: "How long must my password be?", route: answer, facts: [["#14"]], evidence: [{doc: "009", page: 14, quote: "passwords are at least 14 characters long"}]}
+      - {q: "Do I still have to change it every 90 days?", route: answer, facts: [["no", "withdrawn", "no longer", "not required"]], evidence: [{doc: "009", page: 14, quote: "is withdrawn"}]}
+      - {q: "Can I paste client code into ChatGPT to debug it?", route: answer, facts: [["no", "not", "must not", "prohibited"]], evidence: [{doc: "009", page: 14, quote: "must not be entered into"}]}
+  - id: M23
+    kind: follow
+    turns:
+      - {q: "Can an L3 use a personal laptop for work?", route: answer, facts: [["no", "not", "only"]], evidence: [{doc: "009", page: 11, quote: "Personal laptops and computers are permitted only for Grades L7 and L8"}]}
+      - {q: "Which grades can?", route: answer, facts: [["L7"]], evidence: [{doc: "009", page: 11, quote: "Personal laptops and computers are permitted only for Grades L7 and L8"}]}
+      - {q: "How do they connect?", route: answer, facts: [["virtual desktop"]], evidence: [{doc: "009", page: 11, quote: "only through the Company virtual desktop"}]}
+  - id: M24
+    kind: follow
+    turns:
+      - {q: "How much day-care reimbursement can I claim in Chennai?", route: answer, facts: [["#10000"]], evidence: [{doc: "002", page: 24, quote: "is increased from Rs. 8,000 to Rs. 10,000 a month"}]}
+      - {q: "What about in Bengaluru?", route: answer, facts: [["creche", "on-site"]], evidence: [{doc: "002", page: 8, quote: "on-site creches at the Bengaluru and Hyderabad campuses"}]}
+      - {q: "Up to what age of the child?", route: answer, facts: [["six years", "6 years"]], evidence: [{doc: "002", page: 8, quote: "for children aged six months to six years"}]}
+  - id: M25
+    kind: follow
+    turns:
+      - {q: "Who gets an annual health check?", route: answer, facts: [["#35"], ["L5"]], evidence: [{doc: "002", page: 8, quote: "who are 35 years of age or older"}]}
+      - {q: "I'm 40 and in L2. Am I eligible?", route: answer, facts: [["yes", "eligible", "entitled"]], evidence: [{doc: "002", page: 8, quote: "who are 35 years of age or older"}]}
+      - {q: "Where is it done?", route: answer, facts: [["empanelled hospital", "empanelled"]], evidence: [{doc: "002", page: 8, quote: "at an empanelled hospital"}]}
+  - id: M26
+    kind: follow
+    turns:
+      - {q: "What is the domestic per diem for an L4?", route: answer, facts: [["#1000"]], evidence: [{doc: "007", page: 6, quote: "L4 and L5 Rs. 1,000"}]}
+      - {q: "What if the client provides lunch and dinner?", route: answer, facts: [["50 per cent", "50%", "half"]], evidence: [{doc: "007", page: 6, quote: "the Per Diem for that day is reduced by 50 per cent"}]}
+      - {q: "And for a day trip of under 12 hours?", route: answer, facts: [["half", "50 per cent", "50%"]], evidence: [{doc: "007", page: 6, quote: "half the Per Diem is paid"}]}
+  - id: M27
+    kind: follow
+    turns:
+      - {q: "How much severance pay is given on redundancy?", route: answer, facts: [["one month", "1 month"]], evidence: [{doc: "008", page: 6, quote: "one month's fixed pay for each completed year of service"}]}
+      - {q: "What is the maximum?", route: answer, facts: [["six months", "6 months"]], evidence: [{doc: "008", page: 6, quote: "maximum of six months"}]}
+      - {q: "Is any outplacement support given?", route: answer, facts: [["three months", "3 months"]], evidence: [{doc: "008", page: 6, quote: "three months of outplacement support"}]}
+  - id: M28
+    kind: memory
+    turns:
+      - {q: "I'm an L6 based in Hyderabad. What is my hotel limit in Mumbai?", route: answer, facts: [["#7000"]], evidence: [{doc: "007", page: 5, quote: "L6 Rs. 7,000 Rs. 5,000"}]}
+      - {q: "What is my notice period if I resign?", route: answer, facts: [["#90"]], evidence: [{doc: "008", page: 5, quote: "An Employee in Grades L5 to L8 serves a Notice Period of 90 days"}]}
+      - {q: "And my per diem when travelling?", route: answer, facts: [["#1200"]], evidence: [{doc: "007", page: 6, quote: "L6 Rs. 1,200"}]}
+  - id: M29
+    kind: memory
+    turns:
+      - {q: "I work in Noida as an L3. Is professional tax deducted from my salary?", route: answer, facts: [["no", "uttar pradesh", "does not", "not deducted", "nil"]], evidence: [{doc: "005", page: 6, quote: "Uttar Pradesh"}]}
+      - {q: "Is Holi a holiday at my office?", route: answer, facts: [["yes", "declared holiday"]], evidence: [{doc: "001", page: 9, quote: "Uttar Pradesh Dookan Aur Vanijya Adhishthan Ten declared holidays including Holi"}]}
+      - {q: "How many days of earned leave can I encash this year?", route: answer, facts: [["#5"]], evidence: [{doc: "001", page: 6, quote: "L3 Software Engineer"}]}
+  - id: M30
+    kind: switch
+    turns:
+      - {q: "What is the time limit for making a POSH complaint?", route: [answer, escalate], facts: [["three months", "3 months"]], evidence: [{doc: "003", page: 6, quote: "within three months from the date of the incident"}]}
+      - {q: "Can that be extended?", route: [answer, escalate], facts: [["three months", "3 months"]], evidence: [{doc: "003", page: 6, quote: "by a further period not exceeding three months"}]}
+      - {q: "Different question: how many casual leave days does an L4 get?", route: answer, facts: [["#7"]], evidence: [{doc: "001", page: 6, quote: "L4 Senior Software 18 7 8 45"}]}
+
+# Paraphrase pairs (F7 consistency): the same question in two wordings, asked in fresh sessions.
+# Consistent = same route AND the same fact verdict (both contain all gold facts, or both do not).
+paraphrases:
+  - {id: P01, route: answer, facts: [["#10"]], a: "How many days of paternity leave do I get for a baby born in October 2025?", b: "My son was born in Oct 2025. How much paternity leave am I entitled to?"}
+  - {id: P02, route: answer, facts: [["#90"]], a: "What is the notice period for an L5?", b: "I'm a Technical Lead at grade L5. If I resign, how long do I have to serve?"}
+  - {id: P03, route: not_found, a: "Does Nexora pay for egg freezing?", b: "Is oocyte cryopreservation covered by the company?"}
+  - {id: P04, route: answer, facts: [["#6000"]], a: "What is the hotel limit for an L5 staying in Mumbai?", b: "As an L5 on a business trip to Mumbai, how much can I spend on a hotel per night?"}
+  - {id: P05, route: answer, facts: [["#24"]], a: "How many days of earned leave does an L7 get in a year?", b: "What is the annual EL entitlement for a senior manager at L7?"}
+  - {id: P06, route: answer, facts: [["#5"]], a: "How many days of bereavement leave do I get if a parent dies?", b: "My mother passed away. How much bereavement leave can I take?"}
+  - {id: P07, route: answer, facts: [["#3"]], a: "How many days of marriage leave do I get?", b: "I'm getting married next month. How much leave does the company give for that?"}
+  - {id: P08, route: answer, facts: [["#2000"]], a: "What is the maximum value of a gift I can accept from a vendor?", b: "Up to what amount can I keep a present from a supplier?"}
+  - {id: P09, route: answer, facts: [["#14"]], a: "How long must my password be?", b: "What is the minimum number of characters for a password?"}
+  - {id: P10, route: answer, facts: [["#12"]], a: "What percentage of my basic salary goes to provident fund?", b: "How much PF is deducted from my pay each month?"}
+  - {id: P11, route: answer, facts: [["#21000"]], a: "Up to what monthly wage is an employee covered by ESI?", b: "What is the salary limit for ESIC coverage?"}
+  - {id: P12, route: answer, facts: [["#15"]], a: "How many days' salary per year of service is paid as gratuity?", b: "Gratuity is how many days of basic pay for each completed year?"}
+  - {id: P13, route: answer, facts: [["#650"]], a: "What is the night shift allowance for an L3?", b: "I'm L3 and work nights. How much extra do I get per night shift?"}
+  - {id: P14, route: answer, facts: [["#50"]], a: "What is the maximum overtime allowed in a quarter?", b: "How many overtime hours can I work in three months at most?"}
+  - {id: P15, route: answer, facts: [["#1200"]], a: "What is the per diem for an L6 on domestic travel?", b: "How much daily allowance does a grade L6 get when travelling within India?"}
+  - {id: P16, route: answer, facts: [["#12"]], a: "How much is reimbursed per kilometre for using my own car on business?", b: "What mileage rate do I get if I drive my car for official work?"}
+  - {id: P17, route: answer, facts: [["#30"]], a: "Within how many days must I submit my travel expense claim?", b: "What is the deadline for filing a travel reimbursement after a trip?"}
+  - {id: P18, route: answer, facts: [["six months", "6 months"]], a: "After how long can Nexora rehire someone who resigned?", b: "If I quit, when can I come back to Nexora?"}
+  - {id: P19, route: answer, facts: [["#90"]], a: "How long is CCTV footage kept?", b: "What is the retention period for security camera recordings?"}
+  - {id: P20, route: answer, facts: [["#6"]], a: "Within how many hours are cyber incidents reported to CERT-In?", b: "How quickly does Nexora notify CERT-In about a security incident?"}
+  - {id: P21, route: answer, facts: [["#25000"]], a: "What referral bonus is paid when someone I refer joins at L2?", b: "If my friend joins as an Associate at L2 through my referral, how much do I get?"}
+  - {id: P22, route: answer, facts: [["#6"]], a: "How many free EAP counselling sessions do I get per year?", b: "How many sessions with the Employee Assistance Programme counsellors are free each year?"}
+  - {id: P23, route: answer, facts: [["#35"]], a: "Who is entitled to an annual health check?", b: "Which employees get a yearly preventive medical check-up?"}
+  - {id: P24, route: answer, facts: [["#40"]], a: "How many hours of learning must I complete each year?", b: "What is the annual training-hours target for employees?"}
+  - {id: P25, route: answer, facts: [["#9"]], a: "How long must I be in my role before applying for an internal job posting?", b: "When can I apply for an internal transfer to another open position?"}
+  - {id: P26, route: answer, facts: [["#50000"]], a: "How much LTA does an L5 get per year?", b: "What is the annual leave travel allowance at grade L5?"}
+  - {id: P27, route: answer, facts: [["#15"]], a: "What is the target variable pay for an L6?", b: "As an L6 manager, what percentage of my fixed pay is target bonus?"}
+  - {id: P28, route: answer, facts: [["#1500"]], a: "What on-call allowance does an L3 get per week?", b: "How much am I paid for a week of on-call duty at L3?"}
+  - {id: P29, route: answer, facts: [["#5"]], a: "After how many minutes does a company laptop screen lock?", b: "What is the automatic screen-lock timeout on office laptops?"}
+  - {id: P30, route: answer, facts: [["one hour", "1 hour"]], a: "How quickly must I report a lost phone with my work profile?", b: "I lost my personal phone that has office email on it. How soon do I need to report it?"}
+  - {id: P31, route: answer, facts: [["no", "not eligible"]], a: "I am an L6 manager and worked last Sunday. Do I get a comp off?", b: "Does a grade L6 employee earn compensatory off for working on a weekend?"}
+  - {id: P32, route: answer, facts: [["postgraduate"]], a: "Can an L4 employee take a sabbatical?", b: "Is a sabbatical possible for someone at grade L4?"}
+  - {id: P33, route: not_found, a: "How many days of menstrual leave do I get?", b: "Is there period leave for women employees?"}
+  - {id: P34, route: not_found, a: "Can I take paid leave to look after my sick pet?", b: "Does Nexora give leave to care for an ill dog?"}
+  - {id: P35, route: answer, facts: [["no", "not eligible", "cannot"]], a: "I am an L2. Can I encash my earned leave this year?", b: "Is EL encashment during service allowed for grade L2?"}
+  - {id: P36, route: answer, facts: [["immediate family"]], a: "My grandmother passed away. Can I take bereavement leave?", b: "Is bereavement leave available when a grandparent dies?"}
+  - {id: P37, route: answer, facts: [["#10000"]], a: "How much day-care reimbursement can I claim in Pune?", b: "What is the monthly creche fee reimbursement for Pune employees?"}
+  - {id: P38, route: answer, facts: [["anchor"]], a: "I am an L4 on hybrid work. Can I choose Wednesday as a work-from-home day?", b: "Can an L4 take Wednesdays as remote work days?"}
+  - {id: P39, route: answer, facts: [["withdrawn", "withdraws", "withdrew", "no longer", "not required", "do not need", "don't need"]], a: "Do I have to change my password every 90 days?", b: "Is the 90-day password rotation still required?"}
+  - {id: P40, route: answer, facts: [["no", "must not", "cannot", "prohibited", "not allowed", "not permitted"]], a: "Can I paste client source code into ChatGPT to debug it?", b: "Is it OK to use a public AI chatbot with our client's code?"}
