@@ -139,3 +139,13 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
   - `check_content.py` caught 9 of 9 planted errors: clause numbering gap, invalid grade L9, short table row, broken grade table, unknown statute ID, broken clause reference, broken table reference, a circular amending a missing clause, and a repeated sentence. It also warned on the planted hand-typed reference.
   - `verify_pdfs.py` caught 2 of 2 tampered TOC page numbers.
   - The self-test document was then deleted.
+
+**D-021 (2026-09-28): Leave Policy (NTL/HR/POL/001) is complete: 15 pages against a target of 16 ±2.**
+- 12 sections, 100 clauses, 7 tables (5 numbered), 4 annexures (form and checklist, holiday list, escalation matrix, FAQs and illustrations) and 3 amendment circulars that override body clauses (HR/CIR/2025/07 paternity, 2025/11 combining CL with EL, 2026/02 bereavement). About 5,900 words.
+- **Traps T01 to T08** (8 in total) cover types 1, 3, 4, 5 and 6, and all were verified on the PDF pages. Type 2 needs a second document; conflicts C01 (paternity, against the Handbook) and C02 (EL encashment on exit, against the Separation Policy) are registered in `_company.yaml`, to be planted when those documents are written.
+- 11 statutory claims were added to `STATUTORY_CLAIMS.md`: Maternity Benefit Act figures, the polling-day holiday, and the Shops and Establishments Acts of the 5 States. All are UNVERIFIED.
+- **Layout fixes found by looking at the rendered pages:**
+  - A section heading was orphaned at the foot of a page, because `keepWithNext` bound it to a zero-size anchor. Headings are now wrapped in `KeepTogether` with their first real paragraph.
+  - There were two near-empty pages (the end of Section 12, and the last circular). Section 12 gained real clauses (12.4 confidentiality of medical documents, 12.5 no adverse treatment, 12.6 queries) and the circular wording was tightened. 16 pages became 15, with no filler.
+- **Known issue for Phase 3:** in plain text extraction, a wrapped table cell interleaves with its neighbouring columns (for example, the version history rows). Ingestion must extract tables with pdfplumber's table extractor (cell by cell) and not from the plain page text.
+- Wording: "last working day" was changed to "last day of service", so it isn't confused with the defined term "Working Day" (the checker warned about this).

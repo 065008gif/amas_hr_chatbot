@@ -1,0 +1,610 @@
+{
+ "doc_id": "001",
+ "title": "Leave Policy",
+ "number": "NTL/HR/POL/001",
+ "version": "4.2",
+ "effective_date": "2025-04-01",
+ "pdf": "NTL-HR-POL-001_Leave_Policy.pdf",
+ "pages": 15,
+ "built": "2026-09-28T18:11:10",
+ "toc": [
+  {
+   "level": 0,
+   "text": "1. Purpose, Scope and Applicability",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "2. Definitions",
+   "page": 4
+  },
+  {
+   "level": 0,
+   "text": "3. General Principles",
+   "page": 5
+  },
+  {
+   "level": 0,
+   "text": "4. Earned Leave",
+   "page": 6
+  },
+  {
+   "level": 0,
+   "text": "5. Casual Leave and Sick Leave",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "6. Maternity, Adoption and Paternity Leave",
+   "page": 7
+  },
+  {
+   "level": 0,
+   "text": "7. Special Leave",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "8. Leave Without Pay and Sabbatical",
+   "page": 8
+  },
+  {
+   "level": 0,
+   "text": "9. Holidays",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "10. Application, Approval and Records",
+   "page": 9
+  },
+  {
+   "level": 0,
+   "text": "11. Leave during Notice Period and on Separation",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "12. Administration and Review",
+   "page": 10
+  },
+  {
+   "level": 0,
+   "text": "Annexure A: Manual Leave Application Form",
+   "page": 12
+  },
+  {
+   "level": 0,
+   "text": "Annexure B: Holiday List and Restricted Holidays",
+   "page": 13
+  },
+  {
+   "level": 0,
+   "text": "Annexure C: Escalation Matrix for Leave Concerns",
+   "page": 13
+  },
+  {
+   "level": 0,
+   "text": "Annexure D: Frequently Asked Questions and Illustrations",
+   "page": 14
+  },
+  {
+   "level": 0,
+   "text": "Amendment Circulars",
+   "page": 15
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/07: Enhancement of paternity leave",
+   "page": 15
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2025/11: Combination of Casual Leave with Earned Leave",
+   "page": 15
+  },
+  {
+   "level": 1,
+   "text": "Circular HR/CIR/2026/02: Revision of bereavement leave",
+   "page": 15
+  }
+ ],
+ "anchors": {
+  "Section 1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.1": {
+   "start": 4,
+   "end": 4
+  },
+  "1.2": {
+   "start": 4,
+   "end": 4
+  },
+  "1.3": {
+   "start": 4,
+   "end": 4
+  },
+  "1.4": {
+   "start": 4,
+   "end": 4
+  },
+  "1.5": {
+   "start": 4,
+   "end": 4
+  },
+  "1.6": {
+   "start": 4,
+   "end": 4
+  },
+  "1.7": {
+   "start": 4,
+   "end": 4
+  },
+  "Section 2": {
+   "start": 4,
+   "end": 5
+  },
+  "2.1": {
+   "start": 4,
+   "end": 4
+  },
+  "2.2": {
+   "start": 4,
+   "end": 4
+  },
+  "2.3": {
+   "start": 4,
+   "end": 4
+  },
+  "2.4": {
+   "start": 4,
+   "end": 4
+  },
+  "2.5": {
+   "start": 4,
+   "end": 4
+  },
+  "2.6": {
+   "start": 4,
+   "end": 5
+  },
+  "2.7": {
+   "start": 5,
+   "end": 5
+  },
+  "2.8": {
+   "start": 5,
+   "end": 5
+  },
+  "2.9": {
+   "start": 5,
+   "end": 5
+  },
+  "2.10": {
+   "start": 5,
+   "end": 5
+  },
+  "2.11": {
+   "start": 5,
+   "end": 5
+  },
+  "2.12": {
+   "start": 5,
+   "end": 5
+  },
+  "2.13": {
+   "start": 5,
+   "end": 5
+  },
+  "2.14": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 3": {
+   "start": 5,
+   "end": 5
+  },
+  "3.1": {
+   "start": 5,
+   "end": 5
+  },
+  "3.2": {
+   "start": 5,
+   "end": 5
+  },
+  "3.3": {
+   "start": 5,
+   "end": 5
+  },
+  "3.4": {
+   "start": 5,
+   "end": 5
+  },
+  "3.5": {
+   "start": 5,
+   "end": 5
+  },
+  "3.6": {
+   "start": 5,
+   "end": 5
+  },
+  "3.7": {
+   "start": 5,
+   "end": 5
+  },
+  "Section 4": {
+   "start": 5,
+   "end": 6
+  },
+  "4.1": {
+   "start": 6,
+   "end": 6
+  },
+  "Table 1": {
+   "start": 6,
+   "end": 6
+  },
+  "4.2": {
+   "start": 6,
+   "end": 6
+  },
+  "4.3": {
+   "start": 6,
+   "end": 6
+  },
+  "4.3.1": {
+   "start": 6,
+   "end": 6
+  },
+  "4.3.2": {
+   "start": 6,
+   "end": 6
+  },
+  "4.3.3": {
+   "start": 6,
+   "end": 6
+  },
+  "4.4": {
+   "start": 6,
+   "end": 6
+  },
+  "4.5": {
+   "start": 6,
+   "end": 6
+  },
+  "Section 5": {
+   "start": 6,
+   "end": 7
+  },
+  "5.1": {
+   "start": 7,
+   "end": 7
+  },
+  "5.2": {
+   "start": 7,
+   "end": 7
+  },
+  "5.3": {
+   "start": 7,
+   "end": 7
+  },
+  "5.4": {
+   "start": 7,
+   "end": 7
+  },
+  "5.5": {
+   "start": 7,
+   "end": 7
+  },
+  "5.6": {
+   "start": 7,
+   "end": 7
+  },
+  "Section 6": {
+   "start": 7,
+   "end": 8
+  },
+  "6.1": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2.1": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2.2": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2.3": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2.4": {
+   "start": 7,
+   "end": 7
+  },
+  "6.2.5": {
+   "start": 7,
+   "end": 7
+  },
+  "6.3": {
+   "start": 7,
+   "end": 7
+  },
+  "6.4": {
+   "start": 7,
+   "end": 8
+  },
+  "6.4.1": {
+   "start": 7,
+   "end": 7
+  },
+  "6.4.2": {
+   "start": 7,
+   "end": 7
+  },
+  "6.4.3": {
+   "start": 7,
+   "end": 8
+  },
+  "6.5": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 7": {
+   "start": 8,
+   "end": 8
+  },
+  "7.1": {
+   "start": 8,
+   "end": 8
+  },
+  "7.2": {
+   "start": 8,
+   "end": 8
+  },
+  "7.3": {
+   "start": 8,
+   "end": 8
+  },
+  "7.4": {
+   "start": 8,
+   "end": 8
+  },
+  "7.5": {
+   "start": 8,
+   "end": 8
+  },
+  "7.6": {
+   "start": 8,
+   "end": 8
+  },
+  "7.7": {
+   "start": 8,
+   "end": 8
+  },
+  "Section 8": {
+   "start": 8,
+   "end": 9
+  },
+  "8.1": {
+   "start": 8,
+   "end": 8
+  },
+  "8.1.1": {
+   "start": 8,
+   "end": 8
+  },
+  "8.1.2": {
+   "start": 8,
+   "end": 8
+  },
+  "8.2": {
+   "start": 8,
+   "end": 8
+  },
+  "8.3": {
+   "start": 8,
+   "end": 9
+  },
+  "8.3.1": {
+   "start": 8,
+   "end": 9
+  },
+  "8.3.2": {
+   "start": 9,
+   "end": 9
+  },
+  "8.3.3": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 9": {
+   "start": 9,
+   "end": 9
+  },
+  "9.1": {
+   "start": 9,
+   "end": 9
+  },
+  "9.2": {
+   "start": 9,
+   "end": 9
+  },
+  "9.3": {
+   "start": 9,
+   "end": 9
+  },
+  "9.4": {
+   "start": 9,
+   "end": 9
+  },
+  "9.5": {
+   "start": 9,
+   "end": 9
+  },
+  "Table 2": {
+   "start": 9,
+   "end": 9
+  },
+  "Section 10": {
+   "start": 9,
+   "end": 10
+  },
+  "10.1": {
+   "start": 9,
+   "end": 9
+  },
+  "10.2": {
+   "start": 9,
+   "end": 9
+  },
+  "Table 3": {
+   "start": 9,
+   "end": 10
+  },
+  "10.3": {
+   "start": 10,
+   "end": 10
+  },
+  "10.4": {
+   "start": 10,
+   "end": 10
+  },
+  "10.5": {
+   "start": 10,
+   "end": 10
+  },
+  "Section 11": {
+   "start": 10,
+   "end": 10
+  },
+  "11.1": {
+   "start": 10,
+   "end": 10
+  },
+  "11.2": {
+   "start": 10,
+   "end": 10
+  },
+  "11.3": {
+   "start": 10,
+   "end": 10
+  },
+  "11.4": {
+   "start": 10,
+   "end": 10
+  },
+  "11.5": {
+   "start": 10,
+   "end": 10
+  },
+  "Section 12": {
+   "start": 10,
+   "end": 11
+  },
+  "12.1": {
+   "start": 10,
+   "end": 10
+  },
+  "12.2": {
+   "start": 10,
+   "end": 10
+  },
+  "12.3": {
+   "start": 10,
+   "end": 11
+  },
+  "12.4": {
+   "start": 11,
+   "end": 11
+  },
+  "12.5": {
+   "start": 11,
+   "end": 11
+  },
+  "12.6": {
+   "start": 11,
+   "end": 11
+  },
+  "Annexure A": {
+   "start": 12,
+   "end": 12
+  },
+  "Annexure B": {
+   "start": 13,
+   "end": 13
+  },
+  "Table 4": {
+   "start": 13,
+   "end": 13
+  },
+  "B.1": {
+   "start": 13,
+   "end": 13
+  },
+  "B.2": {
+   "start": 13,
+   "end": 13
+  },
+  "Annexure C": {
+   "start": 13,
+   "end": 14
+  },
+  "Table 5": {
+   "start": 13,
+   "end": 13
+  },
+  "Annexure D": {
+   "start": 14,
+   "end": 14
+  },
+  "D.1": {
+   "start": 14,
+   "end": 14
+  },
+  "D.2": {
+   "start": 14,
+   "end": 14
+  },
+  "D.3": {
+   "start": 14,
+   "end": 14
+  },
+  "D.4": {
+   "start": 14,
+   "end": 14
+  },
+  "D.5": {
+   "start": 14,
+   "end": 14
+  },
+  "D.6": {
+   "start": 14,
+   "end": 14
+  },
+  "D.7": {
+   "start": 14,
+   "end": 14
+  },
+  "HR/CIR/2025/07": {
+   "start": 15,
+   "end": 15
+  },
+  "HR/CIR/2025/11": {
+   "start": 15,
+   "end": 15
+  },
+  "HR/CIR/2026/02": {
+   "start": 15,
+   "end": 15
+  }
+ }
+}

@@ -13,7 +13,7 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas as rl_canvas
-from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, LongTable, PageBreak,
+from reportlab.platypus import (BaseDocTemplate, Flowable, Frame, KeepTogether, LongTable, PageBreak,
                                 PageTemplate, Paragraph, Spacer, Table, TableStyle, CondPageBreak)
 from reportlab.platypus.tableofcontents import TableOfContents
 
@@ -60,6 +60,16 @@ def heading(text, style, level, toc_text, key):
     p = Paragraph(text, style)
     p.toc_level, p.toc_text, p.toc_key = level, toc_text, key
     return p
+
+
+def keep_heading(h, body):
+    """Bind a heading to its first real flowable (skipping zero-size anchors) so it is never orphaned."""
+    i = 0
+    while i < len(body) and isinstance(body[i], Anchor):
+        i += 1
+    if i < len(body) and not isinstance(body[i], (LongTable, Table)):
+        return [KeepTogether([h, *body[:i + 1]]), *body[i + 1:]]
+    return [h, *body]
 
 
 class NexDoc(BaseDocTemplate):
@@ -257,7 +267,8 @@ class Builder:
         if b.get("term"):
             parts.append(f'<b>"{self.x(b["term"])}"</b>')
         if b.get("title"):
-            parts.append(f"<b>{self.x(b['title'])}.</b>")
+            t = self.x(b["title"])
+            parts.append(f"<b>{t if t[-1] in '.?:' else t + '.'}</b>")
         if b.get("text"):
             parts.append(self.x(b["text"]))
         out = [Paragraph(" ".join(parts), st, bulletText=num)]
@@ -286,7 +297,7 @@ class Builder:
             if s.get("new_page"):
                 out.append(PageBreak())
             h = heading(f"{s['num']}. {self.x(s['title']).upper()}", SEC, 0, f"{s['num']}. {s['title']}", self.key())
-            out += self.anchored(f"Section {s['num']}", [h, *self.blocks(s.get("body", []))])
+            out += self.anchored(f"Section {s['num']}", keep_heading(h, self.blocks(s.get("body", []))))
         return out
 
     def annexures(self):
@@ -295,7 +306,7 @@ class Builder:
             out.append(PageBreak() if (i == 0 or a.get("new_page")) else CondPageBreak(70 * mm))
             h = heading(f"ANNEXURE {a['id']}: {self.x(a['title']).upper()}", ANX, 0,
                         f"Annexure {a['id']}: {a['title']}", self.key())
-            out += self.anchored(f"Annexure {a['id']}", [h, *self.blocks(a.get("body", []))])
+            out += self.anchored(f"Annexure {a['id']}", keep_heading(h, self.blocks(a.get("body", []))))
         return out
 
     def circulars(self):

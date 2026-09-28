@@ -61,4 +61,17 @@ precedence:
 
 # Deliberate cross-document conflicts (trap type 2). Filled in as documents are written; each must
 # name both sides and which one prevails under `precedence`, and each gets a trap in content/traps.yaml.
-planned_conflicts: []
+planned_conflicts:
+  - id: C01
+    subject: Paternity leave duration
+    side_a: "001 Leave Policy, Circular HR/CIR/2025/07: 10 Working Days within six months (from 1 July 2025)"
+    side_b: "002 Employee Handbook (to be written): summary still states 5 Working Days within three months"
+    prevails: "001 (specific policy over the Handbook summary, and circular over body; 001 Clause 1.4)"
+  - id: C02
+    subject: Earned Leave encashment limit on separation
+    side_a: "001 Leave Policy Clause 11.2: encashed up to the Grade accumulation limit in Table 1 (45 or 60 days; 30 for L1)"
+    side_b: "008 Separation and Exit Policy (to be written): full and final settlement text states a limit of 30 days"
+    prevails: "001, by 001 Clause 11.5 and Clause 1.4 (Leave Policy governs leave encashment)"
+
+circulars_used:     # circular numbers already taken, to avoid duplicates across documents
+  "001": [HR/CIR/2025/07, HR/CIR/2025/11, HR/CIR/2026/02]

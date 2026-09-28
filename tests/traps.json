@@ -1,1 +1,193 @@
-[]
+[
+ {
+  "id": "T01",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "How many days of paternity leave do I get for a baby born in August 2025?",
+  "answer": "10 Working Days within six months, in up to two spells (Circular HR/CIR/2025/07, effective 1 July 2025), not the 5 Working Days in Clause 6.4.1.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 7,
+    "clause": "6.4.1",
+    "quote": "entitled to paternity leave of 5 Working Days"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 15,
+    "clause": "HR/CIR/2025/07",
+    "quote": "is increased from 5 Working Days to 10 Working Days"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T02",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "Can I add a casual leave day to my earned leave?",
+  "answer": "Yes from 1 October 2025: Circular HR/CIR/2025/11 allows CL to be prefixed or suffixed to EL if the combined spell is at most 10 Working Days (sandwich rule applies). Clause 5.2 (no combination) is amended. CL still cannot be combined with Sick Leave.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 7,
+    "clause": "5.2",
+    "quote": "CL shall not be prefixed or suffixed to EL or Sick Leave"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 15,
+    "clause": "HR/CIR/2025/11",
+    "quote": "Casual Leave may be prefixed or suffixed to Earned Leave, provided that the combined spell does not exceed 10 Working Days"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T03",
+  "type": 4,
+  "type_name": "definition changes meaning",
+  "question": "My grandmother passed away. Can I take bereavement leave?",
+  "answer": "No. Bereavement leave covers only Immediate Family, defined in Clause 2.8 as spouse, children, parents and legal guardian; grandparents are excluded (confirmed by Circular HR/CIR/2026/02). Use CL or EL.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 5,
+    "clause": "2.8",
+    "quote": "Immediate Family does not include parents-in-law, siblings, grandparents or any other relative"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 15,
+    "clause": "HR/CIR/2026/02",
+    "quote": "continues to be unavailable on the death of a grandparent, sibling or parent-in-law"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T04",
+  "type": 6,
+  "type_name": "statute overrides company rule",
+  "question": "I am still on probation. How much maternity leave can I get?",
+  "answer": "Clause 6.2.3 says 12 weeks for a Probationer, but Clause 1.5 says a more favourable statute prevails; under the Maternity Benefit Act as stated in Clause 6.2.1-6.2.2, a woman who has worked at least 80 days in the preceding 12 months is entitled to 26 weeks (12 weeks if two or more surviving children).",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 7,
+    "clause": "6.2.3",
+    "quote": "A Probationer shall be eligible for maternity leave of 12 weeks only"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 4,
+    "clause": "1.5",
+    "quote": "provides a benefit more favourable to the Employee than this Policy, the statutory benefit shall prevail"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 7,
+    "clause": "6.2.1",
+    "quote": "has actually worked for the Company for not less than eighty days"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T05",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "I am an L2 associate. Can I encash my earned leave this year?",
+  "answer": "No. Encashment during service is only for Grades L3 to L8 (Clause 4.4, Table 1). An L2 can carry EL forward up to 45 days; it is encashed on separation.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 6,
+    "clause": "4.4",
+    "quote": "Employees in Grades L1 and L2 are not eligible for encashment during service"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T06",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "Can an L4 employee take a sabbatical?",
+  "answer": "Ordinarily no (Clause 8.3: Grade L5 and above), but the carve-out in Annexure D, D.6 allows an L4 with 5 years' Continuous Service admitted to a Company-sponsored full-time postgraduate programme to take up to six months with BU Head and CPO approval.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 8,
+    "clause": "8.3",
+    "quote": "An Employee in Grade L5 and above who has completed five years of Continuous Service"
+   },
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 14,
+    "clause": "D.6",
+    "quote": "an Employee in Grade L4 with at least five years of Continuous Service who has been admitted to a full-time postgraduate programme sponsored by the Company"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T07",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "I am an L6 manager and worked last Sunday. Do I get a comp off?",
+  "answer": "No. Compensatory off is only for Grades L1 to L4 (Clause 7.3); Grades L5 to L8 are not eligible.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Leave Policy",
+    "doc_id": "001",
+    "number": "NTL/HR/POL/001",
+    "page": 8,
+    "clause": "7.3",
+    "quote": "Employees in Grades L5 to L8 are not eligible for compensatory off"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T08",
+  "type": 5,
+  "type_name": "not answered in documents",
+  "question": "Can I donate some of my earned leave to a colleague who is ill?",
+  "answer": "Not covered by the documents; the bot must say so and offer an HR ticket (Policy Clarification).",
+  "expected_route": "not_found",
+  "evidence": [],
+  "verified": true
+ }
+]

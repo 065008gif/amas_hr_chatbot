@@ -1,0 +1,533 @@
+doc_id: "001"
+title: Leave Policy
+number: NTL/HR/POL/001
+version: "4.2"
+effective_date: "2025-04-01"
+target_pages: 16
+
+control:
+  owner: Head, HR Operations
+  approver: Chief People Officer
+  approval_date: "2025-03-18"
+  classification: Internal
+  supersedes: Leave Policy version 4.1 dated 1 April 2024
+  review_cycle: Annual, or earlier on a change in applicable law
+  applicable_to: All Employees on the rolls of Nexora Technologies Limited in India, Grades L1 to L8
+  distribution: "This Policy is published on the NPP under Policies > Leave. Printed copies are uncontrolled. Queries may be addressed to the HR Helpdesk at hrhelpdesk@nexora.example or 1800-000-0000 (extension 4), Monday to Friday, 9:00 a.m. to 6:00 p.m. IST."
+
+history:
+  - ["1.0", "2012-04-01", "First issue of the Leave Policy for Bengaluru and Pune.", "HR Operations / Director HR"]
+  - ["2.0", "2016-04-01", "Extended to Hyderabad and Chennai; Casual Leave and Sick Leave separated.", "HR Operations / Director HR"]
+  - ["3.0", "2017-04-01", "Maternity leave increased to 26 weeks; adoption leave introduced.", "HR Operations / CPO"]
+  - ["3.1", "2019-04-01", "Paternity leave introduced; sabbatical introduced for Grades L5 to L8.", "HR Operations / CPO"]
+  - ["4.0", "2023-04-01", "Leave administration moved to the NPP; Noida added; approval matrix revised.", "HR Operations / CPO"]
+  - ["4.1", "2024-04-01", "Earned Leave encashment during service introduced for Grades L3 to L8.", "HR Operations / CPO"]
+  - ["4.2", "2025-04-01", "Accumulation limits revised; sandwich rule clarified; escalation matrix added.", "HR Operations / CPO"]
+
+sections:
+  - num: 1
+    title: Purpose, Scope and Applicability
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Policy sets out the types of leave available to Employees of the Company, the entitlement to each type of leave, the manner of accrual, carry-forward and encashment, and the procedure for applying for and sanctioning leave. It is intended to allow Employees adequate rest and time for personal and family needs while ensuring continuity of service to the Company's clients."
+      - clause: "1.2"
+        title: Scope
+        text: "This Policy applies to every Employee in Grades L1 to L8 working at the Company's offices in Bengaluru, Pune, Hyderabad, Chennai and Noida, and to Employees working from home or at a client location in India. It does not apply to:"
+        items:
+          - "consultants, retainers and persons engaged through a manpower agency, whose leave is governed by their contract;"
+          - "interns and apprentices, whose leave is governed by their letter of engagement; and"
+          - "Employees on an international assignment, whose leave is governed by the assignment letter and the law of the host country, save that Earned Leave continues to accrue under this Policy."
+      - clause: "1.3"
+        title: Effective date and supersession
+        text: "This Policy is effective from 1 April 2025 and supersedes version 4.1. Leave balances standing to the credit of an Employee on 31 March 2025 are carried forward subject to the accumulation limits in {ref:#Table 1}."
+      - clause: "1.4"
+        title: Relationship with other policies
+        text: "The {doc:002} contains a summary of this Policy for convenience. In the event of any inconsistency between this Policy and the Employee Handbook or any other policy of the Company on a matter relating to leave, including leave encashment, this Policy shall prevail. Attendance regularisation is governed by the {doc:006}, and notice periods by the {doc:008}."
+      - clause: "1.5"
+        title: Applicable law
+        text: "This Policy is subject to applicable law. Notwithstanding anything contained in this Policy, where any statute, including the Maternity Benefit Act, 1961, the Shops and Establishments legislation of the State in which the Employee is based, or the national and festival holidays legislation of that State, provides a benefit more favourable to the Employee than this Policy, the statutory benefit shall prevail to the extent of the inconsistency."
+      - clause: "1.6"
+        title: Amendment circulars
+        text: "The Company may amend this Policy by issuing an amendment circular in the series HR/CIR, approved by the Chief People Officer. A circular prevails over the clause it amends from the effective date stated in the circular. Circulars are reproduced at the end of this Policy and form part of it; the body of the Policy is not re-issued until the next version."
+      - clause: "1.7"
+        title: Interpretation
+        text: "Headings are for convenience only. Where a question of interpretation arises, the decision of the Head, HR Operations, in consultation with the Legal department where required, shall be final, subject to applicable law."
+
+  - num: 2
+    title: Definitions
+    body:
+      - para: "In this Policy, unless the context otherwise requires, the following terms have the meanings given below. Words in the singular include the plural and vice versa."
+      - clause: "2.1"
+        term: Basic Salary
+        text: "means the monthly basic pay of an Employee as stated in the Employee's current compensation letter, excluding all allowances, variable pay, reimbursements and perquisites."
+      - clause: "2.2"
+        term: Calendar Day
+        text: "means any day of the year, including weekly offs and holidays."
+      - clause: "2.3"
+        term: Company
+        text: "means Nexora Technologies Limited and includes its offices and delivery centres in India."
+      - clause: "2.4"
+        term: Confirmed Employee
+        text: "means an Employee whose probation has been completed and who has received a written confirmation of service through the NPP."
+      - clause: "2.5"
+        term: Continuous Service
+        text: "means uninterrupted service with the Company, including periods of paid leave, maternity leave and authorised absence, but excluding any period of Leave Without Pay exceeding 30 Calendar Days in aggregate in a Leave Year and any period of unauthorised absence."
+      - clause: "2.6"
+        term: Employee
+        text: "means a person on the permanent or fixed-term rolls of the Company in Grades L1 to L8, and includes a Probationer."
+      - clause: "2.7"
+        term: HR Business Partner
+        text: "means the member of the HR function assigned to the business unit to which the Employee belongs, as shown on the Employee's NPP profile."
+      - clause: "2.8"
+        term: Immediate Family
+        text: "means the Employee's spouse, children (including adopted children and stepchildren), parents and legal guardian. For the purposes of this Policy, Immediate Family does not include parents-in-law, siblings, grandparents or any other relative, unless a clause of this Policy expressly provides otherwise."
+      - clause: "2.9"
+        term: Leave Without Pay
+        text: "(LWP) means absence from duty sanctioned by the Company without salary or allowances for the period of absence."
+      - clause: "2.10"
+        term: Leave Year
+        text: "means the period from 1 April of a year to 31 March of the following year."
+      - clause: "2.11"
+        term: NPP
+        text: "means the Nexora People Portal, the Company's human resources information system, through which leave is applied for, approved and recorded."
+      - clause: "2.12"
+        term: Probationer
+        text: "means an Employee serving the period of probation stated in the offer letter, which is ordinarily six months for Grades L1 to L3 and three months for Grades L4 to L8."
+      - clause: "2.13"
+        term: Reporting Manager
+        text: "means the person to whom the Employee reports administratively, as recorded on the NPP."
+      - clause: "2.14"
+        term: Working Day
+        text: "means a day from Monday to Friday that is not a declared holiday for the Employee's base location. A Saturday or Sunday is not a Working Day even where the Employee's project team or client works on that day under a roster."
+
+  - num: 3
+    title: General Principles
+    body:
+      - clause: "3.1"
+        title: Leave is not a matter of right
+        text: "Leave cannot be claimed as a matter of right. Sanction of leave is subject to the exigencies of work, and the Reporting Manager may refuse, defer or curtail leave, recording the reason on the NPP. Leave shall not ordinarily be refused where the Employee would otherwise lose a balance that lapses at the end of the Leave Year."
+      - clause: "3.2"
+        title: Credit of leave
+        text: "Casual Leave and Sick Leave are credited in full on 1 April of each Leave Year. Earned Leave is credited monthly, in advance, on the first day of each month at one-twelfth of the annual entitlement in {ref:#Table 1}."
+      - clause: "3.3"
+        title: Proration for joiners
+        text: "An Employee who joins on or before the 15th day of a month receives the Earned Leave credit for that month; an Employee who joins after the 15th day receives credit from the following month. Casual Leave and Sick Leave for the joining year are prorated for the number of months remaining in the Leave Year, including the month of joining, and rounded to the nearest half day."
+      - clause: "3.4"
+        title: Sandwich rule
+        text: "Where a single spell of Earned Leave covers five or more Working Days, weekly offs and holidays falling within that spell are counted as Earned Leave. Where the spell covers fewer than five Working Days, intervening weekly offs and holidays are not counted. The sandwich rule does not apply to Casual Leave, Sick Leave or any leave under {ref:#Section 6}."
+      - clause: "3.5"
+        title: Combination of leave
+        text: "Earned Leave may be combined with Sick Leave and with any leave under {ref:#Section 6}. Casual Leave shall not be combined with Earned Leave or Sick Leave, whether by prefixing or suffixing, as provided in {ref:#5.2}."
+      - clause: "3.6"
+        title: Minimum unit of leave
+        text: "Casual Leave and Sick Leave may be taken in units of half a day. Earned Leave shall be taken in units of not less than one full day."
+      - clause: "3.7"
+        title: Leave during probation
+        text: "A Probationer accrues Earned Leave from the date of joining but may avail it only after completing three months of service, save with the approval of the HR Business Partner in an emergency. Casual Leave and Sick Leave are available to a Probationer as credited under {ref:#3.3}."
+
+  - num: 4
+    title: Earned Leave
+    body:
+      - clause: "4.1"
+        title: Entitlement
+        text: "Earned Leave (EL) is intended for planned rest and recreation. The annual entitlement of EL, and of Casual Leave and Sick Leave, together with the accumulation limit and encashment eligibility for each Grade, is set out in {ref:#Table 1}."
+      - table:
+          id: Table 1
+          title: Annual leave entitlement by Grade (days per Leave Year)
+          grade_table: true
+          header: ["Grade", "Earned Leave", "Casual Leave", "Sick Leave", "EL accumulation limit", "EL encashment during service"]
+          widths: [1.6, 1.2, 1.2, 1.1, 1.5, 2.2]
+          rows:
+            - ["L1 Trainee", "12", "6", "8", "30", "Not eligible"]
+            - ["L2 Associate", "18", "7", "8", "45", "Not eligible"]
+            - ["L3 Software Engineer", "18", "7", "8", "45", "Up to 5 days a year"]
+            - ["L4 Senior Software Engineer", "18", "7", "8", "45", "Up to 5 days a year"]
+            - ["L5 Technical Lead", "21", "7", "8", "45", "Up to 7 days a year"]
+            - ["L6 Manager", "21", "7", "8", "45", "Up to 7 days a year"]
+            - ["L7 Senior Manager", "24", "7", "8", "60", "Up to 10 days a year"]
+            - ["L8 Director and above", "24", "7", "8", "60", "Up to 10 days a year"]
+          note: "Sick Leave may be accumulated up to 24 days in all Grades. Casual Leave lapses on 31 March and is not carried forward. An Employee promoted during a Leave Year receives the EL entitlement of the new Grade from the month following the effective date of promotion."
+      - clause: "4.2"
+        title: Advance application
+        text: "EL of up to three Working Days shall be applied for on the NPP at least three Working Days in advance. EL of more than three Working Days shall be applied for at least 14 Calendar Days in advance, so that project staffing can be adjusted. EL taken without advance application, other than in an emergency accepted by the Reporting Manager, may be treated as Leave Without Pay."
+      - clause: "4.3"
+        title: Accumulation and carry-forward
+        text: "Unused EL is carried forward to the next Leave Year up to the accumulation limit for the Employee's Grade in {ref:#Table 1}."
+        body:
+          - clause: "4.3.1"
+            text: "EL in excess of the accumulation limit on 31 March lapses automatically and is neither carried forward nor encashed."
+          - clause: "4.3.2"
+            text: "The NPP notifies each Employee in February of any balance projected to lapse, so that the Employee may plan leave before 31 March."
+          - clause: "4.3.3"
+            text: "An Employee in Grades L6 to L8 who holds a role designated as sensitive by the Finance or Internal Audit function shall take at least five consecutive Working Days of EL in each Leave Year."
+      - clause: "4.4"
+        title: Encashment during service
+        text: "Encashment of EL during service is available only to Employees in Grades L3 to L8, up to the number of days stated for the Grade in {ref:#Table 1}. Employees in Grades L1 and L2 are not eligible for encashment during service. Encashment is subject to the following conditions:"
+        items:
+          - "the Employee is a Confirmed Employee on the date of application;"
+          - "the EL balance remaining after encashment is not less than 15 days;"
+          - "the application is made on the NPP between 1 April and 30 April, and payment is made with the salary for May; and"
+          - "encashment is calculated at Basic Salary divided by 26 for each day encashed, and is taxable as salary."
+      - clause: "4.5"
+        title: Advance Earned Leave
+        text: "A Confirmed Employee who has exhausted EL may, with the approval of the HR Business Partner, be granted up to five days of EL in advance of accrual. Any advance not recovered by subsequent accrual is recovered in the full and final settlement under {ref:#11.3}."
+
+  - num: 5
+    title: Casual Leave and Sick Leave
+    body:
+      - clause: "5.1"
+        title: Casual Leave
+        text: "Casual Leave (CL) is intended for unforeseen personal needs. Not more than three days of CL may be taken at a time. CL is not encashed and lapses on 31 March."
+      - clause: "5.2"
+        title: No combination with Earned Leave
+        text: "CL shall not be prefixed or suffixed to EL or Sick Leave. Where an Employee applies for CL immediately before or after EL, the entire spell shall be treated as EL and debited accordingly."
+      - clause: "5.3"
+        title: Sick Leave
+        text: "Sick Leave (SL) is available for the Employee's own illness or injury. Unused SL is carried forward up to a maximum of 24 days and is not encashed at any time."
+      - clause: "5.4"
+        title: Medical certificate
+        text: "SL of more than two consecutive Working Days shall be supported by a certificate from a registered medical practitioner, uploaded on the NPP within three Working Days of resuming duty. SL of more than seven consecutive Calendar Days shall additionally be supported by a certificate of fitness to resume duty."
+      - clause: "5.5"
+        title: Exhaustion of Sick Leave
+        text: "Where SL is exhausted, the absence is debited to EL and thereafter treated as Leave Without Pay. CL shall not be used to cover sickness beyond three days."
+      - clause: "5.6"
+        title: Special sick leave for hospitalisation
+        text: "A Confirmed Employee who is hospitalised for more than seven consecutive Calendar Days and has exhausted SL may be granted special sick leave on full pay of up to 30 Calendar Days, once during service, on the recommendation of the HR Business Partner and the approval of the Head, HR Operations. Hospital discharge papers shall be submitted."
+
+  - num: 6
+    title: Maternity, Adoption and Paternity Leave
+    body:
+      - clause: "6.1"
+        title: General
+        text: "Leave under this Section is in addition to the leave in {ref:#Table 1}, is not debited from any leave balance and is not subject to the sandwich rule. Maternity leave is paid at full salary, comprising Basic Salary and all fixed allowances; an Employee covered by the Employees' State Insurance scheme receives the maternity benefit from the ESI Corporation, and the Company pays only the difference, if any."
+      - clause: "6.2"
+        title: Maternity leave
+        body:
+          - clause: "6.2.1"
+            text: "A woman Employee who has actually worked for the Company for not less than {stat:MB_80_DAYS|eighty days} in the twelve months immediately preceding her expected date of delivery is entitled to maternity leave."
+          - clause: "6.2.2"
+            text: "Maternity leave is {stat:MB_MATERNITY_WEEKS|26 weeks}, of which not more than {stat:MB_PRENATAL_WEEKS|eight weeks} may precede the expected date of delivery. For a woman Employee who has two or more surviving children, maternity leave is {stat:MB_THIRD_CHILD|12 weeks}, of which not more than six weeks may precede the expected date of delivery."
+          - clause: "6.2.3"
+            text: "A Probationer shall be eligible for maternity leave of 12 weeks only, and any further absence may be granted as Leave Without Pay at the discretion of the HR Business Partner."
+          - clause: "6.2.4"
+            text: "In the case of miscarriage or medical termination of pregnancy, the Employee is entitled to leave of {stat:MB_MISCARRIAGE|six weeks} immediately following the day of the miscarriage or termination, on production of a medical certificate."
+          - clause: "6.2.5"
+            text: "After maternity leave, the Employee may, by mutual agreement with the Reporting Manager, work from home where the nature of work permits, in accordance with the {doc:006}. Creche facilities are described in the {doc:002}."
+      - clause: "6.3"
+        title: Adoption leave
+        text: "A woman Employee who legally adopts a child below the age of three months, or who is a commissioning mother, is entitled to {stat:MB_ADOPTION|12 weeks} of leave from the date the child is handed over to her. The adoption order or the relevant medical documents shall be submitted on the NPP."
+      - clause: "6.4"
+        title: Paternity leave
+        body:
+          - clause: "6.4.1"
+            text: "A male Employee is entitled to paternity leave of 5 Working Days on the birth of his child or on legally adopting a child below one year of age, to be availed within three months of the date of birth or adoption. Paternity leave is available for up to two children during service."
+          - clause: "6.4.2"
+            text: "Paternity leave shall be taken in a single spell and may be combined with EL."
+          - clause: "6.4.3"
+            text: "The birth certificate, hospital discharge summary or adoption order shall be uploaded on the NPP within 30 Calendar Days of the birth or adoption."
+      - clause: "6.5"
+        title: Protection on return
+        text: "An Employee returning from leave under this Section shall be restored to the same or an equivalent role and Grade. The period of leave shall not be counted against the Employee in the performance review, and the rating shall be based on the period actually worked."
+
+  - num: 7
+    title: Special Leave
+    body:
+      - clause: "7.1"
+        title: Bereavement leave
+        text: "On the death of a member of the Employee's Immediate Family, the Employee is entitled to bereavement leave of 3 Working Days, to be availed within seven Calendar Days of the death. For the death of any other relative, the Employee may apply for CL or EL."
+      - clause: "7.2"
+        title: Marriage leave
+        text: "A Confirmed Employee is entitled to marriage leave of 3 Working Days once during service, on the occasion of the Employee's own marriage, to be availed within one month of the date of marriage and ordinarily combined with EL."
+      - clause: "7.3"
+        title: Compensatory off
+        text: "An Employee in Grades L1 to L4 who is required by the Reporting Manager, with prior approval recorded on the NPP, to work for a full day on a weekly off or declared holiday is entitled to one day of compensatory off. Compensatory off shall be availed within 60 Calendar Days, failing which it lapses, and it is not encashed. Employees in Grades L5 to L8 are not eligible for compensatory off. Overtime payments, where applicable, are governed by the {doc:006}."
+      - clause: "7.4"
+        title: Voting
+        text: "Every Employee who is entitled to vote in an election to the Lok Sabha or a State Legislative Assembly is granted {stat:RP_POLLING_HOLIDAY|a paid holiday on the day of poll} in the constituency where the Employee is registered as a voter. Where the Employee's base location is outside that constituency, the Employee may apply for up to one additional day of CL or EL for travel."
+      - clause: "7.5"
+        title: Examination leave
+        text: "An Employee in Grades L1 to L5 enrolled in a Company-sponsored certification or degree programme may be granted examination leave of up to 5 Working Days in a Leave Year, on submission of the examination schedule."
+      - clause: "7.6"
+        title: Leave in a natural calamity
+        text: "Where the Company declares a natural calamity or civil emergency affecting a location, Employees at that location who are unable to work from home may be granted special leave of up to 5 Working Days, as notified by the Head, HR Operations."
+      - clause: "7.7"
+        title: Court attendance
+        text: "Attendance at a court or tribunal as a witness on behalf of the Company is treated as duty. Attendance in a personal matter shall be covered by CL or EL."
+
+  - num: 8
+    title: Leave Without Pay and Sabbatical
+    body:
+      - clause: "8.1"
+        title: Leave Without Pay
+        text: "Leave Without Pay may be sanctioned only where the Employee has no balance of the relevant leave. LWP of up to 30 Calendar Days in a Leave Year may be approved by the Reporting Manager and the HR Business Partner; LWP beyond 30 Calendar Days requires the approval of the Chief People Officer."
+        body:
+          - clause: "8.1.1"
+            text: "No EL accrues for any month in which the Employee is on LWP for more than ten Calendar Days."
+          - clause: "8.1.2"
+            text: "LWP exceeding 30 Calendar Days in aggregate in a Leave Year does not count as Continuous Service."
+      - clause: "8.2"
+        title: Unauthorised absence
+        text: "Absence without sanctioned leave is treated as LWP and may lead to disciplinary action under the {doc:004}. Absence without intimation for eight or more consecutive Working Days is dealt with under the absconding procedure in the {doc:008}."
+      - clause: "8.3"
+        title: Sabbatical
+        text: "An Employee in Grade L5 and above who has completed five years of Continuous Service may apply for an unpaid sabbatical of three to six months for higher education, research, care of a family member or a personal pursuit of a similar nature."
+        body:
+          - clause: "8.3.1"
+            text: "A sabbatical may be availed once in every five years of Continuous Service, and requires the approval of the Reporting Manager, the Business Unit Head and the Chief People Officer."
+          - clause: "8.3.2"
+            text: "During the sabbatical the Employee retains a lien on employment. Group health insurance continues for the Employee only, with the premium borne by the Company; no leave accrues and no salary is paid."
+          - clause: "8.3.3"
+            text: "An Employee who does not resume duty on the date of expiry of the sabbatical shall be deemed to have resigned, and the provisions of the {doc:008} shall apply."
+
+  - num: 9
+    title: Holidays
+    body:
+      - clause: "9.1"
+        title: Declared and restricted holidays
+        text: "Each location observes ten declared holidays in a calendar year, as listed in {ref:#Annexure B}. In addition, each Employee may choose two restricted holidays from the list in {ref:#Annexure B}, applied for on the NPP at least seven Calendar Days in advance."
+      - clause: "9.2"
+        title: Holiday calendar
+        text: "The holiday calendar follows the calendar year from January to December and is published on the NPP by 15 December of the preceding year, with the dates of festivals notified for each location. The holiday calendar therefore does not coincide with the Leave Year."
+      - clause: "9.3"
+        title: Base location
+        text: "Holidays follow the Employee's base location recorded on the NPP and not the location of a client. An Employee deputed to a client site in another city for more than 30 Calendar Days may, with the approval of the HR Business Partner, follow the holiday calendar of the client location instead."
+      - clause: "9.4"
+        title: Work on a holiday
+        text: "Work on a declared holiday requires prior approval of the Reporting Manager and is compensated under {ref:#7.3}."
+      - clause: "9.5"
+        title: State legislation
+        text: "The minimum number of national and festival holidays, and certain leave conditions, are prescribed by the law of each State. The legislation applicable to each location is listed in {ref:#Table 2}. Where the State law prescribes a higher benefit than this Policy, {ref:#1.5} applies."
+      - table:
+          id: Table 2
+          title: Location-wise legislation governing leave and holidays
+          header: ["Location", "State", "Shops and Establishments legislation", "Company practice"]
+          widths: [1.1, 1.2, 3.6, 3.1]
+          rows:
+            - ["Bengaluru", "Karnataka", "{stat:KA_SE_ACT|Karnataka Shops and Commercial Establishments Act, 1961}", "Ten declared holidays including Kannada Rajyotsava on 1 November."]
+            - ["Pune", "Maharashtra", "{stat:MH_SE_ACT|Maharashtra Shops and Establishments (Regulation of Employment and Conditions of Service) Act, 2017}", "Ten declared holidays including Maharashtra Day on 1 May."]
+            - ["Hyderabad", "Telangana", "{stat:TG_SE_ACT|Telangana Shops and Establishments Act, 1988}", "Ten declared holidays including Telangana Formation Day on 2 June."]
+            - ["Chennai", "Tamil Nadu", "{stat:TN_SE_ACT|Tamil Nadu Shops and Establishments Act, 1947}", "Ten declared holidays including Tamil New Year and Pongal."]
+            - ["Noida", "Uttar Pradesh", "{stat:UP_SE_ACT|Uttar Pradesh Dookan Aur Vanijya Adhishthan Adhiniyam, 1962}", "Ten declared holidays including Holi and Govardhan Puja."]
+
+  - num: 10
+    title: Application, Approval and Records
+    body:
+      - clause: "10.1"
+        title: Application through the NPP
+        text: "All leave shall be applied for, approved and cancelled on the NPP. The manual form in {ref:#Annexure A} may be used only where the NPP is unavailable for more than one Working Day or the Employee has no system access, and shall be regularised on the NPP within five Working Days of the NPP becoming available."
+      - clause: "10.2"
+        title: Approval matrix
+        text: "Leave is approved by the authorities, and within the turnaround times, set out in {ref:#Table 3}."
+      - table:
+          id: Table 3
+          title: Leave approval matrix
+          header: ["Type of leave", "First approver", "Second approver", "Turnaround time"]
+          widths: [3, 2, 2.6, 1.8]
+          rows:
+            - ["CL, SL, compensatory off", "Reporting Manager", "None", "2 Working Days"]
+            - ["EL up to 10 Working Days", "Reporting Manager", "None", "3 Working Days"]
+            - ["EL of more than 10 Working Days", "Reporting Manager", "Skip-level manager", "5 Working Days"]
+            - ["Maternity, adoption, paternity leave", "Reporting Manager", "HR Business Partner", "3 Working Days"]
+            - ["Bereavement, marriage, examination leave", "Reporting Manager", "HR Business Partner", "2 Working Days"]
+            - ["LWP up to 30 Calendar Days", "Reporting Manager", "HR Business Partner", "5 Working Days"]
+            - ["LWP beyond 30 Calendar Days; sabbatical", "Reporting Manager", "Business Unit Head, then Chief People Officer", "10 Working Days"]
+      - clause: "10.3"
+        title: No deemed approval
+        text: "An application not acted upon within the turnaround time is escalated automatically by the NPP to the next approver in {ref:#Table 3}. Leave is never deemed to be approved by lapse of time, and an Employee shall not proceed on leave without an approval recorded on the NPP, except in an emergency."
+      - clause: "10.4"
+        title: Recall from leave
+        text: "In an exigency, the Company may recall an Employee from sanctioned EL. The unavailed portion of the leave is re-credited, and the cost of return travel and any non-refundable booking is reimbursed under the {doc:007}."
+      - clause: "10.5"
+        title: Leave records
+        text: "Leave balances are visible to each Employee on the NPP. An Employee who believes a balance is incorrect shall raise a ticket in the Leave category through the HR Helpdesk within 30 Calendar Days of the credit or debit concerned. Unresolved concerns are escalated as set out in {ref:#Annexure C}."
+
+  - num: 11
+    title: Leave during Notice Period and on Separation
+    body:
+      - clause: "11.1"
+        title: Leave during the notice period
+        text: "An Employee serving notice may not avail EL except with the approval of the Reporting Manager and the HR Business Partner. SL supported by a medical certificate may be availed. Any leave other than such SL that is availed during the notice period extends the last day of service by the number of days of leave, unless the Reporting Manager waives the extension in writing."
+      - clause: "11.2"
+        title: Encashment on separation
+        text: "On separation for any reason other than death, the EL balance on the last day of service is encashed up to the accumulation limit for the Employee's Grade in {ref:#Table 1}, at Basic Salary divided by 26 for each day. CL and SL are not encashed. The encashment is paid with the full and final settlement."
+      - clause: "11.3"
+        title: Recovery of negative balance
+        text: "Any EL availed in advance and not earned by the last day of service is recovered from the full and final settlement at the same rate."
+      - clause: "11.4"
+        title: Death in service
+        text: "On the death of an Employee in service, the entire EL balance is encashed without applying the accumulation limit and paid to the nominee recorded on the NPP, or to the legal heirs where there is no nominee."
+      - clause: "11.5"
+        title: Precedence on encashment
+        text: "Encashment of leave on separation is governed by this Policy. The full and final settlement process, including timelines, is governed by the {doc:008}, but where that policy states a different limit on leave encashment, {ref:#11.2} prevails by virtue of {ref:#1.4}."
+
+  - num: 12
+    title: Administration and Review
+    body:
+      - clause: "12.1"
+        title: Responsibility
+        text: "HR Operations administers this Policy and maintains leave records. Reporting Managers are responsible for timely decisions on applications and for planning team leave so that no Employee is prevented from availing leave that would otherwise lapse."
+      - clause: "12.2"
+        title: Misuse
+        text: "Submission of a false medical certificate or document, or misrepresentation of the purpose of leave, is misconduct and shall be dealt with under the {doc:004}."
+      - clause: "12.3"
+        title: Review
+        text: "This Policy is reviewed annually by HR Operations and on any change in applicable law. Suggestions may be sent to the HR Helpdesk."
+      - clause: "12.4"
+        title: Confidentiality of medical and personal documents
+        text: "Medical certificates, discharge summaries, pregnancy certificates and adoption orders submitted under this Policy are personal data. They are stored in a restricted section of the NPP that is accessible only to HR Operations and the HR Business Partner, are not visible to the Reporting Manager, and are retained and deleted in accordance with the {doc:009}. The Reporting Manager sees only the type and dates of leave."
+      - clause: "12.5"
+        title: No adverse treatment
+        text: "No Employee shall be subjected to adverse treatment in assignment, appraisal, promotion or continuation of employment for availing leave to which the Employee is entitled under this Policy or under law. A Reporting Manager who discourages an Employee from availing maternity, adoption or paternity leave, or who takes such leave into account in a performance rating contrary to {ref:#6.5}, is liable to action under the {doc:004}."
+      - clause: "12.6"
+        title: Queries
+        text: "Queries on the application of this Policy to an individual case are raised as a ticket in the Leave or Policy Clarification category through the HR Helpdesk, which responds within three Working Days. Guidance given by the HR Helpdesk is subject to this Policy and the circulars issued under it."
+
+annexures:
+  - id: A
+    title: Manual Leave Application Form
+    body:
+      - para: "To be used only in the circumstances described in {ref:#10.1}. The completed form is scanned and e-mailed to the HR Helpdesk, and the leave is regularised on the NPP within five Working Days of the NPP becoming available."
+      - table:
+          title: "Form HR-L-01: Application for Leave (manual)"
+          form: true
+          widths: [1.3, 2.7]
+          rows:
+            - ["Employee ID and name", ""]
+            - ["Grade and base location", ""]
+            - ["Type of leave (EL / CL / SL / other: specify)", ""]
+            - ["From date and to date; number of Working Days", ""]
+            - ["Reason (optional for EL and CL)", ""]
+            - ["Contact number while on leave", ""]
+            - ["Supporting document attached (Yes / No / Not applicable)", ""]
+            - ["Employee signature and date", ""]
+            - ["Reporting Manager: approved / not approved; signature and date", ""]
+            - ["HR Business Partner (where required by the approval matrix)", ""]
+      - table:
+          title: "Checklist of supporting documents"
+          header: ["Leave", "Document required", "When to upload"]
+          widths: [1.6, 3.4, 2.2]
+          rows:
+            - ["SL beyond two Working Days", "Certificate from a registered medical practitioner", "Within three Working Days of resuming"]
+            - ["SL beyond seven Calendar Days", "Fitness certificate in addition", "On the day of resuming"]
+            - ["Maternity leave", "Certificate of pregnancy stating the expected date of delivery", "Before the leave begins"]
+            - ["Adoption leave", "Adoption order, or medical documents for a commissioning mother", "Within 30 Calendar Days of hand-over"]
+            - ["Paternity leave", "Birth certificate, discharge summary or adoption order", "Within 30 Calendar Days of the event"]
+            - ["Special sick leave", "Hospital discharge papers", "Within 7 Calendar Days of discharge"]
+
+  - id: B
+    title: Holiday List and Restricted Holidays
+    body:
+      - para: "Declared holidays for the calendar year 2026 are shown below for each location (Y = declared holiday). The dates of festivals are notified on the NPP under {ref:#9.2}; where the date notified by the State Government differs, the State notification prevails."
+      - table:
+          id: Table 4
+          title: Declared holidays by location, calendar year 2026
+          header: ["Holiday", "Bengaluru", "Pune", "Hyderabad", "Chennai", "Noida"]
+          widths: [3.2, 1.1, 1, 1.1, 1, 1]
+          rows:
+            - ["Republic Day (26 January)", "Y", "Y", "Y", "Y", "Y"]
+            - ["Makar Sankranti / Pongal", "-", "-", "Y", "Y", "-"]
+            - ["Holi", "-", "Y", "-", "-", "Y"]
+            - ["Ugadi", "Y", "-", "Y", "-", "-"]
+            - ["Gudi Padwa", "-", "Y", "-", "-", "-"]
+            - ["Id-ul-Fitr", "-", "-", "-", "-", "Y"]
+            - ["Tamil New Year (14 April)", "-", "-", "-", "Y", "-"]
+            - ["May Day / Maharashtra Day (1 May)", "Y", "Y", "-", "Y", "-"]
+            - ["Telangana Formation Day (2 June)", "-", "-", "Y", "-", "-"]
+            - ["Independence Day (15 August)", "Y", "Y", "Y", "Y", "Y"]
+            - ["Ganesh Chaturthi / Vinayaka Chaturthi", "Y", "Y", "Y", "Y", "-"]
+            - ["Gandhi Jayanti (2 October)", "Y", "Y", "Y", "Y", "Y"]
+            - ["Dussehra / Vijayadashami", "Y", "Y", "Y", "Y", "Y"]
+            - ["Deepavali / Diwali", "Y", "Y", "Y", "Y", "Y"]
+            - ["Govardhan Puja", "-", "-", "-", "-", "Y"]
+            - ["Kannada Rajyotsava (1 November)", "Y", "-", "-", "-", "-"]
+            - ["Guru Nanak Jayanti", "-", "-", "-", "-", "Y"]
+            - ["Christmas (25 December)", "Y", "Y", "Y", "Y", "Y"]
+            - ["Total declared holidays", "10", "10", "10", "10", "10"]
+      - clause: "B.1"
+        title: Restricted holidays
+        text: "Each Employee may choose any two of the following restricted holidays in a calendar year, irrespective of base location:"
+        items:
+          - "Good Friday; Mahavir Jayanti; Buddha Purnima; Id-ul-Zuha (Bakrid); Muharram;"
+          - "Raksha Bandhan; Janmashtami; Onam; Bhai Dooj; Chhath Puja; Christmas Eve."
+      - clause: "B.2"
+        title: Unused restricted holidays
+        text: "Restricted holidays not taken by 31 December lapse. They are not carried forward, encashed or converted into EL."
+
+  - id: C
+    title: Escalation Matrix for Leave Concerns
+    body:
+      - para: "An Employee who is dissatisfied with a decision on leave, or with the correction of a leave balance, may escalate the matter in the following order. Each level shall respond within the stated time; if it does not, the Employee may proceed to the next level."
+      - table:
+          id: Table 5
+          title: Escalation levels for leave concerns
+          header: ["Level", "Escalate to", "How", "Response time"]
+          widths: [0.8, 2.4, 3.2, 1.6]
+          rows:
+            - ["1", "HR Helpdesk", "Ticket in the Leave category on the NPP, or hrhelpdesk@nexora.example", "3 Working Days"]
+            - ["2", "HR Business Partner", "Reply to the ticket requesting escalation", "3 Working Days"]
+            - ["3", "Head, HR Operations", "E-mail with the ticket number", "5 Working Days"]
+            - ["4", "Chief People Officer", "E-mail with the ticket number and previous responses", "10 Working Days"]
+      - note: "Concerns involving harassment, discrimination or retaliation connected with leave, for example refusal of leave linked to pregnancy, shall not follow this matrix. They are raised under the {doc:003} or the whistleblower mechanism in the {doc:004}."
+
+  - id: D
+    title: Frequently Asked Questions and Illustrations
+    body:
+      - para: "The answers below illustrate the application of this Policy. Where an answer and a clause of the Policy appear to differ, the clause prevails, save that the carve-out in {ref:#D.6} forms part of this Policy."
+      - clause: "D.1"
+        title: How is the sandwich rule applied?
+        text: "An Employee takes EL from Thursday to the following Tuesday. The spell covers four Working Days (Thursday, Friday, Monday and Tuesday), which is fewer than five, so the intervening Saturday and Sunday are not counted and four days of EL are debited. If the same Employee takes EL from Thursday to the following Wednesday, the spell covers five Working Days, so the Saturday and Sunday are counted and seven days of EL are debited under {ref:#3.4}."
+      - clause: "D.2"
+        title: How is leave prorated for a new joiner?
+        text: "An Employee in Grade L3 joins on 10 August. Having joined on or before the 15th, the Employee receives EL credit from August: eight months at 1.5 days a month, or 12 days by 31 March. CL is prorated as 7 multiplied by 8/12, or 4.67 days, rounded to 4.5 days; SL is prorated as 8 multiplied by 8/12, or 5.33 days, rounded to 5.5 days."
+      - clause: "D.3"
+        title: How is EL encashed on separation?
+        text: "An Employee in Grade L5 with a Basic Salary of Rs. 60,000 a month resigns with an EL balance of 52 days. The accumulation limit for L5 is 45 days, so 45 days are encashed: Rs. 60,000 divided by 26, multiplied by 45, which is Rs. 1,03,846. The remaining seven days lapse."
+      - clause: "D.4"
+        title: Can I take bereavement leave on the death of a grandparent or parent-in-law?
+        text: "No. Bereavement leave under {ref:#7.1} applies only to the Immediate Family as defined in {ref:#2.8}, which does not include grandparents or parents-in-law. CL or EL may be used instead, and the Reporting Manager is expected to approve it at short notice."
+      - clause: "D.5"
+        title: My team works on Saturdays for a client. Do Saturdays count as Working Days for my leave?
+        text: "No. Under {ref:#2.14}, Saturdays and Sundays are never Working Days for the purposes of this Policy, even under a client roster. Work on a Saturday may qualify for compensatory off under {ref:#7.3} if the Employee is in Grades L1 to L4."
+      - clause: "D.6"
+        title: Can an Employee in Grade L4 take a sabbatical?
+        text: "Ordinarily no, because {ref:#8.3} limits sabbatical to Grade L5 and above. However, an Employee in Grade L4 with at least five years of Continuous Service who has been admitted to a full-time postgraduate programme sponsored by the Company may be granted a sabbatical of up to six months with the approval of the Business Unit Head and the Chief People Officer. This carve-out does not extend to Grades L1 to L3."
+      - clause: "D.7"
+        title: Can I encash EL during service if I am in Grade L2?
+        text: "No. Encashment during service is available only in Grades L3 to L8 under {ref:#4.4}. An Employee in Grade L2 may carry forward EL up to 45 days, and the balance within that limit is encashed on separation under {ref:#11.2}."
+
+circulars_intro: "The circulars below are issued under {ref:#1.6}. Each circular prevails over the clause it amends from its effective date. The body of the Policy above is reproduced unedited and must be read with these circulars."
+
+circulars:
+  - number: HR/CIR/2025/07
+    date: "2025-06-20"
+    effective_from: "2025-07-01"
+    subject: Enhancement of paternity leave
+    amends: ["6.4.1", "6.4.2"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 1 July 2025, paternity leave under {ref:#6.4.1} is increased from 5 Working Days to 10 Working Days, to be availed within six months of the date of birth or adoption. The limit of two children during service continues to apply."
+      - para: "Notwithstanding {ref:#6.4.2}, paternity leave may be taken in up to two spells within the six-month period."
+      - items:
+          - "This Circular applies where the date of birth or adoption is on or after 1 July 2025. Where the date of birth or adoption is before 1 July 2025, the entitlement remains 5 Working Days within three months."
+          - "All other provisions of the Policy remain unchanged. This Circular prevails over the body of the Policy to the extent of any inconsistency."
+
+  - number: HR/CIR/2025/11
+    date: "2025-09-12"
+    effective_from: "2025-10-01"
+    subject: Combination of Casual Leave with Earned Leave
+    amends: ["3.5", "5.2"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 1 October 2025, Casual Leave may be prefixed or suffixed to Earned Leave, provided that the combined spell does not exceed 10 Working Days. The CL portion is debited to CL and the EL portion to EL, and the sandwich rule in {ref:#3.4} is applied to the combined spell as if it were a spell of EL."
+      - para: "CL still may not be combined with Sick Leave. {ref:#3.5} and {ref:#5.2} stand amended accordingly."
+
+  - number: HR/CIR/2026/02
+    date: "2026-01-20"
+    effective_from: "2026-02-01"
+    subject: Revision of bereavement leave
+    amends: ["7.1"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 1 February 2026, bereavement leave under {ref:#7.1} is increased from 3 Working Days to 5 Working Days, to be availed within 15 Calendar Days of the death."
+      - para: "The definition of Immediate Family in {ref:#2.8} is not changed by this Circular. Bereavement leave therefore continues to be unavailable on the death of a grandparent, sibling or parent-in-law."
