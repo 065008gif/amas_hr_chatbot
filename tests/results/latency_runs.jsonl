@@ -1,0 +1,32 @@
+{"kind": "cold_probe", "at": "2026-09-29T02:07:18", "idle_note": "unknown (first probe after the user's push)", "seconds_to_ready": 64.93, "attempts": 1, "fresh_instance": false, "server_uptime_s": 122, "server_warm_s": 4.19}
+{"kind": "page", "path": "/", "status": 200, "seconds": 0.257}
+{"kind": "page", "path": "/chat", "status": 200, "seconds": 0.47}
+{"kind": "page", "path": "/library", "status": 200, "seconds": 0.247}
+{"kind": "pdf", "status": 200, "bytes": 57959, "seconds": 0.606}
+{"kind": "chat", "phase": "first", "id": "Q02", "status": 200, "wall_s": 3.469, "server_ms": 3228, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2987, "out": 166}}
+{"kind": "chat", "phase": "first", "id": "Q05", "status": 200, "wall_s": 3.075, "server_ms": 2827, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 3045, "out": 132}}
+{"kind": "chat", "phase": "first", "id": "Q10", "status": 200, "wall_s": 3.308, "server_ms": 3054, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2817, "out": 164}}
+{"kind": "chat", "phase": "first", "id": "Q11", "status": 200, "wall_s": 4.124, "server_ms": 3885, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 3181, "out": 123}}
+{"kind": "chat", "phase": "first", "id": "Q16", "status": 200, "wall_s": 3.101, "server_ms": 2854, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2791, "out": 150}}
+{"kind": "chat", "phase": "first", "id": "Q17", "status": 200, "wall_s": 2.976, "server_ms": 2509, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2810, "out": 112}}
+{"kind": "chat", "phase": "first", "id": "Q23", "status": 200, "wall_s": 3.368, "server_ms": 2915, "cache_hit": false, "route": "not_found", "provider": "ollama", "usage": {"in": 2725, "out": 121}}
+{"kind": "chat", "phase": "first", "id": "Q24", "status": 200, "wall_s": 2.861, "server_ms": 2618, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2691, "out": 144}}
+{"kind": "chat", "phase": "first", "id": "Q26", "status": 200, "wall_s": 3.118, "server_ms": 2885, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2721, "out": 100}}
+{"kind": "chat", "phase": "first", "id": "Q31", "status": 200, "wall_s": 3.271, "server_ms": 3026, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2681, "out": 123}}
+{"kind": "chat", "phase": "first", "id": "Q33", "status": 200, "wall_s": 2.78, "server_ms": 2535, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2733, "out": 175}}
+{"kind": "chat", "phase": "first", "id": "Q38", "status": 200, "wall_s": 3.535, "server_ms": 3284, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 3113, "out": 163}}
+{"kind": "chat", "phase": "first", "id": "Q40", "status": 200, "wall_s": 3.077, "server_ms": 2838, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2861, "out": 150}}
+{"kind": "chat", "phase": "first", "id": "Q41", "status": 200, "wall_s": 3.286, "server_ms": 3026, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2970, "out": 140}}
+{"kind": "chat", "phase": "first", "id": "Q45", "status": 200, "wall_s": 2.736, "server_ms": 2496, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2782, "out": 126}}
+{"kind": "chat", "phase": "first", "id": "Q46", "status": 200, "wall_s": 2.935, "server_ms": 2698, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2770, "out": 173}}
+{"kind": "chat", "phase": "first", "id": "Q49", "status": 200, "wall_s": 2.638, "server_ms": 2395, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2727, "out": 129}}
+{"kind": "chat", "phase": "first", "id": "Q53", "status": 200, "wall_s": 3.219, "server_ms": 2969, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2865, "out": 155}}
+{"kind": "chat", "phase": "first", "id": "Q57", "status": 200, "wall_s": 3.166, "server_ms": 2909, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2746, "out": 129}}
+{"kind": "chat", "phase": "first", "id": "Q61", "status": 200, "wall_s": 2.883, "server_ms": 2634, "cache_hit": false, "route": "answer", "provider": "ollama", "usage": {"in": 2856, "out": 125}}
+{"kind": "chat", "phase": "repeat", "id": "Q02", "status": 200, "wall_s": 0.236, "server_ms": 2, "cache_hit": true, "route": "answer", "provider": "ollama", "usage": {"in": 0, "out": 0}}
+{"kind": "chat", "phase": "repeat", "id": "Q05", "status": 200, "wall_s": 0.24, "server_ms": 3, "cache_hit": true, "route": "answer", "provider": "ollama", "usage": {"in": 0, "out": 0}}
+{"kind": "chat", "phase": "repeat", "id": "Q10", "status": 200, "wall_s": 0.242, "server_ms": 4, "cache_hit": true, "route": "answer", "provider": "ollama", "usage": {"in": 0, "out": 0}}
+{"kind": "chat", "phase": "repeat", "id": "Q11", "status": 200, "wall_s": 0.236, "server_ms": 3, "cache_hit": true, "route": "answer", "provider": "ollama", "usage": {"in": 0, "out": 0}}
+{"kind": "chat", "phase": "repeat", "id": "Q16", "status": 200, "wall_s": 0.251, "server_ms": 3, "cache_hit": true, "route": "answer", "provider": "ollama", "usage": {"in": 0, "out": 0}}
+{"kind": "cold_probe", "at": "2026-09-29T02:31:15", "idle_note": "20 min with no requests from this evaluation", "seconds_to_ready": 45.85, "dns_s": 0.08, "attempts": 1, "fresh_instance": true, "server_uptime_s": 5, "server_warm_s": 4.24}
+{"kind": "cold_probe", "at": "2026-09-29T03:12:01", "idle_note": "40 min with no requests from this evaluation", "seconds_to_ready": 45.69, "dns_s": 0.03, "attempts": 1, "fresh_instance": true, "server_uptime_s": 4, "server_warm_s": 4.07}

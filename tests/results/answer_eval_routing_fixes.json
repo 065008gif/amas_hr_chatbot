@@ -3,39 +3,41 @@
   "items_scored": 119,
   "items_in_set": 119,
   "verdicts": {
-   "correct": 85,
-   "wrong": 1,
+   "partly": 5,
+   "correct": 81,
+   "wrong": 2,
    "correctly_refused": 9,
-   "partly": 4,
-   "wrongly_refused": 4,
+   "wrongly_refused": 6,
    "clarify_ok": 6,
    "escalated_ok": 10
   },
   "by_category": {
    "circular": {
-    "correct": 20,
-    "partly": 1,
-    "wrongly_refused": 1
+    "partly": 3,
+    "correct": 17,
+    "wrongly_refused": 2
    },
    "clarify": {
     "clarify_ok": 6
    },
    "conflict": {
-    "correct": 4
+    "correct": 3,
+    "wrong": 1
    },
    "definition": {
-    "correct": 3,
-    "partly": 1
+    "correct": 4
    },
    "direct": {
-    "correct": 33
+    "correct": 31,
+    "partly": 1,
+    "wrongly_refused": 1
    },
    "escalation": {
     "escalated_ok": 10
    },
    "grade": {
-    "correct": 21,
-    "partly": 2,
+    "correct": 22,
+    "partly": 1,
     "wrongly_refused": 2
    },
    "multi_doc": {
@@ -51,29 +53,29 @@
    }
   },
   "answerable_accuracy": {
-   "n": 85,
+   "n": 81,
    "of": 94,
-   "rate": 0.904
+   "rate": 0.862
   },
   "answerable_correct_or_partly": {
-   "n": 89,
+   "n": 86,
    "of": 94,
-   "rate": 0.947
+   "rate": 0.915
   },
   "citation_snippet_on_cited_page": {
-   "n": 170,
-   "of": 170,
+   "n": 166,
+   "of": 166,
    "rate": 1.0
   },
   "correct_answers_citing_a_gold_page": {
-   "n": 87,
-   "of": 89,
-   "rate": 0.978
+   "n": 83,
+   "of": 86,
+   "rate": 0.965
   },
   "refusal_precision": {
    "n": 9,
-   "of": 11,
-   "rate": 0.818
+   "of": 13,
+   "rate": 0.692
   },
   "refusal_recall": {
    "n": 9,
@@ -105,17 +107,17 @@
     "answer"
    ],
    "route": "answer",
-   "verdict": "correct",
+   "verdict": "partly",
    "facts": [
     true,
-    true
+    false
    ],
    "citations": 2,
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2576,
-   "answer": "You are entitled to 10 Working Days of paternity leave for a baby born in August 2025, which can be taken in up to two spells within six months of the birth. [S1][S2]"
+   "latency_ms": 5770,
+   "answer": "You are entitled to 10 Working Days of paternity leave for a baby born in August 2025 [S1][S2]."
   },
   {
    "id": "T02",
@@ -134,8 +136,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2201,
-   "answer": "Yes, you may add a casual leave day to your earned leave, provided the combined spell does not exceed 10 Working Days. The casual leave portion is debited to CL and the earned leave portion to EL, and the sandwich rule is applied as if it were EL [S2]."
+   "latency_ms": 2021,
+   "answer": "Yes. Since 1 Oct 2025 the policy allows you to prefix or suffix a Casual Leave day to Earned Leave, as long as the total combined spell does not exceed 10 Working Days; the CL portion is debited to CL and the EL portion to EL, and the sandwich rule is applied as if it were EL [S2]."
   },
   {
    "id": "T03",
@@ -154,8 +156,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1955,
-   "answer": "No, bereavement leave is only available for the death of an Immediate Family member, and grandparents are not included in that definition. You would need to use CL or EL instead [S2][S1]"
+   "latency_ms": 1822,
+   "answer": "You cannot take bereavement leave for the death of a grandparent because bereavement leave under Clause 7.1 applies only to Immediate Family, which does not include grandparents. You may instead apply for CL or EL with manager approval. [S1][S2]"
   },
   {
    "id": "T04",
@@ -173,8 +175,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2815,
-   "answer": "As a probationer you are eligible for twelve weeks of maternity leave; any additional time would be unpaid leave at HR’s discretion [S1]."
+   "latency_ms": 1925,
+   "answer": "As a Probationer you are eligible for maternity leave of 12 weeks only; any additional time would be Leave Without Pay at HR's discretion [S1]."
   },
   {
    "id": "T05",
@@ -193,8 +195,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2472,
-   "answer": "No, as a Grade L2 associate you are not eligible to encash earned leave during service; encashment is available only to Grades L3 to L8 [S2][S3]."
+   "latency_ms": 1802,
+   "answer": "You cannot encash earned leave while you are in Grade L2. Encashment during service is only available to Grades L3 to L8, and Grade L2 employees are not eligible [S2][S3]."
   },
   {
    "id": "T06",
@@ -209,12 +211,12 @@
     true,
     true
    ],
-   "citations": 2,
-   "citations_on_page": 2,
+   "citations": 1,
+   "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2855,
-   "answer": "Yes, you can take a sabbatical if you have at least five years of Continuous Service and are enrolled in a full‑time postgraduate programme sponsored by the Company; the sabbatical may be up to six months and requires approval of the Business Unit Head and the Chief People Officer. This exception applies only to Grade L4 and does not extend to Grades L1‑L3. The general rule limits sabbaticals to Grade L5 and above, but the carve‑out for L4 is provided in the FAQ section [S1][S2]."
+   "latency_ms": 1868,
+   "answer": "Yes, you can take a sabbatical, but only if you have at least five years of Continuous Service and are enrolled in a full‑time postgraduate programme sponsored by the Company. The sabbatical may be up to six months and requires approval from your Business Unit Head and the Chief People Officer. This exception applies only to Grade L4 and does not extend to Grades L1‑L3. The general rule limits sabbaticals to Grade L5 and above, but the carve‑out for L4 is provided in the FAQ. [S1]"
   },
   {
    "id": "T07",
@@ -229,12 +231,12 @@
     true,
     true
    ],
-   "citations": 3,
-   "citations_on_page": 3,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1983,
-   "answer": "You are not eligible for compensatory off. The Leave Policy states that Employees in Grades L5 to L8 are not eligible for compensatory off, and the Travel Time clause also limits compensatory off to Grades L1 to L4. [S3][S5]"
+   "latency_ms": 1757,
+   "answer": "You are not eligible for compensatory off for working on a Sunday; compensatory off is only available to Employees in Grades L1 to L4, and Grades L5 to L8 are excluded [S3]."
   },
   {
    "id": "T08",
@@ -250,8 +252,8 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1447,
-   "answer": "Nexora's policy documents do not cover donation of Earned Leave to another employee."
+   "latency_ms": 1319,
+   "answer": "Nexora's policy documents do not cover donation of earned leave to a colleague."
   },
   {
    "id": "T09",
@@ -270,8 +272,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 3841,
-   "answer": "The Handbook states paternity leave is 5 Working Days [S1]. However, the HR circular issued on 20 June 2025 increased the entitlement to 10 Working Days for births or adoptions on or after 1 July 2025, and this circular prevails over the Handbook [S3]. If the child’s birth or adoption was before 1 July 2025, the entitlement remains 5 Working Days."
+   "latency_ms": 2942,
+   "answer": "The Handbook’s 5‑day figure is the original entitlement, but the HR Circular HR/CIR/2025/07 increased paternity leave to 10 Working Days for births or adoptions on or after 1 July 2025, to be taken within six months and may be split into two spells. For dates before 1 July 2025 the entitlement remains 5 Working Days within three months. [S1][S3]"
   },
   {
    "id": "T10",
@@ -289,8 +291,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2557,
-   "answer": "You are not eligible for a referral bonus, so you will receive none even if your friend joins at Grade L5. [S1]"
+   "latency_ms": 2482,
+   "answer": "You are not eligible for a referral bonus because Employees in Grades L7 and L8 are excluded from the scheme [S1]."
   },
   {
    "id": "T11",
@@ -308,8 +310,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1778,
-   "answer": "You can claim up to Rs 10,000 per month for each child (aged six months to six years), for up to two children, when you are based in Pune [S1][S3]."
+   "latency_ms": 1572,
+   "answer": "You can claim up to Rs 10,000 per month for each child (aged six months to six years), for up to two children, in Pune [S3][S1]."
   },
   {
    "id": "T12",
@@ -325,7 +327,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1468,
+   "latency_ms": 1207,
    "answer": "Nexora's policy documents do not cover egg freezing payments."
   },
   {
@@ -344,10 +346,10 @@
    ],
    "citations": 1,
    "citations_on_page": 1,
-   "cites_gold_page": true,
+   "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1766,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYes, you can file a sexual harassment complaint with the Internal Committee. The 2026 amendment extends the complaint, inquiry, interim relief and non‑retaliation provisions to employees of any gender, including men, while keeping the same procedure and timelines as for an Aggrieved Woman [S8]."
+   "latency_ms": 2754,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nThe POSH policy states that only an Aggrieved Woman may make a complaint of sexual harassment to the Internal Committee [S1]."
   },
   {
    "id": "T14",
@@ -367,8 +369,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2705,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYes, the POSH policy applies. Messages sent on a personal phone at any hour are covered if they arise out of the working relationship, as the Workplace includes messaging applications used by colleagues on any device and at any time [S1]."
+   "latency_ms": 2708,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYes, the POSH policy applies. Messages sent on a personal phone late at night are covered if they arise out of the working relationship, because a \"Workplace\" includes messaging applications and groups used by colleagues on any device and at any hour [S1]."
   },
   {
    "id": "T15",
@@ -387,8 +389,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2550,
-   "answer": "No, you cannot keep the Rs. 3,000 Amazon gift card. The amending circular HR/CIR/2025/08 prohibits accepting any gift cards or cash equivalents in any amount and requires they be declined or returned, with the offer recorded in the gift register [S3]."
+   "latency_ms": 1843,
+   "answer": "No, you may not keep the Rs 3,000 Amazon gift card. The amending circular HR/CIR/2025/08 prohibits accepting any gift cards, vouchers or cash equivalents in any amount and treats them like cash, which is not permitted [S3]. The earlier rule allowing up to Rs 5,000 for unsolicited gifts, including gift cards, is overridden by this circular [S4][S2]. You must decline the gift or, if declining would cause embarrassment, accept it on behalf of the Company and hand it to the Ethics Office."
   },
   {
    "id": "T16",
@@ -407,8 +409,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2198,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYou can still complain to the Internal Committee. The POSH policy sets a three‑month time limit for a written complaint, with a possible extension of up to three more months if you had a good reason for the delay [S3][S4]. The 30‑day limit in the Code of Conduct applies to reporting a grievance to the HR Business Partner, but the Internal Committee’s own deadline is longer [S1]."
+   "latency_ms": 2555,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYou can still complain. The Code of Conduct requires a harassment grievance to be reported within 30 days to HR, but the POSH policy allows a written complaint within three months and permits an extension of up to another three months if you had a good reason for the delay [S1][S4][S3]."
   },
   {
    "id": "T17",
@@ -422,12 +424,12 @@
    "facts": [
     true
    ],
-   "citations": 2,
-   "citations_on_page": 2,
-   "cites_gold_page": true,
+   "citations": 1,
+   "citations_on_page": 1,
+   "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1758,
-   "answer": "You do not need pre‑clearance to buy Nexora shares unless you have been designated as a Designated Person for a specific project; only Designated Persons must obtain pre‑clearance under the Insider Trading rules [S2][S6]."
+   "latency_ms": 2659,
+   "answer": "You do not need pre‑clearance to buy Nexora shares unless you have been notified as a Designated Person for a specific project; non‑designated employees are not required to obtain pre‑clearance but must still avoid trading while in possession of UPSI [S6]."
   },
   {
    "id": "T18",
@@ -437,17 +439,17 @@
     "answer"
    ],
    "route": "answer",
-   "verdict": "partly",
+   "verdict": "correct",
    "facts": [
     true,
-    false
+    true
    ],
    "citations": 2,
    "citations_on_page": 2,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 2056,
-   "answer": "Yes, you must declare that your father‑in‑law is a director of a vendor on the conflict‑of‑interest declaration and withdraw from any related decisions [S1][S3]."
+   "latency_ms": 1966,
+   "answer": "Yes, you must declare that your father‑in‑law is a director at a vendor. The Code treats relatives and close personal relationships as situations that require disclosure and withdrawal from related decisions [S3][S1]."
   },
   {
    "id": "T19",
@@ -465,8 +467,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1599,
-   "answer": "Your group medical insurance family floater sum insured is Rs. 4,00,000 [S1]."
+   "latency_ms": 1532,
+   "answer": "Your group medical family‑floater sum insured is Rs. 4,00,000 [S1]."
   },
   {
    "id": "T20",
@@ -485,8 +487,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1651,
-   "answer": "No. Bengaluru is not a Metro City for HRA tax exemption; only Delhi, Mumbai, Kolkata and Chennai qualify, so the exemption limit is 40 % of Basic Salary for Bengaluru [S2][S1]"
+   "latency_ms": 2530,
+   "answer": "No. For HRA tax exemption, only Delhi, Mumbai, Kolkata and Chennai are considered Metro Cities; Bengaluru is not, so the exemption limit is 40 % of Basic Salary [S1][S2]."
   },
   {
    "id": "T21",
@@ -505,8 +507,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1530,
-   "answer": "No. Because you resigned on 10 May, which is before the June payout date, you are not on the rolls on the payout date and therefore are not eligible for variable pay for the preceding Performance Year [S1][S2]"
+   "latency_ms": 1540,
+   "answer": "No. Under Clause 8.4, variable pay is paid only to employees who are on the rolls on the Payout Date and have not resigned or been given notice of termination on or before that date; an employee who resigned in May is therefore not eligible for the June payout for the previous Performance Year [S2][S1]."
   },
   {
    "id": "T22",
@@ -520,12 +522,12 @@
    "facts": [
     true
    ],
-   "citations": 2,
-   "citations_on_page": 2,
+   "citations": 3,
+   "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1480,
-   "answer": "No professional tax is deducted because Uttar Pradesh does not levy professional tax on salaried employees, and the policy lists Noida as a location where no deduction applies [S1][S3]."
+   "latency_ms": 1530,
+   "answer": "No professional tax is deducted because Uttar Pradesh does not levy professional tax on salaried employees, and the policy states that for Noida the deduction is not levied [S1][S2][S3]."
   },
   {
    "id": "T23",
@@ -544,8 +546,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1655,
-   "answer": "No. For Grades L1 to L6, including L4, remote work days may only be taken on Monday and Friday; Tuesday, Wednesday and Thursday are mandatory anchor days for office attendance [S2]."
+   "latency_ms": 1568,
+   "answer": "No. For Grades L1 to L6, the HR circular HR/CIR/2025/10 makes Tuesday, Wednesday and Thursday mandatory anchor days for office attendance, and Remote Work Days may be taken only on Monday and Friday. Therefore you cannot select Wednesday as a work‑from‑home day. [S2]"
   },
   {
    "id": "T24",
@@ -561,7 +563,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1801,
+   "latency_ms": 2086,
    "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
   },
   {
@@ -581,8 +583,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1633,
-   "answer": "You do not receive any shift allowance; Grades L6 to L8 are ineligible for shift allowance even on night shifts [S1][S2]."
+   "latency_ms": 1486,
+   "answer": "You do not receive any shift allowance, as Grades L6 to L8 are ineligible for shift allowance under the policy [S1]."
   },
   {
    "id": "T26",
@@ -601,8 +603,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2696,
-   "answer": "Yes. Because your flight arrives between 9:00 p.m. and 7:00 a.m., the amending circular HR/CIR/2025/12 allows any employee, including Grade L2, to use an app‑based cab in the standard category for the transfer and claim the actual fare without the Rs. 750 limit [S2]."
+   "latency_ms": 2040,
+   "answer": "Yes. Because your flight arrives between 9:00 p.m. and 7:00 a.m., the amending circular HR/CIR/2025/12 allows any employee, including Grade L2, to use an app‑based cab and claim the actual fare without the Rs 750 limit [S2]."
   },
   {
    "id": "T27",
@@ -621,8 +623,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1703,
-   "answer": "For an L2 employee travelling from Bengaluru to Chennai, the default mode is AC 3‑tier rail or an air‑conditioned bus. Air travel is only allowed if the Reporting Manager approves it because no suitable train or bus can get you there on time [S1]."
+   "latency_ms": 1570,
+   "answer": "You may fly only if a suitable train or bus cannot get you to the meeting on time and you have approval from your Reporting Manager [S1]."
   },
   {
    "id": "T28",
@@ -640,8 +642,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1674,
-   "answer": "The hotel limit for a Grade L5 employee in a Metro City such as Mumbai is Rs. 6,000 per night, excluding taxes. [S1][S3]"
+   "latency_ms": 2033,
+   "answer": "The hotel limit for a Grade L5 employee in a Metro City such as Mumbai is Rs. 6,000 per night, excluding taxes. This amount reflects the amendment made by Circular HR/CIR/2025/01, which increased the limit from Rs. 5,000 to Rs. 6,000 for Grades L4 and L5 in Metro Cities [S1][S4]."
   },
   {
    "id": "T29",
@@ -651,16 +653,16 @@
     "answer"
    ],
    "route": "answer",
-   "verdict": "correct",
+   "verdict": "wrong",
    "facts": [
-    true
+    false
    ],
-   "citations": 3,
-   "citations_on_page": 3,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 5689,
-   "answer": "You will have 45 days of Earned Leave encashed in your full and final settlement [S9][S7][S8]"
+   "latency_ms": 2348,
+   "answer": "You will have 30 days of Earned Leave encashed in your full and final settlement, as the Separation and Exit Policy caps encashment at a maximum of 30 days [S5][S8]."
   },
   {
    "id": "T30",
@@ -674,12 +676,12 @@
    "facts": [
     true
    ],
-   "citations": 1,
-   "citations_on_page": 1,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1877,
-   "answer": "Your notice period for resignation as a Grade L5 employee is 90 days. [S1]"
+   "latency_ms": 1872,
+   "answer": "Your notice period for resignation as a Grade L5 employee is 90 calendar days [S1][S3]."
   },
   {
    "id": "T31",
@@ -697,8 +699,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1572,
-   "answer": "You may buy out up to 50 % of your 60‑day notice period, i.e., up to 30 days, and must serve the remaining 30 days unless the Company waives them [S1][S4]. You cannot buy out the whole notice period to leave next week."
+   "latency_ms": 2352,
+   "answer": "You can buy out up to 50 % of your 60‑day notice period, i.e., a maximum of 30 days, and you must serve at least the remaining 30 days unless the Company waives them. You cannot buy out the whole notice period. [S1][S4]"
   },
   {
    "id": "T32",
@@ -716,8 +718,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2024,
-   "answer": "Your gratuity must be paid within 30 days of your last day of service according to the Gratuity Illustrations [S1]. The Full and Final Settlement policy also states that gratuity, when payable, is paid together with the settlement within 45 days of the last day of service [S4]."
+   "latency_ms": 2656,
+   "answer": "Your gratuity must be paid within 30 days of your last day of service according to the illustration in the Compensation and Benefits Policy [S1]. The Separation and Exit Policy also states that gratuity, when payable, is paid together with the full and final settlement within 45 days of the last day of service [S4]."
   },
   {
    "id": "T33",
@@ -735,13 +737,30 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1790,
-   "answer": "No. The requirement to change passwords every 90 days was withdrawn by the amending circular, so you only change it if it may be compromised or the SOC requires it [S1][S2]"
+   "latency_ms": 1575,
+   "answer": "No. The requirement to change passwords every 90 days was withdrawn by the amending circular, so you only change it if it may be compromised or the SOC requires it [S1]."
   },
   {
    "id": "T34",
    "cat": "circular",
    "q": "Can I paste some client source code into ChatGPT to debug it?",
+   "expected": [
+    "answer"
+   ],
+   "route": "not_found",
+   "verdict": "wrongly_refused",
+   "facts": null,
+   "citations": 0,
+   "citations_on_page": 0,
+   "cites_gold_page": false,
+   "provider": "ollama",
+   "latency_ms": 2140,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  },
+  {
+   "id": "T35",
+   "cat": "grade",
+   "q": "I am an L3. Can I use my personal laptop for work when my office laptop is being repaired?",
    "expected": [
     "answer"
    ],
@@ -755,28 +774,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1925,
-   "answer": "No. Client source code may not be pasted into public AI tools such as ChatGPT. The Amending Circular HR/CIR/2025/13 states that Internal, Confidential or Restricted client data must not be entered into any public generative AI tool, and doing so is treated as a disclosure of client data [S4]. This is reinforced by the Code of Conduct which says using an unapproved AI tool on client code breaches policy [S2]."
-  },
-  {
-   "id": "T35",
-   "cat": "grade",
-   "q": "I am an L3. Can I use my personal laptop for work when my office laptop is being repaired?",
-   "expected": [
-    "answer"
-   ],
-   "route": "answer",
-   "verdict": "partly",
-   "facts": [
-    true,
-    false
-   ],
-   "citations": 2,
-   "citations_on_page": 2,
-   "cites_gold_page": true,
-   "provider": "ollama",
-   "latency_ms": 1653,
-   "answer": "No. As an L3 you are not permitted to use a personal laptop or computer for work; only the Company‑issued laptop may be used, even if it is being repaired [S1][S2]."
+   "latency_ms": 1663,
+   "answer": "No. As an L3 you are not permitted to use a personal laptop or computer for work; only Grades L7 and L8 may use personal laptops, and only through the Company virtual desktop. You must use the Company‑issued laptop or arrange another approved device. [S1][S2]"
   },
   {
    "id": "T36",
@@ -792,7 +791,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 2143,
+   "latency_ms": 1358,
    "answer": "Nexora's policy documents do not cover reimbursement of home electricity bills for remote work."
   },
   {
@@ -811,8 +810,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1545,
-   "answer": "You are entitled to 24 days of Earned Leave per Leave Year [S1][S2]"
+   "latency_ms": 1527,
+   "answer": "You are entitled to 24 days of Earned Leave per Leave Year as a Grade L7 employee [S1][S2]."
   },
   {
    "id": "Q02",
@@ -830,8 +829,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1560,
-   "answer": "You must apply for five days of Earned Leave at least 14 days before the start date [S1][S5]."
+   "latency_ms": 1528,
+   "answer": "You must apply for five days of Earned Leave at least 14 Calendar Days before the start of the leave [S1][S5]."
   },
   {
    "id": "Q03",
@@ -841,17 +840,17 @@
     "answer"
    ],
    "route": "answer",
-   "verdict": "correct",
+   "verdict": "partly",
    "facts": [
     true,
-    true
+    false
    ],
    "citations": 2,
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1671,
-   "answer": "You need a medical certificate from a registered medical practitioner if your Sick Leave exceeds two consecutive Working Days; you must upload it on the NPP within three Working Days of resuming duty. If the Sick Leave exceeds seven consecutive Calendar Days, you also need a fitness certificate to resume duty, and it must be uploaded on the day you resume. [S1][S2]"
+   "latency_ms": 1695,
+   "answer": "You need a medical certificate from a registered practitioner if your Sick Leave exceeds two consecutive Working Days; it must be uploaded on the NPP within three Working Days of returning to work [S1][S2]. If the Sick Leave exceeds seven consecutive Calendar Days, you also need a fitness‑to‑resume certificate, which must be uploaded on the day you resume work [S1][S2]."
   },
   {
    "id": "Q04",
@@ -869,8 +868,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1934,
-   "answer": "You are entitled to 5 Working Days of bereavement leave for the death of your father, to be taken within 15 Calendar Days of the death. [S3]"
+   "latency_ms": 1526,
+   "answer": "You are entitled to 5 Working Days of bereavement leave, to be taken within 15 Calendar Days of the death [S3][S2]."
   },
   {
    "id": "Q05",
@@ -888,8 +887,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1756,
-   "answer": "You are entitled to 3 Working Days of marriage leave, to be taken once during your service. [S1]"
+   "latency_ms": 2415,
+   "answer": "You are entitled to 3 Working Days of marriage leave, taken once during your service. [S1]"
   },
   {
    "id": "Q06",
@@ -906,10 +905,10 @@
    ],
    "citations": 2,
    "citations_on_page": 2,
-   "cites_gold_page": false,
+   "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2775,
-   "answer": "Earned Leave is encashed at the rate of Basic Salary divided by 26 for each day of leave encashed [S6][S5]."
+   "latency_ms": 1685,
+   "answer": "Earned Leave encashment is calculated by dividing your Basic Salary by 26 to get the per‑day rate, then multiplying that rate by the number of EL days you are encashing [S1][S6]."
   },
   {
    "id": "Q07",
@@ -925,7 +924,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": null,
-   "latency_ms": 1,
+   "latency_ms": 0,
    "answer": "Please choose a demo employee in the portal first, so I know whose data to show."
   },
   {
@@ -944,7 +943,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2325,
+   "latency_ms": 1705,
    "answer": "The referral bonus for a candidate who joins at Grade L2 is Rs. 25,000 [S1][S3]."
   },
   {
@@ -963,8 +962,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1511,
-   "answer": "The Employee Assistance Programme provides each employee and each household member up to six free counselling sessions per year [S1]."
+   "latency_ms": 1703,
+   "answer": "The Employee Assistance Programme provides each Employee and each household member up to six free counselling sessions per year [S1]."
   },
   {
    "id": "Q12",
@@ -982,8 +981,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1528,
-   "answer": "You receive a one‑time relocation allowance of Rs. 1,00,000 when the transfer is at the Company’s request [S4][S1]."
+   "latency_ms": 2152,
+   "answer": "You receive a one‑time relocation allowance of Rs. 1,00,000 when the transfer is at the Company’s request. The amount is set out for Grade L6 in Table 10 of the Employee Handbook and applies under the relocation support provision for Company‑requested transfers. [S1][S4]"
   },
   {
    "id": "Q13",
@@ -1002,8 +1001,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1857,
-   "answer": "No, you are not entitled to an annual preventive health check. The policy provides it only to Grades L5 and above, or to any grade aged 35 or older [S5]."
+   "latency_ms": 2716,
+   "answer": "No, you are not entitled to an annual preventive health check because it is provided only to Grades L5 and above or to any employee who is 35 years of age or older [S5]."
   },
   {
    "id": "Q14",
@@ -1019,8 +1018,8 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1394,
-   "answer": "Which grade are you in (e.g., L1, L2, etc.)?"
+   "latency_ms": 1625,
+   "answer": "Which grade are you in, specifically are you a Graduate Engineer Trainee (Grade L1)?"
   },
   {
    "id": "Q15",
@@ -1038,8 +1037,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1375,
-   "answer": "You can claim up to Rs. 1,000 per month for home internet reimbursement as an L3 employee on hybrid work [S1]."
+   "latency_ms": 1426,
+   "answer": "You can claim reimbursement of home internet charges up to Rs. 1,000 per month on a hybrid work arrangement [S1]."
   },
   {
    "id": "Q16",
@@ -1057,8 +1056,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2518,
-   "answer": "You receive a Certificate and a gift voucher worth Rs. 15,000, plus an invitation to the annual leadership dinner [S1][S8]"
+   "latency_ms": 1684,
+   "answer": "You receive a Certificate and a gift voucher worth Rs. 15,000, and you are invited to the annual leadership dinner [S1][S8]."
   },
   {
    "id": "Q17",
@@ -1076,8 +1075,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1421,
-   "answer": "You are expected to complete at least 40 hours of learning in each performance year [S1]."
+   "latency_ms": 1365,
+   "answer": "You are expected to complete at least 40 hours of learning in each performance year. [S1]"
   },
   {
    "id": "Q19",
@@ -1096,7 +1095,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1660,
+   "latency_ms": 1625,
    "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nThe Internal Committee must complete the inquiry within ninety days of receiving the complaint [S2][S3]."
   },
   {
@@ -1112,12 +1111,12 @@
    "facts": [
     true
    ],
-   "citations": 2,
-   "citations_on_page": 2,
+   "citations": 3,
+   "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1752,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYes. You can submit a POSH complaint online through the confidential Internal Committee module of the NPP; this submission is treated the same as a written complaint and the date of receipt starts any time limits [S1][S2]."
+   "latency_ms": 3504,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYes. The confidential Internal Committee module on the NPP can be used to submit a POSH complaint, and it has the same effect as a written complaint and sets the date of receipt for all time limits [S1][S2]."
   },
   {
    "id": "Q21",
@@ -1136,8 +1135,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1582,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nComplaint files are retained for eight years after the inquiry is closed [S2]."
+   "latency_ms": 1716,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nPOSH complaint files are retained for eight years after the case is closed [S2]."
   },
   {
    "id": "Q22",
@@ -1156,8 +1155,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1910,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYou have ninety days from the date the Internal Committee’s recommendations are issued to file an appeal to the appellate authority notified under the Act [S1][S3]."
+   "latency_ms": 1811,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nEither the Complainant or the Respondent may file an appeal against the Internal Committee’s recommendations within ninety days of those recommendations being issued [S1][S3]."
   },
   {
    "id": "Q23",
@@ -1171,12 +1170,12 @@
    "facts": [
     true
    ],
-   "citations": 1,
-   "citations_on_page": 1,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1525,
-   "answer": "You must declare the romantic or close personal relationship to the HR Business Partner within 15 days [S1]."
+   "latency_ms": 1714,
+   "answer": "You must declare a romantic or close personal relationship with a reporting employee within 15 days of it arising [S1][S2]."
   },
   {
    "id": "Q24",
@@ -1194,8 +1193,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1261,
-   "answer": "You must submit your annual conflict of interest declaration by 31 May each year [S2][S3]."
+   "latency_ms": 1602,
+   "answer": "You must submit your annual conflict of interest declaration each year by 31 May [S2][S3]."
   },
   {
    "id": "Q25",
@@ -1213,8 +1212,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1544,
-   "answer": "You may accept an unsolicited gift from a vendor up to Rs. 2,000, once per calendar year, and gift cards or similar cash equivalents are not allowed at any amount [S2]."
+   "latency_ms": 1933,
+   "answer": "You may accept an unsolicited gift from a vendor up to Rs. 2,000, once per calendar year from the same vendor; gift cards, vouchers or cash equivalents are not allowed at any amount. [S2]"
   },
   {
    "id": "Q26",
@@ -1232,8 +1231,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1365,
-   "answer": "The Ethics Office acknowledges a whistleblower concern within three Working Days [S1]."
+   "latency_ms": 1421,
+   "answer": "The Ethics Office must acknowledge a whistleblower concern within three Working Days [S1]."
   },
   {
    "id": "Q27",
@@ -1252,8 +1251,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1833,
-   "answer": "Yes, you may do paid part‑time teaching at a recognised educational institution if you obtain written approval from your Reporting Manager and declare it on the NPP; the work must be limited to eight hours per week and be outside your regular working hours, and it must not be for a competitor or Business Associate. [S2]"
+   "latency_ms": 1795,
+   "answer": "Yes, you may do paid part‑time teaching at a recognised educational institution if you obtain written approval from your Reporting Manager and declare the activity on the NPP; the work must be limited to eight hours per week and be outside your regular working hours, and it must not be for a competitor or Business Associate. This is permitted under the amending circular HR/CIR/2026/03, which overrides the earlier Clause 5.1. [S2]"
   },
   {
    "id": "Q28",
@@ -1271,8 +1270,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1455,
-   "answer": "You receive a subsistence allowance equal to 50 % of your fixed monthly pay for the first 90 days of suspension, and 75 % thereafter, unless State law provides a higher amount, in which case the law applies [S1][S2]."
+   "latency_ms": 1508,
+   "answer": "You receive a subsistence allowance equal to 50 % of your fixed monthly pay for the first 90 days of suspension, and 75 % thereafter, unless applicable State law provides a higher amount, in which case the law applies. [S1][S2]"
   },
   {
    "id": "Q29",
@@ -1290,7 +1289,7 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1288,
+   "latency_ms": 1535,
    "answer": "The target variable pay for Grade L6 is 15% of your annual fixed pay [S2]."
   },
   {
@@ -1307,7 +1306,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1501,
+   "latency_ms": 1905,
    "answer": "Nexora's policy documents do not specify the annual LTA amount for Grade L5."
   },
   {
@@ -1326,8 +1325,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1396,
-   "answer": "Your provident fund contribution is 12 percent of your Basic Salary each month, deducted from your salary. [S1]"
+   "latency_ms": 2063,
+   "answer": "Your provident fund contribution is deducted at 12 percent of your Basic Salary each month. [S1]"
   },
   {
    "id": "Q32",
@@ -1345,8 +1344,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1514,
-   "answer": "An employee is covered by the Employees' State Insurance scheme if their gross monthly wages do not exceed Rs. 21,000 [S1]."
+   "latency_ms": 4636,
+   "answer": "An employee whose gross monthly wages do not exceed Rs. 21,000 is covered by the Employees' State Insurance scheme [S1]."
   },
   {
    "id": "Q33",
@@ -1365,8 +1364,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1454,
-   "answer": "Gratuity equals fifteen days of your last drawn Basic Salary for each completed year of service, calculated as (Basic Salary × 15 ÷ 26) × number of completed years. Any part‑year exceeding six months is treated as a full year. The amount is capped at Rs. 20,00,000 as per the Payment of Gratuity Act. [S1][S1][S3]"
+   "latency_ms": 2590,
+   "answer": "Gratuity equals fifteen days of your last drawn Basic Salary for each completed year of service, calculated as (Basic Salary × 15 ÷ 26) × number of completed years. Any part‑year exceeding six months is counted as a full year, and the total is capped at Rs. 20,00,000 as per the Payment of Gratuity Act [S1]. For example, an employee with a Rs. 60,000 basic salary and 7 years 8 months of service receives Rs. 2,76,923 (60,000 × 15 ÷ 26 × 8) [S3]."
   },
   {
    "id": "Q34",
@@ -1376,17 +1375,17 @@
     "answer"
    ],
    "route": "answer",
-   "verdict": "correct",
+   "verdict": "partly",
    "facts": [
     true,
-    true
+    false
    ],
    "citations": 2,
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2527,
-   "answer": "Yes. As of 1 April 2025 the employer NPS contribution option is extended to Grades L3 and L4 on the same terms as for Grades L5‑L8, allowing you to elect up to 10 % of your Basic Salary funded by a reduction in special allowance [S1][S2]."
+   "latency_ms": 2253,
+   "answer": "Yes, as an L4 you may elect the employer contribution to your National Pension System account, up to 10 % of Basic Salary, on the same terms as Grades L5‑L8 [S1][S2]."
   },
   {
    "id": "Q35",
@@ -1404,8 +1403,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1623,
-   "answer": "Your trip must include a spell of Earned Leave of at least 3 Working Days, which may include Casual Leave as permitted by the Leave Policy. This is the current requirement after the amendment [S1][S2]."
+   "latency_ms": 2011,
+   "answer": "Your trip must include a spell of Earned Leave of at least 3 Working Days (the spell may include Casual Leave combined with Earned Leave) for an LTA exemption claim. [S1][S2]"
   },
   {
    "id": "Q36",
@@ -1424,8 +1423,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1541,
-   "answer": "No, employees in Grade L4 are not eligible for stock options under the ESOP scheme; eligibility is limited to Grades L6 to L8, and Grades L1 to L5 are excluded [S1]."
+   "latency_ms": 1622,
+   "answer": "No, employees in Grade L4 are not eligible for stock options under the Nexora Employee Stock Option Scheme; eligibility is limited to Grades L6 to L8, and Grades L1 to L5 are excluded [S1]."
   },
   {
    "id": "Q38",
@@ -1443,8 +1442,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1549,
-   "answer": "You receive an on‑call allowance of Rs. 1,500 for each week you are designated on‑call [S1]."
+   "latency_ms": 1729,
+   "answer": "You receive an on‑call allowance of Rs. 1,500 for each week you are designated on‑call. [S1]"
   },
   {
    "id": "Q39",
@@ -1462,8 +1461,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1766,
-   "answer": "The night shift allowance per day for an L3 employee is Rs. 650, as increased by the 2026 amendment [S2]."
+   "latency_ms": 2081,
+   "answer": "The night shift allowance for an employee in Grade L3 is Rs. 650 per day, as increased by the amending circular effective 1 June 2026 [S2]."
   },
   {
    "id": "Q40",
@@ -1481,8 +1480,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1486,
-   "answer": "The total overtime an employee can work in a calendar quarter must not exceed 50 hours, and it also cannot exceed any lower limit set by the State law [S1]."
+   "latency_ms": 1650,
+   "answer": "The total overtime an employee may work in a calendar quarter cannot exceed 50 hours, regardless of any state law limit. [S1]"
   },
   {
    "id": "Q41",
@@ -1500,8 +1499,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1404,
-   "answer": "A full day of attendance requires at least eight hours of presence at the office (or attendance marked on a Remote Work Day) [S1]"
+   "latency_ms": 1481,
+   "answer": "A full day of attendance requires at least eight hours of presence at the office [S1]."
   },
   {
    "id": "Q42",
@@ -1520,8 +1519,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1658,
-   "answer": "You do not receive overtime pay. Overtime is payable only to Grades L1 to L3, and Grades L4 to L8 are not eligible for overtime pay but may receive compensatory off if the work was on a weekly off or holiday [S1][S2]."
+   "latency_ms": 1588,
+   "answer": "You do not receive overtime pay for the 12‑hour release day because overtime is payable only to Grades L1 to L3. As an L4 you may be eligible for compensatory off if the work was on a weekly off or holiday, per the Leave Policy. [S1][S2]"
   },
   {
    "id": "Q43",
@@ -1539,7 +1538,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1319,
+   "latency_ms": 1457,
    "answer": "You may take nursing breaks at work until your child reaches fifteen months of age [S1][S2]."
   },
   {
@@ -1554,12 +1553,12 @@
    "facts": [
     true
    ],
-   "citations": 1,
-   "citations_on_page": 1,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1544,
-   "answer": "The domestic per diem for a Grade L6 employee is Rs 1,200 per day [S1]."
+   "latency_ms": 1404,
+   "answer": "The domestic per diem for an employee in Grade L6 is Rs. 1,200 per day [S1][S6]."
   },
   {
    "id": "Q45",
@@ -1577,8 +1576,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1444,
-   "answer": "You are reimbursed at Rs. 12 per kilometre for a car used for Business Travel [S1]."
+   "latency_ms": 1426,
+   "answer": "You are reimbursed at Rs. 12 per kilometre for a car when you use your own vehicle for business travel [S1]."
   },
   {
    "id": "Q46",
@@ -1596,7 +1595,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1555,
+   "latency_ms": 1568,
    "answer": "You must submit your travel expense claim within 30 days of the end of the trip (or of the expense date for local claims). Claims submitted after 30 days need Business Unit Head approval, and any claim submitted after 90 days will not be reimbursed [S2][S1]."
   },
   {
@@ -1615,8 +1614,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1904,
-   "answer": "You receive a lodging allowance of Rs 1,000 per night in addition to your regular Per Diem for the business trip days [S1]."
+   "latency_ms": 1669,
+   "answer": "You will receive a lodging allowance of Rs 1,000 per night in addition to your regular Per Diem, and you do not need to submit hotel bills [S1]."
   },
   {
    "id": "Q48",
@@ -1634,8 +1633,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1476,
-   "answer": "The hotel limit for a Grade L7 employee in a non‑metro city is Rs. 7,000 per night, excluding taxes. [S1]"
+   "latency_ms": 1462,
+   "answer": "The hotel limit for an L7 employee in a non‑metro city is Rs. 7,000 per night, excluding taxes. [S1]"
   },
   {
    "id": "Q49",
@@ -1653,8 +1652,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2069,
-   "answer": "International business travel must be requested at least 21 days before the travel date [S1]."
+   "latency_ms": 1498,
+   "answer": "International business travel must be requested at least 21 days before the travel date to allow economical fares, though urgent travel can be approved with a recorded reason. [S1]"
   },
   {
    "id": "Q51",
@@ -1672,7 +1671,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1449,
+   "latency_ms": 1507,
    "answer": "You serve a 30‑day notice period after confirmation. [S1][S3]"
   },
   {
@@ -1692,8 +1691,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2581,
-   "answer": "You receive severance pay of one month's fixed pay for each completed year of service, with a minimum of two months and a maximum of six months [S1][S4]."
+   "latency_ms": 1555,
+   "answer": "You receive severance pay of one month’s fixed pay for each completed year of service, with a minimum of two months and a maximum of six months [S1][S4]."
   },
   {
    "id": "Q53",
@@ -1711,8 +1710,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1729,
-   "answer": "You can be rehired after six months from your last day of service. If you return within 12 months, your previous service will be counted for long‑service awards [S1]."
+   "latency_ms": 1671,
+   "answer": "You may be rehired after six months from your Last Day of Service. If you return within 12 months, your previous service will be counted for long‑service awards [S1]."
   },
   {
    "id": "Q54",
@@ -1730,8 +1729,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1690,
-   "answer": "You may not solicit or induce any Nexora employee for 12 months after your last day of service [S1]."
+   "latency_ms": 1596,
+   "answer": "You may not solicit or induce any Nexora employee for 12 months after your Last Day of Service [S1]."
   },
   {
    "id": "Q55",
@@ -1749,8 +1748,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2563,
-   "answer": "The Relieving Letter is issued digitally on the NPP with a verifiable digital signature, not on paper [S1][S2]."
+   "latency_ms": 1796,
+   "answer": "The Relieving Letter is issued digitally on the NPP with a verifiable digital signature, and a copy is emailed to you, not on paper [S1][S2]."
   },
   {
    "id": "Q56",
@@ -1769,8 +1768,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1593,
-   "answer": "You can appeal against a performance‑related termination by submitting a written appeal to the Chief People Officer within 15 days of receiving the termination notice [S1]."
+   "latency_ms": 1595,
+   "answer": "You can appeal a performance‑related termination by writing to the Chief People Officer within 15 days of receiving the termination notice [S1]."
   },
   {
    "id": "Q57",
@@ -1788,8 +1787,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1385,
-   "answer": "A company laptop screen locks automatically after five minutes of inactivity [S1]."
+   "latency_ms": 1682,
+   "answer": "A company laptop screen locks automatically after five minutes of inactivity. [S1]"
   },
   {
    "id": "Q58",
@@ -1798,17 +1797,15 @@
    "expected": [
     "answer"
    ],
-   "route": "answer",
-   "verdict": "correct",
-   "facts": [
-    true
-   ],
-   "citations": 2,
-   "citations_on_page": 2,
-   "cites_gold_page": true,
+   "route": "not_found",
+   "verdict": "wrongly_refused",
+   "facts": null,
+   "citations": 0,
+   "citations_on_page": 0,
+   "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 2410,
-   "answer": "You must report a lost phone within one hour so the work profile can be removed remotely [S3][S4]"
+   "latency_ms": 3378,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
   },
   {
    "id": "Q59",
@@ -1826,7 +1823,7 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1254,
+   "latency_ms": 1953,
    "answer": "CCTV footage is retained for 90 days [S1]."
   },
   {
@@ -1845,7 +1842,7 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1374,
+   "latency_ms": 1406,
    "answer": "Nexora reports specified cyber security incidents to CERT‑In within six hours of noticing them [S1]."
   },
   {
@@ -1864,8 +1861,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1436,
-   "answer": "Your password must be at least 14 characters long. [S1][S2]"
+   "latency_ms": 1489,
+   "answer": "Your password must be at least 14 characters long. [S1]"
   },
   {
    "id": "Q62",
@@ -1883,8 +1880,8 @@
    "citations_on_page": 1,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1292,
-   "answer": "Third‑party user accounts automatically expire after 90 days unless the sponsor renews them [S1]."
+   "latency_ms": 1515,
+   "answer": "Third‑party user accounts automatically expire after 90 days unless the employee sponsor renews them [S1]."
   },
   {
    "id": "Q37",
@@ -1903,8 +1900,8 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1445,
-   "answer": "You cannot lease a car through the company; car lease is only available to Employees in Grades L7 or L8 [S5]."
+   "latency_ms": 1708,
+   "answer": "No, only Employees in Grade L7 or L8 may lease a car through the Company's leasing partner; as an L4 you are not eligible for this benefit [S5]."
   },
   {
    "id": "Q63",
@@ -1923,8 +1920,8 @@
    "citations_on_page": 3,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 2082,
-   "answer": "Your notice period is 90 days [S4]. On separation, Earned Leave is encashed up to the accumulation limit of 45 days for Grade L5, so you can encash at most 45 days of EL [S2][S6]."
+   "latency_ms": 2030,
+   "answer": "Your notice period is 90 days [S4]. On resignation, you can encash Earned Leave up to the accumulation limit of 45 days for Grade L5; the amount is calculated at your Basic Salary divided by 26 per day [S2][S6]."
   },
   {
    "id": "Q64",
@@ -1943,7 +1940,7 @@
    "citations_on_page": 2,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1570,
+   "latency_ms": 1769,
    "answer": "Your probation period is six months [S1]. If you resign during probation, you must give 15 days' notice (or pay in lieu) [S1][S5]."
   },
   {
@@ -1963,8 +1960,8 @@
    "citations_on_page": 4,
    "cites_gold_page": true,
    "provider": "ollama",
-   "latency_ms": 1670,
-   "answer": "Your hotel limit in Pune (a Metro City) is Rs 6,000 per night [S2][S3]. Your domestic per‑diem is Rs 1,000 per day [S5]."
+   "latency_ms": 2057,
+   "answer": "Your hotel limit in Pune (a Metro City) is Rs. 6,000 per night, as updated by the 2025 amendment [S2][S3]. Your domestic per‑diem is Rs. 1,000 per day [S5]."
   },
   {
    "id": "C01",
@@ -1980,7 +1977,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1391,
+   "latency_ms": 2230,
    "answer": "Which grade are you in (L1 to L8)?"
   },
   {
@@ -1997,7 +1994,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1326,
+   "latency_ms": 1509,
    "answer": "Which grade are you in (L1 to L8)?"
   },
   {
@@ -2014,7 +2011,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1145,
+   "latency_ms": 1321,
    "answer": "Which grade are you in, L1 to L8?"
   },
   {
@@ -2031,7 +2028,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1177,
+   "latency_ms": 1345,
    "answer": "Which grade (L1 to L8) are you in?"
   },
   {
@@ -2048,7 +2045,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1236,
+   "latency_ms": 1602,
    "answer": "Which grade are you in, L1 to L8?"
   },
   {
@@ -2065,8 +2062,8 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1217,
-   "answer": "Which grade are you in (e.g., Probationer, L1‑L8)?"
+   "latency_ms": 1278,
+   "answer": "Which grade are you in (L1 to L8, or Probationer)?"
   },
   {
    "id": "U01",
@@ -2082,7 +2079,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1361,
+   "latency_ms": 2189,
    "answer": "Nexora's policy documents do not cover leave for caring for a sick pet."
   },
   {
@@ -2099,7 +2096,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1328,
+   "latency_ms": 1436,
    "answer": "Nexora's policy documents do not cover reimbursement for driving licence renewal."
   },
   {
@@ -2116,7 +2113,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1349,
+   "latency_ms": 1238,
    "answer": "Nexora's policy documents do not cover menstrual leave."
   },
   {
@@ -2133,8 +2130,8 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 2130,
-   "answer": "Nexora's policy states that charitable donations are made only through the Corporate Social Responsibility Committee and does not mention any matching of employee donations."
+   "latency_ms": 1256,
+   "answer": "Nexora's policy documents do not cover matching charitable donations."
   },
   {
    "id": "U05",
@@ -2150,8 +2147,8 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1244,
-   "answer": "Nexora's policy documents do not address a four‑day work week option."
+   "latency_ms": 1318,
+   "answer": "Nexora's policy documents do not cover a four‑day work week option."
   },
   {
    "id": "U06",
@@ -2167,7 +2164,7 @@
    "citations_on_page": 0,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 1224,
+   "latency_ms": 1463,
    "answer": "Nexora's policy documents do not cover a festival bonus for Diwali."
   },
   {
@@ -2283,12 +2280,12 @@
    "route": "escalate",
    "verdict": "escalated_ok",
    "facts": null,
-   "citations": 3,
-   "citations_on_page": 3,
+   "citations": 2,
+   "citations_on_page": 2,
    "cites_gold_page": false,
    "provider": "ollama",
-   "latency_ms": 2412,
-   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nYou can raise the incident as a sexual harassment complaint with the Internal Committee. The dinner is considered a Workplace, so the behaviour is covered by the POSH Policy [S1][C.2]. A complaint should be made within three months of the incident, but the Committee may extend this by another three months if you had a valid reason for the delay [S1][C.3]. You may first speak confidentially with the HR Business Partner or directly submit a complaint through the confidential online module on the NPP; the submission date will be the official receipt date [S8]. The inquiry will be kept confidential and only those needed (e.g., for interim relief) will be informed, such as the Chief People Officer for senior respondents [S1][C.4][S4]. You do not need to file a formal complaint to stop the behaviour; you can seek guidance or conciliation from the Internal Committee without a formal inquiry starting [S1][C.5]."
+   "latency_ms": 3650,
+   "answer": "This sounds like it may involve sexual harassment. I can't assess what happened or take a complaint, but you can speak to the Internal Committee in confidence. Internal Committee (POSH): ic@nexora.example. You can also talk to the Employee Assistance Programme (EAP): 1800-000-0000 (extension 9), 24x7, confidential. If you are in immediate danger, call 112.\n\nWhat the POSH Policy says about the process:\nThe incident at the team dinner is covered by the POSH policy because an off‑site team event is considered a Workplace [S1][S1]. You may raise a complaint with the Internal Committee; you can first speak confidentially to the HR Business Partner for guidance and you do not have to file a formal complaint if you only want the behaviour stopped [S1][S1]. The complaint must be made within three months of the incident, but the Internal Committee may extend the limit by up to three months if you have a reason for the delay [S1][S1]. The inquiry will be kept confidential and only those needed for interim relief will be informed, such as a manager if strictly necessary [S1][S1]. If the respondent is a senior leader, the Chief People Officer will be notified instead of the usual manager, to avoid influence on the inquiry [S4][S4]."
   },
   {
    "id": "E08",

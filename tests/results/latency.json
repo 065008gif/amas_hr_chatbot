@@ -1,0 +1,73 @@
+{
+ "cold_fresh_instance_s": {
+  "n": 2,
+  "median": 45.77,
+  "p95": 45.85,
+  "max": 45.85
+ },
+ "probes_that_found_a_warm_instance_s": {
+  "n": 1,
+  "median": 64.93,
+  "p95": 64.93,
+  "max": 64.93
+ },
+ "chat_cache_miss_wall_s": {
+  "n": 20,
+  "median": 3.11,
+  "p95": 3.54,
+  "max": 4.12
+ },
+ "chat_cache_miss_server_s": {
+  "n": 20,
+  "median": 2.87,
+  "p95": 3.28,
+  "max": 3.88
+ },
+ "chat_cache_hit_wall_s": {
+  "n": 5,
+  "median": 0.24,
+  "p95": 0.25,
+  "max": 0.25
+ },
+ "chat_errors": 0,
+ "page_load_s": {
+  "n": 4,
+  "median": 0.36,
+  "p95": 0.61,
+  "max": 0.61
+ },
+ "cold_probes": [
+  {
+   "kind": "cold_probe",
+   "at": "2026-09-29T02:07:18",
+   "idle_note": "unknown (first probe after the user's push)",
+   "seconds_to_ready": 64.93,
+   "attempts": 1,
+   "fresh_instance": false,
+   "server_uptime_s": 122,
+   "server_warm_s": 4.19
+  },
+  {
+   "kind": "cold_probe",
+   "at": "2026-09-29T02:31:15",
+   "idle_note": "20 min with no requests from this evaluation",
+   "seconds_to_ready": 45.85,
+   "dns_s": 0.08,
+   "attempts": 1,
+   "fresh_instance": true,
+   "server_uptime_s": 5,
+   "server_warm_s": 4.24
+  },
+  {
+   "kind": "cold_probe",
+   "at": "2026-09-29T03:12:01",
+   "idle_note": "40 min with no requests from this evaluation",
+   "seconds_to_ready": 45.69,
+   "dns_s": 0.03,
+   "attempts": 1,
+   "fresh_instance": true,
+   "server_uptime_s": 4,
+   "server_warm_s": 4.07
+  }
+ ]
+}

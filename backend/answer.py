@@ -25,7 +25,7 @@ RULES
 2. End every factual sentence with its source label(s) in square brackets, for example [S2] or [S1][S3]. Cite only labels that exist.
 3. If the sources do not contain the answer, set route to "not_found" and say briefly that Nexora's policy documents do not cover it. Do not guess and do not answer from general knowledge.
 4. A source marked AMENDING CIRCULAR prevails over the clause it amends from its effective date. Give the rule as amended, cite the circular, and mention the earlier rule only to explain what changed.
-5. If two sources give different rules for the same thing, say so plainly, say which one prevails according to the documents' own precedence clauses (for example, a policy prevails over the Employee Handbook's summary, or a statute prevails over a Company rule where a source says so), cite both, and list the pair under "conflicts".
+5. If two sources give different rules for the same thing, say so plainly, say which one prevails according to the documents' own precedence clauses (for example, a policy prevails over the Employee Handbook's summary, or a statute prevails over a Company rule where a source says so), cite both, and list the pair under "conflicts". A source marked PRECEDENCE RULE says which rule wins; when it applies, the answer IS the prevailing rule's figure. Never give the overridden figure as the answer.
 6. If the answer genuinely depends on the employee's grade or location and neither the profile nor the conversation gives it, set route to "clarify" and ask ONE short question (for example: "Which grade are you in, L1 to L8?"). If the answer is the same for everyone, answer instead. If a reply is vague ("the usual one", "that"), ask one specific question again. Never ask about gender, health, religion, caste or other sensitive personal details.
 7. Defined terms (words in capitals such as "Immediate Family" or "Working Day") have the meaning in the source's definitions. Apply that meaning, and point it out when it changes the answer.
 8. Give no legal advice and no opinion on any individual's case or on specific people.
@@ -41,6 +41,7 @@ Return ONLY this JSON object:
 POSH_MODE = """
 SPECIAL CASE: the employee may be describing harassment. Explain ONLY the process in the sources (who to contact, how to complain, time limits, confidentiality, protection from retaliation, what the Workplace covers). Do NOT judge whether what happened is harassment, do NOT take a complaint, and do NOT promise any outcome. Use route "answer" when the sources describe the process."""
 
+PRECEDENCE_WORD = re.compile(r"\bprevail", re.I)
 LABEL_RE = re.compile(r"\[(S\d+)\]")
 NUMBER_RE = re.compile(r"(?<![\w/])(\d+(?:[.,]\d+)*)(?![\w/])")
 CLAUSE_LINE_RE = re.compile(r"^((?:\d+\.\d+(?:\.\d+)?)|(?:[A-Z]\.\d+)|(?:CIRCULAR NO\. \S+))\b")
@@ -63,6 +64,10 @@ def source_label(hit, i, hits):
     else:
         what = c["section_title"] + (f", Clause {c['clauses'][0]}" if len(c["clauses"]) == 1 else
                                      f", Clauses {c['clauses'][0]} to {c['clauses'][-1]}" if c["clauses"] else "")
+    if hit.role == "prevailing clause":
+        what += " | the clause another source says PREVAILS"
+    elif PRECEDENCE_WORD.search(c["text"]):
+        what += " | contains a PRECEDENCE RULE"
     return f"[S{i}] {c['title']} ({c['number']}) v{c['version']}, effective {c['effective_date']} | {where} | {what}"
 
 

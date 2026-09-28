@@ -33,7 +33,8 @@ def pct(vals, q):
 
 
 def main():
-    base, after = load("answer_eval_baseline.json"), load("answer_eval.json")
+    base, mid, after = load("answer_eval_baseline.json"), load("answer_eval_routing_fixes.json"), load("answer_eval.json")
+    mt0, adv0, rep = load("multiturn_eval_before_fixes.json"), load("adversarial_eval_before_fixes.json"), load("repeat_t29_t13.json")
     mt, adv, ret = load("multiturn_eval.json"), load("adversarial_eval.json"), load("retrieval_eval.json")
     L = ["# RESULTS: Nia, the Nexora HR helpdesk assistant", "",
          "College project. Nexora Technologies, its policies and its employees are fictional. Every number below is produced by a "
@@ -43,11 +44,13 @@ def main():
          "fooled (see Known failures, T13), so the failure list was also read by hand.", ""]
 
     # ---------- answers
-    if base and after:
-        b, a = base["summary"], after["summary"]
+    if base and mid and after:
+        b, m, a = base["summary"], mid["summary"], after["summary"]
         L += ["## 1. Answer quality (119 single questions: 36 traps + 83 new)", "",
-              "Model: Ollama cloud `gpt-oss:120b` (all runs used it; the Gemini fallback was not needed). Answer cache off.", "",
-              "| Metric | Baseline | After routing fixes |", "|---|---|---|"]
+              "Model: Ollama cloud `gpt-oss:120b` (all runs used it; the Gemini fallback was not needed). Answer cache off. "
+              "Three stages: **baseline**; **after the routing fixes** (D-046: salary, discrimination, termination); "
+              "**final**, after the answer fixes (D-049 to D-051: precedence clauses, POSH circulars, follow-up rewriting), a full re-run of every question.", "",
+              "| Metric | Baseline | After routing fixes | Final |", "|---|---|---|---|"]
         for k, label in [("answerable_accuracy", "Answerable questions fully correct"),
                          ("answerable_correct_or_partly", "Answerable questions correct or partly correct"),
                          ("citation_snippet_on_cited_page", "Cited passage found on the cited PDF page (re-read independently)"),
@@ -56,8 +59,10 @@ def main():
                          ("refusal_recall", "Refusal recall (unanswerable questions refused)"),
                          ("escalation_recall", "Sensitive topics handed to a person"),
                          ("clarify_rate", "Ambiguous questions answered with a clarifying question")]:
-            L.append(f"| {label} | {f(b[k])} | {f(a[k])} |")
-        L += ["", "Accuracy by category (after fixes; counts of verdicts):", "",
+            L.append(f"| {label} | {f(b[k])} | {f(m[k])} | {f(a[k])} |")
+        L += ["", "**Run-to-run variation.** The model is not fully deterministic even at temperature 0.1. Asked five times in a row, "
+              "the same question can get different verdicts (see section 2b), so differences of one or two items between two single "
+              "runs are within noise.", "", "Accuracy by category (final; counts of verdicts):", "",
               "| Category | Correct | Partly | Wrong | Wrongly refused | Other |", "|---|---|---|---|---|---|"]
         for cat, c in a["by_category"].items():
             other = {k: v for k, v in c.items() if k not in ("correct", "partly", "wrong", "wrongly_refused")}
@@ -66,24 +71,33 @@ def main():
         L.append("")
 
     # ---------- multi-turn and paraphrases
-    if mt:
-        s = mt["summary"]
+    if mt and mt0:
+        s, s0 = mt["summary"], mt0["summary"]
         L += ["## 2. Multi-turn conversations (F1, F6) and consistency (F7)", "",
-              "| Metric | Result |", "|---|---|",
-              f"| Conversations fully correct (30 conversations, 3 turns each) | {f(s['conversations_fully_correct'])} |"]
+              "Before = the first run; final = after the follow-up rewriter fix (D-051), all 30 conversations and 40 pairs re-run.", "",
+              "| Metric | Before | Final |", "|---|---|---|",
+              f"| Conversations fully correct (30 conversations, 3 turns each) | {f(s0['conversations_fully_correct'])} | {f(s['conversations_fully_correct'])} |"]
         for n, x in s["turn_accuracy_by_position"].items():
-            L.append(f"| Turn {n} correct | {f(x)} |")
+            L.append(f"| Turn {n} correct | {f(s0['turn_accuracy_by_position'][n])} | {f(x)} |")
         for k, x in s["by_kind"].items():
-            L.append(f"| {k} conversations: turns correct | {f(x['turns_correct'])} |")
-        L += [f"| Paraphrase pairs consistent (same route and same fact verdict; 40 pairs) | {f(s['paraphrase_consistency'])} |",
-              f"| Paraphrase pairs with the same route | {f(s['paraphrase_same_route'])} |",
-              f"| Paraphrase pairs with both answers correct | {f(s['paraphrase_both_correct'])} |", ""]
+            L.append(f"| {k} conversations: turns correct | {f(s0['by_kind'][k]['turns_correct'])} | {f(x['turns_correct'])} |")
+        L += [f"| Paraphrase pairs consistent (same route and same fact verdict; 40 pairs) | {f(s0['paraphrase_consistency'])} | {f(s['paraphrase_consistency'])} |",
+              f"| Paraphrase pairs with both answers correct | {f(s0['paraphrase_both_correct'])} | {f(s['paraphrase_both_correct'])} |", ""]
+    if rep:
+        L += ["## 2b. Repeat test of the two fixed traps (same question, fresh session, 5 times each)", "",
+              "| Question | Runs judged correct | Notes |", "|---|---|---|",
+              f"| T29 leave encashment (first version of the fix) | {sum(x['ok'] for x in rep['T29'])}/5 | 45 days when right; otherwise \"not found\" |",
+              f"| T29 leave encashment (final version, prevailing clause added as an extra source) | {sum(x['ok'] for x in rep['T29_after_extra_source'])}/5 | "
+              "one run still gave 30 days; two ended as \"not found\" |",
+              f"| T13 male complainant | {sum(x['ok'] for x in rep['T13'])}/5 by string check, **5/5 on reading** | every run says employees of any "
+              "gender can complain and cites Circular HR/CIR/2026/04; the string check wants the circular number or date in the text |", ""]
 
     # ---------- adversarial
     if adv:
         s = adv["summary"]
         L += ["## 3. Adversarial prompts (F3, B2)", "",
-              f"Handled safely: **{f(s['handled_safely'])}**. Stopped by the regex screen before any model call: {f(s['stopped_by_regex_screen'])}.", "",
+              (f"First run: {f(adv0['summary']['handled_safely'])} safe. " if adv0 else "") +
+              f"Final run: handled safely **{f(s['handled_safely'])}**. Stopped by the regex screen before any model call: {f(s['stopped_by_regex_screen'])}.", "",
               "| Category | Safe | Unsafe |", "|---|---|---|"]
         L += [f"| {k} | {v.get('safe', 0)} | {v.get('unsafe', 0)} |" for k, v in s["by_category"].items()]
         L.append("")
@@ -106,8 +120,10 @@ def main():
         if tok:
             L += [f"Tokens per model-answered turn: median {int(statistics.median(tok))} in total (median {int(statistics.median(outt))} "
                   f"output), 95th percentile {pct(tok, 0.95)}.", ""]
-        L += [f"Turns answered without any model call (safety screen, tools, confidence gate): {len(runs) - len(model)} of {len(runs)}.",
-              "", "Latency of the deployed site (Vercel, from outside) is measured separately by `tests/latency.py` (next batch).", ""]
+        L += [f"Turns answered without any model call (safety screen, tools, confidence gate): {len(runs) - len(model)} of {len(runs)}.", ""]
+    live = R / "latency.md"
+    if live.exists():
+        L += ["## 5b. " + live.read_text().lstrip("# ").strip(), ""]
     kf = R / "known_failures.md"          # written by hand from the result files; included verbatim
     L += ["## 6. Known failures", "", kf.read_text() if kf.exists() else "(not written yet)"]
     (R / "RESULTS.md").write_text("\n".join(L) + "\n")

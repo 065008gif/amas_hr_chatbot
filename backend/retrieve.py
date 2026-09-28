@@ -138,12 +138,24 @@ def rewrite_followup(question: str, history: list[str] | None) -> str:
 # ---------------------------------------------------------------------------------------------
 # Retrieval
 # ---------------------------------------------------------------------------------------------
+CLAUSE_REF = re.compile(r"\bClause (\d+(?:\.\d+)+)\b")
+SENTENCE_END = re.compile(r"(?<=\.)\s+")                 # not inside "11.2"
+
+
+PREVAILS_REF = re.compile(r"\bClause (\d+(?:\.\d+)+)\s+(?:of this Policy\s+)?(?:shall\s+)?prevails?\b", re.I)
+
+
+def precedence_refs(text):
+    """The clause a sentence says prevails: '... Clause 11.2 prevails by virtue of Clause 1.4' -> ['11.2']."""
+    return [m.group(1) for sent in SENTENCE_END.split(text) for m in PREVAILS_REF.finditer(sent)]
+
+
 @dataclass
 class Hit:
     chunk: dict
     score: float                    # final ranking score (reranker score + boosts, or fused score)
     rank: int = 0
-    role: str = "retrieved"         # retrieved | amending circular
+    role: str = "retrieved"         # retrieved | amending circular | prevailing clause
     amends_hit: str | None = None   # for an amending circular: the chunk id it was added for
     signals: dict = field(default_factory=dict)
 
@@ -169,6 +181,11 @@ class Retriever:
         self._reranker = None
         self.circular_ids = {(c["doc_id"], c["circular_no"]): i for i, c in enumerate(self.index.chunks)
                              if c.get("circular_no")}
+        # (doc, clause number) -> chunk, for precedence cross-references ("Clause 11.2 prevails", D-049)
+        self.clause_ids = {}
+        for i, c in enumerate(self.index.chunks):
+            for no in c.get("clauses") or []:
+                self.clause_ids.setdefault((c["doc_id"], no), i)
 
     # -- models are loaded lazily, once per process (backend/onnx_models.py) --
     @property
@@ -277,7 +294,20 @@ class Retriever:
             if len(hits) >= k:
                 break
             add(i)
-        hits = hits[:max(k, sum(h.role == "amending circular" for h in hits) + config.MAIN_TOP_K)]
+        hits = hits[:max(k, sum(h.role != "retrieved" for h in hits) + config.MAIN_TOP_K)]
+        # 5b. a clause that says another clause of the same policy prevails ("Clause 11.2 prevails") brings
+        #     that clause with it as an extra source, so the list can exceptionally hold k + 1 hits (D-049).
+        pos = {h.chunk["chunk_id"]: n for n, h in enumerate(hits)}
+        for h in list(hits):
+            for no in precedence_refs(h.chunk["text"]):
+                j = self.clause_ids.get((h.chunk["doc_id"], no))
+                if j is None or self.index.chunks[j]["chunk_id"] in pos:
+                    continue
+                target = Hit(self.index.chunks[j], final.get(j, 0.0), role="prevailing clause", amends_hit=h.chunk["chunk_id"],
+                             signals=dict(signals.get(j, {}), matches=matches.get(j, 0)))
+                hits.append(target)             # an extra source (at most one per precedence sentence); evicting
+                #                                 a hit instead pushed out evidence such as the grade table (D-049)
+                pos = {x.chunk["chunk_id"]: n for n, x in enumerate(hits)}
         for r, h in enumerate(hits, start=1):
             h.rank = r
 
@@ -290,6 +320,27 @@ class Retriever:
             confidence = 0.0
         return Result(question, query, ents, hits, round(confidence, 4),
                       confidence >= config.CONFIDENCE_THRESHOLD)
+
+
+def include_circulars(retriever, res, doc_id, k=config.FINAL_TOP_K):
+    """Make sure every amendment circular of one document is in the hits (used for POSH-process answers,
+    where the circulars change who may complain and how, D-050). Replaces the lowest-ranked ordinary hits
+    below MAIN_TOP_K when the list is full."""
+    have = {h.chunk["chunk_id"] for h in res.hits}
+    for (d, _no), j in sorted(retriever.circular_ids.items()):
+        c = retriever.index.chunks[j]
+        if d != doc_id or c["chunk_id"] in have:
+            continue
+        hit = Hit(c, 0.0, role="amending circular", amends_hit=None, signals={})
+        spare = [n for n in range(len(res.hits) - 1, config.MAIN_TOP_K - 1, -1) if res.hits[n].role == "retrieved"]
+        if len(res.hits) < k:
+            res.hits.append(hit)
+        elif spare:
+            res.hits[spare[0]] = hit
+        have.add(c["chunk_id"])
+    for r, h in enumerate(res.hits, start=1):
+        h.rank = r
+    return res
 
 
 if __name__ == "__main__":

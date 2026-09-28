@@ -13,14 +13,15 @@ import time
 
 from backend import answer as ans
 from backend import config, llm, safety, store
-from backend.retrieve import COMPANY_CITIES, FOLLOWUP_START_RE, GRADE_Q_RE, Retriever, rewrite_followup, city_name, CITY_RE
+from backend.retrieve import COMPANY_CITIES, FOLLOWUP_START_RE, GRADE_Q_RE, Retriever, include_circulars, rewrite_followup, city_name, CITY_RE
 
 _retriever = None
 
+REFERS_BACK = re.compile(r"\b(it|that|this|those|they|them|same|eligible|entitled|apply|applies|allowed)\b", re.I)
 INTENT_PROMPT = """You classify one message sent to an HR helpdesk assistant and rewrite follow-ups.
 Return ONLY JSON: {"intent": "policy_question" | "leave_balance" | "ticket_status" | "create_ticket" | "smalltalk" | "off_topic",
 "standalone_question": "<the message rewritten as a complete question using the conversation, or the message itself if already complete>"}
-Rules: keep the employee's meaning; do not answer; do not add facts; carry over grade, location, leave type and topic from the conversation when the message refers back to them (for example "what about L7?")."""
+Rules: keep the employee's meaning; do not answer; do not add facts; carry over grade, location, leave type and topic from the conversation when the message refers back to them (for example "what about L7?"). The standalone question is about the NEW message only: never join it to the previous question, and resolve words like "that allowance" or "it" from the conversation, including the assistant's replies."""
 
 RATE_MSG = "The free model limit was reached, please try again shortly."
 BUSY_MSG = "The AI service is busy right now, please try again in a minute."
@@ -66,9 +67,14 @@ def _standalone(message, history):
     if not prev:
         return message, None
     ruled = rewrite_followup(message, prev)
-    ambiguous = ruled == message and (FOLLOWUP_START_RE.match(message) or
-                                      re.search(r"\b(it|that|this|those|they|them|same)\b", message, re.I))
-    if not ambiguous:
+    # The rules are trusted only for a clean swap ("What about L7?" -> the previous question with L7). When they
+    # would glue a new topic onto the previous question ("...notice period; my per diem when travelling?"), or a
+    # short message leans on the conversation ("How much is that allowance?", "Am I eligible?"), the model
+    # rewrites it from the last messages, including Nia's answers (D-051).
+    glued = ruled != message and "; " in ruled and "; " not in message
+    leans_back = ruled == message and (FOLLOWUP_START_RE.match(message) or (
+        REFERS_BACK.search(message) and len(re.findall(r"[A-Za-z]{3,}", message)) <= 10))
+    if not (glued or leans_back):
         return ruled, None
     convo = "\n".join(f"{'Employee' if m['role'] == 'user' else 'Nia'}: {m['content'][:300]}" for m in history[-4:])
     try:
@@ -166,6 +172,8 @@ def handle_turn(message, employee_id=None, profile=None, history=None):
         return done(cached, cached.get("_topic"), query)
 
     res = retriever().search(query, profile=profile)
+    if mode == "posh_process":
+        res = include_circulars(retriever(), res, "003")   # the POSH circulars change who may complain and how
     topic = ans.topic_of(res.hits)
     if not res.confident and mode != "posh_process":
         r = _base("not_found", "I couldn't find anything about this in Nexora's HR policy documents, so I won't guess. "

@@ -1,5 +1,5 @@
 {
- "run": "2026-09-28T20:55:14",
+ "run": "2026-09-29T02:15:18",
  "variants": {
   "full": {
    "dev": {
@@ -18,7 +18,7 @@
     "recall@5": 0.9393939393939394,
     "recall@8": 0.9393939393939394,
     "MRR": 0.7333333333333333,
-    "all_evidence@8": 0.5757575757575758
+    "all_evidence@8": 0.6060606060606061
    }
   },
   "no rerank": {
@@ -38,7 +38,7 @@
     "recall@5": 0.9393939393939394,
     "recall@8": 0.9393939393939394,
     "MRR": 0.756060606060606,
-    "all_evidence@8": 0.5757575757575758
+    "all_evidence@8": 0.6060606060606061
    }
   },
   "no boosting": {
@@ -58,7 +58,7 @@
     "recall@5": 0.9090909090909091,
     "recall@8": 0.9393939393939394,
     "MRR": 0.7133838383838385,
-    "all_evidence@8": 0.6060606060606061
+    "all_evidence@8": 0.5757575757575758
    }
   },
   "no circular rule": {
@@ -78,7 +78,7 @@
     "recall@5": 0.9393939393939394,
     "recall@8": 0.9393939393939394,
     "MRR": 0.7333333333333333,
-    "all_evidence@8": 0.6060606060606061
+    "all_evidence@8": 0.6363636363636364
    }
   },
   "BM25 only, no rerank": {
@@ -266,7 +266,7 @@
    "first_gold_rank": null,
    "all_evidence": false,
    "confidence": 0.8778,
-   "ms": 366.1,
+   "ms": 354.3,
    "top": [
     "001:clause:4.1-4.2",
     "001:clause:4.3-4.5",
@@ -290,7 +290,7 @@
    "first_gold_rank": null,
    "all_evidence": false,
    "confidence": 0.9067,
-   "ms": 369.5,
+   "ms": 380.2,
    "top": [
     "001:annexure:D.6-D.7",
     "002:table:table6",
@@ -314,7 +314,7 @@
    "first_gold_rank": null,
    "all_evidence": false,
    "confidence": 0.8209,
-   "ms": 369.2,
+   "ms": 367.4,
    "top": [
     "003:clause:6.3-6.5",
     "003:circular:HR/CIR/2025/05",
@@ -338,7 +338,7 @@
    "first_gold_rank": null,
    "all_evidence": false,
    "confidence": 0.9901,
-   "ms": 463.8,
+   "ms": 465.0,
    "top": [
     "003:clause:6.1-6.2",
     "003:clause:5.1-5.2",
@@ -363,7 +363,7 @@
    "first_gold_rank": null,
    "all_evidence": false,
    "confidence": 0.0022,
-   "ms": 296.6,
+   "ms": 296.7,
    "top": [
     "004:table:table1",
     "009:clause:18.1-18.3",
@@ -380,8 +380,8 @@
   }
  ],
  "latency_ms": {
-  "median": 317.5,
-  "p95": 407.5
+  "median": 332.7,
+  "p95": 415.2
  },
  "per_question": {
   "dev": [
@@ -393,7 +393,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9962,
-    "ms": 317.9,
+    "ms": 344.8,
     "top": [
      "002:clause:4.5-4.7",
      "008:table:table1",
@@ -416,7 +416,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9944,
-    "ms": 327.3,
+    "ms": 339.0,
     "top": [
      "002:clause:4.5-4.7",
      "008:clause:5.1-5.3",
@@ -439,7 +439,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.7807,
-    "ms": 286.3,
+    "ms": 288.8,
     "top": [
      "005:annexure:B.1-B.3",
      "005:clause:7.1-7.2",
@@ -462,7 +462,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.9993,
-    "ms": 270.6,
+    "ms": 272.4,
     "top": [
      "008:annexure:C.4-C.6",
      "008:clause:9.1-9.4",
@@ -486,7 +486,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.8778,
-    "ms": 366.1,
+    "ms": 354.3,
     "top": [
      "001:clause:4.1-4.2",
      "001:clause:4.3-4.5",
@@ -509,7 +509,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9867,
-    "ms": 349.4,
+    "ms": 341.7,
     "top": [
      "001:table:table:Annexure_A:Checklist_of_supporting_docume",
      "001:clause:5.4-5.6",
@@ -533,7 +533,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.982,
-    "ms": 341.2,
+    "ms": 350.3,
     "top": [
      "007:clause:5.1-5.2",
      "007:circular:HR/CIR/2025/01",
@@ -556,7 +556,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.6756,
-    "ms": 304.6,
+    "ms": 294.6,
     "top": [
      "001:table:table4",
      "001:table:table2",
@@ -579,7 +579,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9939,
-    "ms": 292.8,
+    "ms": 291.8,
     "top": [
      "001:annexure:B.1-B.2",
      "001:clause:9.1-9.5",
@@ -602,7 +602,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9969,
-    "ms": 361.9,
+    "ms": 361.5,
     "top": [
      "001:annexure:D.2-D.3",
      "001:clause:4.3-4.5",
@@ -625,7 +625,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.9067,
-    "ms": 369.5,
+    "ms": 380.2,
     "top": [
      "001:annexure:D.6-D.7",
      "002:table:table6",
@@ -648,7 +648,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9988,
-    "ms": 272.1,
+    "ms": 268.4,
     "top": [
      "005:annexure:C.11-C.14",
      "005:clause:8.1-8.3",
@@ -671,7 +671,7 @@
     "first_gold_rank": 5,
     "all_evidence": true,
     "confidence": 0.9983,
-    "ms": 467.7,
+    "ms": 468.5,
     "top": [
      "003:clause:5.3-5.5",
      "003:circular:HR/CIR/2025/05",
@@ -694,7 +694,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9884,
-    "ms": 380.0,
+    "ms": 378.5,
     "top": [
      "003:clause:5.3-5.5",
      "003:circular:HR/CIR/2025/05",
@@ -717,7 +717,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.8209,
-    "ms": 369.2,
+    "ms": 367.4,
     "top": [
      "003:clause:6.3-6.5",
      "003:circular:HR/CIR/2025/05",
@@ -740,7 +740,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9992,
-    "ms": 390.3,
+    "ms": 415.2,
     "top": [
      "002:circular:HR/CIR/2026/01",
      "002:clause:9.4-9.5",
@@ -764,7 +764,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9869,
-    "ms": 356.0,
+    "ms": 377.0,
     "top": [
      "001:clause:11.3-11.5",
      "008:annexure:B.1",
@@ -773,7 +773,7 @@
      "001:clause:4.3-4.5",
      "001:clause:3.1-3.3",
      "001:clause:3.4-3.7",
-     "005:clause:17.4-17.6"
+     "001:clause:1.3-1.4"
     ],
     "gold": [
      "001:clause:11.3-11.5"
@@ -787,7 +787,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9844,
-    "ms": 362.5,
+    "ms": 361.5,
     "top": [
      "001:clause:11.1-11.2",
      "008:annexure:C.1-C.3",
@@ -796,7 +796,7 @@
      "001:circular:HR/CIR/2025/11",
      "008:annexure:B.1",
      "001:annexure:D.4-D.5",
-     "008:clause:5.4-5.7"
+     "001:clause:1.3-1.4"
     ],
     "gold": [
      "001:clause:11.1-11.2"
@@ -810,7 +810,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.998,
-    "ms": 254.7,
+    "ms": 254.9,
     "top": [
      "006:clause:4.3-4.5",
      "004:table:table3",
@@ -833,7 +833,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.8509,
-    "ms": 272.7,
+    "ms": 270.2,
     "top": [
      "008:clause:11.1-11.4",
      "008:clause:2.1-2.8",
@@ -856,7 +856,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.8761,
-    "ms": 253.4,
+    "ms": 252.0,
     "top": [
      "008:table:table2",
      "002:clause:28.1-28.3",
@@ -879,7 +879,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.4244,
-    "ms": 347.2,
+    "ms": 343.5,
     "top": [
      "002:clause:19.1-19.2",
      "002:clause:19.2-19.4",
@@ -902,7 +902,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.1063,
-    "ms": 296.3,
+    "ms": 290.9,
     "top": [
      "009:clause:10.1-10.3",
      "002:clause:14.1-14.3",
@@ -925,7 +925,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9976,
-    "ms": 317.5,
+    "ms": 315.7,
     "top": [
      "009:clause:6.1-6.4",
      "009:table:table4",
@@ -948,7 +948,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.0109,
-    "ms": 392.2,
+    "ms": 380.4,
     "top": [
      "004:clause:20.1-20.4",
      "009:clause:15.1-15.3",
@@ -971,7 +971,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9972,
-    "ms": 234.7,
+    "ms": 233.2,
     "top": [
      "007:clause:15.1-15.2",
      "007:clause:2.1-2.5",
@@ -994,7 +994,7 @@
     "first_gold_rank": 3,
     "all_evidence": true,
     "confidence": 0.9982,
-    "ms": 244.6,
+    "ms": 242.5,
     "top": [
      "007:clause:3.1-3.2",
      "007:clause:8.1-8.4",
@@ -1017,7 +1017,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.3858,
-    "ms": 251.2,
+    "ms": 247.5,
     "top": [
      "007:table:table:Annexure_A:What_to_attach_to_a_travel_cla",
      "007:annexure:C.8-C.10",
@@ -1040,7 +1040,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.8187,
-    "ms": 272.0,
+    "ms": 266.2,
     "top": [
      "002:clause:31.1-31.3",
      "002:table:table12",
@@ -1063,7 +1063,7 @@
     "first_gold_rank": 3,
     "all_evidence": true,
     "confidence": 0.7785,
-    "ms": 427.0,
+    "ms": 423.0,
     "top": [
      "002:clause:8.1-8.2",
      "002:circular:HR/CIR/2025/09",
@@ -1086,7 +1086,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.0837,
-    "ms": 349.5,
+    "ms": 345.4,
     "top": [
      "008:clause:10.1-10.5",
      "002:annexure:D.4-D.6",
@@ -1109,7 +1109,7 @@
     "first_gold_rank": 4,
     "all_evidence": true,
     "confidence": 0.9918,
-    "ms": 280.3,
+    "ms": 269.1,
     "top": [
      "008:annexure:B.1",
      "008:clause:8.1",
@@ -1117,7 +1117,7 @@
      "008:clause:8.2-8.5",
      "008:clause:2.1-2.8",
      "008:table:table3",
-     "002:clause:19.2-19.4",
+     "001:clause:11.1-11.2",
      "001:clause:11.3-11.5"
     ],
     "gold": [
@@ -1133,7 +1133,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9996,
-    "ms": 278.2,
+    "ms": 297.9,
     "top": [
      "005:annexure:B.1-B.3",
      "005:clause:7.1-7.2",
@@ -1156,7 +1156,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.9975,
-    "ms": 270.1,
+    "ms": 294.3,
     "top": [
      "005:clause:13.1-13.4",
      "005:clause:22.1-22.3",
@@ -1179,7 +1179,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.7542,
-    "ms": 360.2,
+    "ms": 354.4,
     "top": [
      "002:table:table3",
      "001:table:table1",
@@ -1203,7 +1203,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.0307,
-    "ms": 264.5,
+    "ms": 259.9,
     "top": [
      "002:clause:16.1-16.3",
      "002:clause:25.1-25.4",
@@ -1226,7 +1226,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9959,
-    "ms": 470.4,
+    "ms": 469.6,
     "top": [
      "002:clause:20.3-20.6",
      "004:clause:20.1-20.4",
@@ -1249,7 +1249,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9841,
-    "ms": 270.9,
+    "ms": 271.6,
     "top": [
      "008:clause:5.1-5.3",
      "002:clause:4.5-4.7",
@@ -1272,7 +1272,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.8897,
-    "ms": 380.3,
+    "ms": 379.7,
     "top": [
      "009:table:table2",
      "009:annexure:C.1-C.3",
@@ -1295,7 +1295,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9987,
-    "ms": 316.1,
+    "ms": 314.0,
     "top": [
      "001:definition:2.6-2.9",
      "001:circular:HR/CIR/2026/02",
@@ -1318,7 +1318,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0018,
-    "ms": 303.4,
+    "ms": 300.0,
     "top": [
      "002:clause:3.1-3.2",
      "002:table:table13",
@@ -1339,7 +1339,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 263.6,
+    "ms": 253.4,
     "top": [
      "006:circular:HR/CIR/2025/10",
      "006:clause:8.1-8.3",
@@ -1360,7 +1360,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0007,
-    "ms": 299.7,
+    "ms": 294.8,
     "top": [
      "001:table:table4#2",
      "001:table:table4",
@@ -1381,7 +1381,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0789,
-    "ms": 308.4,
+    "ms": 296.2,
     "top": [
      "007:clause:14.1-14.3",
      "007:table:table4",
@@ -1402,7 +1402,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 264.0,
+    "ms": 258.1,
     "top": [
      "008:circular:HR/CIR/2025/04",
      "005:clause:19.1-19.4",
@@ -1423,7 +1423,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0005,
-    "ms": 385.0,
+    "ms": 377.4,
     "top": [
      "003:circular:HR/CIR/2026/04",
      "003:clause:1.1-1.3",
@@ -1444,7 +1444,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.2099,
-    "ms": 278.8,
+    "ms": 278.4,
     "top": [
      "001:clause:7.1-7.3",
      "001:circular:HR/CIR/2026/02",
@@ -1465,7 +1465,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.1658,
-    "ms": 291.1,
+    "ms": 285.9,
     "top": [
      "005:clause:10.1-10.3",
      "002:clause:3.1-3.2",
@@ -1486,7 +1486,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0003,
-    "ms": 323.3,
+    "ms": 354.6,
     "top": [
      "005:clause:12.1-12.4",
      "005:circular:HR/CIR/2026/05",
@@ -1507,7 +1507,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0347,
-    "ms": 301.7,
+    "ms": 311.1,
     "top": [
      "002:annexure:D.10-D.12",
      "002:clause:Front-intro",
@@ -1528,7 +1528,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 285.6,
+    "ms": 289.7,
     "top": [
      "005:clause:5.3-5.5",
      "001:clause:7.4-7.7",
@@ -1549,7 +1549,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 369.6,
+    "ms": 371.4,
     "top": [
      "001:annexure:D.1",
      "002:clause:5.1-5.2",
@@ -1570,7 +1570,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 308.3,
+    "ms": 312.4,
     "top": [
      "007:clause:2.1-2.5",
      "007:table:table6",
@@ -1578,7 +1578,7 @@
      "004:definition:2.4-2.9",
      "005:table:table8",
      "001:table:table2",
-     "006:clause:2.1-2.8",
+     "001:clause:9.1-9.5",
      "001:annexure:B.1-B.2"
     ],
     "gold": []
@@ -1591,7 +1591,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0,
-    "ms": 297.3,
+    "ms": 299.4,
     "top": [
      "001:annexure:D.4-D.5",
      "001:clause:9.1-9.5",
@@ -1612,7 +1612,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0001,
-    "ms": 270.3,
+    "ms": 271.2,
     "top": [
      "005:clause:17.4-17.6",
      "005:clause:2.1-2.4",
@@ -1635,7 +1635,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9702,
-    "ms": 305.8,
+    "ms": 311.8,
     "top": [
      "001:circular:HR/CIR/2025/07",
      "001:clause:6.3-6.5",
@@ -1659,7 +1659,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.9864,
-    "ms": 353.4,
+    "ms": 358.7,
     "top": [
      "001:clause:3.4-3.7",
      "001:circular:HR/CIR/2025/11",
@@ -1683,7 +1683,7 @@
     "first_gold_rank": 2,
     "all_evidence": false,
     "confidence": 0.9976,
-    "ms": 365.8,
+    "ms": 353.2,
     "top": [
      "001:annexure:D.4-D.5",
      "001:circular:HR/CIR/2026/02",
@@ -1707,7 +1707,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.8656,
-    "ms": 283.6,
+    "ms": 279.2,
     "top": [
      "001:clause:6.2.3-6.2.5",
      "001:clause:6.1-6.2.2",
@@ -1732,7 +1732,7 @@
     "first_gold_rank": 3,
     "all_evidence": true,
     "confidence": 0.9214,
-    "ms": 370.8,
+    "ms": 362.4,
     "top": [
      "001:table:table1",
      "001:annexure:D.6-D.7",
@@ -1755,7 +1755,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9999,
-    "ms": 361.2,
+    "ms": 349.2,
     "top": [
      "001:annexure:D.6-D.7",
      "001:clause:8.3-8.3.3",
@@ -1779,7 +1779,7 @@
     "first_gold_rank": 3,
     "all_evidence": true,
     "confidence": 0.006,
-    "ms": 393.1,
+    "ms": 391.4,
     "top": [
      "006:clause:9.1-9.3",
      "006:annexure:C.1-C.3",
@@ -1802,7 +1802,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.004,
-    "ms": 342.7,
+    "ms": 337.4,
     "top": [
      "001:clause:3.4-3.7",
      "001:circular:HR/CIR/2025/11",
@@ -1823,7 +1823,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.9708,
-    "ms": 458.3,
+    "ms": 449.6,
     "top": [
      "002:clause:6.1-6.4",
      "001:clause:6.3-6.5",
@@ -1848,7 +1848,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.2614,
-    "ms": 355.7,
+    "ms": 359.3,
     "top": [
      "002:clause:11.1-11.4",
      "002:table:table6",
@@ -1871,7 +1871,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9315,
-    "ms": 303.8,
+    "ms": 329.3,
     "top": [
      "002:circular:HR/CIR/2025/09",
      "007:annexure:C.3-C.4",
@@ -1895,7 +1895,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.003,
-    "ms": 297.4,
+    "ms": 333.1,
     "top": [
      "002:clause:3.1-3.2",
      "002:annexure:D.10-D.12",
@@ -1916,7 +1916,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.9901,
-    "ms": 463.8,
+    "ms": 465.0,
     "top": [
      "003:clause:6.1-6.2",
      "003:clause:5.1-5.2",
@@ -1940,7 +1940,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.9892,
-    "ms": 397.0,
+    "ms": 401.1,
     "top": [
      "003:annexure:C.1-C.6",
      "003:clause:4.1-4.3",
@@ -1964,7 +1964,7 @@
     "first_gold_rank": 3,
     "all_evidence": true,
     "confidence": 0.9249,
-    "ms": 328.8,
+    "ms": 332.7,
     "top": [
      "004:annexure:C.1-C.2",
      "004:table:table2",
@@ -1988,7 +1988,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.5639,
-    "ms": 407.5,
+    "ms": 407.8,
     "top": [
      "004:clause:12.1-12.4",
      "004:clause:15.3-15.5",
@@ -2013,7 +2013,7 @@
     "first_gold_rank": 2,
     "all_evidence": false,
     "confidence": 0.0091,
-    "ms": 367.8,
+    "ms": 365.4,
     "top": [
      "002:annexure:D.10-D.12",
      "004:clause:8.3-8.5",
@@ -2037,7 +2037,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.0022,
-    "ms": 296.6,
+    "ms": 296.7,
     "top": [
      "004:table:table1",
      "009:clause:18.1-18.3",
@@ -2060,7 +2060,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.8743,
-    "ms": 310.9,
+    "ms": 307.8,
     "top": [
      "005:circular:HR/CIR/2025/06",
      "005:table:table4",
@@ -2083,7 +2083,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9979,
-    "ms": 391.2,
+    "ms": 386.8,
     "top": [
      "005:annexure:C.3-C.4",
      "005:definition:2.5-2.9",
@@ -2107,7 +2107,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9772,
-    "ms": 314.0,
+    "ms": 312.7,
     "top": [
      "005:annexure:C.1-C.2",
      "005:clause:8.4-8.6",
@@ -2131,7 +2131,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9988,
-    "ms": 394.0,
+    "ms": 386.2,
     "top": [
      "005:clause:4.4-4.6",
      "005:annexure:C.5-C.7",
@@ -2154,7 +2154,7 @@
     "first_gold_rank": 2,
     "all_evidence": true,
     "confidence": 0.6901,
-    "ms": 318.1,
+    "ms": 301.5,
     "top": [
      "006:annexure:C.1-C.3",
      "006:circular:HR/CIR/2025/10",
@@ -2178,7 +2178,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.949,
-    "ms": 271.4,
+    "ms": 272.8,
     "top": [
      "006:clause:9.1-9.3",
      "006:clause:9.4-9.6",
@@ -2202,7 +2202,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.8847,
-    "ms": 353.7,
+    "ms": 352.5,
     "top": [
      "006:clause:6.1-6.3",
      "006:circular:HR/CIR/2026/06",
@@ -2225,7 +2225,7 @@
     "first_gold_rank": 2,
     "all_evidence": false,
     "confidence": 0.2319,
-    "ms": 315.9,
+    "ms": 309.0,
     "top": [
      "007:annexure:C.1-C.2",
      "007:circular:HR/CIR/2025/12",
@@ -2249,7 +2249,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.9992,
-    "ms": 309.3,
+    "ms": 350.4,
     "top": [
      "007:annexure:C.1-C.2",
      "005:annexure:C.3-C.4",
@@ -2273,7 +2273,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9186,
-    "ms": 353.7,
+    "ms": 369.6,
     "top": [
      "007:circular:HR/CIR/2025/01",
      "007:annexure:C.3-C.4",
@@ -2294,9 +2294,9 @@
     "answerable": true,
     "type": 2,
     "first_gold_rank": 5,
-    "all_evidence": false,
+    "all_evidence": true,
     "confidence": 0.9971,
-    "ms": 385.1,
+    "ms": 391.8,
     "top": [
      "008:annexure:B.1",
      "001:clause:4.3-4.5",
@@ -2304,7 +2304,7 @@
      "002:table:table3",
      "008:clause:8.1",
      "001:annexure:D.6-D.7",
-     "001:table:table1",
+     "001:clause:11.1-11.2",
      "001:clause:11.3-11.5"
     ],
     "gold": [
@@ -2321,7 +2321,7 @@
     "first_gold_rank": 1,
     "all_evidence": false,
     "confidence": 0.9987,
-    "ms": 273.4,
+    "ms": 272.2,
     "top": [
      "008:clause:5.1-5.3",
      "002:table:table7",
@@ -2346,7 +2346,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9334,
-    "ms": 286.1,
+    "ms": 289.0,
     "top": [
      "008:circular:HR/CIR/2025/04",
      "002:table:table7",
@@ -2370,7 +2370,7 @@
     "first_gold_rank": 4,
     "all_evidence": false,
     "confidence": 0.7872,
-    "ms": 287.0,
+    "ms": 289.0,
     "top": [
      "005:annexure:B.1-B.3",
      "005:clause:7.1-7.2",
@@ -2395,7 +2395,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.2744,
-    "ms": 363.7,
+    "ms": 364.9,
     "top": [
      "009:circular:HR/CIR/2025/02",
      "009:clause:5.1-5.5",
@@ -2419,7 +2419,7 @@
     "first_gold_rank": 4,
     "all_evidence": false,
     "confidence": 0.2878,
-    "ms": 388.2,
+    "ms": 392.4,
     "top": [
      "009:clause:17.1-17.4",
      "004:annexure:C.9-C.10",
@@ -2443,7 +2443,7 @@
     "first_gold_rank": 1,
     "all_evidence": true,
     "confidence": 0.9825,
-    "ms": 338.2,
+    "ms": 341.8,
     "top": [
      "009:annexure:C.1-C.3",
      "009:table:table2",
@@ -2466,7 +2466,7 @@
     "first_gold_rank": null,
     "all_evidence": false,
     "confidence": 0.2335,
-    "ms": 296.6,
+    "ms": 302.4,
     "top": [
      "002:clause:24.1-24.4",
      "002:annexure:D.4-D.6",

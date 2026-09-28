@@ -11,7 +11,7 @@ export default function WarmUp({ status, attempts, error, retry }) {
         <p className="muted" style={{ marginTop: '.5rem' }}>
           {failed
             ? (error || 'The free server did not respond. It may be restarting. Please try again.')
-            : 'The demo runs on free serverless hosting. After a quiet period the first request starts a fresh instance, which loads the policy index and search models (usually a few seconds).'}
+            : 'The demo runs on free serverless hosting. After a quiet period the first request starts a fresh instance, which loads the policy index and search models. This can take up to about a minute; after that, answers take a few seconds.'}
         </p>
         {!failed && <div className="progress" aria-hidden="true"><span style={{ width: `${pct}%` }} /></div>}
         {!failed && <div className="tiny muted">{status === 'sleeping' ? 'Starting the server…' : status === 'connecting' ? 'Starting the assistant and loading search models…' : 'Loading search models…'}</div>}

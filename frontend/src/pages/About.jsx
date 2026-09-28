@@ -32,7 +32,7 @@ export default function About() {
           <p>Leave balances and tickets belong to fictional demo employees. Nia only ever shows the signed-in demo employee's own data.</p>
         </Section>
         <Section Icon={Cloud} title="Hosting and where data lives">
-          <p>The whole portal runs on <b>Vercel's free Hobby plan</b> as one site: the web pages are static files, and the assistant is a Python serverless function. The policy index, the two search models and the PDFs are packaged inside that function, so searching needs no outside service. After a quiet period the first request starts a fresh instance, which takes a few seconds (the "waking up" screen).</p>
+          <p>The whole portal runs on <b>Vercel's free Hobby plan</b> as one site: the web pages are static files, and the assistant is a Python serverless function. The policy index, the two search models and the PDFs are packaged inside that function, so searching needs no outside service. After a quiet period the first request starts a fresh instance, which took about 46 seconds when measured (the "waking up" screen); after that, answers take about 3 seconds.</p>
           {storage?.persistent
             ? <p><b>Tickets are saved</b> in a free Upstash Redis database connected to the project, so they survive restarts. The answer cache and the anonymised usage statistics are kept there too.</p>
             : <div className="alert warn"><TriangleAlert size={16} /><div><b>Tickets reset.</b> No database is connected, so tickets, the answer cache and usage statistics are kept in the server's temporary storage and are lost whenever the serverless instance restarts. Ticket IDs may then repeat.</div></div>}

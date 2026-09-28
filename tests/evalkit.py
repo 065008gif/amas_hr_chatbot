@@ -25,7 +25,7 @@ RESULTS = ROOT / "tests" / "results"
 
 def norm(s):
     s = unicodedata.normalize("NFKC", str(s or "")).lower()
-    for a, b in {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", " ": " ", " ": " "}.items():
+    for a, b in {"‘": "'", "’": "'", "“": '"', "”": '"', "–": "-", "—": "-", "\u2011": "-", "\u2010": "-", " ": " ", " ": " "}.items():
         s = s.replace(a, b)
     s = re.sub(r"(?<=\d),(?=\d)", "", s)                                   # 1,00,000 -> 100000
     s = re.sub(r"(?<=\d) %", "%", s)                                        # "50 %" -> "50%"

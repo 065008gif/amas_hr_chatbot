@@ -35,7 +35,7 @@ singles:
   - {id: T13, cat: circular, route: [answer, escalate], facts: [["yes", "can file", "may file", "can make", "may make", "extends", "extended"], ["8 march 2026", "hr/cir/2026/04"]]}
   - {id: T14, cat: definition, route: [answer, escalate], facts: [["yes", "applies", "covered", "does apply"], ["messaging"]]}
   - {id: T15, cat: circular, facts: [["no", "cannot", "not accept", "may not", "must not", "not allowed", "not permitted"], ["gift card", "gift cards"]]}
-  - {id: T16, cat: conflict, route: [answer, escalate], facts: [["three months", "3 months"]]}
+  - {id: T16, cat: conflict, route: [answer, escalate], facts: [["three months", "3 months", "three-month"]]}
   - {id: T17, cat: grade, facts: [["designated person", "designated persons"]]}
   - {id: T18, cat: definition, facts: [["yes", "must declare", "need to declare", "required to declare", "should declare"], ["relative", "relatives"]]}
   - {id: T19, cat: circular, facts: [["#400000", "4 lakh"]]}

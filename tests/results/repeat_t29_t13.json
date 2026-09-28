@@ -1,0 +1,83 @@
+{
+ "T29": [
+  {
+   "route": "answer",
+   "ok": true,
+   "answer": "You will have 45 days of Earned Leave encashed in your full and final settlement [S3][S8]."
+  },
+  {
+   "route": "not_found",
+   "ok": false,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  },
+  {
+   "route": "answer",
+   "ok": true,
+   "answer": "You will have 45 days of Earned Leave encashed in your full and final settlement [S7][S3][S8]."
+  },
+  {
+   "route": "not_found",
+   "ok": false,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  },
+  {
+   "route": "not_found",
+   "ok": false,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  }
+ ],
+ "T13": [
+  {
+   "route": "escalate",
+   "ok": false,
+   "answer": "‑retaliation provisions to employees of any gender, including men and transgender persons, with the same procedure and timelines as for an Aggrieved Woman [S8]."
+  },
+  {
+   "route": "escalate",
+   "ok": false,
+   "answer": "he 2026 amendment extends the POSH complaint process to employees of any gender, so you can file a sexual harassment complaint with the Internal Committee [S8]."
+  },
+  {
+   "route": "escalate",
+   "ok": true,
+   "answer": "nds the POSH complaint process to employees of any gender, so you can file a sexual‑harassment complaint with the Internal Committee just as a woman could [S8]."
+  },
+  {
+   "route": "escalate",
+   "ok": false,
+   "answer": ". The 2026 amendment extends the POSH complaint process to employees of any gender, including men, so you may file a complaint with the Internal Committee [S8]."
+  },
+  {
+   "route": "escalate",
+   "ok": false,
+   "answer": "visions of the POSH Policy to employees of any gender, including men and transgender persons, and they follow the same procedure as for an Aggrieved Woman [S8]."
+  }
+ ],
+ "T29_after_extra_source": [
+  {
+   "route": "answer",
+   "ok": false,
+   "answer": "al settlement. The Separation and Exit Policy caps encashment at a maximum of 30 days, and the Leave Policy’s precedence rule confirms that this limit overrides the higher accumulation limit [S5][S8]."
+  },
+  {
+   "route": "not_found",
+   "ok": false,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  },
+  {
+   "route": "answer",
+   "ok": true,
+   "answer": "You will have 45 days of Earned Leave encashed in your full and final settlement [S9][S3]."
+  },
+  {
+   "route": "answer",
+   "ok": true,
+   "answer": "umulation limit for Grade L5 (45 days) as set out in the Leave Policy, and this limit prevails over the 30‑day cap in the Separation and Exit Policy due to the precedence rule in Clause 11.2 [S9][S7]."
+  },
+  {
+   "route": "not_found",
+   "ok": false,
+   "answer": "I couldn't find this in Nexora's HR policy documents, so I won't guess."
+  }
+ ]
+}
