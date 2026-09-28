@@ -194,3 +194,11 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
 - Traps: T23 (type 1: anchor days), T24 (type 6: body pays overtime at 1.5×, but Clause 1.3 states the State law requires 2× and prevails), T25 (type 3: no shift allowance for L6 to L8). **Trap count is now 25, all verified, covering all six types, which meets the brief's minimum.**
 - Overtime arithmetic was checked: Rs. 6,24,000 / 12 / 26 / 8 = Rs. 250 an hour; × 1.5 × 6 = Rs. 2,250, and at the statutory 2× it is Rs. 3,000.
 - "Standard working day" was reworded to "standard workday" so it isn't confused with the defined term "Working Day" (Monday to Friday). Running total: 96 pages against 106 targeted.
+
+**D-027 (2026-09-28): Travel and Expense Reimbursement Policy (NTL/HR/POL/007) is complete: 12 pages against a target of 14 ±2.**
+- 16 sections, 7 numbered tables (class of travel by grade, hotel limits, per diem, non-reimbursable items, international per diem, client entertainment, approval matrix) and 4 annexures, plus 2 circulars (HR/CIR/2025/01 L4 and L5 metro hotel limit Rs. 5,000 → 6,000; HR/CIR/2025/12 night-time app cab for all grades). About 4,400 words. 2 statutory claims (FEMA forex, tax on travel reimbursement); both are UNVERIFIED.
+- The **travel definition of "Metro City"** (Clause 2.3) includes Bengaluru, Hyderabad, Pune and NCR (Noida), and explicitly says it differs from the tax definition in the Compensation Policy. This supports trap T20. The brief's example question ("Can I claim a cab from the airport at L4?") is answered in Clause 7.1 and FAQ C.1.
+- Traps: T26 (type 1: night cab for L1 to L3), T27 (type 3: L1 to L3 don't fly for journeys of 500 km or less), T28 (type 1: hotel limit circular).
+- Claim arithmetic was checked: per diem 3 × Rs. 1,000 + transfers 650 + 720 + 840 + 910 + local cabs 1,160 = Rs. 7,280.
+- **Checker refinement:** the repeated-sentence (filler) check now skips table cells. Grade tables legitimately repeat a cell such as the L1 to L3 air rule, while repeated running text is still an error.
+- Running total: 108 pages against 120 targeted.

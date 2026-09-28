@@ -164,8 +164,13 @@ def check_definitions(doc, r):
 
 
 def sentences(doc):
+    """Sentences of running text. Table cells are skipped: grade tables legitimately repeat a cell."""
     here = doc["doc_id"]
+    cells = {str(c) for _, _, body in all_parts(doc) for bt, b, _ in walk(body) if bt == "table"
+             for row in b.get("rows", []) for c in row}
     for where, s in doc_strings(doc):
+        if s in cells:
+            continue
         for sent in re.split(r"(?<=[.;:])\s+", plain(s, here)):
             words = re.findall(r"[a-z0-9]+", sent.lower())
             if len(words) >= 12:

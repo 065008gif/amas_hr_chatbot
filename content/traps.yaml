@@ -193,3 +193,26 @@
   answer: "None. Shift allowance is only for Grades L1 to L5 (Clause 6.2); Grades L6 to L8 are not eligible. (For L1-L5 the Night Shift rate is Rs. 650 per day from 1 June 2026 under Circular HR/CIR/2026/06.)"
   quotes:
     - {doc: "006", anchor: "6.2", text: "Employees in Grades L6 to L8 are not eligible for shift allowance"}
+- id: T26
+  type: 1
+  doc: "007"
+  question: "I am an L2. My flight lands at 11:30 p.m. Can I take an Uber home and claim it?"
+  answer: "Yes. From 15 November 2025, Circular HR/CIR/2025/12 lets any Grade use an app-based cab (standard category) for airport or station transfers between 9:00 p.m. and 7:00 a.m. and claim the actual fare without the Rs. 750 limit. Clause 7.1 otherwise limits L1-L3 to bus, metro or pooled cab up to Rs. 750."
+  quotes:
+    - {doc: "007", anchor: "7.1", text: "reimbursed the actual fare up to Rs. 750 for each trip"}
+    - {doc: "007", anchor: "HR/CIR/2025/12", text: "whose flight or train departs or arrives between 9:00 p.m. and 7:00 a.m. may use an app-based cab in the standard category"}
+- id: T27
+  type: 3
+  doc: "007"
+  question: "I am an L2. Can I fly from Bengaluru to Chennai for a client meeting?"
+  answer: "Normally no. For journeys of 500 km or less, L1-L3 travel by AC 3-tier rail or AC bus (Clause 4.2, Table 1); Bengaluru-Chennai is about 350 km (Annexure C, C.2). The Reporting Manager may approve air travel only if no suitable train or bus gets you there in time."
+  quotes:
+    - {doc: "007", anchor: "4.2", text: "For journeys of 500 km or less, Employees in Grades L1 to L3 travel by rail in AC 3-tier or by air-conditioned bus"}
+    - {doc: "007", anchor: "C.2", text: "The journey is about 350 km, which is less than 500 km"}
+- id: T28
+  type: 1
+  doc: "007"
+  question: "What is the hotel limit for an L5 staying in Mumbai?"
+  answer: "Rs. 6,000 per night excluding taxes, from 1 February 2025 (Circular HR/CIR/2025/01); Table 2 still shows Rs. 5,000 for L4-L5 in a Metro City."
+  quotes:
+    - {doc: "007", anchor: "HR/CIR/2025/01", text: "is increased from Rs. 5,000 to Rs. 6,000 per night, excluding taxes"}

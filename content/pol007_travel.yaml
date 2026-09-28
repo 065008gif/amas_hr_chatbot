@@ -1,0 +1,426 @@
+doc_id: "007"
+title: Travel and Expense Reimbursement Policy
+number: NTL/HR/POL/007
+version: "4.0"
+effective_date: "2024-10-01"
+target_pages: 14
+lowercase_ok: [metro city]   # "non-metro city", reviewed
+
+control:
+  owner: Head, Finance Operations
+  approver: Chief Financial Officer and Chief People Officer
+  approval_date: "2024-09-16"
+  classification: Internal
+  supersedes: Travel Policy version 3.3 dated 1 April 2023
+  review_cycle: Annual
+  applicable_to: All Employees in Grades L1 to L8 travelling on Company business, and candidates and consultants travelling at the Company's request
+  distribution: "Published on the NPP under Policies > Travel and Expenses. The Travel Desk can be reached at traveldesk@nexora.example. Printed copies are uncontrolled."
+
+history:
+  - ["2.0", "2018-04-01", "Grade-based entitlements restated; per diem introduced in place of meal bills.", "Finance Operations / CFO"]
+  - ["3.0", "2021-07-01", "Online booking through the Travel Desk; international travel section revised.", "Finance Operations / CFO"]
+  - ["3.3", "2023-04-01", "Hotel limits revised; GST invoicing requirement added.", "Finance Operations / CFO and CPO"]
+  - ["4.0", "2024-10-01", "Restructured; airport transfers, travel advances and non-reimbursable items clarified.", "Finance Operations / CFO and CPO"]
+
+sections:
+  - num: 1
+    title: Purpose and Scope
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Policy sets out how Business Travel is approved and booked, the class of travel, hotel and daily allowances to which Employees are entitled by Grade, and how expenses are claimed and reimbursed. It aims to ensure that Employees travel safely and in reasonable comfort, and that the Company's money is spent prudently."
+      - clause: "1.2"
+        title: Scope
+        text: "This Policy covers domestic and international Business Travel, local conveyance on Company business, and other business expenses such as client entertainment approved under the {doc:004}. Relocation on transfer is governed by the {doc:002}, and assignments abroad of more than 90 days by the assignment letter."
+      - clause: "1.3"
+        title: Client-billable travel
+        text: "Where travel is billable to a client, the client's travel policy applies if it is more restrictive than this Policy and the Company has agreed to it. The project manager informs the Employee of any such restriction before the travel is booked."
+
+  - num: 2
+    title: Definitions
+    body:
+      - clause: "2.1"
+        term: Base Location
+        text: "means the office to which the Employee is attached, as recorded on the NPP."
+      - clause: "2.2"
+        term: Business Travel
+        text: "means travel away from the Base Location on the Company's business, approved on the NPP before the journey, and includes travel to a client site, another Company office, a training programme or a conference."
+      - clause: "2.3"
+        term: Metro City
+        text: "means, for the purposes of this Policy only, Mumbai, Delhi and the National Capital Region (including Noida, Gurugram, Ghaziabad and Faridabad), Bengaluru, Chennai, Hyderabad, Kolkata and Pune. All other cities in India are non-metro cities for hotel limits. This definition does not apply to the income tax exemption for house rent allowance, for which the {doc:005} uses a different list."
+      - clause: "2.4"
+        term: Per Diem
+        text: "means the fixed daily allowance paid for each day of Business Travel to cover meals, laundry, tips and incidental expenses, without the need to produce bills."
+      - clause: "2.5"
+        term: Travel Desk
+        text: "means the team in Finance Operations, together with the Company's appointed travel agency, that books tickets, hotels and transfers for Business Travel."
+
+  - num: 3
+    title: Approval and Booking
+    body:
+      - clause: "3.1"
+        title: Travel request
+        text: "Every Business Travel is requested on the NPP, stating the purpose, dates, destination and cost centre, and approved before any booking is made. Domestic travel is approved by the Reporting Manager. International travel is approved by the Reporting Manager and the Business Unit Head. Travel billable to a client also requires the client's approval where the contract so provides."
+      - clause: "3.2"
+        title: Booking through the Travel Desk
+        text: "Tickets, hotels and airport transfers are booked by the Travel Desk on the basis of the approved request. Domestic travel is requested at least seven days, and international travel at least 21 days, before the date of travel, so that economical fares can be obtained. Urgent travel at shorter notice is permitted when the reason is recorded on the request."
+      - clause: "3.3"
+        title: Lowest logical fare
+        text: "The Travel Desk books the lowest available fare on a direct or reasonably timed route within the class of travel entitled. An Employee who asks for a particular airline or time for personal convenience, where it costs more than the lowest logical fare by more than Rs. 2,000, bears the difference, unless the Reporting Manager approves it on the request."
+      - clause: "3.4"
+        title: Self-booking
+        text: "An Employee may book travel personally only where the Travel Desk cannot be reached, such as outside its hours for an urgent trip, and must book within the entitlement at the lowest logical fare. The reason is recorded on the claim."
+      - clause: "3.5"
+        title: Changes and cancellations
+        text: "Changes and cancellations are made through the Travel Desk as early as possible. Cancellation charges arising from a business reason are borne by the Company. Charges arising from a personal reason are borne by the Employee unless the Reporting Manager waives them, for example for a medical emergency."
+
+  - num: 4
+    title: Class of Travel
+    body:
+      - clause: "4.1"
+        title: Entitlement by Grade
+        text: "The class of travel for each Grade is set out in {ref:#Table 1}. An Employee may travel in a lower class than entitled but is not reimbursed the difference."
+      - table:
+          id: Table 1
+          title: Class of travel by Grade
+          grade_table: true
+          header: ["Grade", "Domestic air", "Rail", "International air"]
+          widths: [0.8, 3, 1.8, 2.8]
+          rows:
+            - ["L1", "Economy, only where the journey exceeds 500 km by road or rail", "AC 3-tier", "Economy"]
+            - ["L2", "Economy, only where the journey exceeds 500 km by road or rail", "AC 3-tier", "Economy"]
+            - ["L3", "Economy, only where the journey exceeds 500 km by road or rail", "AC 3-tier", "Economy"]
+            - ["L4", "Economy", "AC 2-tier", "Economy"]
+            - ["L5", "Economy", "AC 2-tier", "Economy"]
+            - ["L6", "Economy", "AC 2-tier", "Premium economy for flights over 8 hours"]
+            - ["L7", "Economy", "AC 1st class", "Premium economy for flights over 8 hours"]
+            - ["L8", "Economy; business on flights over 3 hours", "AC 1st class", "Business"]
+      - clause: "4.2"
+        title: Short journeys for Grades L1 to L3
+        text: "For journeys of 500 km or less, Employees in Grades L1 to L3 travel by rail in AC 3-tier or by air-conditioned bus. Air travel for such a journey may be approved by the Reporting Manager only where no suitable rail or bus connection allows the Employee to reach the destination in time, and the reason is recorded on the request."
+      - clause: "4.3"
+        title: Road travel
+        text: "Travel between cities by a hired car is permitted for journeys of up to 300 km where it is cheaper or more practical than rail or air, or where three or more Employees travel together. Employees do not drive themselves on journeys of more than 250 km without the Reporting Manager's approval, as required by the {doc:004}."
+
+  - num: 5
+    title: Accommodation
+    body:
+      - clause: "5.1"
+        title: Company guest houses
+        text: "Where a Company guest house is available at the destination, Employees in Grades L1 to L5 stay in it. Where it is full or unsuitable, the Travel Desk books a hotel within the limits in {ref:#Table 2}."
+      - clause: "5.2"
+        title: Hotel limits
+        text: "The maximum room tariff per night, excluding taxes, depends on Grade and on whether the destination is a Metro City, as set out in {ref:#Table 2}. The Travel Desk books from the Company's list of approved hotels, which have negotiated rates and have been checked for safety."
+      - table:
+          id: Table 2
+          title: Hotel limits per night, excluding taxes
+          header: ["Grades", "Metro City", "Non-metro city", "International"]
+          widths: [1.4, 2, 2, 2.6]
+          rows:
+            - ["L1 to L3", "Rs. 3,500", "Rs. 2,500", "Approved hotel at the negotiated rate"]
+            - ["L4 and L5", "Rs. 5,000", "Rs. 3,500", "Approved hotel at the negotiated rate"]
+            - ["L6", "Rs. 7,000", "Rs. 5,000", "Approved hotel at the negotiated rate"]
+            - ["L7 and L8", "Rs. 10,000", "Rs. 7,000", "Approved hotel at the negotiated rate"]
+          note: "Where the approved hotel's rate exceeds the limit on the dates of travel, for example during a major event, the Travel Desk may book it with the Reporting Manager's approval recorded on the request."
+      - clause: "5.3"
+        title: Long stays
+        text: "For a stay of more than 15 nights at the same destination, the Travel Desk books a serviced apartment at a monthly rate, which is usually cheaper than a hotel. The Per Diem is reduced to 60 per cent from the sixteenth day, as kitchen facilities are available."
+      - clause: "5.4"
+        title: Staying with friends or family
+        text: "An Employee who stays with friends or relatives instead of a hotel receives a lodging allowance of Rs. 1,000 a night in addition to the Per Diem, without bills."
+      - clause: "5.5"
+        title: GST invoices
+        text: "Hotel invoices are issued in the name of Nexora Technologies Limited with the Company's GST registration number for the State of the hotel, so that the Company can claim input tax credit. The Travel Desk provides the details; an Employee booking personally asks the hotel to invoice the Company."
+
+  - num: 6
+    title: Per Diem
+    body:
+      - clause: "6.1"
+        title: Domestic Per Diem
+        text: "For each day of domestic Business Travel, the Employee receives the Per Diem in {ref:#Table 3}. A day is counted for each calendar day away from the Base Location; for a trip of less than 12 hours with no overnight stay, half the Per Diem is paid."
+      - table:
+          id: Table 3
+          title: Domestic Per Diem by Grade
+          header: ["Grades", "Per Diem per day"]
+          widths: [3, 3]
+          rows:
+            - ["L1 to L3", "Rs. 800"]
+            - ["L4 and L5", "Rs. 1,000"]
+            - ["L6", "Rs. 1,200"]
+            - ["L7 and L8", "Rs. 1,500"]
+      - clause: "6.2"
+        title: When meals are provided
+        text: "Where breakfast is included in the hotel tariff, the Per Diem is not reduced. Where lunch and dinner are provided by the client or at a conference, the Per Diem for that day is reduced by 50 per cent."
+      - clause: "6.3"
+        title: International Per Diem
+        text: "For international Business Travel, the Per Diem is paid in US dollars at the rates in {ref:#Annexure B}, loaded on the Company forex card. No Per Diem is paid during an assignment abroad, for which the host allowance under the {doc:005} applies."
+
+  - num: 7
+    title: Local Conveyance and Airport Transfers
+    body:
+      - clause: "7.1"
+        title: Airport and station transfers
+        text: "Transfers between the residence or hotel and the airport or railway station are reimbursed as follows:"
+        items:
+          - "Employees in Grades L4 and L5 may use an app-based cab in the standard category, or a prepaid taxi, and claim the actual fare;"
+          - "Employees in Grades L6 to L8 may use an app-based cab in the premium sedan category and claim the actual fare; and"
+          - "Employees in Grades L1 to L3 use the airport bus, metro rail or a shared or pooled cab, and are reimbursed the actual fare up to Rs. 750 for each trip."
+      - clause: "7.2"
+        title: Local travel at the destination
+        text: "Travel between the hotel and the client site or Company office at the destination is reimbursed at the actual fare of public transport or an app-based cab in the standard category, for all Grades. The Travel Desk may arrange a shared car for a team at the same site."
+      - clause: "7.3"
+        title: Use of own vehicle
+        text: "An Employee who uses a personal vehicle for Business Travel or local business trips, with the Reporting Manager's approval, is reimbursed at Rs. 12 per kilometre for a car and Rs. 5 per kilometre for a two-wheeler, on the distance shown by a mapping application, together with parking and toll charges against receipts."
+      - clause: "7.4"
+        title: Late working
+        text: "An Employee on the general shift who is asked by the Reporting Manager to work beyond 9:00 p.m. at the Base Location, and who does not use Company transport under the {doc:006}, may claim the actual fare of an app-based cab home, up to Rs. 1,000."
+      - clause: "7.5"
+        title: Daily commuting
+        text: "Travel between the residence and the Base Location on a normal Working Day is not Business Travel and is not reimbursed."
+
+  - num: 8
+    title: International Travel
+    body:
+      - clause: "8.1"
+        title: Documents
+        text: "The Employee holds a passport valid for at least six months beyond the return date. The Travel Desk arranges the visa through the Company's immigration partner on the basis of the approved request and the invitation letter; the Employee provides documents promptly. The correct visa category for the purpose of the visit is used; business visitor visas are not used for productive work that requires a work permit."
+      - clause: "8.2"
+        title: Forex and payments
+        text: "Foreign currency is provided on a Company forex card loaded by the Travel Desk, covering the Per Diem and an estimate of local conveyance. Unspent balances are returned within 15 days of return. Purchases of foreign exchange are made through the Travel Desk within the {stat:LRS_FEMA|limits applicable to business travel under the foreign exchange regulations}."
+      - clause: "8.3"
+        title: Insurance
+        text: "Every Employee on international Business Travel is covered by the Company's overseas travel insurance for medical expenses, evacuation, loss of passport and baggage delay. The policy details and the 24-hour assistance number are sent with the itinerary."
+      - clause: "8.4"
+        title: High-risk destinations
+        text: "Travel to a country or region that the Company's security advisor rates as high risk requires the prior approval of the Chief People Officer and a security briefing. The Company may require the Employee to leave such a destination at short notice."
+
+  - num: 9
+    title: Claims and Reimbursement
+    body:
+      - clause: "9.1"
+        title: Submitting a claim
+        text: "Expenses are claimed on the NPP within 30 days of the end of the trip, or of the date of the expense for local claims, with scanned receipts attached. Claims submitted after 30 days require the Business Unit Head's approval, and claims submitted after 90 days are not reimbursed."
+      - clause: "9.2"
+        title: Receipts
+        text: "Receipts are required for every expense above Rs. 500, other than the Per Diem and the lodging allowance. Where a receipt is lost, the Employee submits a declaration on the NPP explaining the expense; declarations are accepted for up to Rs. 2,000 in a trip and are reviewed by Internal Audit."
+      - clause: "9.3"
+        title: Approval and payment
+        text: "Claims are approved by the Reporting Manager within five Working Days and checked by Finance Operations. Approved claims are reimbursed with the next monthly salary, or, where the amount exceeds Rs. 25,000, by separate bank transfer within ten Working Days of approval."
+      - clause: "9.4"
+        title: Audit
+        text: "Finance Operations audits a sample of claims every month and all claims above Rs. 50,000. Employees keep original receipts for six months after reimbursement and produce them on request."
+
+  - num: 10
+    title: Tax and Advances
+    body:
+      - clause: "10.1"
+        title: Tax treatment
+        text: "Reimbursement of actual expenses incurred on Business Travel, and the Per Diem within the rates in this Policy, are treated as {stat:IT_TRAVEL_REIMB|business expenses of the Company and are not taxable in the hands of the Employee}. Amounts reimbursed that are not for Business Travel, or allowances paid without travel, are added to salary and tax is deducted at source."
+      - clause: "10.2"
+        title: Travel advance
+        text: "An Employee may request a travel advance on the NPP of up to the Per Diem for the days of travel plus 50 per cent, for trips where the hotel and tickets are not paid directly by the Company. The advance is settled by a claim within 15 days of return; an advance not settled within 30 days is recovered from the next salary."
+      - clause: "10.3"
+        title: Corporate card
+        text: "Employees in Grades L6 to L8 who travel frequently may be issued a corporate card for business expenses. Card statements are reconciled with claims on the NPP each month; personal use of the corporate card is not permitted."
+
+  - num: 11
+    title: Safety and Wellbeing on Travel
+    body:
+      - clause: "11.1"
+        title: Itinerary and contact
+        text: "Every itinerary is recorded on the NPP so that the Travel Desk can locate Employees in an emergency. Employees keep their mobile phones reachable and inform the Travel Desk of any change in plans."
+      - clause: "11.2"
+        title: Late arrivals
+        text: "Where an Employee arrives at a destination between 9:00 p.m. and 6:00 a.m., the Travel Desk arranges a pre-booked transfer from the airport or station to the hotel, and the hotel is informed of the late check-in. Employees arriving late are not expected to use public transport."
+      - clause: "11.3"
+        title: Rest after long journeys
+        text: "An Employee arriving after an overnight flight of more than eight hours is not expected to work for the rest of that day, and a Reporting Manager does not schedule client meetings within six hours of such an arrival, except in an emergency."
+
+  - num: 12
+    title: Non-Reimbursable Expenses and Misuse
+    body:
+      - clause: "12.1"
+        title: Expenses not reimbursed
+        text: "The expenses in {ref:#Table 4} are not reimbursed in any circumstances, unless the Chief Financial Officer approves an exception in writing."
+      - table:
+          id: Table 4
+          title: Expenses that are not reimbursed
+          header: ["Expense", "Reason"]
+          widths: [3.4, 4.6]
+          rows:
+            - ["Alcohol, minibar and room service beyond the Per Diem", "Personal consumption; meals are covered by the Per Diem"]
+            - ["Upgrades of flight class or hotel room at the Employee's request", "Beyond the entitlement for the Grade"]
+            - ["Travel, meals or stay of a spouse, family member or friend", "Not Business Travel"]
+            - ["Traffic fines, parking violations and penalties", "Personal responsibility of the Employee"]
+            - ["Personal entertainment, spa, gym and sightseeing", "Personal expenses"]
+            - ["Loss or theft of personal belongings", "Covered only by travel insurance where applicable"]
+            - ["Excess baggage for personal items", "Only excess baggage for Company equipment is reimbursed"]
+      - clause: "12.2"
+        title: Misuse
+        text: "Submitting a false or inflated claim, claiming the same expense twice, or claiming for travel not undertaken is fraud and is dealt with as gross misconduct under the {doc:004}. The amount wrongly claimed is recovered in every case."
+      - clause: "12.3"
+        title: Loyalty points
+        text: "Airline and hotel loyalty points earned on Business Travel may be retained by the Employee for personal use, but choosing a more expensive airline or hotel to earn points is not permitted."
+
+  - num: 13
+    title: Client Entertainment and Business Meals
+    body:
+      - clause: "13.1"
+        title: When permitted
+        text: "Employees in Grades L4 to L8 may entertain clients and prospective clients at a business meal where it serves a clear business purpose, with the prior approval of the Reporting Manager for amounts above the limits in {ref:#Table 5}. Employees in Grades L1 to L3 may attend such meals but do not host them."
+      - table:
+          id: Table 5
+          title: Limits for client entertainment per person
+          header: ["Grade of the host", "Limit per person, including taxes and service charge"]
+          widths: [3, 4]
+          rows:
+            - ["L4 and L5", "Rs. 1,500"]
+            - ["L6", "Rs. 2,500"]
+            - ["L7 and L8", "Rs. 4,000"]
+          note: "The limit is per person present, including Company Employees. Alcohol is reimbursed only where the host is in Grade L6 or above and within the limit."
+      - clause: "13.2"
+        title: Claiming
+        text: "The claim states the names and organisations of all attendees and the business purpose. Entertainment of a Government Official is not permitted, and entertainment of a Business Associate participating in a current tender is not permitted, as provided in the {doc:004}."
+      - clause: "13.3"
+        title: Team meals
+        text: "Team meals to celebrate a project milestone are paid from the business unit's engagement budget, approved by the Business Unit Head, within Rs. 1,000 per person, and are not claimed as client entertainment."
+
+  - num: 14
+    title: Conferences, Training and Memberships
+    body:
+      - clause: "14.1"
+        title: Conferences and training
+        text: "Registration fees for a conference or external training approved on the NPP are paid directly by the Travel Desk or reimbursed against the receipt. Travel to the event follows this Policy. Certification examination fees are governed by the {doc:002}."
+      - clause: "14.2"
+        title: Professional memberships
+        text: "The annual fee for membership of one professional body relevant to the Employee's role, such as an institute of chartered accountants or a professional engineering society, is reimbursed for Employees in Grades L4 to L8 with the Reporting Manager's approval."
+      - clause: "14.3"
+        title: Visa and passport costs
+        text: "Visa fees, immigration partner charges and courier costs for Business Travel are paid by the Company. The cost of obtaining or renewing a passport is borne by the Employee."
+
+  - num: 15
+    title: Candidates and Consultants
+    body:
+      - clause: "15.1"
+        title: Candidates
+        text: "A candidate invited for an in-person interview from another city is reimbursed rail fare in AC 3-tier or economy air fare, as approved by Talent Acquisition, and one night's stay where needed, at the hotel limit for the Grade of the position. Claims are submitted to Talent Acquisition within 15 days of the interview."
+      - clause: "15.2"
+        title: Consultants
+        text: "Consultants travelling at the Company's request follow this Policy at the Grade stated in their contract, unless the contract provides for travel costs to be included in their fees."
+
+  - num: 16
+    title: Accessibility, Health and Sustainable Travel
+    body:
+      - clause: "16.1"
+        title: Employees with disabilities
+        text: "An Employee with a disability may travel in a higher class, choose an accessible hotel outside the approved list, and be accompanied by an escort whose travel and stay are paid by the Company, where the HR Business Partner confirms that this is needed. The Travel Desk records the requirements on the Employee's profile so that they are applied automatically."
+      - clause: "16.2"
+        title: Pregnancy
+        text: "A pregnant Employee may decline Business Travel without any adverse consequence. Air travel after 28 weeks of pregnancy requires a fitness-to-fly certificate, in line with airline requirements, and the Travel Desk books aisle seats close to the front of the aircraft on request."
+      - clause: "16.3"
+        title: Sustainable travel
+        text: "Employees consider whether a meeting can be held by video before requesting travel. For journeys of up to 300 km, rail or road is preferred to air where the travel time is reasonable. The Travel Desk reports the estimated carbon emissions of each business unit's travel every quarter."
+
+annexures:
+  - id: A
+    title: Claim Checklist
+    body:
+      - table:
+          title: What to attach to a travel claim
+          header: ["Expense", "Attach", "Notes"]
+          widths: [2.2, 3, 3]
+          rows:
+            - ["Air or rail tickets booked personally", "Ticket and payment receipt", "Only where the Travel Desk could not book"]
+            - ["Hotel booked personally", "GST invoice in the Company's name", "Room tariff within the limit in {ref:#Table 2}"]
+            - ["Airport transfer and local cab", "App receipt or taxi receipt above Rs. 500", "Within the category for the Grade"]
+            - ["Own vehicle", "Map distance, toll and parking receipts", "Prior approval of the Reporting Manager"]
+            - ["Per Diem and lodging allowance", "No receipts", "Calculated automatically on the NPP from the travel dates"]
+            - ["Client entertainment", "Receipt and names of attendees", "Subject to the Code of Conduct and Ethics"]
+
+  - id: B
+    title: International Per Diem
+    body:
+      - table:
+          id: Table 6
+          title: International Per Diem per day (US dollars)
+          header: ["Country group", "Examples", "Grades L1 to L6", "Grades L7 and L8"]
+          widths: [1.4, 3.4, 1.7, 1.7]
+          rows:
+            - ["A", "United States, United Kingdom, Switzerland, Singapore", "75", "90"]
+            - ["B", "Germany, Netherlands, Australia, Canada, Japan", "60", "72"]
+            - ["C", "United Arab Emirates, Poland, Malaysia, South Africa", "45", "54"]
+          note: "The country groups are the same as those used for host allowances in the Compensation and Benefits Policy. Countries not listed are assigned to a group by the Head, Finance Operations."
+
+  - id: C
+    title: Frequently Asked Questions and Illustrations
+    body:
+      - clause: "C.1"
+        title: I am an L4. Can I take a cab from the airport to my home after a business trip?
+        text: "Yes. Under {ref:#7.1}, Employees in Grades L4 and L5 may use an app-based cab in the standard category, or a prepaid taxi, for transfers between the airport and the residence, and claim the actual fare with the receipt if it is above Rs. 500."
+      - clause: "C.2"
+        title: I am an L2 travelling from Bengaluru to Chennai for a client meeting. Can I fly?
+        text: "The journey is about 350 km, which is less than 500 km, so under {ref:#4.2} an Employee in Grade L2 travels by AC 3-tier rail or an air-conditioned bus. Air travel may be approved by the Reporting Manager only where no suitable train or bus allows the Employee to arrive in time."
+      - clause: "C.3"
+        title: How much can I spend on a hotel in Noida at Grade L5?
+        text: "Noida is part of the National Capital Region, which is a Metro City for this Policy under {ref:#2.3}, so the limit for Grades L4 and L5 in {ref:#Table 2} applies, subject to any circular revising it."
+      - clause: "C.4"
+        title: Worked example of a domestic claim
+        text: "An Employee in Grade L5 travels from Pune to Hyderabad for three days and two nights; the Travel Desk books the flights and the hotel. The Employee claims three days of Per Diem at Rs. 1,000, which is Rs. 3,000; airport transfers of Rs. 650 and Rs. 720 at Pune and Rs. 840 and Rs. 910 at Hyderabad, which is Rs. 3,120; and local cabs to the client site of Rs. 1,160. The total claim is Rs. 7,280, with receipts attached for the four transfers and the cab trips above Rs. 500."
+      - clause: "C.5"
+        title: The client is providing lunch and dinner at the workshop. Do I still get the Per Diem?
+        text: "Yes, but reduced by 50 per cent for each day on which lunch and dinner are provided, under {ref:#6.2}."
+
+      - clause: "C.6"
+        title: Can I claim a dinner with a client as an L3?
+        text: "No. Under {ref:#13.1}, only Employees in Grades L4 to L8 host client entertainment. An Employee in Grade L3 may attend a meal hosted by a colleague in an eligible Grade."
+      - clause: "C.7"
+        title: My trip was cancelled by the client after booking. Who pays the cancellation charge?
+        text: "The Company, because the cancellation arose from a business reason under {ref:#3.5}. The Travel Desk records the reason on the request."
+      - clause: "C.8"
+        title: I missed the 30-day deadline for my claim. Can I still submit it?
+        text: "Yes, up to 90 days after the trip with the Business Unit Head's approval under {ref:#9.1}. Claims submitted after 90 days are not reimbursed."
+
+      - clause: "C.9"
+        title: Can I extend a business trip over the weekend for personal reasons?
+        text: "Yes, if the Reporting Manager agrees and the fare for the changed return date is not higher than the fare for the original date; any difference is paid by the Employee. Hotel nights and Per Diem for the personal days are not reimbursed, and the personal days are not Business Travel for insurance purposes."
+      - clause: "C.10"
+        title: I am an L6 with a corporate card. Can I use it for a personal hotel night?
+        text: "No. The corporate card is only for business expenses under {ref:#10.3}. A personal charge made by mistake is reported to Finance Operations immediately and repaid within seven days."
+  - id: D
+    title: Approval Matrix
+    body:
+      - table:
+          id: Table 7
+          title: Who approves travel and expenses
+          header: ["Item", "Approver", "Additional approval"]
+          widths: [3.2, 2.2, 2.8]
+          rows:
+            - ["Domestic Business Travel", "Reporting Manager", "None"]
+            - ["International Business Travel", "Reporting Manager", "Business Unit Head"]
+            - ["Travel billable to a client", "Reporting Manager", "Client, where the contract requires"]
+            - ["Travel to a high-risk destination", "Business Unit Head", "Chief People Officer and a security briefing"]
+            - ["Hotel above the limit, or air travel for a short journey in Grades L1 to L3", "Reporting Manager", "Reason recorded on the request"]
+            - ["Claims submitted between 31 and 90 days after the trip", "Reporting Manager", "Business Unit Head"]
+            - ["Any exception to the non-reimbursable list", "Head, Finance Operations", "Chief Financial Officer"]
+
+circulars_intro: "The circulars below amend this Policy with the approval of the Chief Financial Officer. Each prevails over the clause it amends from its effective date; the body is reproduced unedited."
+
+circulars:
+  - number: HR/CIR/2025/01
+    date: "2025-01-15"
+    effective_from: "2025-02-01"
+    subject: Revision of hotel limits for Grades L4 and L5
+    amends: ["5.2", "Table 2"]
+    issued_by: Chief Financial Officer
+    body:
+      - para: "In view of the increase in hotel tariffs in the principal cities, with effect from 1 February 2025 the hotel limit for Employees in Grades L4 and L5 in a Metro City in {ref:#Table 2} is increased from Rs. 5,000 to Rs. 6,000 per night, excluding taxes. The limit in a non-metro city remains Rs. 3,500, and the limits for other Grades are unchanged."
+
+  - number: HR/CIR/2025/12
+    date: "2025-11-10"
+    effective_from: "2025-11-15"
+    subject: Airport and station transfers at night for all Grades
+    amends: ["7.1"]
+    issued_by: Chief Financial Officer and Chief People Officer
+    body:
+      - para: "For the safety of Employees, with effect from 15 November 2025, notwithstanding {ref:#7.1}, an Employee of any Grade, including Grades L1 to L3, whose flight or train departs or arrives between 9:00 p.m. and 7:00 a.m. may use an app-based cab in the standard category for the transfer between the residence or hotel and the airport or station, and claim the actual fare without the limit of Rs. 750."
+      - para: "At other times, the arrangements in {ref:#7.1} continue to apply."
