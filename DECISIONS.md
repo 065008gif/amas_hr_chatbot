@@ -74,3 +74,23 @@ Consequences:
 7. **Friendly messages.** On 429: "The free model limit was reached, please try again shortly." On 503 or all-down: "The AI service is busy right now, please try again in a minute." Users never see a raw error. `/health` shows each provider's last status.
 8. **Protecting quota on the public link.** A per-IP rate limit, 800 characters per message and 20 turns per session.
 9. **Evaluation runs in batches.** Phase 7 scripts are throttled (a pause between calls), resumable (results saved after each question) and use the cache, so a run can be spread over several sessions or days if limits are hit.
+
+**D-015 (2026-09-28): The college network can reach every service we need, so no workaround is required.**
+Test with `curl` on 2026-09-28. Every host answered, with the one-off exception noted below:
+- huggingface.co 200, github.com 200, vercel.com 200, pypi.org 200, api.github.com 200, api.vercel.com 308, registry.npmjs.org 200, www.netlify.com 200, generativelanguage.googleapis.com 404 (normal for the bare API root).
+- The download CDNs `files.pythonhosted.org`, `cdn-lfs.hf.co` and `cas-bridge.xethub.hf.co` answered 403 or 404 on the bare root. That's normal: they only serve specific files, and they were proven to work by the real downloads below.
+- ollama.com timed out once at 25 s, then answered 3/3 retries in 0.56 to 0.85 s. This matches the slow-DNS pattern in D-011 (the first lookup of a name often takes about 5 s, and once 15 s for huggingface.co).
+- There's no HTTPS interception. github.com's certificate is issued by Sectigo, the real public issuer, not a college proxy.
+- Download speed from PyPI: 22.5 MB in 0.70 s, about **32 MB/s**. No phone hotspot is needed.
+Consequence: `git push`, `pip install`, `npm install` and model downloads can all be done from this PC. Tools may occasionally stall about 5 to 15 s on DNS. That's harmless: we retry rather than treat it as a block.
+
+**D-016 (2026-09-28): Embeddings use `BAAI/bge-small-en-v1.5` through `fastembed` (ONNX, CPU), for both the index and queries.**
+- **Why fastembed and not sentence-transformers:** fastembed runs on ONNX Runtime (onnxruntime 1.30.0, a wheel of about 22 MB) with no PyTorch. PyTorch alone is hundreds of MB, which would slow the Docker build and the cold start of the free Space. Installed: fastembed 0.8.1, with `pip --no-cache-dir` so nothing is written to `~/.cache`.
+- **Why this model:** it's small, has 384-dimensional vectors, is English, and is a strong retriever for its size. The same model embeds the documents and the queries, so the vectors match. It runs inside the backend and needs no external API, so it works when deployed and costs no quota.
+- **Measured (`python scripts/test_embeddings.py`), with 100 chunks of about 286 tokens each:**
+  - model download + load: 11.4 s the first time; about 65 MB in `~/hrbot/.cache/fastembed` (git-ignored)
+  - embedding 100 chunks: 1.90 s using all 28 cores of this PC; **5.92 s limited to 2 threads** (like a free Space)
+  - one query: 3 ms (5 ms on 2 threads)
+  - sanity check PASS: "How many days of paternity leave do I get?" put 3 paternity-leave chunks at the top (cosine about 0.82)
+- **Consequence:** the full index (expected to be a few thousand chunks) is built **once, on this PC**, and shipped inside the Docker image. The Space only embeds the user's query, which is milliseconds. The model files must also be baked into the image, so a sleeping Space doesn't re-download 65 MB on wake-up. That will be done in Phase 8.
+- Caches are kept inside the project by setting `HF_HOME=~/hrbot/.cache/huggingface` and `cache_dir=~/hrbot/.cache/fastembed`. We checked that nothing was created outside `~/hrbot`.

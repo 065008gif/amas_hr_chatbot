@@ -25,7 +25,9 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 1, Step 3 DONE: header check showed no rate-limit headers from either provider; Gemini 3.1-flash-lite gave 503 about 10 min after a 200 (flaky). Limits recorded as UNVERIFIED; 9-point coping design in DECISIONS D-014 (to implement in Phase 5).
 
+- [x] Phase 1, Step 4 DONE: all needed hosts reachable, no TLS interception, about 32 MB/s from PyPI; occasional 5-15 s DNS stalls only (D-015).
+- [x] Phase 1, Step 5 DONE: `fastembed` 0.8.1 + `BAAI/bge-small-en-v1.5` installed and cached in `.cache/fastembed`. 100 chunks embed in 1.90 s (28 cores) / 5.92 s (2 threads); query 3-5 ms; sanity PASS. `scripts/test_embeddings.py` (D-016). Scripts must set `HF_HOME=~/hrbot/.cache/huggingface`.
+
 ## Next
-- [ ] Phase 1, Steps 4-5: network test (huggingface.co, github.com, vercel.com, pypi.org), embedding model download and timing
 - [ ] Phase 1, Step 6: Hugging Face and Vercel accounts (GitHub already exists, skip)
 - [ ] End of Phase 1: secret scan, commit, user pushes
