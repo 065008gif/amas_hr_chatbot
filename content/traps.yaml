@@ -107,3 +107,36 @@
   quotes:
     - {doc: "003", anchor: "3.10", text: "messaging applications or groups used by colleagues, whether on a Company or a personal device and whether during or outside working hours"}
     - {doc: "003", anchor: "C.1", text: "unwelcome sexual messages from a colleague on a personal messaging application at 11 p.m. on a Sunday are within this Policy"}
+- id: T15
+  type: 1
+  doc: "004"
+  question: "A vendor gave me a Rs. 3,000 Amazon gift card for Diwali. Can I keep it?"
+  answer: "No. Since 1 August 2025 (Circular HR/CIR/2025/08) gift cards and other cash equivalents may not be accepted in any amount, and the Gift limit was cut from Rs. 5,000 to Rs. 2,000. Clause 6.2 (which allowed gift cards up to Rs. 5,000) is amended."
+  quotes:
+    - {doc: "004", anchor: "6.2", text: "including a gift card or voucher within that value"}
+    - {doc: "004", anchor: "HR/CIR/2025/08", text: "gift cards, vouchers, prepaid cards and other cash equivalents may not be accepted in any amount"}
+- id: T16
+  type: 2
+  doc: "004"
+  question: "Something happened with a colleague six weeks ago. The Code of Conduct says harassment must be reported within 30 days. Is it too late to complain to the Internal Committee?"
+  answer: "No. The Code (Clause 12.4) says 30 days, but sexual harassment complaints are governed by the POSH Policy and the Act: three months from the incident (or the last incident), extendable by three more months (POSH Clause 6.2). The statute and the specific policy prevail; the Code itself (Clause 1.3) defers to the POSH Policy."
+  quotes:
+    - {doc: "004", anchor: "12.4", text: "shall be reported to the HR Business Partner or the appropriate committee within 30 days of the incident"}
+    - {doc: "003", anchor: "6.2", text: "within three months from the date of the incident"}
+    - {doc: "004", anchor: "1.3", text: "governs complaints of sexual harassment"}
+- id: T17
+  type: 3
+  doc: "004"
+  question: "I am an L4 developer and want to buy Nexora shares. Do I need pre-clearance?"
+  answer: "No pre-clearance or trading window restriction applies unless you are a Designated Person (all L8; L6-L7 in Finance, Legal, Secretarial, Investor Relations, Strategy; or notified). But no Employee may trade while holding UPSI (Clause 8.2, 8.5)."
+  quotes:
+    - {doc: "004", anchor: "2.3", text: "every Employee in Grade L8; every Employee in Grades L6 and L7 in the Finance, Legal, Company Secretarial, Investor Relations and Strategy functions"}
+    - {doc: "004", anchor: "8.5", text: "Employees who are not Designated Persons do not need pre-clearance and are not bound by the Trading Window"}
+- id: T18
+  type: 4
+  doc: "004"
+  question: "My father-in-law is a director at one of our vendors. Do I need to declare it?"
+  answer: "Yes. Under the Code, Relative includes parents-in-law (Clause 2.6), which is wider than Immediate Family in the Leave Policy. Declare on the NPP within 15 days and do not take part in decisions about that vendor (Clauses 4.2, 4.6)."
+  quotes:
+    - {doc: "004", anchor: "2.6", text: "and the Employee's parents-in-law"}
+    - {doc: "004", anchor: "2.6", text: "wider than the definition of Immediate Family used in the Leave Policy"}

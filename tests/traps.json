@@ -334,5 +334,121 @@
    }
   ],
   "verified": true
+ },
+ {
+  "id": "T15",
+  "type": 1,
+  "type_name": "circular overrides body clause",
+  "question": "A vendor gave me a Rs. 3,000 Amazon gift card for Diwali. Can I keep it?",
+  "answer": "No. Since 1 August 2025 (Circular HR/CIR/2025/08) gift cards and other cash equivalents may not be accepted in any amount, and the Gift limit was cut from Rs. 5,000 to Rs. 2,000. Clause 6.2 (which allowed gift cards up to Rs. 5,000) is amended.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 6,
+    "clause": "6.2",
+    "quote": "including a gift card or voucher within that value"
+   },
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 16,
+    "clause": "HR/CIR/2025/08",
+    "quote": "gift cards, vouchers, prepaid cards and other cash equivalents may not be accepted in any amount"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T16",
+  "type": 2,
+  "type_name": "two documents conflict",
+  "question": "Something happened with a colleague six weeks ago. The Code of Conduct says harassment must be reported within 30 days. Is it too late to complain to the Internal Committee?",
+  "answer": "No. The Code (Clause 12.4) says 30 days, but sexual harassment complaints are governed by the POSH Policy and the Act: three months from the incident (or the last incident), extendable by three more months (POSH Clause 6.2). The statute and the specific policy prevail; the Code itself (Clause 1.3) defers to the POSH Policy.",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 9,
+    "clause": "12.4",
+    "quote": "shall be reported to the HR Business Partner or the appropriate committee within 30 days of the incident"
+   },
+   {
+    "document": "Policy on Prevention of Sexual Harassment (POSH)",
+    "doc_id": "003",
+    "number": "NTL/HR/POL/003",
+    "page": 6,
+    "clause": "6.2",
+    "quote": "within three months from the date of the incident"
+   },
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 4,
+    "clause": "1.3",
+    "quote": "governs complaints of sexual harassment"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T17",
+  "type": 3,
+  "type_name": "grade/location-specific rule",
+  "question": "I am an L4 developer and want to buy Nexora shares. Do I need pre-clearance?",
+  "answer": "No pre-clearance or trading window restriction applies unless you are a Designated Person (all L8; L6-L7 in Finance, Legal, Secretarial, Investor Relations, Strategy; or notified). But no Employee may trade while holding UPSI (Clause 8.2, 8.5).",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 4,
+    "clause": "2.3",
+    "quote": "every Employee in Grade L8; every Employee in Grades L6 and L7 in the Finance, Legal, Company Secretarial, Investor Relations and Strategy functions"
+   },
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 8,
+    "clause": "8.5",
+    "quote": "Employees who are not Designated Persons do not need pre-clearance and are not bound by the Trading Window"
+   }
+  ],
+  "verified": true
+ },
+ {
+  "id": "T18",
+  "type": 4,
+  "type_name": "definition changes meaning",
+  "question": "My father-in-law is a director at one of our vendors. Do I need to declare it?",
+  "answer": "Yes. Under the Code, Relative includes parents-in-law (Clause 2.6), which is wider than Immediate Family in the Leave Policy. Declare on the NPP within 15 days and do not take part in decisions about that vendor (Clauses 4.2, 4.6).",
+  "expected_route": "answer",
+  "evidence": [
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 4,
+    "clause": "2.6",
+    "quote": "and the Employee's parents-in-law"
+   },
+   {
+    "document": "Code of Conduct and Ethics",
+    "doc_id": "004",
+    "number": "NTL/HR/POL/004",
+    "page": 4,
+    "clause": "2.6",
+    "quote": "wider than the definition of Immediate Family used in the Leave Policy"
+   }
+  ],
+  "verified": true
  }
 ]

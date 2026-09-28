@@ -169,3 +169,10 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
   - A document may list `lowercase_ok` words that are ordinary English (for POSH: "an act of", "calendar days", "an employee of a client"). These are reviewed rather than rewritten into unnatural text.
   - Capitalising "Sexual Harassment" broke trap T13's quote. The trap check caught it, and the quote was updated.
 - Running page total: 51 against 56 targeted for docs 001 to 003. The remaining documents aim slightly above target so the total stays near 150.
+
+**D-024 (2026-09-28): Code of Conduct and Ethics (NTL/HR/POL/004) is complete: 16 pages against a target of 18 ±2.**
+- 22 sections, 4 numbered tables and 4 annexures (declaration form, gift register, 10 ethical scenarios with a buried carve-out at C.2 for gifts at one's own wedding, and a decision checklist), plus 2 circulars (HR/CIR/2025/08 Gift limit Rs. 5,000 → 2,000 and gift cards banned; HR/CIR/2026/03 approved teaching and open-source work). About 7,500 words. 8 statutory claims were added (Prevention of Corruption Act, Companies Act ss. 177 and 182, SEBI PIT Regulations, Competition Act, contract labour); all are UNVERIFIED.
+- **Plants conflict C03** (Clause 12.4: harassment grievances within 30 days, against the POSH Policy's statutory three months).
+- Traps: T15 (type 1: gift cards), T16 (type 2: C03), T17 (type 3: Designated Persons and pre-clearance by grade and function), T18 (type 4: "Relative" includes parents-in-law, unlike the Leave Policy's "Immediate Family").
+- The first draft was 13 pages. Real sections were added (AML and sanctions, human rights and supply chain, health, safety and environment, conduct away from the office, virtual meetings and recording, personal data).
+- **Page-total policy:** the user asked to *cap* the total at about 150 pages to preserve usage. Documents are kept within their own ±2 range, and we don't overshoot to reach exactly 150. Running total: 67 pages against 74 targeted.

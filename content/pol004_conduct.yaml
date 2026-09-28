@@ -1,0 +1,548 @@
+doc_id: "004"
+title: Code of Conduct and Ethics
+number: NTL/HR/POL/004
+version: "5.1"
+effective_date: "2025-04-01"
+target_pages: 18
+lowercase_ok: [relatives, gift, gifts, conflict of interest]   # 'gift register', 'conflict of interest declaration' are form names
+
+control:
+  owner: Chief Ethics Officer
+  approver: Board of Directors, on the recommendation of the Audit Committee
+  approval_date: "2025-03-14"
+  classification: Internal
+  supersedes: Code of Conduct and Ethics version 5.0 dated 1 April 2023
+  review_cycle: Every two years, and on any change in applicable law or listing regulations
+  applicable_to: All Employees in Grades L1 to L8, and the Directors of the Company in so far as it applies to them
+  distribution: "Published on the NPP and the Company's intranet. Every Employee certifies compliance on joining and annually through the NPP. Printed copies are uncontrolled."
+
+history:
+  - ["3.0", "2016-04-01", "Anti-bribery section added.", "Ethics Office / Board"]
+  - ["4.0", "2019-04-01", "Insider trading section aligned with the regulations of 2015; whistleblower mechanism expanded.", "Ethics Office / Board"]
+  - ["5.0", "2023-04-01", "Social media, data privacy and remote work conduct added; disciplinary procedure restated.", "Ethics Office / Board"]
+  - ["5.1", "2025-04-01", "Conflict of interest thresholds revised; gift register moved to the NPP.", "Ethics Office / Board"]
+
+sections:
+  - num: 1
+    title: Introduction
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Code sets out the standards of conduct that the Company expects of every Employee. It explains how to recognise and handle conflicts of interest, gifts, confidential information and other ethical questions, how to raise concerns, and what happens when the Code is breached. The Code cannot anticipate every situation; where it is silent, Employees are expected to act in a way they would be comfortable seeing reported publicly."
+      - clause: "1.2"
+        title: Application
+        text: "This Code applies to every Employee at every location, including when working from home, at a client site or while travelling, and in personal conduct that affects the Company's reputation or business relationships. Consultants, contractors and vendors are bound by the Supplier Code of Conduct, which reflects the principles of this Code."
+      - clause: "1.3"
+        title: Relationship with law and other policies
+        text: "Where applicable law imposes a stricter requirement than this Code, the law applies. The {doc:003} governs complaints of sexual harassment, and the {doc:009} governs information security; this Code summarises their requirements for convenience."
+      - clause: "1.4"
+        title: Responsibility for the Code
+        text: "The Chief Ethics Officer is responsible for the interpretation of this Code, maintains the conflict of interest and gift registers, and reports to the Audit Committee of the Board every quarter on concerns raised and their outcome."
+
+  - num: 2
+    title: Definitions
+    body:
+      - clause: "2.1"
+        term: Business Associate
+        text: "means any client, prospective client, vendor, supplier, subcontractor, consultant, agent or partner of the Company, and any of their employees or representatives."
+      - clause: "2.2"
+        term: Conflict of Interest
+        text: "means a situation in which an Employee's personal interest, or the interest of a Relative, interferes or could reasonably appear to interfere with the Employee's duty to act in the best interest of the Company."
+      - clause: "2.3"
+        term: Designated Person
+        text: "means an Employee who, by reason of role, is likely to have access to Unpublished Price Sensitive Information, namely: every Employee in Grade L8; every Employee in Grades L6 and L7 in the Finance, Legal, Company Secretarial, Investor Relations and Strategy functions; the executive assistants of Employees in Grade L8; and any other Employee notified in writing by the Company Secretary. An Employee who is not a Designated Person is nonetheless bound by {ref:#8.2}."
+      - clause: "2.4"
+        term: Gift
+        text: "means anything of value given or received in connection with the Company's business, including goods, cash, gift cards and vouchers, discounts not available to the public, loans, services, hospitality, entertainment, travel, accommodation and offers of employment."
+      - clause: "2.5"
+        term: Government Official
+        text: "means any officer or employee of a government, ministry, department, regulator, court, public sector undertaking or government-owned company, any political party or candidate, and any person acting in an official capacity for any of them."
+      - clause: "2.6"
+        term: Relative
+        text: "means the Employee's spouse, parents, children, siblings, the spouses of the Employee's children and siblings, and the Employee's parents-in-law, and includes any person who lives in the Employee's household. This definition applies only to this Code and is wider than the definition of Immediate Family used in the {doc:001}."
+      - clause: "2.7"
+        term: Trading Window
+        text: "means the period during which Designated Persons may trade in the Company's securities, as described in {ref:#8.4}."
+      - clause: "2.8"
+        term: Unpublished Price Sensitive Information
+        text: "(UPSI) means any information relating to the Company or its securities that is not generally available and that, on becoming generally available, is likely to materially affect the price of the securities, including financial results, dividends, changes in capital structure, mergers, acquisitions, disposals, the award or loss of a major contract, and changes in key managerial personnel."
+      - clause: "2.9"
+        term: Whistleblower
+        text: "means any person who makes a disclosure in good faith under {ref:#Section 13}."
+
+  - num: 3
+    title: Our Standards
+    body:
+      - clause: "3.1"
+        title: Integrity
+        text: "Employees are honest in all dealings, do not misrepresent facts to clients, colleagues or authorities, and correct errors promptly when they discover them. Pressure to meet a deadline or a target never justifies a breach of this Code."
+      - clause: "3.2"
+        title: Compliance with law
+        text: "Employees comply with the laws of India and of any other country in which they work, including laws on employment, tax, data protection, anti-corruption, competition, export control and securities. Where an Employee is unsure whether an action is lawful, the Employee consults the Legal department before acting."
+      - clause: "3.3"
+        title: Managers' additional responsibilities
+        text: "Managers lead by example, ensure that their teams understand this Code, create an environment in which concerns can be raised without fear, and escalate to the Ethics Office any concern reported to them that may involve a breach of this Code. A manager who ignores a reported breach is personally accountable."
+      - clause: "3.4"
+        title: Asking for guidance
+        text: "An Employee facing an ethical question may ask the Reporting Manager, the HR Business Partner, the Legal department or the Ethics Office at ethics@nexora.example. Guidance is given in writing on request, and an Employee who acts in good faith on written guidance from the Ethics Office is not in breach of this Code."
+
+  - num: 4
+    title: Conflicts of Interest
+    body:
+      - clause: "4.1"
+        title: General rule
+        text: "Employees avoid situations that create a Conflict of Interest. Where a Conflict of Interest cannot be avoided, it is disclosed before the Employee takes any decision or action connected with it, and the Employee withdraws from that decision unless the Ethics Office directs otherwise."
+      - clause: "4.2"
+        title: Declarations
+        text: "Every Employee makes a conflict of interest declaration on the NPP on joining and each year by 31 May, and makes an additional declaration within 15 days of any change in circumstances. A declaration of \"no conflict\" is also required. Failure to declare is itself a breach of this Code, even where no harm results."
+      - clause: "4.3"
+        title: Relatives at work
+        text: "A Relative of an Employee may be employed by the Company, but an Employee shall not be in the reporting line of a Relative, and shall not take part in any decision about a Relative's hiring, allocation, rating, promotion, pay or discipline. The same applies to a person with whom the Employee is in a close personal relationship."
+      - clause: "4.4"
+        title: Personal relationships
+        text: "A romantic or close personal relationship between Employees where one reports directly or indirectly to the other, or can influence the other's work or pay, is declared by the senior party to the HR Business Partner within 15 days. The Company then changes the reporting line or responsibilities, without adverse effect on the junior party."
+      - clause: "4.5"
+        title: Financial interests
+        text: "An Employee declares any financial interest, held directly or through a Relative, in a Business Associate or a competitor where the interest exceeds one per cent of the equity of that entity or Rs. 10,00,000 in value, whichever is lower. Investments in listed mutual funds are not required to be declared."
+      - clause: "4.6"
+        title: Business Associates connected with an Employee
+        text: "An Employee shall not select, approve or manage a vendor or subcontractor in which the Employee or a Relative has an interest or is employed. The Procurement function records any such connection and assigns the decision to another approver."
+      - clause: "4.7"
+        title: Outside directorships
+        text: "An Employee shall not accept a directorship, partnership or advisory role in any entity other than a non-profit organisation or a private company of the Employee's own family without the prior approval of the Chief Ethics Officer. Directorship of a Business Associate or a competitor is not approved."
+      - clause: "4.8"
+        title: Examples
+        text: "{ref:#Table 1} gives common situations and the action required."
+      - table:
+          id: Table 1
+          title: Common conflict situations and required action
+          header: ["Situation", "Is it a Conflict of Interest?", "Required action"]
+          widths: [3.4, 1.6, 3.4]
+          rows:
+            - ["Your sibling works for a vendor that your team is evaluating", "Yes", "Declare on the NPP; withdraw from the evaluation"]
+            - ["You hold shares worth Rs. 2,00,000 in a listed client", "Not above the threshold", "No declaration; do not trade while holding UPSI about the client"]
+            - ["Your spouse is being considered for a role in your business unit", "Yes", "Declare; take no part in the hiring decision; no reporting line to you"]
+            - ["You are asked to join the advisory board of a start-up in the same industry", "Yes", "Seek prior approval of the Chief Ethics Officer; do not accept before approval"]
+            - ["A friend asks you to refer them for a job", "No, if you follow the referral process", "Refer through the NPP; do not take part in the interview"]
+            - ["You are dating a colleague in another business unit with no work link", "No", "No action, unless the work relationship changes"]
+
+  - num: 5
+    title: Outside Employment and Activities
+    body:
+      - clause: "5.1"
+        title: No outside employment
+        text: "An Employee devotes full working time to the Company and shall not take up any other employment, paid assignment, consultancy, freelance work or business, whether during or outside working hours and whether or not the work competes with the Company, without the prior written approval of the Chief Ethics Officer. Such approval is ordinarily not given."
+      - clause: "5.2"
+        title: Activities that do not need approval
+        text: "The following do not require approval, provided they do not use Company time, assets or confidential information, and do not involve a Business Associate: unpaid community or religious service; management of the Employee's own personal investments; and unpaid membership of professional bodies and alumni associations."
+      - clause: "5.3"
+        title: Writing, speaking and open-source contribution
+        text: "An Employee may write articles, speak at conferences and contribute to open-source projects in a personal capacity, with the Reporting Manager's approval where the subject relates to the Employee's work. No client information, Company code or confidential material may be used, and any contribution relating to the Company's business requires the prior approval of the Legal department."
+      - clause: "5.4"
+        title: Political activity
+        text: "Employees may take part in political activity in their personal capacity and in their own time, but shall not use Company resources for it, and shall not represent that their views are those of the Company."
+
+  - num: 6
+    title: Gifts, Hospitality and Entertainment
+    body:
+      - clause: "6.1"
+        title: Principle
+        text: "An Employee shall not offer, give, solicit or accept any Gift that could influence, or reasonably appear to influence, a business decision. Gifts shall never be solicited in any amount."
+      - clause: "6.2"
+        title: Accepting Gifts
+        text: "An Employee may accept an unsolicited Gift from a Business Associate of a value not exceeding Rs. 5,000, and not more than once in a calendar year from the same Business Associate, including a gift card or voucher within that value. Any Gift valued above Rs. 1,000 is recorded in the gift register on the NPP within seven days of receipt. A Gift above Rs. 5,000 is politely declined or, where declining would cause embarrassment, accepted on behalf of the Company and handed to the Ethics Office."
+      - clause: "6.3"
+        title: Hospitality
+        text: "Reasonable business meals and entertainment with a Business Associate, where the host attends and business is discussed, are permitted. An Employee shall not accept travel, accommodation or hospitality for personal or family leisure from a Business Associate, and shall not accept any hospitality while the Business Associate is participating in a tender or contract negotiation in which the Employee is involved."
+      - clause: "6.4"
+        title: Giving Gifts
+        text: "Gifts to clients and other Business Associates are given only on behalf of the Company, within the budget approved by the Business Unit Head, and are recorded in the gift register. Gifts to a Government Official are prohibited, except promotional items bearing the Company's logo with a value below Rs. 1,000."
+      - clause: "6.5"
+        title: Thresholds at a glance
+        text: "The thresholds that apply to Gifts are summarised in {ref:#Table 2}."
+      - table:
+          id: Table 2
+          title: Gift thresholds
+          header: ["Type of Gift", "Limit", "Record in gift register?"]
+          widths: [3.6, 2.4, 2]
+          rows:
+            - ["Unsolicited Gift from a Business Associate, including gift cards", "Up to Rs. 5,000, once a year per Business Associate", "Yes, if above Rs. 1,000"]
+            - ["Cash, cheque, loan or securities", "Not permitted in any amount", "Report any offer to the Ethics Office"]
+            - ["Business meal with the host present", "Reasonable and infrequent", "No"]
+            - ["Travel or accommodation for leisure", "Not permitted", "Report any offer"]
+            - ["Gift to a Government Official", "Only logo items below Rs. 1,000", "Yes"]
+            - ["Gift to a client on behalf of the Company", "Within the business unit budget", "Yes"]
+
+  - num: 7
+    title: Anti-Bribery and Anti-Corruption
+    body:
+      - clause: "7.1"
+        title: Zero tolerance
+        text: "The Company prohibits bribery in any form. No Employee shall offer, promise, give, request or accept any undue advantage to or from any person, including a Government Official, to obtain or retain business or any improper advantage. Bribery is a criminal offence under the {stat:PC_ACT|Prevention of Corruption Act, 1988}, which also makes a commercial organisation liable where a person associated with it gives a bribe for its benefit."
+      - clause: "7.2"
+        title: Facilitation payments
+        text: "Small unofficial payments to speed up routine government actions, such as issuing a permit or clearing goods, are bribes and are prohibited, even where they are customary. An Employee asked for such a payment refuses and reports the request to the Ethics Office. The only exception is a payment made under immediate threat to personal safety, which is reported within 24 hours."
+      - clause: "7.3"
+        title: Third parties
+        text: "The Company does not use agents, consultants or partners to do what it may not do directly. Any third party that interacts with Government Officials on the Company's behalf is approved by the Legal department after due diligence, and its contract includes anti-bribery obligations."
+      - clause: "7.4"
+        title: Political contributions and donations
+        text: "Contributions to political parties are made only by the Company, only by resolution of the Board and only in accordance with the {stat:CA_182|Companies Act, 2013}. Charitable donations are made only through the Corporate Social Responsibility Committee. No Employee may make any contribution on behalf of the Company."
+      - clause: "7.5"
+        title: Accurate records
+        text: "All payments are recorded accurately in the Company's books. No Employee shall create or maintain any off-book account, or record a payment under a false description."
+
+  - num: 8
+    title: Insider Trading
+    body:
+      - clause: "8.1"
+        title: Legal framework
+        text: "The equity shares of the Company are listed on recognised stock exchanges in India. Trading in securities while in possession of UPSI, and the communication of UPSI except for legitimate purposes, are prohibited by the {stat:SEBI_PIT|SEBI (Prohibition of Insider Trading) Regulations, 2015}. The Company's detailed Code of Conduct for Prevention of Insider Trading, maintained by the Company Secretary, prevails over this Section in case of inconsistency."
+      - clause: "8.2"
+        title: Rules for every Employee
+        text: "Every Employee, whether or not a Designated Person, shall not trade in the securities of the Company, or of a client or other listed company, while in possession of UPSI about it, and shall not pass UPSI to anyone, including a Relative or friend, or recommend that anyone trade on the basis of it."
+      - clause: "8.3"
+        title: Designated Persons
+        text: "A Designated Person, in addition to {ref:#8.2}:"
+        items:
+          - "discloses holdings of the Company's securities, and those of Relatives, on becoming a Designated Person and thereafter every year;"
+          - "obtains pre-clearance from the Company Secretary through the NPP before trading in the Company's securities where the value of the trades in a calendar quarter exceeds Rs. 10,00,000, and completes the trade within seven Working Days of pre-clearance;"
+          - "does not execute a contra trade, that is, an opposite transaction, within {stat:SEBI_CONTRA|six months} of a trade; and"
+          - "trades only when the Trading Window is open."
+      - clause: "8.4"
+        title: Trading Window
+        text: "The Trading Window closes {stat:SEBI_WINDOW|from the end of every quarter until 48 hours after the declaration of the financial results} for that quarter, and at any other time notified by the Company Secretary when a Designated Person is expected to have UPSI. The closure is announced by e-mail and on the NPP."
+      - clause: "8.5"
+        title: Employees who are not Designated Persons
+        text: "Employees who are not Designated Persons do not need pre-clearance and are not bound by the Trading Window, but remain bound by {ref:#8.2}. The Company Secretary may notify any Employee as a Designated Person for a specific project, such as an acquisition, for the duration of that project."
+
+  - num: 9
+    title: Confidential Information and Intellectual Property
+    body:
+      - clause: "9.1"
+        title: Confidential information
+        text: "Information about the Company, its clients, its Business Associates and its Employees that is not public is confidential. Employees use it only for the purpose for which it was provided, share it only with those who need it for their work, and protect it in accordance with the {doc:009}. The obligation continues after employment ends."
+      - clause: "9.2"
+        title: Client information
+        text: "Client information is used only for the client's project and is never shared with another client, used for a proposal to another client, or taken outside approved systems. Where a client contract imposes stricter obligations, the contract prevails."
+      - clause: "9.3"
+        title: Intellectual property
+        text: "All work product created by an Employee in the course of employment, or using Company resources, including software, designs, documents and inventions, belongs to the Company or, where the contract so provides, to the client. Employees disclose inventions to the Legal department and assist in securing rights in them."
+      - clause: "9.4"
+        title: Third-party material
+        text: "Employees respect the intellectual property of others. Software, images, text and data are used only under a valid licence, and confidential information belonging to a previous employer shall not be brought to or used at the Company."
+
+  - num: 10
+    title: Fair Dealing
+    body:
+      - clause: "10.1"
+        title: Clients
+        text: "Employees represent the Company's services honestly, do not promise what the Company cannot deliver, and report any delivery risk to the client through the agreed governance process."
+      - clause: "10.2"
+        title: Competitors
+        text: "Employees do not agree or discuss with competitors any matter relating to prices, bids, allocation of clients or markets, or salaries of Employees, as such conduct may breach the {stat:COMPETITION_ACT|Competition Act, 2002}. Competitive information is obtained only from public or legitimate sources."
+      - clause: "10.3"
+        title: Vendors
+        text: "Vendors are selected on merit through the procurement process. Employees do not disclose one vendor's bid to another and treat vendors courteously and fairly."
+
+  - num: 11
+    title: Company Assets and Records
+    body:
+      - clause: "11.1"
+        title: Use of assets
+        text: "Company assets, including funds, equipment, software, data and time, are used for legitimate business purposes. Limited personal use of a laptop or e-mail is acceptable where it does not interfere with work or breach the {doc:009}."
+      - clause: "11.2"
+        title: Expense claims
+        text: "Expense and travel claims are submitted honestly and only for expenses actually incurred on Company business, in accordance with the {doc:007}. A false or inflated claim, however small, is fraud."
+      - clause: "11.3"
+        title: Timesheets and attendance
+        text: "Timesheets and attendance records reflect the time actually worked. Recording time against a client project for work not done for that client, or marking attendance for another Employee, is falsification of records."
+      - clause: "11.4"
+        title: Records retention
+        text: "Business records are retained for the periods in the records retention schedule maintained by the Legal department, and are never destroyed while an investigation, audit or legal proceeding to which they relate is pending or anticipated."
+
+  - num: 12
+    title: Respectful Workplace
+    body:
+      - clause: "12.1"
+        title: Dignity at work
+        text: "Every Employee treats others with dignity and courtesy. Discrimination on the basis of gender, religion, caste, region, language, disability, age, sexual orientation, gender identity, marital status or any other characteristic protected by law is prohibited."
+      - clause: "12.2"
+        title: Harassment and bullying
+        text: "Harassment, bullying, intimidation, abusive language, threats and humiliation, whether in person, in writing or online, are prohibited. Repeated public criticism intended to humiliate, deliberate exclusion from work, and spreading malicious rumours are examples of bullying."
+      - clause: "12.3"
+        title: Violence and substances
+        text: "Violence or threats of violence, possession of weapons on Company premises, and working under the influence of alcohol or drugs are prohibited. Alcohol may be served at Company events only with the approval of the Business Unit Head and within the limits set by the organisers."
+      - clause: "12.4"
+        title: Time limit for grievances
+        text: "Any grievance of harassment, including sexual harassment, discrimination or bullying, shall be reported to the HR Business Partner or the appropriate committee within 30 days of the incident, so that it can be investigated while evidence is available. Grievances reported after 30 days may be considered at the discretion of the Chief Ethics Officer."
+
+  - num: 13
+    title: Speaking Up and Whistleblower Protection
+    body:
+      - clause: "13.1"
+        title: Duty to report
+        text: "An Employee who becomes aware of a breach or suspected breach of this Code, of any law, or of any Company policy reports it through one of the channels in {ref:#13.2}. Reporting in good faith is always protected, even if the concern turns out to be unfounded."
+      - clause: "13.2"
+        title: Channels
+        text: "Concerns may be raised with the Reporting Manager, the HR Business Partner, the Ethics Office at ethics@nexora.example, or the ethics hotline at 1800-000-0000 (extension 7), which is operated by an independent provider and accepts anonymous reports. Concerns about a member of the leadership team, or about the Ethics Office itself, may be sent directly to the Chair of the Audit Committee at auditchair@nexora.example, as part of the {stat:CA_177_VIGIL|vigil mechanism required for listed companies}."
+      - clause: "13.3"
+        title: Handling of concerns
+        text: "The Ethics Office acknowledges a concern within three Working Days, completes a preliminary review within 15 Working Days, and where an investigation is warranted, completes it ordinarily within 60 days. The Whistleblower is informed of the outcome in general terms, subject to the privacy of others."
+      - clause: "13.4"
+        title: Protection
+        text: "No Whistleblower shall be dismissed, demoted, suspended, threatened, harassed or discriminated against for making a disclosure in good faith. The identity of the Whistleblower is disclosed only on a need-to-know basis for the investigation, or where required by law. Retaliation is serious misconduct."
+      - clause: "13.5"
+        title: Knowingly false reports
+        text: "A disclosure made knowing it to be false, or to settle a personal score, is misconduct. A report that is made honestly but is not substantiated is not treated as false."
+
+  - num: 14
+    title: Social Media and Public Communication
+    body:
+      - clause: "14.1"
+        title: Speaking for the Company
+        text: "Only persons authorised by Corporate Communications speak to the media or post on behalf of the Company. Requests from journalists, analysts or investors are referred to Corporate Communications or Investor Relations."
+      - clause: "14.2"
+        title: Personal use of social media
+        text: "In personal posts, Employees do not disclose confidential information, do not name clients without approval, do not post content that harasses or discriminates against colleagues, and make clear that views are their own when commenting on matters related to the Company or the industry."
+
+  - num: 15
+    title: Disciplinary Procedure
+    body:
+      - clause: "15.1"
+        title: Breach of the Code
+        text: "A breach of this Code, of any Company policy or of the law in connection with employment is misconduct. Examples of minor and major misconduct, and the range of penalties, are given in {ref:#Table 3}. The penalty in each case depends on the seriousness of the conduct, its impact, the Employee's intent and previous record, and any mitigating circumstances."
+      - table:
+          id: Table 3
+          title: Categories of misconduct and range of penalties
+          header: ["Category", "Examples", "Range of penalties"]
+          widths: [1.4, 4.2, 2.6]
+          rows:
+            - ["Minor", "Repeated late attendance without regularisation; failure to complete mandatory training; minor misuse of Company assets; failure to record a Gift above Rs. 1,000", "Counselling; written warning"]
+            - ["Major", "Undisclosed Conflict of Interest; accepting a prohibited Gift; breach of confidentiality; falsification of timesheets or records; harassment or bullying; unauthorised absence for eight or more consecutive Working Days", "Written warning; withholding of pay increase, variable pay or promotion; demotion; termination"]
+            - ["Gross", "Fraud, theft or bribery; insider trading; sexual harassment proved by the Internal Committee; violence; deliberate disclosure of client data; retaliation against a Whistleblower", "Termination; recovery of loss; report to the authorities where required by law"]
+      - clause: "15.2"
+        title: Procedure
+        text: "Except for counselling, no penalty is imposed without following a fair procedure:"
+        items:
+          - "the Employee is issued a show-cause notice setting out the allegations and the material relied upon;"
+          - "the Employee submits a written reply within seven days, which may be extended once on request;"
+          - "where the allegation is disputed and a major penalty is contemplated, an inquiry officer, who is not in the Employee's reporting line, conducts an inquiry at which the Employee may present evidence and be accompanied by a colleague; and"
+          - "the disciplinary authority decides on the basis of the inquiry report and informs the Employee in writing of the decision and the reasons."
+      - clause: "15.3"
+        title: Complaints of sexual harassment
+        text: "Where the allegation is of sexual harassment, the inquiry is conducted by the Internal Committee under the {doc:003}, and the disciplinary authority acts on its recommendations. No separate inquiry is conducted under {ref:#15.2}."
+      - clause: "15.4"
+        title: Suspension pending inquiry
+        text: "Where the allegation is serious and the Employee's presence could hinder the inquiry or cause risk, the Employee may be suspended pending inquiry by the Chief People Officer. During suspension the Employee receives a subsistence allowance of 50 per cent of fixed monthly pay for the first 90 days and 75 per cent thereafter, unless applicable State law provides a higher amount, in which case the law applies."
+      - clause: "15.5"
+        title: Appeal
+        text: "An Employee may appeal against a penalty to the Chief People Officer, or where the Chief People Officer imposed the penalty, to the Managing Director, within 15 days of receiving the decision. The appeal authority decides within 30 days."
+
+  - num: 16
+    title: Certification and Waivers
+    body:
+      - clause: "16.1"
+        title: Annual certification
+        text: "Every Employee completes the Code of Conduct and Ethics training and certifies compliance with this Code on the NPP each year by 31 May. The certification includes the conflict of interest declaration under {ref:#4.2}."
+      - clause: "16.2"
+        title: Waivers
+        text: "A waiver of any provision of this Code for an Employee in Grade L8 may be granted only by the Board on the recommendation of the Audit Committee, and is disclosed as required by law. For other Employees, a waiver may be granted only by the Chief Ethics Officer, in writing, with reasons, and is recorded in the ethics register."
+
+  - num: 17
+    title: Money Laundering, Sanctions and Export Control
+    body:
+      - clause: "17.1"
+        title: Anti-money laundering
+        text: "The Company does not facilitate money laundering or the financing of terrorism. Employees are alert to unusual payment requests from Business Associates, such as payment to a third party, payment in cash, payment to an account in a different country from the Business Associate, or overpayment followed by a request for refund, and report them to Finance before processing."
+      - clause: "17.2"
+        title: Screening of Business Associates
+        text: "New clients, vendors and partners are screened by the Legal department against sanctions and watch lists before a contract is signed, and existing Business Associates are re-screened each year. No Employee may start work for, or place an order with, a Business Associate that has not cleared screening."
+      - clause: "17.3"
+        title: Sanctions
+        text: "The Company complies with sanctions imposed by India and by the United Nations, and with the sanctions of other countries that apply to its clients' contracts. Employees do not provide services to, travel for work to, or transfer technology to, a sanctioned country, entity or person without the prior written approval of the Legal department."
+      - clause: "17.4"
+        title: Export control
+        text: "Certain software, encryption technology and technical data are subject to export control laws of India and of the country of origin. Employees working on client projects that involve controlled technology follow the access restrictions notified for the project and do not share controlled technical data with colleagues who have not been cleared for it, including colleagues of another nationality where the client contract so requires."
+
+  - num: 18
+    title: Human Rights and Responsible Supply Chain
+    body:
+      - clause: "18.1"
+        title: Respect for human rights
+        text: "The Company respects internationally recognised human rights, and does not tolerate forced labour, bonded labour, human trafficking or child labour in its operations or in its supply chain. The Company does not employ any person below the age of eighteen years in any role."
+      - clause: "18.2"
+        title: Contract workers
+        text: "Employees who manage housekeeping, security, catering or other contracted services ensure that the contractor pays its workers at least the minimum wages applicable in the State, provides the statutory benefits, and complies with the {stat:CONTRACT_LABOUR|contract labour legislation in force}. Evidence of payment is checked by Facilities every quarter before the contractor's invoice is approved."
+      - clause: "18.3"
+        title: Supplier Code of Conduct
+        text: "Every vendor accepts the Supplier Code of Conduct, which covers labour practices, health and safety, environment, anti-bribery and data protection. An Employee who learns that a vendor is not complying informs Procurement, which may audit the vendor and suspend orders."
+
+  - num: 19
+    title: Health, Safety and Environment
+    body:
+      - clause: "19.1"
+        title: Safe conduct
+        text: "Employees follow the safety rules at every Workplace, take part in fire drills, keep exits and corridors clear, and report hazards, accidents and near misses promptly through the Facilities module of the NPP. No Employee may disable a safety device or override a safety procedure."
+      - clause: "19.2"
+        title: Environment
+        text: "Employees support the Company's commitment to reduce energy use, water use and waste, by switching off equipment when not in use, using the waste segregation bins, and returning old electronic equipment only through the IT Service Desk for certified recycling. Printing is kept to what is necessary."
+      - clause: "19.3"
+        title: Travel safety
+        text: "Employees travelling for work follow the {doc:007}, register their itinerary on the NPP, and do not drive themselves on work journeys of more than 250 kilometres without the approval of the Reporting Manager."
+
+  - num: 20
+    title: Conduct Away from the Office
+    body:
+      - clause: "20.1"
+        title: At client sites
+        text: "At a client site, Employees represent the Company. They follow the client's security and conduct rules where the Company has accepted them, use only the systems and access granted for the project, and do not discuss one client's affairs at another client's premises."
+      - clause: "20.2"
+        title: At Company events
+        text: "The standards of this Code apply at team outings, off-sites, celebrations and conferences, including those held after working hours or at external venues. Organisers ensure that events are inclusive, that alcohol, where approved, is served responsibly, and that transport home is available after late events."
+      - clause: "20.3"
+        title: While travelling
+        text: "On business travel Employees behave courteously towards hosts, co-travellers and service staff, respect local laws and customs, and are mindful that their conduct reflects on the Company even outside working hours."
+      - clause: "20.4"
+        title: Conduct outside work
+        text: "The Company does not seek to regulate Employees' private lives. However, conduct outside work that results in a criminal conviction, involves harassment of a colleague, or brings the Company into public disrepute may be treated as misconduct. An Employee who is arrested or charged with a criminal offence informs the HR Business Partner within 48 hours, and the information is kept confidential."
+
+  - num: 21
+    title: Remote Work and Virtual Meetings
+    body:
+      - clause: "21.1"
+        title: Same standards online
+        text: "The standards of this Code apply equally to conduct on video calls, chat tools and e-mail. Comments, images and reactions posted in team channels are subject to the same rules on respect and harassment as conduct in the office."
+      - clause: "21.2"
+        title: Recording meetings
+        text: "A meeting is recorded only after all participants have been informed at the start and, for client meetings, only with the client's consent. Recordings are stored only in approved repositories and deleted in accordance with the {doc:009}. Automated transcription or note-taking tools are used only where approved by Information Security."
+      - clause: "21.3"
+        title: Working from home
+        text: "Employees working from home ensure that family members and visitors cannot see or hear confidential client information, take calls from a private space, and do not allow others to use the Company laptop."
+
+  - num: 22
+    title: Personal Data
+    body:
+      - clause: "22.1"
+        title: Handling personal data
+        text: "Employees who handle personal data of colleagues, candidates, clients' customers or any other person access it only when required for their role, use it only for the purpose for which it was collected, and never download, copy, share or discuss it beyond that purpose. The rules are set out in the {doc:009}."
+      - clause: "22.2"
+        title: Curiosity is not a purpose
+        text: "Looking up the salary, rating, medical documents, address or personal details of a colleague on the NPP, a client system or any other system without a work reason is a breach of this Code, even if the system technically allows the access and even if the information is not shared further."
+      - clause: "22.3"
+        title: Breaches
+        text: "Any suspected unauthorised access to or disclosure of personal data is reported to the IT Service Desk immediately, so that the Company can meet its legal obligations to notify, as described in the {doc:009}."
+
+annexures:
+  - id: A
+    title: Conflict of Interest Declaration
+    body:
+      - para: "Completed on the NPP on joining, annually by 31 May and within 15 days of any change. The paper form below is used only where the NPP is unavailable."
+      - table:
+          title: "Form ETH-01: Conflict of interest declaration"
+          form: true
+          widths: [2.2, 3]
+          rows:
+            - ["Employee ID, name, Grade and business unit", ""]
+            - ["Relatives employed by the Company or by a Business Associate (name, relationship, organisation, role)", ""]
+            - ["Financial interests above the threshold in a Business Associate or competitor", ""]
+            - ["Directorships, partnerships or advisory roles held", ""]
+            - ["Outside employment or activities approved or requiring approval", ""]
+            - ["Personal relationships requiring declaration under the Code", ""]
+            - ["I have no Conflict of Interest to declare (tick if applicable)", ""]
+            - ["Signature and date", ""]
+
+  - id: B
+    title: Gift Register Entry
+    body:
+      - table:
+          title: "Form ETH-02: Gift register entry (recorded on the NPP within seven days)"
+          form: true
+          widths: [2.2, 3]
+          rows:
+            - ["Given or received", ""]
+            - ["Name of the Business Associate and its relationship with the Company", ""]
+            - ["Description of the Gift and estimated value in rupees", ""]
+            - ["Date and occasion", ""]
+            - ["Is the Business Associate involved in a current tender or negotiation? (Yes / No)", ""]
+            - ["Action taken: retained / handed to the Ethics Office / returned", ""]
+
+  - id: C
+    title: Ethical Scenarios and Guidance
+    body:
+      - para: "The scenarios below illustrate how the Code applies. Where a scenario states an exception, the exception forms part of the Code."
+      - clause: "C.1"
+        title: A vendor offers a gift card during Diwali
+        text: "A vendor sends an Employee in Procurement a gift card of Rs. 3,000 while the vendor's contract renewal is under negotiation. Although the value is within the limit, the Employee is involved in a negotiation with the vendor, so accepting it could appear to influence the decision. The Employee declines and records the offer."
+      - clause: "C.2"
+        title: Gifts at the Employee's own wedding
+        text: "Personal gifts given to an Employee on the occasion of the Employee's own wedding or the birth of a child by colleagues or by personal friends are outside the Gift limits in {ref:#Section 6}. Gifts on such occasions from a Business Associate remain subject to the limits and must be recorded where required."
+      - clause: "C.3"
+        title: Weekend freelance work
+        text: "A developer is offered paid work building a website for a friend's shop over weekends. Paid freelance work is outside employment under {ref:#5.1} and requires prior written approval, even though the shop is not a competitor and the work is done at weekends."
+      - clause: "C.4"
+        title: A colleague shares quarterly figures early
+        text: "A Finance Employee mentions to a friend in Delivery that quarterly revenue will beat expectations, and the friend buys the Company's shares before the results are announced. Both have breached the Code: the Finance Employee by communicating UPSI, and the friend, although not a Designated Person, by trading while in possession of UPSI under {ref:#8.2}."
+      - clause: "C.5"
+        title: A client asks to hire the Employee directly
+        text: "A client's manager suggests that an Employee resign and join the client. The Employee informs the Reporting Manager. Client contracts usually restrict such hiring, and the matter is handled under the {doc:008}."
+      - clause: "C.6"
+        title: A government inspector asks for a payment
+        text: "An inspector visiting an office suggests that a certificate will be issued faster if a payment is made. This is a request for a bribe. The Facilities manager declines, notes the details, and reports the request to the Legal department and the Ethics Office the same day."
+
+      - clause: "C.7"
+        title: A former colleague asks for a client contact list
+        text: "A former Employee now working for a competitor asks an Employee for a list of contacts at a client they both served. The list is confidential information of the Company and the client. The Employee refuses and informs the Ethics Office, as the request may also breach the former Employee's post-employment obligations."
+      - clause: "C.8"
+        title: A manager asks an Employee to backdate a document
+        text: "Before an audit, a manager asks an Employee to change the date on a test report to show that testing was completed before release. This is falsification of records. The Employee declines and, if the pressure continues, reports it through a channel in {ref:#13.2}; the Employee is protected under {ref:#13.4}."
+      - clause: "C.9"
+        title: A client invites the team to an overseas conference
+        text: "A client offers to pay for two Employees to attend a conference abroad, including business-class flights and five nights at a resort. Attendance for learning may be acceptable, but the travel and accommodation are hospitality of significant value. The Business Unit Head decides whether the Company will pay for the attendance itself; the Employees do not accept the client's offer."
+      - clause: "C.10"
+        title: Using an unapproved AI tool on client code
+        text: "An Employee pastes a block of client source code into a public AI chatbot to find a bug. This discloses client confidential information to a third party and breaches {ref:#9.2} and the {doc:009}. Only AI tools approved by Information Security may be used with client or Company data."
+  - id: D
+    title: Ethical Decision Checklist
+    body:
+      - para: "Before acting in a situation that feels uncertain, ask the questions below. If the answer to any question is no, or if you are unsure, stop and seek guidance under {ref:#3.4}."
+      - table:
+          id: Table 4
+          title: Questions to ask before acting
+          header: ["Question", "Why it matters"]
+          widths: [3.6, 4.4]
+          rows:
+            - ["Is it legal, in every country involved?", "Legality is the minimum standard, and laws differ between countries"]
+            - ["Is it consistent with this Code and the Company's policies?", "The policies record what the Company has decided in advance"]
+            - ["Would I be comfortable if it were reported in the news or to my family?", "A test of how others would see the action"]
+            - ["Would I be comfortable if my Reporting Manager, the client and the Ethics Office knew all the facts?", "Actions that need to be hidden are rarely right"]
+            - ["Does it benefit me or a Relative at the expense of the Company, a client or a colleague?", "A sign of a possible Conflict of Interest"]
+            - ["Would it still be acceptable if everyone in the Company did it?", "A test of whether the action can be a standard"]
+            - ["Have I recorded what I did and why?", "A written record protects the Employee who acts in good faith"]
+
+circulars_intro: "The circulars below amend this Code with the approval of the Audit Committee. Each prevails over the clause it amends from its effective date; the body of the Code is reproduced unedited."
+
+circulars:
+  - number: HR/CIR/2025/08
+    date: "2025-07-22"
+    effective_from: "2025-08-01"
+    subject: Revision of the limit for accepting Gifts and prohibition of gift cards
+    amends: ["6.2", "Table 2"]
+    issued_by: Chief Ethics Officer, with the approval of the Audit Committee
+    body:
+      - para: "Following an internal audit of the gift register, with effect from 1 August 2025:"
+      - items:
+          - "the limit for accepting an unsolicited Gift from a Business Associate under {ref:#6.2} is reduced from Rs. 5,000 to Rs. 2,000, not more than once in a calendar year from the same Business Associate;"
+          - "gift cards, vouchers, prepaid cards and other cash equivalents may not be accepted in any amount, and are treated in the same way as cash in {ref:#Table 2}; and"
+          - "every Gift accepted, whatever its value, is recorded in the gift register on the NPP within seven days."
+      - para: "All other provisions of {ref:#Section 6} remain unchanged."
+
+  - number: HR/CIR/2026/03
+    date: "2026-02-16"
+    effective_from: "2026-03-01"
+    subject: Approved outside teaching and open-source work
+    amends: ["5.1"]
+    issued_by: Chief Ethics Officer
+    body:
+      - para: "With effect from 1 March 2026, notwithstanding {ref:#5.1}, an Employee may, with the written approval of the Reporting Manager and a declaration on the NPP, undertake paid part-time teaching at a recognised educational institution, or paid work on an open-source project that is not sponsored by a competitor or a Business Associate, for not more than eight hours a week outside working hours."
+      - para: "All other paid outside work, including freelance development, consultancy and any work for a Business Associate or competitor, continues to require the prior written approval of the Chief Ethics Officer under {ref:#5.1}, which is ordinarily not given."
