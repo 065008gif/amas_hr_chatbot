@@ -39,10 +39,11 @@ Full brief: `MASTER_PROMPT.md`. Working protocol: Part A (one step at a time, sh
 
 - [x] Phase 2, doc 001 Leave Policy: 15 pages (target 16 ±2), TOC 20/20, footers 14/14, content check 0 errors / 0 warnings, traps T01-T08 verified (types 1,3,4,5,6). Conflicts C01, C02 registered for docs 002 and 008. D-021.
 
+- [x] Phase 2, doc 002 Employee Handbook: 24 pages (target 26 ±2), TOC 42/42, 0 errors/warnings, traps T09-T12 verified (all 6 types now covered). Conflicts C01 and C04 planted. D-022. Helper: `bash scripts/doc_cycle.sh NNN` runs the whole routine; `python scripts/renumber_tables.py NNN` fixes table order.
+
 ## Per-document routine (use for every document)
 `python scripts/check_content.py --doc NNN` -> `python scripts/build_docs.py --doc NNN` -> `python scripts/verify_pdfs.py --doc NNN --show 2` -> `python scripts/verify_traps.py`. Adjust content until pages are within target ±2. Add statute figures to STATUTORY_CLAIMS.md, add traps to content/traps.yaml, add cross-document conflicts to `planned_conflicts` in `_company.yaml`. Show the user ONLY checker results, the page count and pages 1-2 text. Commit each document.
 
 ## Next
-- [ ] Phase 2, doc 002: Employee Handbook (target 26 ±2). MUST plant conflict C01 (Handbook states paternity 5 Working Days within 3 months) plus a trap of type 2 for it; include the policy hierarchy clause (see `precedence` in `_company.yaml`); creche facility (referenced by 001 Clause 6.2.5).
 - [ ] Documents 003-009 in order, one per turn (008 must plant conflict C02: EL encashment limit of 30 days). Check `circulars_used` in `_company.yaml` before numbering circulars.
 - [ ] End of Phase 2: `check_content.py --all --final`, `verify_pdfs.py --all`, `verify_traps.py --final` (>= 25 traps, all 6 types), user reads 2-3 PDFs, then commit and user pushes

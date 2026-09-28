@@ -149,3 +149,14 @@ Effect on the report: we cite "about 150 pages across 9 documents", not 220. Ret
   - There were two near-empty pages (the end of Section 12, and the last circular). Section 12 gained real clauses (12.4 confidentiality of medical documents, 12.5 no adverse treatment, 12.6 queries) and the circular wording was tightened. 16 pages became 15, with no filler.
 - **Known issue for Phase 3:** in plain text extraction, a wrapped table cell interleaves with its neighbouring columns (for example, the version history rows). Ingestion must extract tables with pdfplumber's table extractor (cell by cell) and not from the plain page text.
 - Wording: "last working day" was changed to "last day of service", so it isn't confused with the defined term "Working Day" (the checker warned about this).
+
+**D-022 (2026-09-28): Employee Handbook (NTL/HR/POL/002) is complete: 24 pages against a target of 26 ±2.**
+- 31 sections, 17 tables and 8 annexures (contacts, joining checklist, acknowledgement form, FAQs, glossary, HR calendar, workplace scenarios, policy directory), plus 2 circulars (HR/CIR/2025/09 day-care Rs. 8,000 → 10,000; HR/CIR/2026/01 internal job posting eligibility 12 → 9 months). About 10,400 words.
+- It carries the policy hierarchy (Clause 1.3) and **plants conflicts C01** (paternity 5 Working Days, Clause 6.2) **and C04** (L5 notice 60 days, Table 7; to be contradicted by the Separation Policy). It governs creche, relocation (a grade-linked Table 8), the referral scheme and probation.
+- New traps: T09 (type 2: Handbook vs Leave Policy circular), T10 (type 3: no referral bonus for L7/L8), T11 (type 1: day-care circular), T12 (type 5: egg freezing not covered). **All six trap types are now represented.**
+- **First draft was too thin:** 5,444 words gave 15 pages. Genuine sections were added (relocation, client deployment, diversity, personal data, facilities, remote work support, business continuity, caregivers, volunteering, assets, communication norms, first 90 days, mandatory training), each iteration measured.
+- **Tooling fixes found here:**
+  1. `registry()` re-read every YAML file on each call, and a check took more than 5 minutes. It's now cached, and a check takes 4 s.
+  2. `scripts/renumber_tables.py` renumbers tables in order of appearance after sections are inserted.
+  3. The defined-term checker now matches whole words (it had flagged "upgraded" for "Grade") and ignores statutory wording inside `{stat:}` markers.
+  4. Contents-page rows have no cell padding, so up to about 45 entries fit on one page. The Leave Policy was rebuilt and still passes.

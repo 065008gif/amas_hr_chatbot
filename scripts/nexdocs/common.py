@@ -9,6 +9,7 @@ Content markers (inside any text string in content/*.yaml; they never appear in 
   {stat:MB_MATERNITY|26 weeks} -> "26 weeks"; ID must exist in content/STATUTORY_CLAIMS.md
   **bold**              -> bold text
 """
+import functools
 import re
 import unicodedata
 from pathlib import Path
@@ -35,8 +36,10 @@ def company():
     return load_yaml(CONTENT / "_company.yaml")
 
 
+@functools.lru_cache(maxsize=None)
 def registry():
-    """doc_id -> {title, number, file, ...}; includes any extra pol*.yaml (e.g. a self-test)."""
+    """doc_id -> {title, number, file, ...}; includes any extra pol*.yaml (e.g. a self-test).
+    Cached: content files do not change while one script runs."""
     reg = {k: dict(v) for k, v in company()["documents"].items()}
     for f in CONTENT.glob("pol*.yaml"):
         d = load_yaml(f)

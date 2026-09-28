@@ -73,5 +73,38 @@ planned_conflicts:
     side_b: "008 Separation and Exit Policy (to be written): full and final settlement text states a limit of 30 days"
     prevails: "001, by 001 Clause 11.5 and Clause 1.4 (Leave Policy governs leave encashment)"
 
-circulars_used:     # circular numbers already taken, to avoid duplicates across documents
+  - id: C03
+    subject: Time limit for raising a sexual harassment complaint
+    side_a: "003 POSH Policy: within three months of the incident, extendable by a further three months (statutory)"
+    side_b: "004 Code of Conduct: grievances including harassment to be raised within 30 days"
+    prevails: "003 and the statute (POSH Act); a statute prevails over a weaker company rule"
+  - id: C04
+    subject: Notice period for Grade L5
+    side_a: "008 Separation and Exit Policy: 90 days for Grades L5 to L8"
+    side_b: "002 Employee Handbook summary: 60 days for Grade L5"
+    prevails: "008 (the policy governing notice periods, over the Handbook summary)"
+
+# Circular numbers reserved per document (number order = date order), to avoid duplicates:
+circulars_used:
   "001": [HR/CIR/2025/07, HR/CIR/2025/11, HR/CIR/2026/02]
+  "002": [HR/CIR/2025/09, HR/CIR/2026/01]
+  "003": [HR/CIR/2025/05, HR/CIR/2026/04]
+  "004": [HR/CIR/2025/08, HR/CIR/2026/03]
+  "005": [HR/CIR/2025/03, HR/CIR/2025/06, HR/CIR/2026/05]
+  "006": [HR/CIR/2025/10, HR/CIR/2026/06]
+  "007": [HR/CIR/2025/01, HR/CIR/2025/12]
+  "008": [HR/CIR/2025/04, HR/CIR/2026/07]
+  "009": [HR/CIR/2025/02, HR/CIR/2025/13]
+
+# Figures quoted by more than one document (the governing document is named first):
+shared_facts:
+  notice_period_days: {governed_by: "008", Probationer: 15, L1: 30, L2: 30, L3: 60, L4: 60, L5: 90, L6: 90, L7: 90, L8: 90}
+  probation_months: {governed_by: "002", L1-L3: 6, L4-L8: 3}
+  group_medical_sum_insured_lakh: {governed_by: "005", L1-L3: 3, L4-L5: 5, L6-L7: 7.5, L8: 10, note: "L1-L3 raised to 4 by HR/CIR/2025/06"}
+  variable_pay_target_pct_of_ctc: {governed_by: "005", L1: 0, L2: 8, L3: 8, L4: 10, L5: 12, L6: 15, L7: 20, L8: 25}
+  hotel_cap_per_night_metro_nonmetro_rs: {governed_by: "007", L1-L3: [3500, 2500], L4-L5: [5000, 3500], L6: [7000, 5000], L7-L8: [10000, 7000]}
+  per_diem_domestic_rs: {governed_by: "007", L1-L3: 800, L4-L5: 1000, L6: 1200, L7-L8: 1500}
+  wfh_days_per_week: {governed_by: "006", all: 2, note: "anchor office days Tue-Thu for L1-L6 from HR/CIR/2025/10"}
+  overtime: {governed_by: "006", eligible: "L1-L3", body_rate: "1.5x", statutory: "twice the ordinary rate"}
+  creche: {governed_by: "002", onsite: "Bengaluru and Hyderabad campuses", reimbursement_rs_per_month: 8000, note: "10000 from HR/CIR/2025/09"}
+  hr_contacts: "see contacts above; IC at ic@nexora.example; ethics at ethics@nexora.example"

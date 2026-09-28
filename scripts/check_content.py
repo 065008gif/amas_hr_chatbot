@@ -149,10 +149,12 @@ def check_definitions(doc, r):
     terms = [b["term"] for _, _, body in all_parts(doc) for bt, b, _ in walk(body) if bt == "clause" and b.get("term")]
     if not terms:
         r.warn("No definitions (clauses with 'term:') found")
-    text = " ".join(plain(s, here) for _, s in doc_strings(doc))
+    # statutory wording inside {stat:...} markers is quoted law, not our defined terms
+    text = " ".join(plain(re.sub(r"\{stat:[^}]*\}", "", s), here) for _, s in doc_strings(doc))
     for t in terms:
-        uses = len(re.findall(re.escape(t), text)) - 1
-        lower = [m.group(0) for m in re.finditer(re.escape(t), text, re.I) if m.group(0) != t]
+        word = r"\b" + re.escape(t) + r"s?\b"
+        uses = len(re.findall(word, text)) - 1
+        lower = [m.group(0) for m in re.finditer(word, text, re.I) if not m.group(0).startswith(t)]
         if uses < 1:
             r.warn(f"Defined term '{t}' is never used after its definition")
         if lower:

@@ -35,8 +35,8 @@ CELL = ParagraphStyle("cell", fontName="Times-Roman", fontSize=8.8, leading=10.6
 HCELL = ParagraphStyle("hcell", fontName="Helvetica-Bold", fontSize=8.2, leading=10)
 NOTE = ParagraphStyle("note", parent=BODY, fontName="Times-Italic", fontSize=9.2, leading=12,
                       backColor=NOTE_BG, borderPadding=(4, 4, 4, 4), spaceBefore=4, spaceAfter=8)
-TOC0 = ParagraphStyle("toc0", fontName="Helvetica-Bold", fontSize=9.6, leading=13, leftIndent=0)
-TOC1 = ParagraphStyle("toc1", fontName="Helvetica", fontSize=9, leading=12, leftIndent=14)
+TOC0 = ParagraphStyle("toc0", fontName="Helvetica-Bold", fontSize=9, leading=11, leftIndent=0)
+TOC1 = ParagraphStyle("toc1", fontName="Helvetica", fontSize=8.6, leading=10.5, leftIndent=14)
 
 # indent (points) of clause number and clause text, by clause depth (4.3 -> 2, 4.3.1 -> 3)
 INDENT = {2: (0, 30), 3: (30, 64)}
@@ -198,7 +198,10 @@ class Builder:
         return out
 
     def toc_page(self):
-        toc = TableOfContents(dotsMinLevel=0)
+        toc = TableOfContents(dotsMinLevel=0, tableStyle=TableStyle([
+            ("VALIGN", (0, 0), (-1, -1), "TOP"), ("TOPPADDING", (0, 0), (-1, -1), 0),
+            ("BOTTOMPADDING", (0, 0), (-1, -1), 1), ("LEFTPADDING", (0, 0), (-1, -1), 0),
+            ("RIGHTPADDING", (0, 0), (-1, -1), 0)]))
         toc.levelStyles = [TOC0, TOC1]
         return [Paragraph("CONTENTS", SEC), toc, PageBreak()]
 

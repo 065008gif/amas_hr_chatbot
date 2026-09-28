@@ -1,0 +1,927 @@
+doc_id: "002"
+title: Employee Handbook
+number: NTL/HR/POL/002
+version: "6.0"
+effective_date: "2025-04-01"
+target_pages: 26
+
+control:
+  owner: Head, HR Operations
+  approver: Chief People Officer
+  approval_date: "2025-03-21"
+  classification: Internal
+  supersedes: Employee Handbook version 5.2 dated 1 April 2024
+  review_cycle: Annual
+  applicable_to: All Employees of Nexora Technologies Limited in India, Grades L1 to L8
+  distribution: "Every new Employee receives this Handbook through the NPP on the date of joining and acknowledges it using the form in Annexure C. The Handbook is available on the NPP under Policies > Handbook. Printed copies are uncontrolled."
+
+history:
+  - ["4.0", "2019-04-01", "Handbook restructured; sections on the POSH policy and grievance redressal expanded.", "HR Operations / CPO"]
+  - ["5.0", "2022-04-01", "Hybrid work introduced; information security essentials added.", "HR Operations / CPO"]
+  - ["5.1", "2023-04-01", "Updated for the NPP; Noida location added.", "HR Operations / CPO"]
+  - ["5.2", "2024-04-01", "Employee referral scheme revised; wellbeing section expanded.", "HR Operations / CPO"]
+  - ["6.0", "2025-04-01", "Policy hierarchy clause added; summaries aligned with the policies in force on 1 April 2025.", "HR Operations / CPO"]
+
+sections:
+  - num: 1
+    title: About this Handbook
+    body:
+      - clause: "1.1"
+        title: Purpose
+        text: "This Handbook introduces Employees to the Company, explains how the Company works day to day, and summarises the principal policies that govern employment. It is written to be read in full by every new Employee during the first week and to serve thereafter as a quick reference."
+      - clause: "1.2"
+        title: Status of this Handbook
+        text: "This Handbook is a summary. It does not form part of any contract of employment and does not create any right that is not provided in the policy on which a summary is based. Each summary names the governing policy, which should be consulted for the complete rule, its conditions and its exceptions."
+      - clause: "1.3"
+        title: Policy hierarchy
+        text: "Where two documents appear to give different answers on the same matter, the following order of precedence applies:"
+        items:
+          - "applicable law, including any statute, rule or notification, prevails over any policy of the Company that provides a lesser benefit or a contrary rule;"
+          - "an amendment circular in the HR/CIR series prevails, from its effective date, over the clause of the policy that it amends;"
+          - "the specific policy on a subject prevails over this Handbook, which is only a summary; and"
+          - "between two policies, the policy that governs the subject matter prevails, for example the {doc:001} on leave and leave encashment, and the {doc:008} on notice periods."
+      - clause: "1.4"
+        title: Circulars and updates
+        text: "Policies change during the year through amendment circulars, which are published on the NPP and announced by e-mail. This Handbook is re-issued once a year and may therefore not reflect a circular issued after its effective date. Employees should check the circulars at the end of the governing policy before acting on a summary in this Handbook."
+      - clause: "1.5"
+        title: Questions
+        text: "Questions about this Handbook or any policy may be raised with the HR Business Partner or as a ticket through the HR Helpdesk. An answer given by the HR Helpdesk is guidance on the policy and does not change it."
+
+  - num: 2
+    title: Definitions
+    body:
+      - para: "Terms defined in a governing policy have the same meaning in the summary of that policy. In addition, the following terms are used throughout this Handbook."
+      - clause: "2.1"
+        term: Base Location
+        text: "means the office of the Company to which an Employee is attached, as recorded on the NPP, irrespective of the place from which the Employee works on a particular day."
+      - clause: "2.2"
+        term: Business Unit Head
+        text: "means the leader of the business unit or corporate function to which an Employee belongs."
+      - clause: "2.3"
+        term: Company
+        text: "means Nexora Technologies Limited, including all its offices and delivery centres in India."
+      - clause: "2.4"
+        term: Confirmed Employee
+        text: "means an Employee who has completed probation and has received a confirmation letter through the NPP."
+      - clause: "2.5"
+        term: Employee
+        text: "means a person on the permanent or fixed-term rolls of the Company in Grades L1 to L8, including a Probationer."
+      - clause: "2.6"
+        term: Grade
+        text: "means the position of an Employee in the Company's career structure, from L1 to L8, as described in {ref:#Table 2}."
+      - clause: "2.7"
+        term: HR Business Partner
+        text: "means the member of the HR function assigned to an Employee's business unit, as shown on the NPP."
+      - clause: "2.8"
+        term: NPP
+        text: "means the Nexora People Portal, the Company's human resources system for leave, attendance, payroll documents, claims, tickets and policies."
+      - clause: "2.9"
+        term: Probationer
+        text: "means an Employee serving the probation period stated in the offer letter."
+      - clause: "2.10"
+        term: Reporting Manager
+        text: "means the person to whom an Employee reports, as recorded on the NPP."
+
+  - num: 3
+    title: About Nexora
+    body:
+      - clause: "3.1"
+        title: Who we are
+        text: "The Company was incorporated in Bengaluru in 2009 as a software services firm and today employs about 18,000 people across five delivery centres in India. It provides application development, application maintenance, cloud migration, data engineering and testing services to clients in banking, insurance, healthcare, retail and manufacturing, principally in India, the United Kingdom and North America."
+      - clause: "3.2"
+        title: Business units
+        text: "Delivery is organised into five business units: Banking and Financial Services; Healthcare and Life Sciences; Retail and Consumer; Digital Engineering; and Cloud and Infrastructure Services. Corporate functions, including HR, Finance, Legal, Information Security, Facilities and the Travel Desk, support all business units from Bengaluru, with local teams at each location."
+      - clause: "3.3"
+        title: Locations
+        text: "The Company's offices and the facilities available at each are listed in {ref:#Table 1}."
+      - table:
+          id: Table 1
+          title: Company locations and facilities
+          header: ["Location", "Role", "Approximate headcount", "On-site facilities"]
+          widths: [1.2, 2.2, 1.3, 4.2]
+          rows:
+            - ["Bengaluru", "Headquarters and delivery centre", "7,500", "Creche, gymnasium, medical room with a nurse on all shifts, cafeteria, Learning Academy"]
+            - ["Pune", "Delivery centre", "3,200", "Medical room, cafeteria, quiet rooms"]
+            - ["Hyderabad", "Delivery centre", "3,800", "Creche, medical room, cafeteria, Learning Academy"]
+            - ["Chennai", "Delivery centre", "2,300", "Medical room, cafeteria"]
+            - ["Noida", "Delivery centre", "1,200", "Medical room, cafeteria"]
+      - clause: "3.4"
+        title: Career structure
+        text: "Every role is mapped to one of eight Grades. The typical designations and experience for each Grade are shown in {ref:#Table 2}. Designations vary between the technology, delivery management and corporate function tracks; the Grade determines entitlements under all policies."
+      - table:
+          id: Table 2
+          title: Grades and typical designations
+          grade_table: true
+          header: ["Grade", "Technology track", "Management or corporate track", "Typical experience"]
+          widths: [0.8, 2.6, 2.6, 1.6]
+          rows:
+            - ["L1", "Graduate Engineer Trainee", "Trainee Associate", "0 to 1 year"]
+            - ["L2", "Associate Engineer", "Associate", "1 to 3 years"]
+            - ["L3", "Software Engineer", "Senior Associate", "3 to 5 years"]
+            - ["L4", "Senior Software Engineer", "Team Lead", "5 to 8 years"]
+            - ["L5", "Technical Lead", "Assistant Manager", "8 to 11 years"]
+            - ["L6", "Solution Architect", "Manager", "11 to 14 years"]
+            - ["L7", "Principal Architect", "Senior Manager", "14 to 18 years"]
+            - ["L8", "Distinguished Engineer", "Director, Vice President and above", "18 years and above"]
+      - clause: "3.5"
+        title: Our values
+        text: "The Company expects every Employee to act in accordance with five values: Integrity, meaning that we do what we say and never compromise honesty for a result; Client First, meaning that we understand and protect our clients' interests; Ownership, meaning that we take responsibility for outcomes and raise problems early; Respect, meaning that we treat every colleague with dignity regardless of role, gender, religion, caste, region, disability or any other characteristic; and Learning, meaning that we keep our skills current. The values are applied in practice through the {doc:004}."
+
+  - num: 4
+    title: Joining and Probation
+    body:
+      - clause: "4.1"
+        title: Joining formalities
+        text: "On the date of joining, a new Employee completes the joining formalities on the NPP, submits the documents listed in {ref:#Annexure B}, and receives an identity card, a laptop and system access. Original documents are verified and returned on the same day; the Company does not retain original certificates."
+      - clause: "4.2"
+        title: Background verification
+        text: "Every offer is subject to background verification of identity, address, education, previous employment and, where permitted by law, criminal records, carried out by an authorised third-party agency with the Employee's written consent. Verification is ordinarily completed within 60 days of joining. A material discrepancy, such as a false degree or concealed employment, may result in withdrawal of the offer or termination of employment in accordance with the {doc:008}."
+      - clause: "4.3"
+        title: Induction
+        text: "All new Employees attend the Nexora Foundation Programme, a five-day induction covering the Company's business, values, policies, information security and the POSH policy. Completion of the induction modules on the NPP, including the information security and POSH assessments, is mandatory within 30 days of joining."
+      - clause: "4.4"
+        title: Graduate trainees
+        text: "Employees joining in Grade L1 as Graduate Engineer Trainees complete a twelve-week technical programme at the Learning Academy in Bengaluru or Hyderabad before deployment to a project. Trainees who receive the programme sign a service agreement under which, if the trainee resigns within 18 months of joining, a prorated share of the programme cost of Rs. 75,000 is recoverable. No other Grade is required to sign a service agreement at joining."
+      - clause: "4.5"
+        title: Probation
+        text: "The probation period is six months for Grades L1 to L3 and three months for Grades L4 to L8. During probation the Reporting Manager holds a check-in at the end of each month and records it on the NPP. Probation may be extended once, by up to three months, where performance or conduct has not been satisfactory, and the reasons are communicated in writing."
+      - clause: "4.6"
+        title: Confirmation
+        text: "An Employee who completes probation satisfactorily receives a confirmation letter through the NPP. Until confirmation is issued, the Employee remains a Probationer even if the probation period has ended, save that confirmation is deemed where no decision is communicated within 30 days after the end of probation."
+      - clause: "4.7"
+        title: Notice during probation
+        text: "Either party may end employment during probation by giving 15 days' notice, or payment in lieu of notice at the Company's discretion, as provided in the {doc:008}."
+
+  - num: 5
+    title: Working Hours, Attendance and Hybrid Work
+    body:
+      - para: "Governing policy: {doc:006}. The summary below reflects that policy as on 1 April 2025."
+      - clause: "5.1"
+        title: Working week
+        text: "The standard working week is Monday to Friday. A working day is nine hours, including a one-hour meal break, and the Company expects about 45 hours of presence a week. Core hours, during which Employees are expected to be available for meetings, are 11:00 a.m. to 4:00 p.m. in the Employee's time zone."
+      - clause: "5.2"
+        title: Attendance recording
+        text: "Attendance is recorded by the identity card at office entry points and, on days of remote work, by marking attendance on the NPP. Missed or incorrect punches may be regularised on the NPP, with the approval of the Reporting Manager, up to three times in a calendar month."
+      - clause: "5.3"
+        title: Hybrid work
+        text: "Employees whose role permits may work from home for up to two days in a week, on days agreed with the Reporting Manager, and work from the Base Location on the remaining days. Client requirements may require full-time attendance at an office or client site. Employees working from home must follow the information security rules summarised in {ref:#Section 14}."
+      - clause: "5.4"
+        title: Shifts
+        text: "Employees supporting clients in other time zones may be assigned to a shift. Shift allowance and night transport are provided as set out in the {doc:006}. No woman Employee is required to work a night shift without her written consent and without the safeguards required by the law of the State."
+
+  - num: 6
+    title: Leave and Holidays
+    body:
+      - para: "Governing policy: {doc:001}. In any inconsistency the Leave Policy and its circulars prevail."
+      - clause: "6.1"
+        title: Annual leave at a glance
+        text: "Leave is credited for the Leave Year from 1 April to 31 March. The principal entitlements are summarised in {ref:#Table 3}; conditions such as advance notice, the sandwich rule and accumulation limits are in the Leave Policy."
+      - table:
+          id: Table 3
+          title: Summary of leave entitlements (days per Leave Year)
+          header: ["Grades", "Earned Leave", "Casual Leave", "Sick Leave", "EL encashment during service"]
+          widths: [1.2, 1.2, 1.2, 1.2, 2.4]
+          rows:
+            - ["L1", "12", "6", "8", "Not available"]
+            - ["L2", "18", "7", "8", "Not available"]
+            - ["L3 and L4", "18", "7", "8", "Up to 5 days a year"]
+            - ["L5 and L6", "21", "7", "8", "Up to 7 days a year"]
+            - ["L7 and L8", "24", "7", "8", "Up to 10 days a year"]
+      - clause: "6.2"
+        title: Family-related leave
+        text: "A woman Employee who meets the eligibility conditions of the Maternity Benefit Act, 1961 receives 26 weeks of paid maternity leave, and 12 weeks on adoption of a child below three months. A male Employee receives paternity leave of 5 Working Days, to be taken within three months of the birth or adoption of a child, for up to two children. Bereavement leave of 3 Working Days is available on the death of an Immediate Family member, and marriage leave of 3 Working Days once during service."
+      - clause: "6.3"
+        title: Holidays
+        text: "Each location observes ten declared holidays in a calendar year, and each Employee may choose two restricted holidays. The holiday calendar for each location is published on the NPP in December for the following calendar year."
+      - clause: "6.4"
+        title: Applying for leave
+        text: "All leave is applied for and approved on the NPP. An Employee should plan Earned Leave with the Reporting Manager, particularly around project milestones, and apply at least 14 days in advance for any spell longer than three days."
+
+  - num: 7
+    title: Pay and Payroll
+    body:
+      - para: "Governing policy: {doc:005}."
+      - clause: "7.1"
+        title: Cost to Company
+        text: "Remuneration is stated as an annual Cost to Company (CTC), comprising fixed pay, the employer's contributions to provident fund and gratuity, insurance premiums, and, for eligible Grades, target variable pay. The components and their percentages are set out in the Compensation and Benefits Policy and in each Employee's compensation letter."
+      - clause: "7.2"
+        title: Pay day and payslips
+        text: "Salary is credited to the Employee's bank account on the last Working Day of each month. Payslips, the annual tax statement (Form 16) and the provident fund details are available on the NPP. Payroll queries are raised as a ticket in the Payroll category."
+      - clause: "7.3"
+        title: Income tax
+        text: "Tax is deducted at source each month on the basis of the tax regime chosen and the investment declaration made by the Employee on the NPP in April. Proof of investments must be uploaded by 15 January; where proof is not submitted, the tax is recomputed and the shortfall is deducted from the salaries of February and March."
+      - clause: "7.4"
+        title: Variable pay
+        text: "Employees in Grades L2 to L8 have a target variable pay stated as a percentage of CTC. The payout depends on Company performance and individual performance, is paid once a year with the salary for June, and is payable only to Employees on the rolls, and not serving notice, on the date of payout, subject to the exceptions in the Compensation and Benefits Policy."
+      - clause: "7.5"
+        title: Salary advance
+        text: "A Confirmed Employee facing a medical emergency in the Immediate Family may request an interest-free salary advance of up to one month's net salary, recovered in not more than six equal monthly instalments. Only one advance may be outstanding at a time. Requests are approved by the HR Business Partner and the Head, Payroll."
+      - clause: "7.6"
+        title: Reimbursements
+        text: "Business expenses, travel and relocation are reimbursed through the claims module of the NPP against original bills, as set out in the {doc:007}. Claims must be submitted within 30 days of the expense."
+
+  - num: 8
+    title: Benefits and Wellbeing
+    body:
+      - para: "Governing policy for insurance and retirement benefits: {doc:005}. Creche and day-care arrangements are governed by this Handbook."
+      - clause: "8.1"
+        title: Insurance
+        text: "Every Employee is covered from the date of joining by group medical insurance for the Employee, spouse and up to two children, by group personal accident insurance and by group term life insurance. The sum insured depends on Grade and is summarised in {ref:#Table 4}. Parents and parents-in-law may be added to a separate parental policy at the Employee's cost, deducted from salary."
+      - table:
+          id: Table 4
+          title: Summary of group insurance cover by Grade
+          header: ["Grades", "Group medical (family floater)", "Group personal accident", "Group term life"]
+          widths: [1.2, 2.2, 2.2, 2.2]
+          rows:
+            - ["L1 to L3", "Rs. 3,00,000", "Three times annual fixed pay", "Three times annual fixed pay"]
+            - ["L4 and L5", "Rs. 5,00,000", "Three times annual fixed pay", "Three times annual fixed pay"]
+            - ["L6 and L7", "Rs. 7,50,000", "Three times annual fixed pay", "Three times annual fixed pay"]
+            - ["L8", "Rs. 10,00,000", "Three times annual fixed pay", "Three times annual fixed pay"]
+      - clause: "8.2"
+        title: Creche and day care
+        text: "The Company provides creche facilities in accordance with the {stat:MB_CRECHE|Maternity Benefit Act, 1961, which requires a creche in an establishment with fifty or more employees}. The arrangements are:"
+        items:
+          - "on-site creches at the Bengaluru and Hyderabad campuses, open from 8:00 a.m. to 7:30 p.m. on Working Days, for children aged six months to six years, free of charge to the Employee;"
+          - "at Pune, Chennai and Noida, reimbursement of the fees of a registered day-care centre of up to Rs. 8,000 a month for each child aged six months to six years, for up to two children, claimed quarterly through the NPP; and"
+          - "a mother may visit the creche four times a day, including the interval for rest, as permitted by law; the timings are agreed with the Reporting Manager."
+      - clause: "8.3"
+        title: Employee Assistance Programme
+        text: "The Employee Assistance Programme (EAP) offers confidential counselling by qualified counsellors from an external partner, 24 hours a day, at 1800-000-0000 (extension 9). Each Employee and each member of the Employee's household may use up to six free sessions in a year. The Company receives only anonymous usage statistics and never the identity of a caller."
+      - clause: "8.4"
+        title: Health checks and wellness
+        text: "Employees in Grade L5 and above, and Employees of any Grade who are 35 years of age or older, are entitled to an annual preventive health check at an empanelled hospital. All locations have a medical room; Bengaluru has a gymnasium open to all Employees. Wellness sessions on nutrition, ergonomics and mental health are held each quarter."
+      - clause: "8.5"
+        title: Transport
+        text: "The Company provides transport for Employees whose shift ends after 9:00 p.m. or begins before 6:00 a.m., with the safeguards described in the {doc:006}. There is no general commuting allowance; fuel and commuting costs form part of fixed pay."
+
+  - num: 9
+    title: Performance and Career Growth
+    body:
+      - clause: "9.1"
+        title: Performance cycle
+        text: "The performance year runs from 1 April to 31 March. Goals are agreed on the NPP by 30 April, reviewed at a mid-year check-in in October, and assessed in the annual review in April and May. Employees who joined after 31 December are not rated for that year and are reviewed in the following cycle."
+      - clause: "9.2"
+        title: Ratings
+        text: "Performance is rated on the five-point scale in {ref:#Table 5}. Ratings proposed by Reporting Managers are reviewed in a normalisation meeting within each business unit to ensure consistent standards. The Employee sees the final rating and the manager's comments on the NPP and may request a discussion with the skip-level manager within 15 days."
+      - table:
+          id: Table 5
+          title: Performance rating scale
+          header: ["Rating", "Description", "Indicative share of a business unit"]
+          widths: [0.8, 4.4, 2]
+          rows:
+            - ["5", "Outstanding: consistently exceeded all goals and made an exceptional contribution beyond the role", "Up to 10 per cent"]
+            - ["4", "Exceeds expectations: exceeded most goals", "Up to 25 per cent"]
+            - ["3", "Meets expectations: met the goals of the role", "About 50 per cent"]
+            - ["2", "Partially meets expectations: met some goals; improvement needed", "About 10 per cent"]
+            - ["1", "Does not meet expectations: did not meet the goals of the role", "About 5 per cent"]
+      - clause: "9.3"
+        title: Promotions
+        text: "Promotions are decided once a year, effective 1 July, on the basis of performance, demonstrated capability at the next Grade and business need. The minimum time in Grade before promotion is 12 months from L1 to L2, 24 months for promotion from L2, L3 and L4, and 36 months for promotion from L5 and above. A rating of 4 or 5 in the most recent cycle is ordinarily expected."
+      - clause: "9.4"
+        title: Internal job postings
+        text: "Open positions are advertised internally on the NPP before external hiring. An Employee may apply for an internal job posting after completing 12 months in the current role, provided the most recent rating is 3 or above and the Employee is not on a performance improvement plan. The Reporting Manager is informed of the application but cannot block it; the release date is agreed within 60 days of selection."
+      - clause: "9.5"
+        title: Performance improvement plan
+        text: "An Employee rated 1, or rated 2 in two consecutive cycles, is placed on a performance improvement plan of 60 days with specific goals and fortnightly reviews. The plan is supportive in intent. If the goals are not met, the Company may take further action, including separation, in accordance with the {doc:008}."
+
+  - num: 10
+    title: Learning and Development
+    body:
+      - clause: "10.1"
+        title: Learning hours
+        text: "Every Employee is expected to complete at least 40 hours of learning in a performance year through the Learning Academy, the online library on the NPP, or approved external programmes. Mandatory compliance modules count towards these hours."
+      - clause: "10.2"
+        title: Certification reimbursement
+        text: "An Employee in Grade L3 or above who passes a certification approved for the Employee's role may claim reimbursement of the examination fee, up to Rs. 50,000 in a performance year. An Employee who resigns within 12 months of the reimbursement repays it in full through the full and final settlement. Employees in Grades L1 and L2 are nominated for certifications by the Learning Academy, which pays the fee directly and does not require repayment."
+      - clause: "10.3"
+        title: Higher education
+        text: "The Company may sponsor a part-time postgraduate programme for a Confirmed Employee with at least three years of service, meeting up to 75 per cent of the fees subject to a service agreement of 24 months after completion. Full-time programmes may be supported by a sabbatical under the {doc:001}."
+      - clause: "10.4"
+        title: Mentoring
+        text: "Every Employee in Grades L1 and L2 is assigned a mentor from Grade L4 or above for the first year. Mentors meet mentees at least once a month; the mentoring relationship is separate from the reporting line."
+
+  - num: 11
+    title: Employee Referral Scheme
+    body:
+      - clause: "11.1"
+        title: Purpose
+        text: "The Company encourages Employees to refer suitable candidates for open positions. Referrals are submitted through the referral module of the NPP with the candidate's consent."
+      - clause: "11.2"
+        title: Referral bonus
+        text: "A referral bonus is paid to the referring Employee when the referred candidate joins and completes 90 days of service, at the amount set out in {ref:#Table 6} for the Grade of the position filled."
+      - table:
+          id: Table 6
+          title: Referral bonus by Grade of the position filled
+          header: ["Grade of position filled", "Referral bonus"]
+          widths: [3, 3]
+          rows:
+            - ["L1 to L3", "Rs. 25,000"]
+            - ["L4 and L5", "Rs. 50,000"]
+            - ["L6 and above", "Rs. 1,00,000"]
+      - clause: "11.3"
+        title: Eligibility of the referring Employee
+        text: "The referring Employee must be on the rolls of the Company, and not serving notice, on the date of payment. The following are not eligible for a referral bonus:"
+        items:
+          - "Employees in Grades L7 and L8;"
+          - "Employees in the Talent Acquisition and HR functions;"
+          - "the hiring manager and any member of the interview panel for the position; and"
+          - "any Employee referring a former Employee who left the Company less than 12 months before the date of rejoining."
+      - clause: "11.4"
+        title: Tax
+        text: "The referral bonus is paid with the monthly salary and is taxable as salary."
+
+  - num: 12
+    title: Conduct and Respect at Work
+    body:
+      - para: "Governing policies: {doc:004} and {doc:003}."
+      - clause: "12.1"
+        title: Standards of conduct
+        text: "Every Employee is expected to act honestly, protect confidential information, avoid conflicts of interest, and treat colleagues, clients and vendors with courtesy and respect. Examples of misconduct include fraud, falsification of records, harassment, disclosure of confidential information, and misuse of Company assets."
+      - clause: "12.2"
+        title: Gifts and hospitality
+        text: "Employees should not accept gifts or hospitality that could influence, or appear to influence, a business decision. Modest gifts may be accepted within the value limit and declaration requirements of the Code of Conduct and Ethics."
+      - clause: "12.3"
+        title: Outside employment
+        text: "Employees may not take up any other employment, paid assignment or business, including freelance work, while employed by the Company, without prior written approval under the Code of Conduct and Ethics."
+      - clause: "12.4"
+        title: Dress and identity
+        text: "The dress code at Company offices is business casual. At a client site the client's dress code applies. The identity card must be displayed at all times on Company and client premises and must not be lent to anyone; loss must be reported to Facilities and Information Security the same day."
+      - clause: "12.5"
+        title: Social media
+        text: "Employees may not post confidential information about the Company or its clients on social media, or comment on behalf of the Company without authorisation from Corporate Communications. Personal views should be clearly personal."
+      - clause: "12.6"
+        title: Respect and non-discrimination
+        text: "The Company does not tolerate discrimination, bullying or harassment on the basis of gender, religion, caste, region, language, disability, age, sexual orientation, marital status or any other characteristic. Sexual harassment is dealt with under the POSH policy summarised in {ref:#Section 13}."
+
+  - num: 13
+    title: POSH and Grievance Redressal
+    body:
+      - clause: "13.1"
+        title: Prevention of sexual harassment
+        text: "The Company has constituted an Internal Committee at each location to receive and inquire into complaints of sexual harassment, as required by law. A complaint is made in writing to the Internal Committee at ic@nexora.example. The process, timelines and protections are in the {doc:003}; Employees should read that policy rather than rely on this summary."
+      - clause: "13.2"
+        title: Grievances
+        text: "Any other work-related grievance, such as a concern about allocation of work, a manager's conduct, or the application of a policy, is first raised with the Reporting Manager or the HR Business Partner. If it is not resolved within ten Working Days, the Employee may raise it in writing with the location Grievance Committee, chaired by a senior leader, which responds within 15 Working Days."
+      - clause: "13.3"
+        title: Ethics concerns
+        text: "Concerns about fraud, bribery, conflicts of interest, data misuse or any breach of law may be raised with the Ethics Office at ethics@nexora.example or through the ethics hotline at 1800-000-0000 (extension 7), anonymously if the Employee prefers."
+      - clause: "13.4"
+        title: No retaliation
+        text: "No Employee shall suffer any adverse consequence for raising a grievance, a complaint or an ethics concern in good faith, or for participating in an inquiry as a witness. Retaliation is itself misconduct."
+
+  - num: 14
+    title: Information Security Essentials
+    body:
+      - para: "Governing policy: {doc:009}."
+      - clause: "14.1"
+        title: Your responsibilities
+        text: "Every Employee protects the information of the Company and its clients. In practice this means: locking the screen when leaving the desk; never sharing passwords or one-time codes; using only Company-approved software and cloud services; never copying client data to a personal device, personal e-mail or unapproved storage; and completing the annual security training."
+      - clause: "14.2"
+        title: Working remotely
+        text: "When working from home, Employees use the Company laptop and the virtual private network, work where screens cannot be overlooked, and do not print client documents at home. Public Wi-Fi may be used only with the virtual private network connected."
+      - clause: "14.3"
+        title: Reporting incidents
+        text: "A lost laptop or phone, a suspicious e-mail, or any suspected disclosure of data is reported immediately to the IT Service Desk at itsd@nexora.example. Early reporting limits harm and is never penalised; concealing an incident is misconduct."
+
+  - num: 15
+    title: Business Travel
+    body:
+      - para: "Governing policy: {doc:007}."
+      - clause: "15.1"
+        title: Booking
+        text: "All business travel is requested on the NPP, approved by the Reporting Manager, and booked through the Travel Desk at traveldesk@nexora.example. Travel class, hotel limits and daily allowances depend on Grade and are set out in the Travel and Expense Reimbursement Policy."
+      - clause: "15.2"
+        title: Safety while travelling
+        text: "Employees travelling for work register their itinerary on the NPP so that the Travel Desk can contact them in an emergency. The travel assistance number on the back of the identity card is available 24 hours a day in India and abroad."
+
+  - num: 16
+    title: Health, Safety and Emergencies
+    body:
+      - clause: "16.1"
+        title: Safe workplace
+        text: "The Company maintains its offices in accordance with fire, building and health regulations. Fire drills are held at every location at least twice a year, and each floor has trained fire wardens and first-aid responders whose names are displayed near the lifts."
+      - clause: "16.2"
+        title: Accidents and injuries
+        text: "Any accident or injury at work, while travelling on work or in Company transport, is reported to the Facilities team and the HR Business Partner within 24 hours. The medical room provides first aid; emergency cases are taken to the nearest empanelled hospital."
+      - clause: "16.3"
+        title: Emergencies
+        text: "In a fire alarm, Employees leave by the nearest marked exit without using lifts and assemble at the assembly point shown on the floor plan. In a local emergency such as flooding or civil disturbance, instructions are sent by SMS and e-mail by the location Crisis Management Team."
+
+  - num: 17
+    title: Leaving the Company
+    body:
+      - para: "Governing policy: {doc:008}. In any inconsistency the Separation and Exit Policy prevails."
+      - clause: "17.1"
+        title: Resignation and notice
+        text: "An Employee resigns through the NPP. The notice period depends on Grade and is summarised in {ref:#Table 7}. The Reporting Manager may discuss the reasons for resignation, and the Company may, at its discretion, waive part of the notice period."
+      - table:
+          id: Table 7
+          title: Summary of notice periods
+          header: ["Grades", "Notice period"]
+          widths: [3, 3]
+          rows:
+            - ["Probationers (all Grades)", "15 days"]
+            - ["L1 and L2", "30 days"]
+            - ["L3 to L5", "60 days"]
+            - ["L6 to L8", "90 days"]
+      - clause: "17.2"
+        title: Exit process
+        text: "Before the last day of service the Employee hands over work, returns the laptop, identity card and other Company assets, and obtains clearances on the NPP from the Reporting Manager, IT, Facilities, Finance and HR. An exit interview is offered by the HR Business Partner and its content is kept confidential."
+      - clause: "17.3"
+        title: Full and final settlement and documents
+        text: "The full and final settlement includes salary for the days worked, leave encashment under the {doc:001}, gratuity where eligible, and recoveries such as unserved notice or outstanding advances. The relieving letter and service certificate are issued after clearances are complete."
+
+  - num: 18
+    title: Communication and Employee Voice
+    body:
+      - clause: "18.1"
+        title: Channels
+        text: "The Company communicates through the Nexora Connect intranet, e-mail, quarterly town halls with the leadership team, and monthly business unit meetings. Policy changes are announced on the NPP with a link to the circular."
+      - clause: "18.2"
+        title: Surveys and feedback
+        text: "An annual engagement survey and short pulse surveys invite anonymous feedback. Results are shared with all Employees at business unit level, and each business unit publishes an action plan within 60 days of the survey."
+      - clause: "18.3"
+        title: Recognition
+        text: "Colleagues may recognise one another through the recognition module of the NPP. Quarterly awards are made in each business unit, and annual Nexora Excellence Awards are presented at the annual town hall."
+      - clause: "18.4"
+        title: Long service awards
+        text: "Employees completing milestones of Continuous Service with the Company receive the awards in {ref:#Table 8}, presented at the business unit town hall following the anniversary. Service in a previous period of employment with the Company is counted where the break was less than 12 months."
+      - table:
+          id: Table 8
+          title: Long service awards
+          header: ["Completed years of service", "Award", "Additional recognition"]
+          widths: [2, 3, 3]
+          rows:
+            - ["5 years", "Certificate and gift voucher of Rs. 5,000", "Name published on Nexora Connect"]
+            - ["10 years", "Certificate and gift voucher of Rs. 15,000", "Invitation to the annual leadership dinner"]
+            - ["15 years", "Certificate and gift voucher of Rs. 25,000", "Invitation to the annual leadership dinner"]
+            - ["20 years and every 5 years thereafter", "Certificate and gift voucher of Rs. 50,000", "Recognition by the Managing Director at the annual town hall"]
+          note: "Gift vouchers are taxable as perquisites where their value exceeds the limit under income tax rules, and tax is deducted accordingly."
+      - clause: "18.5"
+        title: Self-service on the NPP
+        text: "Most routine requests are completed on the NPP without contacting HR. The most frequently used services and their turnaround times are listed in {ref:#Table 9}."
+      - table:
+          id: Table 9
+          title: Frequently used NPP services
+          header: ["Service", "Where on the NPP", "Turnaround"]
+          widths: [3, 3, 1.8]
+          rows:
+            - ["Apply for or cancel leave; view balances", "Leave > Apply", "Immediate; approval within the matrix time"]
+            - ["Regularise attendance", "Attendance > Regularise", "2 Working Days"]
+            - ["Download payslip or Form 16", "Payroll > Documents", "Immediate"]
+            - ["Investment declaration and proofs", "Payroll > Tax", "Windows in April and January"]
+            - ["Employment or address proof letter", "Letters > Request", "2 Working Days"]
+            - ["Add dependants for insurance", "Benefits > Insurance", "Next Working Day"]
+            - ["Submit an expense or travel claim", "Claims > New", "Paid in the next payroll after approval"]
+            - ["Raise an HR ticket", "Helpdesk > New ticket", "Response within 3 Working Days"]
+            - ["Book a desk", "Facilities > Seating", "Immediate"]
+
+  - num: 19
+    title: Relocation and Transfers
+    body:
+      - clause: "19.1"
+        title: Transfers between locations
+        text: "An Employee may be transferred to another location of the Company at the Company's request, for business reasons, or at the Employee's request, subject to a suitable open position. A transfer at the Company's request is communicated at least 30 days before the date of reporting, and requires the approval of the Business Unit Head. A transfer at the Employee's request is considered after 18 months at the current Base Location."
+      - clause: "19.2"
+        title: Relocation support
+        text: "An Employee transferred at the Company's request, or a new Employee in Grade L4 or above asked to join at a location other than the one in which the Employee lives, receives relocation support. The one-time relocation allowance by Grade is set out in {ref:#Table 10}; it covers packing, transport of household goods and incidental expenses, and is not subject to production of bills."
+      - table:
+          id: Table 10
+          title: Relocation support by Grade
+          grade_table: true
+          header: ["Grade", "Relocation allowance (one time)", "Travel to new location", "Temporary accommodation"]
+          widths: [0.8, 2.2, 2.6, 2.6]
+          rows:
+            - ["L1", "Rs. 20,000", "Train (AC 3-tier) or bus for Employee", "Company guest house, up to 7 nights"]
+            - ["L2", "Rs. 30,000", "Train (AC 3-tier) or bus for Employee and family", "Company guest house, up to 7 nights"]
+            - ["L3", "Rs. 30,000", "Economy air for Employee and family", "Hotel within the travel limit, up to 7 nights"]
+            - ["L4", "Rs. 50,000", "Economy air for Employee and family", "Hotel within the travel limit, up to 10 nights"]
+            - ["L5", "Rs. 60,000", "Economy air for Employee and family", "Hotel within the travel limit, up to 10 nights"]
+            - ["L6", "Rs. 1,00,000", "Economy air for Employee and family", "Serviced apartment, up to 15 nights"]
+            - ["L7", "Rs. 1,50,000", "Economy air for Employee and family", "Serviced apartment, up to 21 nights"]
+            - ["L8", "Rs. 1,50,000", "Economy air for Employee and family", "Serviced apartment, up to 30 nights"]
+          note: "Family means the spouse and up to two dependent children. The allowance is taxable as salary. Hotel limits are those of the Travel and Expense Reimbursement Policy."
+      - clause: "19.3"
+        title: Recovery on early exit
+        text: "An Employee who resigns within 12 months of receiving the relocation allowance repays it on a prorated basis through the full and final settlement. No recovery is made where the Company ends employment, or where the Employee resigns because of the death or serious illness of a member of the Immediate Family."
+      - clause: "19.4"
+        title: Transfer at the Employee's request
+        text: "Where a transfer is made at the Employee's own request, the Company bears the cost of the Employee's travel only, and no relocation allowance or temporary accommodation is paid. The Employee's Grade and fixed pay are unchanged; location-linked items, such as the holiday calendar and any State-specific benefits, follow the new Base Location from the date of reporting."
+
+  - num: 20
+    title: Client Deployment and Assignments Abroad
+    body:
+      - clause: "20.1"
+        title: Working at a client site
+        text: "An Employee deployed at a client's premises remains an Employee of the Company and continues to be governed by the Company's policies. The Employee also follows the client's site rules on security, dress, working hours and holidays where the Company has agreed to them, and signs any confidentiality undertaking required by the client. Leave is applied for on the NPP and, where the client requires, also notified to the client's project manager."
+      - clause: "20.2"
+        title: Client background checks
+        text: "Some clients require additional background checks, drug tests or security clearances before an Employee is given access. These are carried out only with the Employee's written consent. An Employee who declines is not penalised but may be deployed to another project."
+      - clause: "20.3"
+        title: Complaints at a client site
+        text: "An Employee who experiences sexual harassment or any other misconduct at a client site, or by a member of the client's staff, may complain to the Company's Internal Committee or the HR Business Partner. The Company takes up the matter with the client and does not require the Employee to use the client's complaint process."
+      - clause: "20.4"
+        title: Assignments abroad
+        text: "Short business visits abroad are governed by the Travel and Expense Reimbursement Policy. An assignment abroad of more than 90 days is made through an assignment letter setting out the duration, the host-country allowance, housing, insurance, tax equalisation and home leave. The Company arranges visas and work permits; an Employee must not travel on a business visitor visa to perform work that requires a work permit."
+      - clause: "20.5"
+        title: Social security abroad
+        text: "Where India has a social security agreement with the host country, the Company obtains a certificate of coverage so that the Employee continues to contribute to the Indian provident fund and is exempt from the host country's social security contributions for the period of the agreement. Where no agreement applies, host-country contributions are deducted as required by that country's law."
+      - clause: "20.6"
+        title: Return from assignment
+        text: "An Employee returning from an assignment abroad is placed in a role at the same Grade at the Base Location recorded before the assignment, unless another location is agreed. The Employee's leave balances continue to accrue during the assignment under the Leave Policy."
+
+  - num: 21
+    title: Diversity, Inclusion and Accessibility
+    body:
+      - clause: "21.1"
+        title: Commitment
+        text: "The Company aims to be a workplace where every Employee can contribute fully. Hiring, allocation of work, performance ratings, promotions and pay decisions are made on merit and the requirements of the role, and are reviewed each year for unexplained differences between groups."
+      - clause: "21.2"
+        title: Employees with disabilities
+        text: "The Company provides reasonable accommodation to Employees with disabilities, such as assistive software, accessible workstations, flexible hours for medical treatment and accessible transport, as required by the {stat:RPWD_ACT|Rights of Persons with Disabilities Act, 2016}. Requests are made to the HR Business Partner, are kept confidential, and are decided within 15 Working Days. The Company has appointed a Grievance Redressal Officer for matters under that Act, who can be reached through the HR Helpdesk."
+      - clause: "21.3"
+        title: Gender identity
+        text: "Employees may record their gender identity and preferred name on the NPP. Facilities, including accessible and all-gender washrooms at every location, are available. Discrimination against a transgender Employee is prohibited, consistent with the {stat:TG_PERSONS_ACT|Transgender Persons (Protection of Rights) Act, 2019}."
+      - clause: "21.4"
+        title: Employee resource groups
+        text: "Employee resource groups, open to all Employees, support women in technology, Employees with disabilities, parents and caregivers, and LGBTQ+ Employees and allies. Each group has a sponsor from the leadership team and a small annual budget for events, approved by the Business Unit Head of the sponsor."
+      - clause: "21.5"
+        title: Inclusive language and meetings
+        text: "Employees are expected to use respectful and inclusive language, to avoid jokes or remarks based on any personal characteristic, and to schedule meetings within core hours so that colleagues with caregiving responsibilities are not excluded."
+
+  - num: 22
+    title: Your Personal Data and Employee Records
+    body:
+      - clause: "22.1"
+        title: Personal data held by the Company
+        text: "The Company holds the personal data needed to employ and pay Employees and to meet its legal obligations, including identity and contact details, bank details, tax and provident fund numbers, educational and employment history, performance records, leave and attendance records, and, where the Employee provides them, medical documents and details of dependants for insurance."
+      - clause: "22.2"
+        title: How it is protected
+        text: "Personal data is stored on the NPP and in the payroll system, with access limited to those who need it for their role. Medical documents are visible only to HR Operations and the HR Business Partner. The Company processes personal data in accordance with the {stat:DPDP_ACT|Digital Personal Data Protection Act, 2023} and the {doc:009}."
+      - clause: "22.3"
+        title: Your rights
+        text: "An Employee may view most of the Employee's own data on the NPP, request correction of inaccurate data, and raise any concern about the processing of personal data with the Data Protection Officer at dpo@nexora.example, who responds within 15 Working Days."
+      - clause: "22.4"
+        title: Keeping records up to date
+        text: "An Employee updates the NPP within 30 days of any change in address, name, marital status, bank account, emergency contact or dependants. Insurance for a new spouse or newborn is effective from the date of the event only if the change is recorded within 30 days of that event."
+      - clause: "22.5"
+        title: Letters and certificates
+        text: "Employment verification letters, address proof letters for banks and visa support letters are generated on the NPP and are available within two Working Days of the request. Letters requested by an external party, such as a prospective employer or a bank, are issued only with the Employee's consent."
+
+  - num: 23
+    title: Workplace Facilities and Services
+    body:
+      - clause: "23.1"
+        title: Seating
+        text: "Offices follow a mix of assigned and bookable seating. Employees on hybrid schedules book a desk on the NPP up to 14 days in advance; bookings not checked in by 11:00 a.m. are released. Project areas with client-mandated access controls have assigned seating only."
+      - clause: "23.2"
+        title: Cafeteria and meals
+        text: "Each location has a cafeteria run by an external caterer, offering subsidised meals during the day and on night shifts. Complaints about food quality are raised through the Facilities module of the NPP and reviewed monthly by a committee that includes Employee representatives."
+      - clause: "23.3"
+        title: Parking
+        text: "Two-wheeler parking is available to all Employees at every location. Car parking is limited and allocated first to Employees with disabilities, expecting mothers and Employees on night shifts, then by a quarterly draw on the NPP."
+      - clause: "23.4"
+        title: Lactation and quiet rooms
+        text: "Every location has at least one lactation room and one quiet room. The lactation room may be booked on the NPP or used without booking when free."
+      - clause: "23.5"
+        title: Lost and found
+        text: "Items found on Company premises are handed to the security desk and recorded. Unclaimed items are kept for 60 days; laptops, phones and identity cards found are handed to the IT Service Desk the same day."
+
+  - num: 24
+    title: Remote Work Support
+    body:
+      - clause: "24.1"
+        title: Home office set-up
+        text: "An Employee approved for hybrid work may claim a one-time home office allowance of up to Rs. 5,000 against bills for an ergonomic chair, a keyboard, a mouse or a monitor stand, within six months of the approval. Items purchased remain the Employee's property. A second claim may be made after 36 months."
+      - clause: "24.2"
+        title: Internet reimbursement
+        text: "Employees in Grades L1 to L4 on hybrid work may claim reimbursement of home internet charges of up to Rs. 1,000 a month against the bill. Employees in Grades L5 to L8 receive a communication allowance as part of fixed pay and do not claim internet reimbursement separately."
+      - clause: "24.3"
+        title: Working from another city
+        text: "An Employee may work remotely from a city other than the Base Location for up to 30 Calendar Days in a calendar year, with the Reporting Manager's approval recorded on the NPP. Remote work from outside India is not permitted without the approval of the Chief People Officer and the Head of Information Security, because of tax, immigration and data transfer risks."
+      - clause: "24.4"
+        title: Health and safety at home
+        text: "Employees working from home are asked to follow the ergonomic guidance on the NPP, take regular breaks, and report any injury sustained while working in the same way as an injury at the office."
+
+  - num: 25
+    title: Business Continuity and Crisis Support
+    body:
+      - clause: "25.1"
+        title: When a crisis affects a location
+        text: "In a flood, epidemic, civil disturbance or similar event, the location Crisis Management Team decides whether the office remains open, and communicates the decision by SMS and e-mail by 6:00 a.m. on the affected day. Employees who cannot reach the office and cannot work from home are covered by the special leave provision of the Leave Policy for calamities."
+      - clause: "25.2"
+        title: Staying reachable
+        text: "Every Employee keeps an up-to-date personal mobile number and emergency contact on the NPP. During a declared crisis the Company may send safety check messages, and Employees are asked to respond as soon as they are safe."
+      - clause: "25.3"
+        title: Financial and personal support
+        text: "Employees directly affected by a declared crisis may receive an emergency salary advance without the usual waiting conditions, and may use the Employee Assistance Programme for themselves and their families. The Company may also arrange temporary accommodation for Employees whose homes are unsafe."
+      - clause: "25.4"
+        title: Client commitments
+        text: "Each project maintains a continuity plan agreed with the client, covering alternate work locations, remote access and critical staffing. Employees named as critical in a continuity plan are informed in advance and may be asked to work from an alternate site."
+
+  - num: 26
+    title: Caregiver Support
+    body:
+      - clause: "26.1"
+        title: Flexible hours for parents
+        text: "An Employee who is a parent of a child below three years of age may, with the Reporting Manager's agreement, work flexible hours outside the core hours, provided client commitments are met. The arrangement is recorded on the NPP and reviewed every six months."
+      - clause: "26.2"
+        title: Return-to-work support
+        text: "An Employee returning from maternity or adoption leave may work a phased schedule for the first four weeks by agreement with the Reporting Manager, and is offered a return-to-work conversation with the HR Business Partner. Performance goals for the year are prorated for the period of leave."
+      - clause: "26.3"
+        title: Care for family members
+        text: "An Employee caring for a seriously ill member of the Immediate Family may request temporary remote work or a temporary reduction in travel. The HR Business Partner will explore options such as Earned Leave, Leave Without Pay or a sabbatical under the Leave Policy where the need is extended."
+
+  - num: 27
+    title: Volunteering and Community
+    body:
+      - clause: "27.1"
+        title: Volunteering hours
+        text: "The Company's community programme partners with registered non-profit organisations near each location in education, digital literacy and environment. With the Reporting Manager's approval, an Employee may volunteer for up to 16 working hours in a calendar year through the programme; these hours are treated as duty and do not require leave."
+      - clause: "27.2"
+        title: Personal causes
+        text: "Employees may support causes of their choice in their own time. Collecting funds from colleagues or clients on Company premises or systems requires the approval of Corporate Communications, and no Employee may be pressured to contribute."
+
+  - num: 28
+    title: Company Assets
+    body:
+      - clause: "28.1"
+        title: Care of assets
+        text: "Laptops, phones, access cards and other equipment issued to an Employee remain the property of the Company. They are to be used for Company work, kept secure, and never left unattended in vehicles or public places."
+      - clause: "28.2"
+        title: Loss or damage
+        text: "Loss or damage is reported to the IT Service Desk immediately and, in the case of theft, to the police, with a copy of the police report uploaded on the NPP within 48 hours. Where loss results from negligence, the Company may recover the depreciated value of the asset, which for a laptop is reduced by 25 per cent of the purchase value for each completed year of use."
+      - clause: "28.3"
+        title: Return of assets
+        text: "All assets are returned on the last day of service or when requested. The value of an asset not returned is recovered from the full and final settlement."
+
+  - num: 29
+    title: Communication Norms
+    body:
+      - clause: "29.1"
+        title: E-mail and chat
+        text: "Company e-mail and the approved chat tool are used for business communication. Client information is shared only through channels approved for that client. Employees do not use personal messaging applications to share Company or client information."
+      - clause: "29.2"
+        title: After-hours messages
+        text: "Except for Employees on shift or on call, no Employee is expected to reply to non-urgent messages between 8:00 p.m. and 8:00 a.m. or on weekly offs. Managers are asked to schedule messages for the next Working Day and to use a phone call for genuine emergencies."
+      - clause: "29.3"
+        title: Meetings
+        text: "Meetings are scheduled within core hours where possible, have an agenda, and end with agreed actions. Cameras are encouraged but not mandatory, except for client meetings where the client requests them."
+      - table:
+          id: Table 11
+          title: Stages of grievance redressal
+          header: ["Stage", "Raised with", "Response time", "If unresolved"]
+          widths: [0.8, 2.6, 1.6, 3.2]
+          rows:
+            - ["1", "Reporting Manager or HR Business Partner", "10 Working Days", "Proceed to stage 2"]
+            - ["2", "Location Grievance Committee (in writing)", "15 Working Days", "Proceed to stage 3"]
+            - ["3", "Chief People Officer (in writing, with the committee's response)", "20 Working Days", "The decision is final within the Company; statutory remedies remain available"]
+          note: "The stages above apply to general grievances under {ref:#13.2}. Sexual harassment complaints go directly to the Internal Committee, and ethics concerns to the Ethics Office."
+
+  - num: 30
+    title: Your First 90 Days
+    body:
+      - para: "The first three months set the foundation for a successful career at the Company. The milestones below apply to every new Employee; the Reporting Manager tailors them to the role."
+      - clause: "30.1"
+        title: First week
+        text: "Complete joining formalities and the Nexora Foundation Programme, collect the laptop and identity card, set up multi-factor authentication, meet the Reporting Manager and the mentor or buddy, and read this Handbook and the policies most relevant to the role."
+      - clause: "30.2"
+        title: First 30 days
+        text: "Complete the mandatory modules on the NPP, including information security, the POSH policy and the Code of Conduct and Ethics; record dependants for insurance and nominations for provident fund and gratuity; agree initial goals with the Reporting Manager; and understand the project's client, delivery process and quality standards."
+      - clause: "30.3"
+        title: Days 31 to 60
+        text: "Take ownership of assigned work, seek feedback at the monthly probation check-in, and complete any role-specific technical training. Employees who expect to need hybrid work arrangements or reasonable accommodation should discuss them with the Reporting Manager by this stage."
+      - clause: "30.4"
+        title: Days 61 to 90
+        text: "Review progress against the initial goals, identify one or two development areas with the Reporting Manager, and update the talent profile on the NPP. For Employees in Grades L4 to L8, whose probation is three months, the confirmation discussion takes place in this period."
+      - clause: "30.5"
+        title: Where to get help
+        text: "The mentor or buddy answers everyday questions about how things work; the Reporting Manager is responsible for goals, work allocation and feedback; the HR Business Partner handles policy and people concerns; and the HR Helpdesk answers questions about leave, payroll and benefits."
+
+  - num: 31
+    title: Mandatory Training
+    body:
+      - clause: "31.1"
+        title: Required modules
+        text: "Certain training is required by law, by client contracts or by Company policy. The modules, the Employees to whom each applies, and the deadlines are set out in {ref:#Table 12}. Completion is recorded automatically on the NPP."
+      - table:
+          id: Table 12
+          title: Mandatory training modules
+          header: ["Module", "Who must complete it", "Frequency", "Deadline"]
+          widths: [2.6, 2.6, 1.4, 2]
+          rows:
+            - ["Prevention of sexual harassment (POSH)", "All Employees; Internal Committee members complete an additional advanced module", "On joining and annually", "30 days from joining; by 30 June each year"]
+            - ["Information security and data privacy", "All Employees", "On joining and annually", "30 days from joining; by 30 September each year"]
+            - ["Code of Conduct and Ethics, with annual declaration", "All Employees", "On joining and annually", "30 days from joining; by 31 May each year"]
+            - ["Insider trading and trading window rules", "Designated Persons under the Code of Conduct and Ethics", "Annually", "By 31 May each year"]
+            - ["Client-specific compliance", "Employees on projects for clients that require it", "As specified by the client", "Before access is granted"]
+            - ["Fire safety and emergency evacuation", "All Employees; fire wardens complete practical training", "On joining; wardens annually", "30 days from joining"]
+      - clause: "31.2"
+        title: Consequences of non-completion
+        text: "An Employee who does not complete a mandatory module by the deadline receives reminders from the NPP and the Reporting Manager. Access to client systems may be suspended where a client contract requires completed training, and non-completion is taken into account in the annual performance review. Persistent non-completion may be treated as a breach of the Code of Conduct and Ethics."
+      - clause: "31.3"
+        title: Accessibility of training
+        text: "All modules are available with captions and screen-reader support. Employees who need the training in another format or language should contact the Learning Academy, which will arrange an alternative within 15 Working Days without affecting the deadline."
+
+annexures:
+  - id: A
+    title: Important Contacts
+    body:
+      - table:
+          id: Table 13
+          title: Who to contact
+          header: ["For", "Contact", "Hours"]
+          widths: [2.6, 3.4, 2.4]
+          rows:
+            - ["Leave, payroll, benefits and policy questions", "HR Helpdesk: hrhelpdesk@nexora.example, 1800-000-0000 (extension 4), or a ticket on the NPP", "Monday to Friday, 9:00 a.m. to 6:00 p.m."]
+            - ["Complaints of sexual harassment", "Internal Committee: ic@nexora.example", "Complaints received at any time"]
+            - ["Ethics concerns and whistleblowing", "Ethics Office: ethics@nexora.example; hotline 1800-000-0000 (extension 7)", "24 hours (hotline)"]
+            - ["Confidential counselling", "Employee Assistance Programme: 1800-000-0000 (extension 9)", "24 hours, all days"]
+            - ["Laptops, access, security incidents", "IT Service Desk: itsd@nexora.example", "24 hours, all days"]
+            - ["Salary and tax", "Payroll: payroll@nexora.example", "Monday to Friday"]
+            - ["Business travel", "Travel Desk: traveldesk@nexora.example", "Monday to Saturday; emergency line 24 hours"]
+      - note: "All e-mail addresses and telephone numbers in this Handbook are fictional placeholders created for a college project."
+
+  - id: B
+    title: Joining Document Checklist
+    body:
+      - para: "New Employees upload scanned copies of the following on the NPP before the date of joining and bring the originals for verification on that date."
+      - table:
+          title: Documents required at joining
+          header: ["Document", "Purpose", "Remarks"]
+          widths: [2.8, 2.4, 3]
+          rows:
+            - ["Permanent Account Number (PAN) card", "Income tax", "Mandatory"]
+            - ["Aadhaar", "Provident fund linkage and identity", "The Employee may mask the first eight digits except for provident fund linkage"]
+            - ["Degree certificates and final mark sheets", "Background verification", "Provisional certificate accepted for up to six months"]
+            - ["Relieving letters and last three payslips from previous employers", "Background verification", "Not required for Grade L1"]
+            - ["Universal Account Number (UAN), if any", "Transfer of provident fund", "Obtained from the previous employer's payslip"]
+            - ["Cancelled cheque or bank statement", "Salary credit", "Account in the Employee's own name"]
+            - ["Two passport-size photographs", "Identity card", "Digital copy accepted"]
+            - ["Nomination forms (provident fund, gratuity, insurance)", "Statutory and insurance records", "Completed on the NPP within 30 days"]
+
+  - id: C
+    title: Handbook Acknowledgement
+    body:
+      - para: "Completed electronically on the NPP within 30 days of joining. The paper version below is used only where the NPP is unavailable."
+      - table:
+          title: "Form HR-HB-01: Acknowledgement of the Employee Handbook"
+          form: true
+          widths: [2, 3]
+          rows:
+            - ["Employee ID and name", ""]
+            - ["Grade, business unit and Base Location", ""]
+            - ["I confirm that I have received and read the Employee Handbook version 6.0, and that I understand that the governing policies prevail over the Handbook.", ""]
+            - ["I confirm that I have completed the information security and POSH induction modules.", ""]
+            - ["Employee signature and date", ""]
+
+  - id: D
+    title: Frequently Asked Questions for New Joiners
+    body:
+      - clause: "D.1"
+        title: When will I receive my first salary?
+        text: "Salary for the month of joining is paid on the last Working Day of that month if joining formalities, including bank details, are completed on the NPP by the 20th. Otherwise it is paid with the salary of the following month."
+      - clause: "D.2"
+        title: Can I take leave during probation?
+        text: "Casual Leave and Sick Leave can be taken from joining. Earned Leave accrues from joining but can be availed only after three months of service, except in an emergency approved by the HR Business Partner, as provided in the Leave Policy."
+      - clause: "D.3"
+        title: When is my health insurance active?
+        text: "From the date of joining, provided the dependants' details are entered on the NPP within 30 days. Dependants added later are covered only from the next policy renewal on 1 July, except a newborn or a new spouse added within 30 days of the event."
+      - clause: "D.4"
+        title: Can I work from home from my first week?
+        text: "Hybrid work is available once the Reporting Manager confirms that the role permits it. Most new joiners work from the Base Location for the first four weeks to complete induction and meet the team."
+      - clause: "D.5"
+        title: Who do I ask if two policies seem to say different things?
+        text: "Apply the policy hierarchy in {ref:#1.3}, and raise a ticket in the Policy Clarification category if still in doubt. The HR Helpdesk will confirm which rule applies and cite the governing clause."
+
+      - clause: "D.6"
+        title: I have a job offer from a client of Nexora. Can I accept it?
+        text: "Most client contracts restrict the hiring of the Company's Employees for a period after deployment. Before accepting, speak to the HR Business Partner; the restrictions, and the non-solicitation obligations that apply after leaving, are described in the Separation and Exit Policy."
+      - clause: "D.7"
+        title: Can I change my tax regime during the year?
+        text: "The tax regime chosen in April is applied for monthly deductions for the year. Salaried Employees may generally choose a different regime when filing their own income tax return, but the Company cannot change the regime used for deductions after the April declaration window, except for a new joiner who declares within 30 days of joining."
+      - clause: "D.8"
+        title: How do I get a laptop replaced or upgraded?
+        text: "Raise a request with the IT Service Desk. Laptops are replaced every four years, or earlier if a fault cannot be repaired. Personal software may not be installed; approved software is available from the software centre on the laptop."
+      - clause: "D.9"
+        title: What happens to my insurance when I leave?
+        text: "Group medical cover ends on the last day of service. The insurer offers a conversion to an individual policy without fresh waiting periods if the request is made within 30 days of leaving; details are in the exit kit on the NPP."
+      - clause: "D.10"
+        title: I am being asked to work very late every day. What should I do?
+        text: "Discuss workload with the Reporting Manager first. If the pattern continues, raise it with the HR Business Partner or through the grievance process in {ref:#13.2}. Employees in Grades L1 to L3 may be entitled to overtime payment under the Attendance, Hybrid Work and Overtime Policy."
+      - clause: "D.11"
+        title: Can my spouse also work at Nexora?
+        text: "Yes. Relatives may be employed, but an Employee may not be in the reporting line of a relative, or take part in decisions about the relative's hiring, pay, rating or promotion. The relationship must be declared on the NPP under the conflict of interest declaration."
+      - clause: "D.12"
+        title: Do I get paid for working on a Saturday?
+        text: "Weekend work requires prior approval. Employees in Grades L1 to L4 may receive compensatory off under the Leave Policy, and those in Grades L1 to L3 may be eligible for overtime under the Attendance, Hybrid Work and Overtime Policy. Employees in Grades L5 and above are not eligible for either."
+      - clause: "D.13"
+        title: What if I lose my identity card?
+        text: "Report the loss the same day to Facilities and the IT Service Desk so that the card can be deactivated. A temporary card is issued at the security desk against photo identification. A replacement fee of Rs. 500 is recovered for a second loss within 12 months."
+      - clause: "D.14"
+        title: Can I choose which project I work on?
+        text: "Project allocation depends on client needs and skills. Employees can record preferences and skills on the NPP talent profile, which resource managers consult first. After 12 months on a project, an Employee may request a change, which the resource management team considers within 60 days."
+      - clause: "D.15"
+        title: How do I report an unsafe condition in the office?
+        text: "Report it on the Facilities module of the NPP or to the security desk. Hazards such as exposed wiring, blocked fire exits or water leakage are attended to on the same day, and the reporter receives an update when the issue is closed."
+  - id: E
+    title: Glossary of Abbreviations
+    body:
+      - table:
+          id: Table 14
+          title: Abbreviations used in Company policies
+          header: ["Abbreviation", "Meaning", "Abbreviation", "Meaning"]
+          widths: [1.2, 3, 1.2, 3]
+          rows:
+            - ["CL", "Casual Leave", "IJP", "Internal job posting"]
+            - ["CTC", "Cost to Company", "LWP", "Leave Without Pay"]
+            - ["DPO", "Data Protection Officer", "NPP", "Nexora People Portal"]
+            - ["EAP", "Employee Assistance Programme", "PF", "Provident fund"]
+            - ["EL", "Earned Leave", "PIP", "Performance improvement plan"]
+            - ["ESI", "Employees' State Insurance", "POSH", "Prevention of sexual harassment"]
+            - ["F&F", "Full and final settlement", "SL", "Sick Leave"]
+            - ["HRBP", "HR Business Partner", "TDS", "Tax deducted at source"]
+            - ["IC", "Internal Committee", "UAN", "Universal Account Number"]
+  - id: F
+    title: HR Year at a Glance
+    body:
+      - para: "The table below shows when the principal HR activities fall in a typical year. Exact dates are announced on the NPP."
+      - table:
+          id: Table 15
+          title: Annual HR calendar
+          header: ["Month", "Activity"]
+          widths: [1.2, 6.8]
+          rows:
+            - ["April", "Leave Year begins and CL and SL are credited; tax regime and investment declaration; EL encashment window for Grades L3 to L8; goal setting opens; annual review of the previous year"]
+            - ["May", "Ratings finalised after normalisation; EL encashment paid with salary"]
+            - ["June", "Variable pay paid with salary; revised pay letters issued"]
+            - ["July", "Promotions effective 1 July; group insurance renewal and addition of dependants"]
+            - ["October", "Mid-year performance check-in"]
+            - ["December", "Holiday calendar for the next calendar year published"]
+            - ["January", "Deadline of 15 January for proof of investments"]
+            - ["February", "NPP notifies EL balances projected to lapse; engagement survey"]
+            - ["March", "EL above the accumulation limit lapses on 31 March; CL lapses"]
+
+  - id: G
+    title: Illustrative Workplace Scenarios
+    body:
+      - para: "The scenarios below show how the values and policies apply in everyday situations. They are illustrations only; the governing policies decide any actual case."
+      - clause: "G.1"
+        title: A vendor offers a festival hamper
+        text: "A vendor whose contract Priya manages sends a large festival hamper to her home. Priya should check the value against the gift limit in the Code of Conduct and Ethics, declare it on the NPP, and return it if it exceeds the limit or if a contract decision involving the vendor is pending. Accepting it silently would create at least the appearance of a conflict of interest."
+      - clause: "G.2"
+        title: A colleague asks for your login
+        text: "A teammate who has lost access asks Arjun for his password to finish an urgent client delivery. Arjun must refuse, even though the request is well meant, and help the colleague raise an urgent request with the IT Service Desk. Every action on a system is attributed to the account holder."
+      - clause: "G.3"
+        title: A client manager makes repeated personal comments
+        text: "A client's manager repeatedly comments on Meena's appearance during calls. Meena may raise a complaint with the Company's Internal Committee even though the person is not a Company Employee, as described in {ref:#20.3}. She may also speak confidentially to the HR Business Partner first."
+      - clause: "G.4"
+        title: A friend at a competitor asks about a client
+        text: "Rahul's friend, who works for a competitor, asks which bank Rahul's project is for and how many people are on it. This is confidential client information, and Rahul should politely decline to discuss it."
+      - clause: "G.5"
+        title: A manager discourages leave
+        text: "A Reporting Manager tells a team member that taking paternity leave during a release would affect his rating. This is contrary to the Leave Policy, which protects Employees who avail leave to which they are entitled. The team member may raise the matter with the HR Business Partner or through the grievance process."
+      - clause: "G.6"
+        title: Posting about a project win
+        text: "Kiran wants to post on a professional networking site that the team has gone live for a well-known retailer. Client names may be mentioned publicly only where the client has agreed and Corporate Communications has approved; otherwise the post should describe the work without naming the client."
+  - id: H
+    title: Directory of HR Policies
+    body:
+      - para: "The following policies govern employment at the Company. Each is published on the NPP with its amendment circulars; the most recent version prevails over any summary in this Handbook."
+      - table:
+          title: Policies and what they cover
+          header: ["Policy", "Number", "Owner", "Covers"]
+          widths: [2.4, 1.6, 1.8, 3.6]
+          rows:
+            - ["Leave Policy", "NTL/HR/POL/001", "Head, HR Operations", "Leave types and entitlements, accrual, encashment, holidays, leave approvals"]
+            - ["Employee Handbook", "NTL/HR/POL/002", "Head, HR Operations", "Overview of employment, joining, probation, benefits, referral scheme, creche, relocation"]
+            - ["Policy on Prevention of Sexual Harassment (POSH)", "NTL/HR/POL/003", "Presiding Officer, Internal Committee", "Complaints, inquiry process, timelines, interim relief, protection from retaliation"]
+            - ["Code of Conduct and Ethics", "NTL/HR/POL/004", "Chief Ethics Officer", "Conflicts of interest, gifts, outside employment, insider trading, whistleblowing, discipline"]
+            - ["Compensation and Benefits Policy", "NTL/HR/POL/005", "Head, Total Rewards", "Salary structure, provident fund, ESI, gratuity, variable pay, insurance, ESOP"]
+            - ["Attendance, Hybrid Work and Overtime Policy", "NTL/HR/POL/006", "Head, HR Operations", "Working hours, attendance, hybrid work, shifts, overtime, night transport"]
+            - ["Travel and Expense Reimbursement Policy", "NTL/HR/POL/007", "Head, Finance Operations", "Travel class, hotels, per diem, local conveyance, claims and tax"]
+            - ["Separation and Exit Policy", "NTL/HR/POL/008", "Head, HR Operations", "Resignation, notice periods, full and final settlement, relieving, non-solicitation"]
+            - ["IT, Information Security and Acceptable Use Policy", "NTL/HR/POL/009", "Chief Information Security Officer", "Acceptable use, devices, passwords, client data, personal data protection, incidents"]
+
+circulars_intro: "The circulars below amend this Handbook. Circulars that amend other policies are published at the end of those policies and are not repeated here; see {ref:#1.4}."
+
+circulars:
+  - number: HR/CIR/2025/09
+    date: "2025-08-18"
+    effective_from: "2025-09-01"
+    subject: Revision of day-care reimbursement
+    amends: ["8.2"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 1 September 2025, the reimbursement of day-care fees for Employees at Pune, Chennai and Noida under {ref:#8.2} is increased from Rs. 8,000 to Rs. 10,000 a month for each child, for up to two children aged six months to six years."
+      - para: "The on-site creches at Bengaluru and Hyderabad are unchanged. An Employee at Bengaluru or Hyderabad who lives more than 15 kilometres from the campus may choose the reimbursement instead of the on-site creche, by declaration on the NPP once in each Leave Year."
+
+  - number: HR/CIR/2026/01
+    date: "2026-01-10"
+    effective_from: "2026-01-15"
+    subject: Eligibility for internal job postings
+    amends: ["9.4"]
+    issued_by: Chief People Officer
+    body:
+      - para: "With effect from 15 January 2026, an Employee may apply for an internal job posting after completing 9 months in the current role, instead of 12 months as stated in {ref:#9.4}. The other conditions, a most recent rating of 3 or above and not being on a performance improvement plan, continue to apply."
+      - para: "Graduate Engineer Trainees in Grade L1 remain ineligible until 12 months after deployment to their first project."
