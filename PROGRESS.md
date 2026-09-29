@@ -88,6 +88,7 @@ Each batch is small enough to finish in one sitting. Model-calling runs save one
 - [x] **Batch 4 DONE** (D-048): live cold start about 46 s (2 controlled probes after 20 and 40 idle minutes, fresh instance confirmed by server uptime); warm answers median 3.1 s (cache hit 0.24 s); pages 0.36 s; 0 errors. Portal waking-up and About wording corrected to match.
 - [x] **Answer fixes** (D-049 to D-051), then a full re-run of every evaluation (D-052): T29 improved but unreliable (2/5 in repeats); T13 fixed (5/5 on reading); follow-up rewriter fixed (conversations 21/30 → 25/30, turn 3 24/30 → 27/30, with new model-rewrite errors noted). Final: 85/94 fully correct, 89/94 correct or partly; citations 170/170 on page; escalation 10/10; paraphrases 34/40; adversarial 28/30.
 - [x] `tests/results/RESULTS.md` regenerated (3 stages, repeat test, live latency, Known failures).
-- [ ] USER: push.
-- [ ] Phase 9: the report (.docx), with evidence from RESULTS.md, screenshots and the known failures.
+- [x] USER pushed Phase 7 batch 4 and the answer fixes.
+- [x] **Phase 9 report DONE** (D-053): `report/Nia_HR_Helpdesk_Report.docx`, 23 pages, built by `report/build_report.js` from the result files; live-portal screenshots and the architecture diagram in `report/img/`.
+- [ ] USER: push; read the report and edit the wording where it doesn't sound like you; verify A6 competitors, A7 prices and the statutory claims (Appendix C); submit the .docx and the live link.
 - [ ] Then Phase 9: the report (.docx).
