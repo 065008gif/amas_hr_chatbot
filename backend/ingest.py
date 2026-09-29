@@ -61,8 +61,8 @@ def ntokens(text: str) -> int:
     """Token count with the embedding model's own tokenizer (so it matches the 512 limit)."""
     global _tokenizer
     if _tokenizer is None:
-        path = next(config.EMBED_CACHE_DIR.glob("models--*bge-small*/snapshots/*/tokenizer.json"))
-        _tokenizer = Tokenizer.from_file(str(path))
+        # the bundled copy of the embedding model's tokenizer (backend/models), so a fresh clone needs no download
+        _tokenizer = Tokenizer.from_file(str(config.EMBED_MODEL_DIR / "tokenizer.json"))
     return len(_tokenizer.encode(text, add_special_tokens=False).ids)
 
 
@@ -595,9 +595,10 @@ def check_against_manifest(doc_id, chunks):
 # Step 5: build and save the indexes
 # ---------------------------------------------------------------------------------------------
 def embed(texts):
-    from fastembed import TextEmbedding
-    model = TextEmbedding(config.EMBED_MODEL, cache_dir=str(config.EMBED_CACHE_DIR))
-    vecs = np.array(list(model.embed(texts, batch_size=config.EMBED_BATCH_SIZE)), dtype=np.float32)
+    # The bundled ONNX model (backend/onnx_models.py), the same one the backend uses at query time. It reproduces
+    # fastembed exactly (tests/check_onnx_models.py, D-040) and needs no download, so a fresh clone can rebuild.
+    from backend.onnx_models import Embedder
+    vecs = Embedder().embed(texts, batch_size=config.EMBED_BATCH_SIZE)
     return vecs / np.linalg.norm(vecs, axis=1, keepdims=True)
 
 

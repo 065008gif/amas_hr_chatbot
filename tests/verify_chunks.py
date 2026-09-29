@@ -78,9 +78,9 @@ def check(chunk, pages, start, end):
 
 def cold_load_seconds():
     code = ("import time; t=time.perf_counter(); from backend import config, indexstore; "
-            "idx=indexstore.load_index(); from fastembed import TextEmbedding; "
-            "m=TextEmbedding(config.EMBED_MODEL, cache_dir=str(config.EMBED_CACHE_DIR), threads=2); "
-            "list(m.embed(['warm-up query'])); print(round(idx.load_seconds,3), round(time.perf_counter()-t,2))")
+            "idx=indexstore.load_index(); from backend.onnx_models import Embedder; "
+            "m=Embedder(threads=2); "          # the bundled model the backend uses (no download, D-055)
+            "m.embed(['warm-up query']); print(round(idx.load_seconds,3), round(time.perf_counter()-t,2))")
     out = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True,
                          cwd=config.ROOT, check=True).stdout.split()
     return float(out[0]), float(out[1])

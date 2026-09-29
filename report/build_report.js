@@ -1,6 +1,6 @@
 // Builds report/Nia_HR_Helpdesk_Report.docx (Phase 9, D-053).
 // Every number comes from tests/results/*, DECISIONS.md or the eval files; nothing is typed in from memory.
-// Run: NODE_PATH=.cache/docxgen/node_modules node report/build_report.js   (from ~/hrbot)
+// Run: cd report && npm ci && npm run build   (docx is pinned in report/package.json)
 const fs = require('fs')
 const path = require('path')
 const {

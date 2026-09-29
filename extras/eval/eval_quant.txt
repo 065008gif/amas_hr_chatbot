@@ -1,0 +1,44 @@
+DEV: 40 answerable + 15 unanswerable.  TEST (traps): 33 answerable + 3 not covered.
+
+variant                   DEV R@8  DEV MRR  TEST R@1  TEST R@3  TEST R@8  TEST MRR  all-ev@8
+full                        0.925    0.778     0.606     0.848     0.939     0.733     0.576
+no rerank                   0.925    0.765     0.636     0.879     0.939     0.756     0.576
+no boosting                 0.925    0.790     0.576     0.818     0.939     0.713     0.606
+no circular rule            0.925    0.783     0.606     0.848     0.939     0.733     0.606
+BM25 only, no rerank        0.875    0.703     0.515     0.788     0.939     0.667     0.636
+dense only, no rerank       1.000    0.754     0.515     0.818     0.879     0.662     0.515
+
+Full configuration - questions with NO gold chunk in the top 8:
+  dev D05: Who approves an earned leave application of 15 days?
+      gold ['001:table:table3']
+      got  ['001:clause:4.1-4.2', '001:clause:4.3-4.5', '005:circular:HR/CIR/2026/05', '008:annexure:C.1-C.3']
+  dev D11: What is the salary range for an L4?
+      gold ['005:table:table7']
+      got  ['001:annexure:D.6-D.7', '002:table:table6', '005:clause:19.1-19.4', '005:table:table1']
+  dev D15: Will people find out who filed a harassment complaint?
+      gold ['003:clause:11.1-11.3']
+      got  ['003:clause:6.3-6.5', '003:circular:HR/CIR/2025/05', '003:clause:6.1-6.2', '003:clause:15.1-15.2']
+  test T13: I am a male employee. Can I file a sexual harassment complaint with the Internal
+      gold ['003:circular:HR/CIR/2026/04', '003:clause:2.1-2.4']
+      got  ['003:clause:6.1-6.2', '003:clause:5.1-5.2', '003:table:table:Annexure_A:Form_IC-01:_Complaint_to_the_I', '003:clause:6.3-6.5']
+  test T18: My father-in-law is a director at one of our vendors. Do I need to declare it?
+      gold ['004:definition:2.4-2.9']
+      got  ['004:table:table1', '009:clause:18.1-18.3', '004:clause:4.1-4.3', '004:table:table:Annexure_A:Form_ETH-01:_Conflict_of_inter']
+Traps with a gold chunk but not ALL evidence in the top 8: ['T03', 'T04', 'T09', 'T14', 'T16', 'T17', 'T26', 'T27', 'T29', 'T30', 'T32', 'T34']
+
+Confidence threshold from DEV (lowest answerable / 10): 0.0011  [for reference, best balanced-accuracy threshold would refuse answerable questions: 0.3858]
+  DEV : answerable kept 40/40, unanswerable refused 10/15; wrongly refused [], wrongly answered ['U01', 'U04', 'U07', 'U08', 'U10']
+  TEST: answerable kept 33/33, not-covered refused 0/3; wrongly refused [], wrongly answered ['T08', 'T12', 'T36']
+  lowest answerable confidences (dev): [0.0109, 0.0307, 0.0837, 0.1063]; highest unanswerable (dev): [0.0347, 0.0789, 0.1658, 0.2099]
+  NOTE: backend/config.py has CONFIDENCE_THRESHOLD = 0.0015; tuned value is 0.0011
+
+Follow-up rewriting:
+  PASS F01: 'What about L7?' -> 'What is the notice period if I resign at L7?'
+  PASS F02: 'and in Pune?' -> 'What is the hotel limit for an L5 staying in Pune?'
+  PASS F03: 'How about sick leave?' -> 'How many sick leave days does an L3 get?'
+  PASS F04: 'What if the flight lands after midnight?' -> 'Can I claim a cab from the airport at L4; the flight lands after midnight?'
+  PASS F05: 'Is day-care reimbursed in Pune?' -> 'Is day-care reimbursed in Pune?'
+
+Latency per search (full, this PC): median 318 ms, 95th percentile 408 ms
+
+TEST recall@8 = 0.939 (target 0.9), MRR = 0.733.  RESULT: PASS

@@ -1,0 +1,25 @@
+import puppeteer from 'puppeteer-core'
+const BASE = 'https://nexora-hr-portal.vercel.app', OUT = '/home/ashok/hrbot/report/img'
+const emp = { employee_id: 'NXR100056', name: 'Arjun Verma', grade: 'L4', designation: 'Senior Software Engineer', location: 'Noida' }
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: 'new', userDataDir: '/home/ashok/hrbot/.cache/screens/chrome-live' })
+const p = await b.newPage()
+p.on('pageerror', (e) => console.log('PAGE ERROR', e.message))
+const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+await p.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1.5 })
+await p.goto(BASE, { waitUntil: 'networkidle2', timeout: 120000 })
+await p.evaluate((e) => { localStorage.clear(); localStorage.setItem('nxr.employee', JSON.stringify(e)) }, emp)
+const go = async (path) => { await p.goto(BASE + path, { waitUntil: 'networkidle2', timeout: 120000 }); await p.waitForSelector('.sidebar', { timeout: 150000 }); await wait(1500) }
+await go('/'); await p.screenshot({ path: `${OUT}/home.png` })
+await go('/chat')
+await p.type('#msg', 'What is the hotel limit for an L5 staying in Mumbai?')
+await p.keyboard.press('Enter')
+await p.waitForSelector('.chip.cite', { timeout: 120000 }); await wait(800)
+await p.click('.chip.cite'); await p.waitForSelector('.pdf-stage canvas', { timeout: 60000 }); await wait(2500)
+await p.screenshot({ path: `${OUT}/ask_nia_citation.png` })
+await go('/tickets'); await p.screenshot({ path: `${OUT}/my_tickets.png` })
+await go('/library'); await p.screenshot({ path: `${OUT}/policy_library.png` })
+await go('/insights'); await wait(1000); await p.screenshot({ path: `${OUT}/hr_insights.png` })
+await p.setViewport({ width: 390, height: 844, deviceScaleFactor: 2 })
+await go('/chat'); await p.evaluate(() => { const m = document.querySelector('.messages'); m.style.scrollBehavior = 'auto'; m.scrollTop = 0 }); await wait(500)
+await p.screenshot({ path: `${OUT}/phone_chat.png` })
+await b.close(); console.log('done')

@@ -1,0 +1,7 @@
+{
+  "name": "nia-report-builder",
+  "private": true,
+  "description": "Builds report/Nia_HR_Helpdesk_Report.docx from report/build_report.js",
+  "scripts": { "build": "node build_report.js" },
+  "dependencies": { "docx": "9.8.1" }
+}

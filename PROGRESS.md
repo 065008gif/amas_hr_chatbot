@@ -91,5 +91,6 @@ Each batch is small enough to finish in one sitting. Model-calling runs save one
 - [x] USER pushed Phase 7 batch 4 and the answer fixes.
 - [x] **Phase 9 report DONE** (D-053): `report/Nia_HR_Helpdesk_Report.docx`, 23 pages, built by `report/build_report.js` from the result files; live-portal screenshots and the architecture diagram in `report/img/`.
 - [x] Report rewritten in impersonal academic voice; A6 filled with verified competitor facts (D-054).
-- [ ] USER: push; verify A7 prices (optional) and the statutory claims (Appendix C); submit the .docx and the live link.
+- [x] **Hand-over** (D-055): `RUN_LOCALLY.md` (Linux tested, Windows untested), `requirements-lock.txt`, `report/package.json`, `extras/` with an inventory of every ignored file; ingestion now rebuilds from the bundled models in a fresh clone (identical index); `~/hrbot_backup.zip` created (the only file outside ~/hrbot, at the user's request).
+- [ ] USER: push; copy `~/hrbot_backup.zip` somewhere safe (it is on the shared college PC); verify A7 prices (optional) and the statutory claims (Appendix C); submit the .docx and the live link.
 - [ ] Then Phase 9: the report (.docx).
