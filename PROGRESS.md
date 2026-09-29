@@ -90,5 +90,6 @@ Each batch is small enough to finish in one sitting. Model-calling runs save one
 - [x] `tests/results/RESULTS.md` regenerated (3 stages, repeat test, live latency, Known failures).
 - [x] USER pushed Phase 7 batch 4 and the answer fixes.
 - [x] **Phase 9 report DONE** (D-053): `report/Nia_HR_Helpdesk_Report.docx`, 23 pages, built by `report/build_report.js` from the result files; live-portal screenshots and the architecture diagram in `report/img/`.
-- [ ] USER: push; read the report and edit the wording where it doesn't sound like you; verify A6 competitors, A7 prices and the statutory claims (Appendix C); submit the .docx and the live link.
+- [x] Report rewritten in impersonal academic voice; A6 filled with verified competitor facts (D-054).
+- [ ] USER: push; verify A7 prices (optional) and the statutory claims (Appendix C); submit the .docx and the live link.
 - [ ] Then Phase 9: the report (.docx).
